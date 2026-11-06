@@ -39,7 +39,7 @@ typedef struct {
 
 typedef void *(*PanelStep)(void);
 
-extern PanelScene *data_ov001_020a04e8;
+extern PanelScene *gSubscenePanelWork;
 extern u8 *data_0205fe0c;
 extern u8 gMenuListTaskClass[];
 extern u8 gOverlayDisplaySessionTaskClass[];
@@ -74,7 +74,7 @@ PanelStep InitFieldPanelScene(void)
     AcquireRecordManager();
     AcquireRecordSlot(1, 1);
     panel = GetRunningTaskWork();
-    data_ov001_020a04e8 = panel;
+    gSubscenePanelWork = panel;
     i = 0;
     MI_CpuFill8(panel, 0, sizeof(PanelScene));
     panel->formationType = 2;

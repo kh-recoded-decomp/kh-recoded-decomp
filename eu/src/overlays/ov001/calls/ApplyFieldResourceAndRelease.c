@@ -1,6 +1,6 @@
 #define func_ov001_0206efac SplitFieldHudIconTilesAndUploadBg3
 #define ApplyFieldResourceAndRelease_0206f040 ApplyFieldResourceAndRelease
-#define data_ov001_020a04a4 data_ov001_020a04c4
+#define data_ov001_020a04a4 gFieldSceneGlobals
 #define func_ov027_020ba1d8 GetFileLoadRequestBuffer
 #define func_ov027_020ba1e0 DestroyFileLoadRequest
 #include "src/ov001/field_manager/ApplyFieldResourceAndRelease_0206f040.c"

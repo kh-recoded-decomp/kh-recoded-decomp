@@ -2,6 +2,6 @@
 #define IsEntryFlag2Active_020642d0 IsEntryFlag2Active
 #define SetNodeStateRandomDir_0206604c SetNodeStateRandomDir
 #define WakeNearbyIdleNodes_02066874 WakeNearbyIdleNodes
-#define data_ov001_020a0464 data_ov001_020a0484
+#define data_ov001_020a0464 gFieldEffectPool
 #define func_01ffa0f4 VEC_Distance
 #include "src/ov001/shared_engine/WakeNearbyIdleNodes_02066874.c"

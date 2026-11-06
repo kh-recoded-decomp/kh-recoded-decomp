@@ -9,7 +9,7 @@
 #define SelectRecordPage_020c2060 SelectRecordPage
 #define SetSelectionIfChanged_020bc92c SetSelectionIfChanged_020bc94c
 #define UpdateEntryCountRecord_020c42a0 UpdateEntryCountRecord
-#define data_ov001_020a0460 data_ov001_020a0480
+#define data_ov001_020a0460 gFieldSessionWork
 #define func_0204d8b8 QueueSoundKind4
 #define func_ov001_020645c8 IsSessionFlagSet
 #define func_ov039_020bc1bc GetMenuWork

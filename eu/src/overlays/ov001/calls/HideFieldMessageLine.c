@@ -1,5 +1,5 @@
 #define HideFieldMessageLine_0207166c HideFieldMessageLine
-#define data_ov001_020a04a4 data_ov001_020a04c4
+#define data_ov001_020a04a4 gFieldSceneGlobals
 #define func_ov001_020701fc ClearFieldStatusRow
 #define func_ov001_020750c8 ReleasePendingSceneTags
 #include "src/ov001/field_manager/HideFieldMessageLine_0207166c.c"

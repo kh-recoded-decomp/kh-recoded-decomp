@@ -8,6 +8,6 @@
 #define Text_UploadTileBuffer_02001520 Text_UploadTileBuffer
 #define UpdateWidgetLayerDefault_020b9df0 UpdateWidgetLayerDefault_020b9e10
 #define data_ov001_0209dd94 gChoiceBalloonTailTiles
-#define data_ov001_020a04a4 data_ov001_020a04c4
+#define data_ov001_020a04a4 gFieldSceneGlobals
 #define func_ov027_020b9e00 MarkTileTableRowDirty
 #include "src/ov001/text_rendering/ShowChoiceBalloonAtWorldPos_020725dc.c"

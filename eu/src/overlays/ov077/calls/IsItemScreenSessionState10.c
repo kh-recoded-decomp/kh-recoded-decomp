@@ -5,13 +5,13 @@ typedef struct {
     int playerState;
 } Session;
 
-extern Session *data_ov001_020a0480;
+extern Session *gFieldSessionWork;
 
 BOOL IsItemScreenSessionState10(void)
 {
     BOOL isStateTen = FALSE;
 
-    if (data_ov001_020a0480->playerState == 10) {
+    if (gFieldSessionWork->playerState == 10) {
         isStateTen = TRUE;
     }
     return isStateTen;

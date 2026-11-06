@@ -1,4 +1,4 @@
 #define FindFreeEffectSlot_02065fa8 FindFreeEffectSlot
-#define data_ov001_020a0464 data_ov001_020a0484
+#define data_ov001_020a0464 gFieldEffectPool
 #define func_0200d58c CountLeadingZeros32
 #include "src/ov001/unclassified_helpers/FindFreeEffectSlot_02065fa8.c"

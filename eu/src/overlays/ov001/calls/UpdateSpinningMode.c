@@ -1,5 +1,5 @@
 #define UpdateSpinningMode_0207e9b8 UpdateSpinningMode
-#define data_ov001_020a04d4 data_ov001_020a04f4
+#define data_ov001_020a04d4 gFieldMinigameWork
 #define func_ov001_0207e4f4 LayoutFrameCornerSprites
 #define func_ov001_0207e598 PlaceOrbitSpriteCorners
 #define func_ov001_0207e73c HandleDirectionalPrompt

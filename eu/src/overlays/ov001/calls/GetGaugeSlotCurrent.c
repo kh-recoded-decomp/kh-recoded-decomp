@@ -11,9 +11,9 @@ typedef struct GaugeMenu {
     GaugeSlot slots[3];
 } GaugeMenu;
 
-extern GaugeMenu *data_ov001_020a04cc;
+extern GaugeMenu *gFieldHudGaugeState;
 
 u16 GetGaugeSlotCurrent(int index)
 {
-    return data_ov001_020a04cc->slots[index].current;
+    return gFieldHudGaugeState->slots[index].current;
 }

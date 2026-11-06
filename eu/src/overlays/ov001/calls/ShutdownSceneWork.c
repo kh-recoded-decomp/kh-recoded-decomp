@@ -3,5 +3,5 @@
 #define func_ov001_0206ae58 ShutdownSceneWork
 #define NNSi_FndGetCurrentRootHeap_0202a764 GetRunningTaskWork
 #define func_ov001_0206c720 RemoveTaggedListEntries
-#define g_manager_020a0484 data_ov001_020a04a4
+#define g_manager_020a0484 gFieldTargetSelectionWork
 #include "src/ov001/shared_engine/func_ov001_0206ae58.c"

@@ -23,7 +23,7 @@ typedef struct PartyGlobals {
     PartyActorFactory factory;
 } PartyGlobals;
 
-extern PartyGlobals data_ov001_020a04bc;
+extern PartyGlobals gManagedActorGlobals;
 extern u8 data_020608c8;
 extern char OVERLAY_51_ID[];
 extern char OVERLAY_52_ID[];
@@ -42,7 +42,7 @@ extern void CreateFieldEffectGroups(void);
 extern void ClearHandleActiveFlags(void);
 
 void InitPartyState(int mode) {
-    PartyState *party = data_ov001_020a04bc.party;
+    PartyState *party = gManagedActorGlobals.party;
     int i;
 
     if (party->count > 0) {
@@ -74,10 +74,10 @@ void InitPartyState(int mode) {
     for (i = 0; i < data_020608c8; i++) {
         PartyEntry *entry = &party->entries[i];
         party->count++;
-        data_ov001_020a04bc.factory = NULL;
+        gManagedActorGlobals.factory = NULL;
         entry->overlayId = LoadOverlayForMode(i, mode);
-        if (data_ov001_020a04bc.factory != NULL) {
-            entry->actor = data_ov001_020a04bc.factory(i);
+        if (gManagedActorGlobals.factory != NULL) {
+            entry->actor = gManagedActorGlobals.factory(i);
             InitFieldButtonForEntryIndex(entry->tracker, i);
             entry->flags |= 1;
             entry->flags |= 0x10;

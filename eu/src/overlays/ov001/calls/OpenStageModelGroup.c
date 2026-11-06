@@ -22,7 +22,7 @@ typedef struct StageModelResourceTable {
     StageModelResource *entries[1];
 } StageModelResourceTable;
 
-extern StageModelState *data_ov001_020a048c;
+extern StageModelState *gFieldSceneEntryContext;
 extern char sOv001_ColWall_0209ea84[];
 extern void OpenActorModelGroupResource(int group, u32 resource);
 extern void SetWorldMeshEntryValueByName(const char *name, const u32 *value);
@@ -32,7 +32,7 @@ extern void ApplyToNamedCollisionFaces(const char *name, int flags, int value);
 void OpenStageModelGroup(void)
 {
     u32 i;
-    StageModelState *state = data_ov001_020a048c;
+    StageModelState *state = gFieldSceneEntryContext;
     OpenActorModelGroupResource(0,
         (state->resources->entries[state->mode]->id & 0x1ff)
         | (0x80000000 | (((state->group + 0x8000) & 0xfffffc) << 7)));

@@ -32,7 +32,7 @@ typedef struct GaugeMenu {
     u16 primaryState;
 } GaugeMenu;
 
-extern GaugeMenu *data_ov001_020a04cc;
+extern GaugeMenu *gFieldHudGaugeState;
 extern void DrawShortLayoutRow(void *context, int index, int mode);
 extern void BlitFourPixelLabelPattern(void *context, int index, int mode);
 extern u64 OS_GetTick(void);
@@ -46,7 +46,7 @@ extern BOOL PlaySoundEffect(int seqArcNo, int index);
 extern void StopSeqArcOrDefault(int seqArcNo, int index, int fade);
 
 void SetMenuGaugeActive(int index, BOOL enable) {
-    GaugeMenu *menu = data_ov001_020a04cc;
+    GaugeMenu *menu = gFieldHudGaugeState;
     GaugeAnim *anim = &menu->anims[index];
     void (*callback)(void *context, int index, int mode);
     u16 state;

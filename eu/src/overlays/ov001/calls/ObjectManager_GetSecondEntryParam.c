@@ -1,3 +1,3 @@
 #define ObjectManager_GetSecondEntryParam_0207ee48 ObjectManager_GetSecondEntryParam
-#define g_objectManager_020a04d8 data_ov001_020a04f8
+#define g_objectManager_020a04d8 gFieldObjectClassManager
 #include "src/ov001/unclassified_helpers/ObjectManager_GetSecondEntryParam_0207ee48.c"

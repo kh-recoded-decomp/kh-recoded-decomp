@@ -714,3 +714,14 @@ shared definition is bound through its EU alias; a proven superseded DATA
 copy is preserved outside the compiled source tree. See the
 [source-tree map](SOURCE_LAYOUT.md) and [system index](README.md) for the
 Days-informed navigation and the complete 100-function uncertainty inventory.
+
+## Field and session global storage owners
+
+Twenty-seven BSS identities now name demonstrated task handles, manager
+work, field/session contexts and independent list/fade owners.
+[FIELD_SESSION_GLOBAL_DATA_CONTRACTS.md](FIELD_SESSION_GLOBAL_DATA_CONTRACTS.md)
+records physical extents and the constructor/accessor/cleanup evidence.
+
+The managed-actor and scene globals retain their two-word layouts; the
+menu prefix stays three words with separate fade storage. Pointer/handle
+views do not shrink native allocations or turn opaque tails into host fields.

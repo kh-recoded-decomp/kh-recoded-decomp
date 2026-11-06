@@ -12,7 +12,7 @@ typedef struct {
     FieldMenu *menu;
 } FieldMenuHandle;
 
-extern FieldMenuHandle data_ov001_020a04d0;
+extern FieldMenuHandle gFieldCommandMenuGlobals;
 
 extern BOOL InvokeFieldMinigameActiveCallback(void);
 extern BOOL IsModeSetOrFlag370aClear(void);
@@ -31,7 +31,7 @@ BOOL TryArmFieldMenuButtonDelay(void)
     if (IsLeadEntryFlag80Set()) {
         return FALSE;
     }
-    menu = data_ov001_020a04d0.menu;
+    menu = gFieldCommandMenuGlobals.menu;
     if (menu->unk_C8 >= 2 && menu->unk_144 < 0) {
         menu->unk_144 = 0;
     }

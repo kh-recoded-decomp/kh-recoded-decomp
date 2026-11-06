@@ -1,5 +1,5 @@
 #define AllocSessionNameTable_0206394c AllocSessionNameTable
 #define NNSi_FndAllocFromDefaultHeap_0202a178 NNSi_FndAllocFromDefaultHeap
-#define data_ov001_020a0460 data_ov001_020a0480
+#define data_ov001_020a0460 gFieldSessionWork
 #define func_01ff86fc MIi_CpuClear32
 #include "src/ov001/unclassified_helpers/AllocSessionNameTable_0206394c.c"

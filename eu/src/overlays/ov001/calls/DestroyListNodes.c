@@ -1,4 +1,4 @@
 #define DestroyListNodes_0207eef4 DestroyListNodes
-#define data_ov001_020a04d8 data_ov001_020a04f8
+#define data_ov001_020a04d8 gFieldObjectClassManager
 #define func_ov001_0207f648 ReleaseObjectUse
 #include "src/ov001/unclassified_helpers/DestroyListNodes_0207eef4.c"

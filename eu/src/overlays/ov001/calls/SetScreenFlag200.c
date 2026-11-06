@@ -1,3 +1,3 @@
 #define SetScreenFlag200_0206a834 SetScreenFlag200
-#define data_ov001_020a0480 data_ov001_020a04a0
+#define data_ov001_020a0480 gFieldScreenTransitionWork
 #include "src/ov001/unclassified_helpers/SetScreenFlag200_0206a834.c"

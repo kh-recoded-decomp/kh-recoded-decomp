@@ -6,7 +6,7 @@ typedef struct GaugeContext {
     void *workTiles;
 } GaugeContext;
 
-extern GaugeContext *data_ov001_020a04cc;
+extern GaugeContext *gFieldHudGaugeState;
 
 extern const u8 gGaugeFilledRow[];
 extern const u8 gGaugeEmptyRow[];
@@ -18,7 +18,7 @@ extern void MIi_CpuCopyFast(const void *src, void *dst, u32 size);
 
 void DrawGaugeFill(s32 filledRows)
 {
-    GaugeContext *gauge = data_ov001_020a04cc;
+    GaugeContext *gauge = gFieldHudGaugeState;
     s32 row;
 
     for (row = 0; row < filledRows; row++) {

@@ -11,7 +11,7 @@
 #define GetBoundedEntryField_0206db5c GetBoundedEntryField
 #define SelectNextSessionState_02062150 SelectNextSessionState
 #define WriteSessionPackedBits_0206459c WriteSessionPackedBits
-#define data_ov001_020a0460 data_ov001_020a0480
+#define data_ov001_020a0460 gFieldSessionWork
 #define func_ov000_02062c64 IsSessionScriptEntryReady
 #define func_ov001_020630bc SaveElapsedSeconds
 #define func_ov001_02063f90 GetClampedTimerValue

@@ -1,7 +1,7 @@
 #define ShowSessionNameEntry_020639ac ShowSessionNameEntry
 #define Utf8ToUcs2_020512b4 Utf8ToUcs2
 #define WriteSessionPackedBits_0206459c WriteSessionPackedBits
-#define data_ov001_020a0460 data_ov001_020a0480
+#define data_ov001_020a0460 gFieldSessionWork
 #define func_ov001_02064574 ReadSessionPackedBits
 #define func_ov001_02071df0 DrawFieldHeaderText
 #define func_ov001_02071e44 ShowFieldPopupText

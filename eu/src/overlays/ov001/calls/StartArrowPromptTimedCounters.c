@@ -1,6 +1,6 @@
 #include "nitro/types.h"
 
-extern u32 data_ov001_020a04f0;
+extern u32 gArrowPromptWork;
 extern u32 GetSceneTagTracker(void);
 extern u32 GetTaskUpdateCount(void);
 extern u32 FindActiveRecordById(u32 handle, u32 tag);
@@ -13,7 +13,7 @@ void StartArrowPromptTimedCounters(u32 param, u8 flag)
     u32 handle;
     u32 value;
 
-    context = (u8 *)data_ov001_020a04f0;
+    context = (u8 *)gArrowPromptWork;
     handle = GetSceneTagTracker();
     context[0] = 0;
     context[1] = flag;

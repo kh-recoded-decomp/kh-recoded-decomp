@@ -1,5 +1,5 @@
-extern int *data_ov001_020a0490;
+extern int *gStageEventContext;
 
 int GetLoadedStageEntryFile(void) {
-    return *data_ov001_020a0490;
+    return *gStageEventContext;
 }

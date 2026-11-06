@@ -13,7 +13,7 @@ typedef struct FieldContext {
     FieldTimer timer;
 } FieldContext;
 
-extern FieldContext *data_ov001_020a0480;
+extern FieldContext *gFieldSessionWork;
 extern BOOL IsSessionFlagSet(int bit);
 extern u32 ReadSessionPackedBits(int bit, int count);
 extern void SetFieldTimerCounterMilliseconds(u32 value, s32 index);
@@ -31,7 +31,7 @@ static inline s32 TimerDirectionUserData(BOOL countUp)
 
 void RestoreFieldTimer(void)
 {
-    FieldContext *context = data_ov001_020a0480;
+    FieldContext *context = gFieldSessionWork;
     FieldTimer *timer = &context->timer;
     u32 mode;
     s32 timeLimit;

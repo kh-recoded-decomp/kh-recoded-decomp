@@ -4,7 +4,7 @@
 #define StoreGlobalArrayEntry_02025668 StoreGlobalArrayEntry
 #define data_ov001_0209f018 sOv001_MoMo_0209f038
 #define data_ov001_0209f028 gFieldObjectScriptCommandHandlers
-#define data_ov001_020a04d8 data_ov001_020a04f8
+#define data_ov001_020a04d8 gFieldObjectClassManager
 #define func_01ff8740 MIi_CpuClearFast
 #define func_0202c478 Archive_LoadFile
 #define func_ov001_02086c10 CreateRecordViewer

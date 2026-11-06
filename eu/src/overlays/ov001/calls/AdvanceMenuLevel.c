@@ -7,7 +7,7 @@
 #define data_ov001_0209dc64 gMenuGaugeLevelFileIds
 #define data_ov001_0209dc84 gMenuGaugeLevelMidpoints
 #define data_ov001_0209dca8 gMenuGaugeCapacityByPartySize
-#define data_ov001_020a04a4 data_ov001_020a04c4
+#define data_ov001_020a04a4 gFieldSceneGlobals
 #define func_ov001_0206f040 ApplyFieldResourceAndRelease
 #define func_ov001_020728e4 IsFieldFlag13OrSessionFlagSet
 #define func_ov001_0207b4f8 RequestTemporaryPanelListDisplay

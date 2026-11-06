@@ -15,7 +15,7 @@
 #define RetainOrInitializeSharedRecord_0202c80c SND_RegisterSeq
 #define SetCollisionObjectPosition_02033f48 SetCollisionObjectPosition
 #define data_ov001_0209f160 sOv001_Lump_0209f180
-#define data_ov001_020a0460 data_ov001_020a0480
+#define data_ov001_020a0460 gFieldSessionWork
 #define func_01ff86fc MIi_CpuClear32
 #define func_01ffa0f4 VEC_Distance
 #define func_0202c48c LoadFileAllocFromHeapTail

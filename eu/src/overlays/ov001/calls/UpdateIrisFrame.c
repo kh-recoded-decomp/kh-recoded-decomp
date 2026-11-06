@@ -6,7 +6,7 @@
 #define data_0205a924 NNS_G3dGlb
 #define data_0205a92c NNS_G3dGlb_projMtx
 #define data_ov001_0209da80 gIrisFrameBaseScale
-#define data_ov001_020a0480 data_ov001_020a04a0
+#define data_ov001_020a0480 gFieldScreenTransitionWork
 #define func_020192ec NNS_G3dGlbSetBaseTrans
 #define func_0201931c NNS_G3dGlbSetBaseScale
 #define func_ov001_0206aa7c SetScreenOrthoCamera

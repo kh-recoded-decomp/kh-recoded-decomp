@@ -1,6 +1,6 @@
 #define HandleListMenuConfirm_0207eb0c HandleListMenuConfirm
 #define PlaySoundEffect_0204d924 PlaySoundEffect
-#define data_ov001_020a04d4 data_ov001_020a04f4
+#define data_ov001_020a04d4 gFieldMinigameWork
 #define func_ov001_0207e64c HandleFallingPieceInput
 #define func_ov001_0207e73c HandleDirectionalPrompt
 #include "src/ov001/shared_engine/HandleListMenuConfirm_0207eb0c.c"

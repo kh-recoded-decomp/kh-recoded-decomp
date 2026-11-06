@@ -2,5 +2,5 @@
 
 void SetPanelInputActive(void)
 {
-    data_ov001_020a04e8->inputActive = TRUE;
+    gSubscenePanelWork->inputActive = TRUE;
 }

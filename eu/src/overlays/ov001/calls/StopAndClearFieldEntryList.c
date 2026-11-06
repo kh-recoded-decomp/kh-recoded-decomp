@@ -1,10 +1,10 @@
 #include "nitro/types.h"
 
 extern void Element_RunStopHook(void *node);
-extern u32 data_ov001_020a04fc;
+extern u32 gFieldEntryPoolManager;
 
 void StopAndClearFieldEntryList(void) {
-    u32 base = data_ov001_020a04fc;
+    u32 base = gFieldEntryPoolManager;
     void **node = *(void ***)(base + 8);
     while (node != 0) {
         Element_RunStopHook(node);

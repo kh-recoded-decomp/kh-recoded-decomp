@@ -1,3 +1,3 @@
 #define ForceHudState6IfActive_0207208c ForceHudState6IfActive
-#define data_020a04a4 data_ov001_020a04c4
+#define data_020a04a4 gFieldSceneGlobals
 #include "src/ov001/shared_engine/ForceHudState6IfActive_0207208c.c"

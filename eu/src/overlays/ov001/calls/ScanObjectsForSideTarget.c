@@ -4,5 +4,5 @@
 #define func_ov001_0206b614 IsEntryWithinFacingRange
 #define func_ov001_020863f4 GetEntryPoolTargetPosition
 #define func_ov001_0208723c GetFieldEntryListHead
-#define g_manager_020a0484 data_ov001_020a04a4
+#define g_manager_020a0484 gFieldTargetSelectionWork
 #include "src/ov001/shared_engine/ScanObjectsForSideTarget_0206b2c0.c"

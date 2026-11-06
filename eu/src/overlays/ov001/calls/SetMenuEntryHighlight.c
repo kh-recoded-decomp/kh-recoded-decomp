@@ -1,5 +1,5 @@
 #define SetMenuEntryHighlight_0207830c SetMenuEntryHighlight
-#define data_ov001_020a04b0 data_ov001_020a04d0
+#define data_ov001_020a04b0 gFieldCommandMenuGlobals
 #define func_ov001_020728e4 IsFieldFlag13OrSessionFlagSet
 #define func_ov001_020754d8 FindFieldMenuEntryById
 #include "src/ov001/field_manager/SetMenuEntryHighlight_0207830c.c"

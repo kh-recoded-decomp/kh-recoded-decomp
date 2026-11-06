@@ -1,9 +1,9 @@
 #include "nitro/types.h"
 
-extern u32 data_ov001_020a04fc;
+extern u32 gFieldEntryPoolManager;
 
 void RequestFieldEntryResourceDelivery(void) {
-    if ((*(u8 *)(data_ov001_020a04fc + 5) & 2) != 0) {
-        *(u8 *)(data_ov001_020a04fc + 5) |= 0xc;
+    if ((*(u8 *)(gFieldEntryPoolManager + 5) & 2) != 0) {
+        *(u8 *)(gFieldEntryPoolManager + 5) |= 0xc;
     }
 }

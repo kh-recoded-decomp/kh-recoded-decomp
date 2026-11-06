@@ -15,14 +15,14 @@ typedef struct {
     EntryCache cache;
 } Session;
 
-extern Session *data_ov001_020a0480;
+extern Session *gFieldSessionWork;
 extern u32 GetManagedActorCount(void);
 extern u32 GetBoundedEntryField(int index);
 extern u32 CopyActiveBlockIfPresent(u32 entry, EntryBuffer *buffer);
 
 void SnapshotManagedActorStateBlocks(void)
 {
-    EntryCache *cache = &data_ov001_020a0480->cache;
+    EntryCache *cache = &gFieldSessionWork->cache;
     int index = 0;
 
     if ((int)GetManagedActorCount() > 0)

@@ -1,4 +1,4 @@
 #define InvokeListNodeCallbacks_0207eff0 InvokeListNodeCallbacks
-#define data_ov001_020a04d8 data_ov001_020a04f8
+#define data_ov001_020a04d8 gFieldObjectClassManager
 #define func_ov001_02087190 ResourceCache_Shutdown
 #include "src/ov001/unclassified_helpers/InvokeListNodeCallbacks_0207eff0.c"

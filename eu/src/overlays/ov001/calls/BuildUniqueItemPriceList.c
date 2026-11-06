@@ -2,6 +2,6 @@
 #define BuildUniqueItemPriceList_02068604 BuildUniqueItemPriceList
 #define GetShortTableValueOrDefault_020521dc GetShortTableValueOrDefault
 #define ReleaseRecordSlot_02051dfc ReleaseRecordSlot
-#define data_ov001_020a0470 data_ov001_020a0490
+#define data_ov001_020a0470 gStageEventContext
 #define func_01ff8830 MI_CpuFill8
 #include "src/ov001/unclassified_helpers/BuildUniqueItemPriceList_02068604.c"

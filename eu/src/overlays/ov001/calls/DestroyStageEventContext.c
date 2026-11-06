@@ -1,6 +1,6 @@
 #include "nitro/types.h"
 
-extern u32 data_ov001_020a0490;
+extern u32 gStageEventContext;
 extern void ResetStageEventContext(void);
 extern void ReleaseRecordSlot(s32 mode);
 extern void ReleaseServiceInstance_020876a0(void);
@@ -10,13 +10,13 @@ void DestroyStageEventContext(void)
 {
     u32 *ctx;
 
-    ctx = (u32 *)data_ov001_020a0490;
+    ctx = (u32 *)gStageEventContext;
     ResetStageEventContext();
     ReleaseRecordSlot(4);
     ReleaseServiceInstance_020876a0();
     if (*ctx != 0) {
         NNSi_FndFreeFromDefaultHeap((void *)*ctx);
     }
-    NNSi_FndFreeFromDefaultHeap((void *)data_ov001_020a0490);
-    data_ov001_020a0490 = 0;
+    NNSi_FndFreeFromDefaultHeap((void *)gStageEventContext);
+    gStageEventContext = 0;
 }

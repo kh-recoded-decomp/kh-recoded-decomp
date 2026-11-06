@@ -1,5 +1,5 @@
 #define FreeSceneListObject_020715ac FreeSceneListObject
 #define NNSi_FndFreeFromDefaultHeap_0202a1c4 NNSi_FndFreeFromDefaultHeap
 #define RemoveIntrusiveListObject_020129d8 NNS_FndRemoveListObject
-#define data_ov001_020a04a4 data_ov001_020a04c4
+#define data_ov001_020a04a4 gFieldSceneGlobals
 #include "src/ov001/field_manager/FreeSceneListObject_020715ac.c"

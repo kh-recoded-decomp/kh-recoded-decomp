@@ -1,7 +1,7 @@
 #define RunEventScriptFrame_020884e0 RunEventScriptFrame
 #define ScriptVm_RunFrame_02025b18 ScriptVm_RunFrame
 #define WriteSessionPackedBits_0206459c WriteSessionPackedBits
-#define data_ov001_020a04e0 data_ov001_020a0500
+#define data_ov001_020a04e0 gActorSceneManager
 #define func_020258f8 ResetScriptSkipState
 #define func_0202a5ac Obj_SetWord14
 #define func_ov001_02071898 StartFieldSlideIn

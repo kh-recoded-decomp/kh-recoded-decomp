@@ -1,4 +1,4 @@
 #define FlushPendingFieldUpdate_020633d4 FlushPendingFieldUpdate
-#define data_ov001_020a0460 data_ov001_020a0480
+#define data_ov001_020a0460 gFieldSessionWork
 #define func_ov001_0206d84c DestroyPartyState
 #include "src/ov001/field_manager/FlushPendingFieldUpdate_020633d4.c"

@@ -1,5 +1,5 @@
 #define func_ov001_02088568 NotifyFlaggedActors
 #define func_ov001_0208a114 UpdatePartyActorMotion
 #define func_ov001_0208a334 IsActorFlagBit8Set
-#define g_actorManager_020a04e0 data_ov001_020a0500
+#define g_actorManager_020a04e0 gActorSceneManager
 #include "src/ov001/object_creation/func_ov001_02088568.c"

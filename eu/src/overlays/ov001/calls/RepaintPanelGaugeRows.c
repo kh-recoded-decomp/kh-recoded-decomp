@@ -1,6 +1,6 @@
 #define DrawGaugeSpan_02073bb4 DrawGaugeSpan
 #define RepaintPanelGaugeRows_020746e8 RepaintPanelGaugeRows
-#define data_ov001_020a04ac data_ov001_020a04cc
+#define data_ov001_020a04ac gFieldHudGaugeState
 #define func_01ff878c MIi_CpuCopyFast
 #define func_ov001_02073894 BlitFourPixelInsetPattern
 #include "src/ov001/field_manager/RepaintPanelGaugeRows_020746e8.c"

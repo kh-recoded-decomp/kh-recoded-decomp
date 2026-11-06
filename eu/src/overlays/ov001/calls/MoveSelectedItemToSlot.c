@@ -31,7 +31,7 @@ typedef struct FieldMenuHandle {
     FieldMenu *menu;
 } FieldMenuHandle;
 
-extern FieldMenuHandle data_ov001_020a04d0;
+extern FieldMenuHandle gFieldCommandMenuGlobals;
 extern void *FND_GetListObjectByIndex(NNSFndList *list, u16 index);
 extern void NNS_FndInsertListObject(
     NNSFndList *list,
@@ -43,7 +43,7 @@ extern void DrawMenuPanelPage(FieldMenu *menu);
 
 void MoveSelectedItemToSlot(s32 slotId, u16 count)
 {
-    FieldMenu *menu = data_ov001_020a04d0.menu;
+    FieldMenu *menu = gFieldCommandMenuGlobals.menu;
     FieldEntry *current =
         FND_GetListObjectByIndex(&menu->list, menu->selectedIndex);
     FieldEntry *slot;

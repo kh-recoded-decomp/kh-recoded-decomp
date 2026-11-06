@@ -58,8 +58,8 @@ typedef struct {
     int eventMode;
 } FieldGlobal;
 
-extern HudGaugeSet *data_ov001_020a04cc;
-extern FieldGlobal *data_ov001_020a0480;
+extern HudGaugeSet *gFieldHudGaugeState;
+extern FieldGlobal *gFieldSessionWork;
 extern BOOL UpdateHudGaugeCounters(GaugeCounter *fill, GaugeCounter *drain, int gaugeIndex, void *handle);
 extern void RedrawHudGaugeRows(void);
 extern void RepaintPanelGaugeRows(void);
@@ -79,7 +79,7 @@ extern void StopSeqArcOrDefault(int a, int id, int fade);
 
 int UpdateHudGauges(void)
 {
-    HudGaugeSet *set = data_ov001_020a04cc;
+    HudGaugeSet *set = gFieldHudGaugeState;
     HudGaugeLayout *layouts = gHudGaugeTable.layouts;
     int i;
     u64 now;
@@ -111,7 +111,7 @@ int UpdateHudGauges(void)
                         UploadScreenSlotBlock(i, 0);
                     }
                 } else {
-                    if (i == 0 && (IsSessionFlagSet(0x3525) || data_ov001_020a0480->keepGauge)) {
+                    if (i == 0 && (IsSessionFlagSet(0x3525) || gFieldSessionWork->keepGauge)) {
                         keepShown = TRUE;
                     } else {
                         keepShown = FALSE;
@@ -133,7 +133,7 @@ int UpdateHudGauges(void)
     if (set->soundPlaying) {
         if (IsFieldPanelHidden() && !IsFirstEntryFlagSet() && !InvokeSessionCheckCallbackOrDefault()) {
             blocked = FALSE;
-            if (data_ov001_020a0480->eventLock && data_ov001_020a0480->eventMode == 5) {
+            if (gFieldSessionWork->eventLock && gFieldSessionWork->eventMode == 5) {
                 blocked = TRUE;
             }
             if (!blocked && !GetSessionFlagsMask20() && GetMainBrightnessSetting() != -16 && GetMainBrightnessSetting() != 16) {
@@ -144,7 +144,7 @@ int UpdateHudGauges(void)
         set->soundPlaying = FALSE;
     } else if (set->slots[0].active && IsFieldPanelHidden() && !IsFirstEntryFlagSet() && !InvokeSessionCheckCallbackOrDefault()) {
         blocked = FALSE;
-        if (data_ov001_020a0480->eventLock && data_ov001_020a0480->eventMode == 5) {
+        if (gFieldSessionWork->eventLock && gFieldSessionWork->eventMode == 5) {
             blocked = TRUE;
         }
         if (!blocked && !GetSessionFlagsMask20() && GetMainBrightnessSetting() != -16 && GetMainBrightnessSetting() != 16) {

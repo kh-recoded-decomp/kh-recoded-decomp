@@ -6,5 +6,5 @@
 #define GetBoundedEntryField_0206db5c GetBoundedEntryField
 #define IsFieldFlag16Set_020735b8 IsFieldFlag16Set
 #define IsPlayerEntryFlagSet_02050014 IsPlayerEntryFlagSet
-#define data_ov001_020a049c data_ov001_020a04bc
+#define data_ov001_020a049c gManagedActorGlobals
 #include "src/ov001/field_manager/AwardPartyGaugePoints_0206ded8.c"

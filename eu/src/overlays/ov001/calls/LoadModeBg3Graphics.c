@@ -6,5 +6,5 @@
 #define func_ov001_0207a1d0 OpenMessageWindowLayers
 #define func_ov027_020ba1d8 GetFileLoadRequestBuffer
 #define func_ov027_020ba1e0 DestroyFileLoadRequest
-#define g_activeContext_020a04c4 data_ov001_020a04e4
+#define g_activeContext_020a04c4 gMessageWindowWork
 #include "src/ov001/leaf_research/LoadModeBg3Graphics_02078c7c.c"

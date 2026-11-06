@@ -3,5 +3,5 @@
 #define SetSceneAnimState_02072fc4 SetSceneAnimState
 #define TagTracker_InvokeCallback_020b8210 TagTracker_InvokeCallback
 #define data_ov001_0209dbdc gChoiceSceneAnimationRecords
-#define data_ov001_020a04a4 data_ov001_020a04c4
+#define data_ov001_020a04a4 gFieldSceneGlobals
 #include "src/ov001/text_rendering/SetSceneAnimState_02072fc4.c"

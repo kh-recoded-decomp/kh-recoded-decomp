@@ -3,5 +3,5 @@
 #define MakePrimaryVramKey_020711ec MakePrimaryVramKey
 #define NNSi_FndAllocFromDefaultHeap_0202a178 NNSi_FndAllocFromDefaultHeap
 #define data_ov001_0209db04 gManagerSpriteFileIds
-#define data_ov001_020a049c data_ov001_020a04bc
+#define data_ov001_020a049c gManagedActorGlobals
 #include "src/ov001/shared_engine/LoadManagerSpriteSlots_0206dbb4.c"

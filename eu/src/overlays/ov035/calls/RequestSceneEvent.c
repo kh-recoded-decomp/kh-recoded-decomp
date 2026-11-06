@@ -2,6 +2,6 @@
 #define func_ov001_020645c8 IsSessionFlagSet
 #define RequestSceneEvent_020bae84 RequestSceneEvent
 #define StageEvents_CheckEvent_02087824 StageEvents_CheckEvent
-#define data_ov001_020a0460 data_ov001_020a0480
+#define data_ov001_020a0460 gFieldSessionWork
 #define data_ov035_020bc4e0 gMovieContextState
 #include "src/ov035/shared_engine/RequestSceneEvent_020bae84.c"

@@ -8,7 +8,7 @@
 #define SetEntrySlotsVisible_020b9580 SetEntrySlotsVisible
 #define SetFocusedWidget_020b96e4 SetFocusedWidget
 #define UpdateEntryCountRecord_020c42a0 UpdateEntryCountRecord
-#define data_ov001_020a0460 data_ov001_020a0480
+#define data_ov001_020a0460 gFieldSessionWork
 #define func_ov039_020bbf78 StartSubScene
 #define func_ov039_020bc1bc GetMenuWork
 #define func_ov039_020bc810 GetMenuStackDepth

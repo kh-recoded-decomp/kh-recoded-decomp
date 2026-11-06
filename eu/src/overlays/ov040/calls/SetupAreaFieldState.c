@@ -3,7 +3,7 @@
 #define func_ov040_020bce50 SetupAreaFieldState
 #define data_ov035_020bc4e0 gMovieContextState
 #define data_ov040_020be260 gAreaRewardSceneWork
-#define data_ov001_020a0460 data_ov001_020a0480
+#define data_ov001_020a0460 gFieldSessionWork
 #define data_ov021_020b52a0 data_ov021_020b52c0
 #define data_ov021_020b52c0 gSubModeTaskDefinition
 #define func_ov001_0207d120 func_ov001_0207d148

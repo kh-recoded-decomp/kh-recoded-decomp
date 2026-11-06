@@ -1,10 +1,10 @@
 #include "nitro/types.h"
 
-extern unsigned int *data_ov001_020a04bc;
+extern unsigned int *gManagedActorGlobals;
 
 unsigned int GetManagedActorMode(void) {
-  if (data_ov001_020a04bc == (unsigned int *)0x0) {
+  if (gManagedActorGlobals == (unsigned int *)0x0) {
     return 0xffffffff;
   }
-  return *data_ov001_020a04bc;
+  return *gManagedActorGlobals;
 }

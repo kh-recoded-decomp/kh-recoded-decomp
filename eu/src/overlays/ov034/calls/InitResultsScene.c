@@ -197,7 +197,7 @@ ResultsWork *data_ov034_020c0fa4;
 ResultsParams *data_ov034_020c0fa0;
 extern const TileIds data_ov034_020be8cc;
 extern SessionState data_0206085c;
-extern SessionFlags *data_ov001_020a0480;
+extern SessionFlags *gFieldSessionWork;
 extern StageInfo data_ov034_020bf990[];
 extern u8 data_ov034_020bea78[][3];
 extern SaveData *data_0205fe0c;
@@ -299,7 +299,7 @@ ResultsStateFn InitResultsScene(ResultsArgs *args)
                 }
             } else {
                 data_ov034_020c0fa0->worldId = data_ov034_020c0fa4->shopSection;
-                if (data_ov001_020a0480->replay) {
+                if (gFieldSessionWork->replay) {
                     data_ov034_020c0fa0->earnedAmount = GetSessionCounter(1);
                 } else {
                     data_0206085c.rank = 1;
@@ -414,7 +414,7 @@ ResultsStateFn InitResultsScene(ResultsArgs *args)
         return CloseResultsScreen;
     }
     if (data_ov034_020c0fa4->mode == 0) {
-        data_ov001_020a0480->resultsSeen = 1;
+        gFieldSessionWork->resultsSeen = 1;
         SetSelectionIfChanged(0x16);
     } else if (data_ov034_020c0fa4->mode == 2) {
         QueueSoundKind4(0x16, 0x1e);

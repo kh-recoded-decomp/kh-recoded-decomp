@@ -1,3 +1,3 @@
 #define ApplyVerticalLayoutOffset_0207d5f4 ApplyVerticalLayoutOffset
-#define data_ov001_020a04cc data_ov001_020a04ec
+#define data_ov001_020a04cc gCounterHudWork
 #include "src/ov001/unclassified_helpers/ApplyVerticalLayoutOffset_0207d5f4.c"

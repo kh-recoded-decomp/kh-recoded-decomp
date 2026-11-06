@@ -9,5 +9,5 @@
 #define func_ov001_020690c8 RaiseFieldStateFlag
 #define func_01ff8830 MI_CpuFill8
 #define NNSi_FndFreeFromDefaultHeap_0202a1c4 NNSi_FndFreeFromDefaultHeap
-#define data_ov001_020a0460 data_ov001_020a0480
+#define data_ov001_020a0460 gFieldSessionWork
 #include "src/ov001/field_manager/LeaveFieldMenu_02061fc0.c"

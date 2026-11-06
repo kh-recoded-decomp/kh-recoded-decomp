@@ -2,5 +2,5 @@
 #define FieldObject_ReleaseWithSlotReset_02082ae0 FieldObject_ReleaseWithSlotReset
 #define ReleaseOwnerResource_0207f20c ReleaseOwnerResource
 #define SetSlotLayoutHighlight_0207d45c SetSlotLayoutHighlight
-#define data_ov001_020a0460 data_ov001_020a0480
+#define data_ov001_020a0460 gFieldSessionWork
 #include "src/ov001/field_objects/FieldObject_ReleaseWithSlotReset_02082ae0.c"

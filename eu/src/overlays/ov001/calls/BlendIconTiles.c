@@ -1,7 +1,7 @@
 #define BlendIconTiles_0206ed8c BlendIconTiles
 #define GX_LoadBG3Char_02007b70 GX_LoadBG3Char
 #define data_ov001_0209dcbc gMenuGaugeBlendThresholds
-#define data_ov001_020a04a4 data_ov001_020a04c4
+#define data_ov001_020a04a4 gFieldSceneGlobals
 #define func_01ff878c MIi_CpuCopyFast
 #define func_020033e0 DC_FlushAll
 #define func_ov001_020728e4 IsFieldFlag13OrSessionFlagSet

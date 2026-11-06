@@ -2,5 +2,5 @@
 #define OS_SPrintf_02002428 OS_SPrintf
 #define data_ov001_0209e6f0 sSessionNameStringFormat
 #define data_ov001_0209e6f4 sSessionNumberFormat
-#define data_ov001_020a0460 data_ov001_020a0480
+#define data_ov001_020a0460 gFieldSessionWork
 #include "src/ov001/unclassified_helpers/FormatSessionNumber_02063578.c"

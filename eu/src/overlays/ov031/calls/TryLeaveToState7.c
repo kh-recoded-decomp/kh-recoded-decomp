@@ -13,7 +13,7 @@ typedef struct {
 } PanelState;
 
 extern OverlayState *gOv031SceneWorkStorage;
-extern PanelState *data_ov001_020a0480;
+extern PanelState *gFieldSessionWork;
 extern BOOL IsScreenModeIdle(void);
 extern void Panel_CaptureBrightness(void);
 
@@ -26,7 +26,7 @@ u32 TryLeaveToState7(void)
     }
     if (!(state->flags & 0x4000)) {
         if (state->mode != 3) {
-            data_ov001_020a0480->displayFlags &= ~0x40000;
+            gFieldSessionWork->displayFlags &= ~0x40000;
             Panel_CaptureBrightness();
         }
         state->mode = -1;

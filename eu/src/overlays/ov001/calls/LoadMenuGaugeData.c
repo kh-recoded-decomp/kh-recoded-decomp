@@ -27,7 +27,7 @@ typedef struct GaugeSave {
     u8 *data;
 } GaugeSave;
 
-extern GaugeMenu *data_ov001_020a04cc;
+extern GaugeMenu *gFieldHudGaugeState;
 extern void AllocCopyOrClearBuffer(void **outBuffer, void *source, u32 size);
 extern void *NNSi_FndAllocFromDefaultHeap(u32 size);
 extern void MIi_CpuCopyFast(const void *src, void *dst, u32 size);
@@ -37,7 +37,7 @@ extern void SetHudGaugeValue(int index, int x, int y, int redraw, int arg4, int 
 
 void LoadMenuGaugeData(GaugeSave *save) {
     HudGaugeLayout *layouts = gHudGaugeTable.layouts;
-    GaugeMenu *menu = data_ov001_020a04cc;
+    GaugeMenu *menu = gFieldHudGaugeState;
     u8 *data = save->data;
     int i;
     GaugeLayout *layout;

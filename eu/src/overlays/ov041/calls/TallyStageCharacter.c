@@ -1,7 +1,7 @@
 #include "nitro/types.h"
 #include "src/overlays/ov001/FieldProgressState.h"
 
-extern FieldProgressState *data_ov001_020a0480;
+extern FieldProgressState *gFieldSessionWork;
 extern u8 LookupMovieCharacterValue(int id);
 extern BOOL AddClampedGlobalPackedBits(u32 bitOffset, u32 bitCount, u32 amount, u32 maximum);
 extern void SetGlobalPackedBit(int bitIndex);
@@ -23,7 +23,7 @@ void TallyStageCharacter(int character, BOOL counted)
     if (!counted) {
         progress = 0;
     }
-    data_ov001_020a0480->pendingRegionProgress += (s16)progress;
+    gFieldSessionWork->pendingRegionProgress += (s16)progress;
     if (character == 0x1a) {
         SetGlobalPackedBit(0xbe5);
     }

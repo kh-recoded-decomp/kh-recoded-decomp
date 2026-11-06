@@ -19,7 +19,7 @@ typedef struct EventContext {
     u32 resourceArchiveIds[5];
 } EventContext;
 
-extern EventContext *data_ov001_020a04bc;
-#define gEventContext data_ov001_020a04bc
+extern EventContext *gManagedActorGlobals;
+#define gEventContext gManagedActorGlobals
 
 #endif

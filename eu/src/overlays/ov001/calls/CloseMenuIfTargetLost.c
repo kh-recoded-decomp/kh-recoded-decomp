@@ -4,5 +4,5 @@
 #define IsActorTargetable_0206b4a4 IsActorTargetable
 #define IsEventSlotInRange_0206b800 IsEventSlotInRange
 #define SetMenuOpenState_0206bb74 SetMenuOpenState
-#define data_ov001_020a0484 data_ov001_020a04a4
+#define data_ov001_020a0484 gFieldTargetSelectionWork
 #include "src/ov001/shared_engine/CloseMenuIfTargetLost_0206bc20.c"

@@ -3,7 +3,7 @@
 #define LoadSlotIconGraphics_0207001c LoadSlotIconGraphics
 #define NNSi_FndFreeFromDefaultHeap_0202a1c4 NNSi_FndFreeFromDefaultHeap
 #define TagTracker_InvokeCallback_020b8210 TagTracker_InvokeCallback
-#define data_ov001_020a04a4 data_ov001_020a04c4
+#define data_ov001_020a04a4 gFieldSceneGlobals
 #define func_01ff869c MIi_CpuCopy16
 #define func_0200344c DC_FlushRange
 #define func_02007250 GX_LoadBGPltt

@@ -4,5 +4,5 @@
 #define ScreenFadeInStep_0206a184 ScreenFadeInStep
 #define SetSecondaryBrightness_02029ed0 SetSecondaryBrightness
 #define data_ov001_0209eb0c sOv001_RefreshWnd_0209eb2c
-#define data_ov001_020a0480 data_ov001_020a04a0
+#define data_ov001_020a0480 gFieldScreenTransitionWork
 #include "src/ov001/shared_engine/ScreenFadeInStep_0206a184.c"

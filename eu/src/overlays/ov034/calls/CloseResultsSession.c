@@ -27,7 +27,7 @@ typedef struct SessionFlags {
 extern ResultsScreen data_ov034_020c0fa0;
 extern u32 data_0206085c;
 extern u8 *data_0205fe0c;
-extern SessionFlags *data_ov001_020a0480;
+extern SessionFlags *gFieldSessionWork;
 extern char OVERLAY_27_ID[];
 extern char OVERLAY_24_ID[];
 
@@ -76,7 +76,7 @@ void CloseResultsSession(void)
         mixB = random_next_scaled(0xffffffff);
         SeedSharedRandomState(seed, (u64)mixA * mixB);
         SessionBuffer_Free(10);
-        data_ov001_020a0480->resultsDone = 1;
+        gFieldSessionWork->resultsDone = 1;
         WriteSessionPackedBits(0x1e19, 1, 0);
     }
     data_ov034_020c0fa0.work = NULL;

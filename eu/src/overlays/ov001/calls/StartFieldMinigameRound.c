@@ -6,7 +6,7 @@
 #define StartFieldMinigameRound_0207ea14 StartFieldMinigameRound
 #define data_ov001_0209e060 gMinigameStartingLevels
 #define data_ov001_0209e070 gMinigameTimeMultipliers
-#define data_ov001_020a04d4 data_ov001_020a04f4
+#define data_ov001_020a04d4 gFieldMinigameWork
 #define func_ov001_0207df44 StartArrowPromptTimedCounters
 #define func_ov001_0207e244 RandomizePositiveSpinPrompt
 #define func_ov027_020b9d54 ClearTileTableRect

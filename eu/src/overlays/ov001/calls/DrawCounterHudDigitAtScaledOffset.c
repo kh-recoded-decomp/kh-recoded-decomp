@@ -10,7 +10,7 @@ typedef struct Point {
     s32 y;
 } Point;
 
-extern Context *data_ov001_020a04ec;
+extern Context *gCounterHudWork;
 extern int FX_Mul(int left, int right);
 extern void DrawScaledTextureQuad(Point *pos, int scale, int arg2, int arg3);
 
@@ -18,7 +18,7 @@ void DrawCounterHudDigitAtScaledOffset(int offset, int scale, int arg2, int arg3
 {
     Point pos;
 
-    pos.x = data_ov001_020a04ec->baseX + FX_Mul(offset, scale);
+    pos.x = gCounterHudWork->baseX + FX_Mul(offset, scale);
     pos.y = 0x13000;
     DrawScaledTextureQuad(&pos, scale, arg2, arg3);
 }

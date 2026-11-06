@@ -1,14 +1,14 @@
 #include "nitro/types.h"
 
-extern u32 data_ov001_020a04ec;
+extern u32 gCounterHudWork;
 
 BOOL SetCounterHudFadeEnabled(u32 value)
 {
     u32 context;
 
-    context = data_ov001_020a04ec;
-    if (data_ov001_020a04ec != 0) {
-        *(u32 *)(data_ov001_020a04ec + 0xf8) = value;
+    context = gCounterHudWork;
+    if (gCounterHudWork != 0) {
+        *(u32 *)(gCounterHudWork + 0xf8) = value;
     }
     return context != 0;
 }

@@ -12,7 +12,7 @@ typedef struct {
     FieldMenu *menu;
 } FieldMenuHandle;
 
-extern FieldMenuHandle data_ov001_020a04d0;
+extern FieldMenuHandle gFieldCommandMenuGlobals;
 
 extern BOOL IsModeSetOrFlag370aClear(void);
 extern BOOL IsLeadEntryFlag80Set(void);
@@ -20,7 +20,7 @@ extern BOOL FieldMenu_TryEnterState3(FieldMenu *menu);
 
 BOOL TryEnterFieldMenuState3(void)
 {
-    FieldMenu *menu = data_ov001_020a04d0.menu;
+    FieldMenu *menu = gFieldCommandMenuGlobals.menu;
 
     if (menu->unk_138 == 0) {
         return FALSE;

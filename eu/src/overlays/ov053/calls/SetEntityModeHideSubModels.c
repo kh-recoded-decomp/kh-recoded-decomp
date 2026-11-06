@@ -2,5 +2,5 @@
 #define SetEntityModeEnabled_020ce7a0 SetEntityModeEnabled
 #define SetEntityModeHideSubModels_020d28e4 SetEntityModeHideSubModels
 #define SetSubModelsEnabled_020ceaf4 SetSubModelsEnabled
-#define data_ov001_020a0460 data_ov001_020a0480
+#define data_ov001_020a0460 gFieldSessionWork
 #include "src/ov053/unclassified_helpers/SetEntityModeHideSubModels_020d28e4.c"

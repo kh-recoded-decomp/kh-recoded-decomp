@@ -1,4 +1,4 @@
 #define InvokeFieldModeOp340_02072e98 InvokeFieldModeOp340
-#define data_ov001_020a04a4 data_ov001_020a04c4
+#define data_ov001_020a04a4 gFieldSceneGlobals
 #define func_020cf340 CloseStageCaptionNotice
 #include "src/ov001/field_manager/InvokeFieldModeOp340_02072e98.c"

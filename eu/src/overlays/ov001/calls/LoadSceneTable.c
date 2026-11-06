@@ -8,7 +8,7 @@
 #define OS_SPrintf_02002428 OS_SPrintf
 #define ReleaseRecordSlot_02051dfc ReleaseRecordSlot
 #define data_ov001_0209ea8c sOv001_MiWdWFormat02d_0209eaac
-#define data_ov001_020a046c data_ov001_020a048c
+#define data_ov001_020a046c gFieldSceneEntryContext
 #define func_01ff869c MIi_CpuCopy16
 #define func_0202c478 Archive_LoadFile
 #include "src/ov001/shared_engine/LoadSceneTable_020674d0.c"

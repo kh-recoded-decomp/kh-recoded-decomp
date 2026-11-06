@@ -5,7 +5,7 @@ typedef struct {
     u32 pendingValue;
 } Session;
 
-extern Session *data_ov001_020a0480;
+extern Session *gFieldSessionWork;
 extern void ConfigureFieldTracks(int x, int y, int mode, int param);
 extern u32 GetManagedActorPosition(int index);
 extern u32 GetBiasAdjustedField(int index);
@@ -17,7 +17,7 @@ void QueueStage900AndSaveLeaderPlacement(u32 value)
     u32 values;
 
     ConfigureFieldTracks(900, -4, 1, -1);
-    data_ov001_020a0480->pendingValue = value;
+    gFieldSessionWork->pendingValue = value;
     values = GetManagedActorPosition(0);
     StorePackedSessionPlacement(values, GetBiasAdjustedField(0));
     SetGlobalStateValue(-1);

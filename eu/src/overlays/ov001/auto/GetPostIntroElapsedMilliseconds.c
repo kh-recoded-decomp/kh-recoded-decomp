@@ -1,8 +1,8 @@
 #include "nitro/types.h"
 
-extern u8 *data_ov001_020a0494;
+extern u8 *gSessionTimerWork;
 
 u32 GetPostIntroElapsedMilliseconds(void)
 {
-    return *(const u32 *)(data_ov001_020a0494 + 0x8);
+    return *(const u32 *)(gSessionTimerWork + 0x8);
 }

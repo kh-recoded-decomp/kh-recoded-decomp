@@ -1,7 +1,7 @@
 #include "src/overlays/ov028/Ov028FieldState.h"
 #include "src/overlays/ov001/FieldProgressState.h"
 
-extern FieldProgressState *data_ov001_020a0480;
+extern FieldProgressState *gFieldSessionWork;
 extern void SetFieldEntriesPaused(s32 paused);
 extern void SetMenuHighlight(s32 highlight);
 extern void PlaySoundChecked(s32 channel, s32 soundId);
@@ -38,20 +38,20 @@ s32 PollFieldTransition(void)
         return 11;
     }
     if (GetPendingWorldEntryData()) {
-        data_ov001_020a0480->transitionFlags |= 0x10;
+        gFieldSessionWork->transitionFlags |= 0x10;
         SetFieldEntriesPaused(1);
         SetMenuHighlight(1);
         gOv028FieldState->flags |= 0x8000;
         return 8;
     }
     if (!GetMainBrightnessSetting()) {
-        if (data_ov001_020a0480->pendingExperience > 0) {
-            AwardSlotLevelProgress(data_ov001_020a0480->pendingExperience);
-            data_ov001_020a0480->pendingExperience = 0;
+        if (gFieldSessionWork->pendingExperience > 0) {
+            AwardSlotLevelProgress(gFieldSessionWork->pendingExperience);
+            gFieldSessionWork->pendingExperience = 0;
         }
-        if (data_ov001_020a0480->pendingRegionProgress > 0) {
-            AddRegionProgress((u8)data_ov001_020a0480->pendingRegionProgress);
-            data_ov001_020a0480->pendingRegionProgress = 0;
+        if (gFieldSessionWork->pendingRegionProgress > 0) {
+            AddRegionProgress((u8)gFieldSessionWork->pendingRegionProgress);
+            gFieldSessionWork->pendingRegionProgress = 0;
         }
     }
     return -1;

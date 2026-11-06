@@ -13,7 +13,7 @@ extern void DC_FlushRange(const void *addr, u32 size);
 extern void GX_LoadBGPltt(void *addr, u32 val, u32 size);
 extern void OpenMessageWindowLayers(u32 field);
 
-extern u32 data_ov001_020a04e4;
+extern u32 gMessageWindowWork;
 
 void UploadMessageWindowPaletteCallback(u32 entry, u32 unused1, u32 unused2, u32 unused3)
 {
@@ -22,9 +22,9 @@ void UploadMessageWindowPaletteCallback(u32 entry, u32 unused1, u32 unused2, u32
     NNSG2dPaletteData *palette;
     u32 file;
 
-    context = data_ov001_020a04e4;
+    context = gMessageWindowWork;
     unused = unused3;
-    if (*(u32 *)(data_ov001_020a04e4 + 0xf8) != 0) {
+    if (*(u32 *)(gMessageWindowWork + 0xf8) != 0) {
         DestroyFileLoadRequest((FileLoadRequest *)entry, TRUE);
         return;
     }

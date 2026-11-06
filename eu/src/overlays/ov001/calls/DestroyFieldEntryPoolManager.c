@@ -2,10 +2,10 @@
 
 extern void NNSi_FndFreeFromDefaultHeap(void *ptr);
 extern void DestroyAllEffectEntries(int arg);
-extern u32 data_ov001_020a04fc;
+extern u32 gFieldEntryPoolManager;
 
 void DestroyFieldEntryPoolManager(void) {
-    u32 base = data_ov001_020a04fc;
+    u32 base = gFieldEntryPoolManager;
     int i = 0;
     DestroyAllEffectEntries(0);
     do {
@@ -15,6 +15,6 @@ void DestroyFieldEntryPoolManager(void) {
         }
         i = i + 1;
     } while (i < 8);
-    NNSi_FndFreeFromDefaultHeap((void *)data_ov001_020a04fc);
-    data_ov001_020a04fc = 0;
+    NNSi_FndFreeFromDefaultHeap((void *)gFieldEntryPoolManager);
+    gFieldEntryPoolManager = 0;
 }

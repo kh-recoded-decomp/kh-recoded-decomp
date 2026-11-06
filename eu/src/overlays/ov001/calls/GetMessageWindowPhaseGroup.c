@@ -1,10 +1,10 @@
 #include "nitro/types.h"
 
-extern u32 data_ov001_020a04e4;
+extern u32 gMessageWindowWork;
 
 u32 GetMessageWindowPhaseGroup(void)
 {
-    switch (*(u32 *)(data_ov001_020a04e4 + 0xc)) {
+    switch (*(u32 *)(gMessageWindowWork + 0xc)) {
     case 0:
         return 0;
     case 1:

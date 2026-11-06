@@ -2,13 +2,13 @@
 
 typedef unsigned int code();
 
-extern unsigned int data_ov001_020a0480;
+extern unsigned int gFieldSessionWork;
 
 unsigned int InvokeSessionCheckCallbackOrDefault(void) {
   unsigned int result;
 
-  if (*(code **)(data_ov001_020a0480 + 0x2834) != (code *)0x0) {
-    result = (**(code **)(data_ov001_020a0480 + 0x2834))();
+  if (*(code **)(gFieldSessionWork + 0x2834) != (code *)0x0) {
+    result = (**(code **)(gFieldSessionWork + 0x2834))();
     return result;
   }
   return 1;

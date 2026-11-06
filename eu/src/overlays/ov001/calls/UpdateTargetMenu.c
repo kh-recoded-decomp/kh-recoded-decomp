@@ -3,7 +3,7 @@
 #define SelectNearestTarget_0206afec SelectNearestTarget
 #define UpdateSubModeResult_020af46c UpdateSubModeResult
 #define UpdateTargetMenu_0206bcbc UpdateTargetMenu
-#define data_ov001_020a0484 data_ov001_020a04a4
+#define data_ov001_020a0484 gFieldTargetSelectionWork
 #define func_ov001_0206bb74 SetMenuOpenState
 #define func_ov001_0206bd30 HandleShoulderLockOn
 #define func_ov001_0206b06c HandleSideTargetButtons

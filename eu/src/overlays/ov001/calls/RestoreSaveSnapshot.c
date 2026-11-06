@@ -1,7 +1,7 @@
 #define ReadSessionPackedBits_02064574 ReadSessionPackedBits
 #define RestoreSaveSnapshot_02062fa4 RestoreSaveSnapshot
 #define WriteSessionPackedBits_0206459c WriteSessionPackedBits
-#define data_ov001_020a0460 data_ov001_020a0480
+#define data_ov001_020a0460 gFieldSessionWork
 #define func_01ff869c MIi_CpuCopy16
 #define func_01ff878c MIi_CpuCopyFast
 #define g_saveBits_0205fe0c data_0205fe0c

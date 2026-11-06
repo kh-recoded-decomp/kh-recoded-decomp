@@ -1,3 +1,3 @@
 #define IsScreenModeIdle_0206a814 IsScreenModeIdle
-#define data_ov001_020a0480 data_ov001_020a04a0
+#define data_ov001_020a0480 gFieldScreenTransitionWork
 #include "src/ov001/unclassified_helpers/IsScreenModeIdle_0206a814.c"

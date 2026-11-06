@@ -1,7 +1,7 @@
 #define FixedPointAtan2_020062bc FX_Atan2Idx
 #define SpawnTrailEffect_0206d050 SpawnTrailEffect
 #define VEC_MultAdd_01ffa09c VEC_MultAdd
-#define data_ov001_020a049c data_ov001_020a04bc
+#define data_ov001_020a049c gManagedActorGlobals
 #define func_ov021_020a8ab4 ResetAnimationTrackState
 #define func_ov021_020a8ca0 func_ov021_020a8cc0
 #include "src/ov001/field_objects/SpawnTrailEffect_0206d050.c"

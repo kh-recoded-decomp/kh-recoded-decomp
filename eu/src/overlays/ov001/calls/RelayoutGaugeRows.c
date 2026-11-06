@@ -2,6 +2,6 @@
 #define func_ov001_020738d4 UpdateGaugeMarker
 #define GetSceneTagTracker_020711b0 GetSceneTagTracker
 #define RelayoutGaugeRows_020742e0 RelayoutGaugeRows
-#define data_ov001_020a04ac data_ov001_020a04cc
+#define data_ov001_020a04ac gFieldHudGaugeState
 #define func_ov027_020b7f60 DeactivateTrackerRecord
 #include "src/ov001/field_manager/RelayoutGaugeRows_020742e0.c"

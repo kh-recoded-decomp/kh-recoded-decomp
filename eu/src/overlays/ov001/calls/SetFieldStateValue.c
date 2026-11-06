@@ -20,12 +20,12 @@ typedef struct FieldState {
     u8 mode;
 } FieldState;
 
-extern FieldState *data_ov001_020a0480;
+extern FieldState *gFieldSessionWork;
 extern void SetGlobalStateValue(u32 value);
 
 void SetFieldStateValue(int value, u8 mode)
 {
-    FieldState *field = data_ov001_020a0480;
+    FieldState *field = gFieldSessionWork;
     FieldValueState *state = &field->value;
 
     if (!state->locked && value != 0) {

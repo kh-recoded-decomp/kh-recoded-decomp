@@ -1,15 +1,15 @@
 #include "nitro/types.h"
 
-extern unsigned int *data_ov001_020a0484;
+extern unsigned int *gFieldEffectPool;
 extern unsigned int ActorSlot_UnlinkRoot();
 extern unsigned int NNSi_FndFreeFromDefaultHeap();
 
 void DestroyFieldEffectPool(void) {
-  if (data_ov001_020a0484 != (unsigned int *)0x0) {
-    NNSi_FndFreeFromDefaultHeap((void *)*data_ov001_020a0484);
-    NNSi_FndFreeFromDefaultHeap((void *)data_ov001_020a0484[0x84]);
-    ActorSlot_UnlinkRoot(data_ov001_020a0484 + 0xf);
-    NNSi_FndFreeFromDefaultHeap(data_ov001_020a0484);
-    data_ov001_020a0484 = (unsigned int *)0x0;
+  if (gFieldEffectPool != (unsigned int *)0x0) {
+    NNSi_FndFreeFromDefaultHeap((void *)*gFieldEffectPool);
+    NNSi_FndFreeFromDefaultHeap((void *)gFieldEffectPool[0x84]);
+    ActorSlot_UnlinkRoot(gFieldEffectPool + 0xf);
+    NNSi_FndFreeFromDefaultHeap(gFieldEffectPool);
+    gFieldEffectPool = (unsigned int *)0x0;
   }
 }

@@ -19,12 +19,12 @@ typedef struct {
     int entryCount;
 } FieldEntryManager;
 
-extern FieldEntryManager *data_ov001_020a04bc;
+extern FieldEntryManager *gManagedActorGlobals;
 extern void SetFieldSpritesFlag(BOOL paused);
 
 void SetFieldEntriesPaused(BOOL paused)
 {
-    FieldEntryManager *manager = data_ov001_020a04bc;
+    FieldEntryManager *manager = gManagedActorGlobals;
     int i;
 
     if (manager == NULL) {

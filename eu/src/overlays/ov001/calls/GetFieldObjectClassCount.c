@@ -1,7 +1,7 @@
 #include "nitro/types.h"
 
-extern u32 data_ov001_020a04f8;
+extern u32 gFieldObjectClassManager;
 
 int GetFieldObjectClassCount(void) {
-  return (int)*(char *)(data_ov001_020a04f8 + 4);
+  return (int)*(char *)(gFieldObjectClassManager + 4);
 }

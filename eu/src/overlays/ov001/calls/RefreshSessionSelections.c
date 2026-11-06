@@ -7,7 +7,7 @@
 #define RefreshSessionSelections_02064c44 RefreshSessionSelections
 #define SetupAllSelectionRecords_0204f85c SetupAllSelectionRecords
 #define SyncSelectionRecordFromSlotEntry_0204fabc SyncSelectionRecordFromSlotEntry
-#define data_ov001_020a0460 data_ov001_020a0480
+#define data_ov001_020a0460 gFieldSessionWork
 #define func_0204f768 GetOverlaySelectionRecord
 #define func_0204fba0 RefreshFirstSelectionAbilityTable
 #define func_02050a44 ReleaseMapLayoutReference

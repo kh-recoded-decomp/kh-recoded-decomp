@@ -15,7 +15,7 @@ typedef struct {
     SessionFlags flags;
 } Session;
 
-extern Session *data_ov001_020a0480;
+extern Session *gFieldSessionWork;
 extern int ReadGlobalPackedBits(int bitOffset, int bitCount);
 extern void StoreSessionDifficultyPreset(void);
 extern void ConfigureFieldTracks(int sceneId, int subSceneId, int mode, int param);
@@ -30,6 +30,6 @@ void QueueFieldFromSavedSceneIds(void)
     }
     sceneId = ReadGlobalPackedBits(0x330b, 10);
     ConfigureFieldTracks(sceneId, ReadGlobalPackedBits(0x3315, 10), 1, 0);
-    data_ov001_020a0480->flags.bit5 = TRUE;
-    data_ov001_020a0480->flags.bit14 = TRUE;
+    gFieldSessionWork->flags.bit5 = TRUE;
+    gFieldSessionWork->flags.bit14 = TRUE;
 }

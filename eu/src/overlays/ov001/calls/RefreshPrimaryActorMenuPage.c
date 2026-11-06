@@ -14,12 +14,12 @@ typedef struct EventContext {
     EventStatus status;
 } EventContext;
 
-extern EventContext *data_ov001_020a04bc;
+extern EventContext *gManagedActorGlobals;
 extern void RefreshFieldMenuPage(s32 param);
 
 void RefreshPrimaryActorMenuPage(void)
 {
-    EventContext *context = data_ov001_020a04bc;
+    EventContext *context = gManagedActorGlobals;
     EventStatus *status = &context->status;
 
     if ((context->flags & 8) && !(context->flags & 0x10) && status->pending == 0) {

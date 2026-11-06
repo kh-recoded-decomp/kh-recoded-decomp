@@ -17,7 +17,7 @@
 #define data_ov001_0209ec9c gHudSlideResourceGroup2
 #define data_ov001_0209eca8 gHudSlideResourceGroup3
 #define data_ov001_0209ecb4 gHudSlideResourceGroup4
-#define data_ov001_020a04a4 data_ov001_020a04c4
+#define data_ov001_020a04a4 gFieldSceneGlobals
 #define func_02001908 GetTextLayerLineWidth
 #define func_0202b788 GetLanguageIndex
 #define func_ov027_020ba2e0 FormatPackedWideText

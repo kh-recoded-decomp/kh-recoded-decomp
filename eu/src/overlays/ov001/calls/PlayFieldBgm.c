@@ -17,7 +17,7 @@ typedef struct FieldSession {
 
 enum { FIELD_BGM_NORMAL = 2 };
 
-extern FieldSession *data_ov001_020a0480;
+extern FieldSession *gFieldSessionWork;
 extern int GetCurrentFieldAreaIndex(void);
 extern u8 GetAreaNormalBgm(int areaIndex);
 extern u8 GetAreaBattleBgm(int areaIndex);
@@ -26,7 +26,7 @@ extern u32 SetScriptBgmSelection(u32 value);
 
 void PlayFieldBgm(BOOL useBattleTrack, int fadeFrames)
 {
-    FieldBgmState *bgm = &data_ov001_020a0480->bgm;
+    FieldBgmState *bgm = &gFieldSessionWork->bgm;
 
     if (useBattleTrack) {
         bgm->track = GetAreaBattleBgm(GetCurrentFieldAreaIndex());

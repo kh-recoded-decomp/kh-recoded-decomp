@@ -3,5 +3,5 @@
 #define PlaySoundEffect_0204d924 PlaySoundEffect
 #define ResumeOrResetRequest_0206bbe4 ResumeOrResetRequest
 #define SetMenuOpenState_0206bb74 SetMenuOpenState
-#define data_ov001_020a0484 data_ov001_020a04a4
+#define data_ov001_020a0484 gFieldTargetSelectionWork
 #include "src/ov001/shared_engine/SetMenuOpenState_0206bb74.c"

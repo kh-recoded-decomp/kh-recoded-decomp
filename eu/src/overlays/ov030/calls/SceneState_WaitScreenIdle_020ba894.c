@@ -12,7 +12,7 @@ typedef struct {
 } FieldGlobal;
 
 extern SceneState *gOv030SceneWork;
-extern FieldGlobal *data_ov001_020a0480;
+extern FieldGlobal *gFieldSessionWork;
 
 extern BOOL IsScreenModeIdle(void);
 extern void Panel_CaptureBrightness(void);
@@ -25,7 +25,7 @@ int SceneState_WaitScreenIdle_020ba894(void) {
     }
     if (!(scene->flags & 0x4000)) {
         if (scene->mode != 3) {
-            data_ov001_020a0480->flags &= ~0x40000;
+            gFieldSessionWork->flags &= ~0x40000;
             Panel_CaptureBrightness();
         }
         scene->mode = -1;

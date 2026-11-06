@@ -3,7 +3,7 @@
 #define FindActiveRecordById_020b8184 FindActiveRecordById
 #define GetSceneTagTracker_020711b0 GetSceneTagTracker
 #define InvokeCallback40_020b8268 InvokeCallback40
-#define data_ov001_020a04b0 data_ov001_020a04d0
+#define data_ov001_020a04b0 gFieldCommandMenuGlobals
 #define func_ov027_020b8390 FindLoadedElementById
 #define func_ov027_020b83e8 SetTagRecordArmed
 #include "src/ov001/field_manager/FieldMenu_SetHidden_02077c98.c"

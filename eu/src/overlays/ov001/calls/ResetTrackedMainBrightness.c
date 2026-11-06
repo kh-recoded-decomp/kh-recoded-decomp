@@ -1,15 +1,15 @@
 #include "nitro/types.h"
 
-extern u32 data_ov001_020a04bc;
+extern u32 gManagedActorGlobals;
 extern void SetBrightnessAndSyncMain(u32 callerId);
 
 void ResetTrackedMainBrightness(void)
 {
     u32 ctx;
 
-    ctx = data_ov001_020a04bc;
+    ctx = gManagedActorGlobals;
     SetBrightnessAndSyncMain(0);
-    if (data_ov001_020a04bc != 0) {
+    if (gManagedActorGlobals != 0) {
         *(u32 *)(ctx + 0xf4) = 0;
         *(u8 *)(ctx + 0xf0) = 0;
     }

@@ -1,3 +1,3 @@
 #define FindRegisteredEntryIndex_0207ee7c FindRegisteredEntryIndex
-#define data_ov001_020a04d8 data_ov001_020a04f8
+#define data_ov001_020a04d8 gFieldObjectClassManager
 #include "src/ov001/unclassified_helpers/FindRegisteredEntryIndex_0207ee7c.c"

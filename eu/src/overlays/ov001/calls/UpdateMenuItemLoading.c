@@ -1,6 +1,6 @@
 #define FinishSceneSlotLoad_0206737c FinishSceneSlotLoad
 #define LoadNextSceneSlotResources_020672a0 LoadNextSceneSlotResources
 #define UpdateMenuItemLoading_02067750 UpdateMenuItemLoading
-#define data_ov001_020a046c data_ov001_020a048c
+#define data_ov001_020a046c gFieldSceneEntryContext
 #define func_ov001_020671e0 SyncDoorMeshState
 #include "src/ov001/field_manager/UpdateMenuItemLoading_02067750.c"

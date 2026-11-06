@@ -7,7 +7,7 @@
 #define StartPanelScrollOut_0207d28c StartPanelScrollOut
 #define UpdateFieldTimer_02063d4c UpdateFieldTimer
 #define WriteSessionPackedBits_0206459c WriteSessionPackedBits
-#define data_ov001_020a0460 data_ov001_020a0480
+#define data_ov001_020a0460 gFieldSessionWork
 #define func_ov001_020645c8 IsSessionFlagSet
 #define func_ov001_020645dc SetSessionFlag
 #define func_ov001_020645e8 ClearSessionPackedBit

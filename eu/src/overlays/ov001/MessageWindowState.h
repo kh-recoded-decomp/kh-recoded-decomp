@@ -8,7 +8,7 @@ typedef struct MessageWindowState {
     u16 result;
 } MessageWindowState;
 
-extern MessageWindowState *data_ov001_020a04e4;
-#define gMessageWindowState data_ov001_020a04e4
+extern MessageWindowState *gMessageWindowWork;
+#define gMessageWindowState gMessageWindowWork
 
 #endif

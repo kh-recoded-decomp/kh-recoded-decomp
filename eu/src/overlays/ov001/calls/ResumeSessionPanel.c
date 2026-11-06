@@ -1,4 +1,4 @@
 #define ResumeSessionPanel_02062c24 ResumeSessionPanel
-#define data_ov001_020a0460 data_ov001_020a0480
+#define data_ov001_020a0460 gFieldSessionWork
 #define func_ov037_020bac98 InitCommHandlerTable
 #include "src/ov001/shared_engine/ResumeSessionPanel_02062c24.c"

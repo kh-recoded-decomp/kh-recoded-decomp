@@ -1,8 +1,8 @@
 #include "nitro/types.h"
 
-extern u8 *data_ov001_020a0480;
+extern u8 *gFieldSessionWork;
 
 u32 GetSessionFlagsMask20(void)
 {
-    return *(const u32 *)(data_ov001_020a0480 + 0x20) & 0x20;
+    return *(const u32 *)(gFieldSessionWork + 0x20) & 0x20;
 }

@@ -38,7 +38,7 @@
 #define WriteSessionPackedBits_0206459c WriteSessionPackedBits
 #define data_ov001_0209ec04 gPartyStateClassDescriptor
 #define data_ov001_0209f2cc gOverlayObjectSystemClass
-#define data_ov001_020a0460 data_ov001_020a0480
+#define data_ov001_020a0460 gFieldSessionWork
 #define func_01ff8740 MIi_CpuClearFast
 #define func_01ff8830 MI_CpuFill8
 #define func_01ff89a8 MI_CpuCopy8

@@ -1,7 +1,7 @@
 #define CanUseItemEntry_020c7b6c CanUseItemEntry
 #define GetCtxModeByte_02068084 GetCtxModeByte
 #define IsPartyLevelSufficient_020c7a78 IsPartyLevelSufficient_020c7a98
-#define data_ov001_020a0460 data_ov001_020a0480
+#define data_ov001_020a0460 gFieldSessionWork
 #define func_ov077_020c7a48 IsItemScreenPartyHpFull
 #define func_ov077_020c7b14 AreItemScreenSessionStatesZero
 #define func_ov077_020c7b50 IsItemScreenSessionState10

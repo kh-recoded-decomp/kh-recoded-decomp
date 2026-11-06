@@ -1,7 +1,7 @@
 #include "nitro/types.h"
 
 extern s32 gPanelActive;
-extern s32 data_ov001_020a04bc;
+extern s32 gManagedActorGlobals;
 extern s32 GXx_GetMasterBrightness_(u32 reg);
 extern void SetBrightnessAndSyncMain(s32 callerId);
 extern s32 GetMainBrightnessSetting(void);
@@ -13,8 +13,8 @@ s32 UpdateTrackedMainBrightness(s32 callerId)
     s32 ok;
     s32 check;
 
-    ctx = data_ov001_020a04bc;
-    if (data_ov001_020a04bc == 0) {
+    ctx = gManagedActorGlobals;
+    if (gManagedActorGlobals == 0) {
         return 0;
     }
     ok = *(s32 *)(ctx + 0xf4);

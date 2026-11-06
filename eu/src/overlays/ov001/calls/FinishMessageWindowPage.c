@@ -1,7 +1,7 @@
 #define FinishMessageWindowPage_02079f2c FinishMessageWindowPage
 #define GetSceneTagTracker_020711b0 GetSceneTagTracker
 #define PlaceWindowCornerTag_02079578 PlaceWindowCornerTag
-#define data_ov001_020a04c4 data_ov001_020a04e4
+#define data_ov001_020a04c4 gMessageWindowWork
 #define func_02003fd4 OS_GetTick
 #define func_ov001_02079790 DrawGridMenuCells
 #include "src/ov001/field_manager/FinishMessageWindowPage_02079f2c.c"

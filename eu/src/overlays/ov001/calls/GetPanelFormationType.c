@@ -1,11 +1,11 @@
 #include "nitro/types.h"
 
-extern u32 data_ov001_020a04e8;
+extern u32 gSubscenePanelWork;
 
 u8 GetPanelFormationType(void)
 {
-    if (data_ov001_020a04e8 == 0) {
+    if (gSubscenePanelWork == 0) {
         return 0;
     }
-    return *(u8 *)(data_ov001_020a04e8 + 0x103);
+    return *(u8 *)(gSubscenePanelWork + 0x103);
 }

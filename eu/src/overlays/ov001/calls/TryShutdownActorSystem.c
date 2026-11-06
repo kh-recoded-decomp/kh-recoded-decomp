@@ -5,7 +5,7 @@ typedef struct ActorManager {
     void *releasableHandle;
 } ActorManager;
 
-extern ActorManager *data_ov001_020a0500;
+extern ActorManager *gActorSceneManager;
 extern void ZeroHalfThenFree(void *block);
 extern void PopVramState(void);
 extern void func_ov001_0206375c(void);
@@ -25,7 +25,7 @@ s32 TryShutdownActorSystem(void)
     s32 result;
     s32 sessionMode;
 
-    manager = data_ov001_020a0500;
+    manager = gActorSceneManager;
     result = IsFieldPanelHidden();
     if (result != 0 && (result = IsTransitionStateDone(), result != 0)) {
         FinishEventCameraCut();

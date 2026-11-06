@@ -5,9 +5,9 @@ typedef struct ArrowPrompt {
     u8 stepCount;
 } ArrowPrompt;
 
-extern ArrowPrompt *data_ov001_020a04f0;
+extern ArrowPrompt *gArrowPromptWork;
 
 u8 GetArrowPromptStepCount(void)
 {
-    return data_ov001_020a04f0->stepCount;
+    return gArrowPromptWork->stepCount;
 }

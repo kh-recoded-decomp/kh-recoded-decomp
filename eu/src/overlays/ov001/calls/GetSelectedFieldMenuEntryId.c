@@ -24,13 +24,13 @@ typedef struct {
     FieldMenu *menu;
 } FieldMenuHandle;
 
-extern FieldMenuHandle data_ov001_020a04d0;
+extern FieldMenuHandle gFieldCommandMenuGlobals;
 
 extern void *FND_GetListObjectByIndex(NNSFndList *list, u16 index);
 
 u16 GetSelectedFieldMenuEntryId(void)
 {
-    FieldMenu *menu = data_ov001_020a04d0.menu;
+    FieldMenu *menu = gFieldCommandMenuGlobals.menu;
     FieldListEntry *entry = FND_GetListObjectByIndex(&menu->list, menu->selectedIndex);
 
     return entry->id;

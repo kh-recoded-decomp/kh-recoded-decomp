@@ -4,7 +4,7 @@ extern u32 GetLoadedSubsceneMode(void);
 extern u32 GetSubsceneReadyValue(void);
 extern u32 LookupChannelEntry(s32 index);
 
-extern u32 data_ov001_020a04e8;
+extern u32 gSubscenePanelWork;
 
 u32 GetSubsceneSlotValue(s32 index)
 {
@@ -16,5 +16,5 @@ u32 GetSubsceneSlotValue(s32 index)
         result = LookupChannelEntry(index);
         return result;
     }
-    return *(u32 *)(data_ov001_020a04e8 + index * 4 + 0xe4);
+    return *(u32 *)(gSubscenePanelWork + index * 4 + 0xe4);
 }

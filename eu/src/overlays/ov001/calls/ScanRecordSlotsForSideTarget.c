@@ -5,5 +5,5 @@
 #define func_ov001_0206b800 IsEventSlotInRange
 #define func_ov001_02087928 ForwardToActiveServiceWithResult
 #define func_ov001_02087944 FindNextActiveStageEventIfActive
-#define g_manager_020a0484 data_ov001_020a04a4
+#define g_manager_020a0484 gFieldTargetSelectionWork
 #include "src/ov001/shared_engine/ScanRecordSlotsForSideTarget_0206b334.c"

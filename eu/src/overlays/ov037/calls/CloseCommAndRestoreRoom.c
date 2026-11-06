@@ -15,7 +15,7 @@ typedef struct FieldState {
 } FieldState;
 
 extern CommState *gContinueSceneState;
-extern FieldState *data_ov001_020a0480;
+extern FieldState *gFieldSessionWork;
 extern void DestroyOv037Context(void);
 extern void PopVramState(void);
 extern int func_ov001_020644b0(void);
@@ -39,7 +39,7 @@ s32 CloseCommAndRestoreRoom(void)
         if (func_ov001_020644b0() == 900) {
             SetFieldStateValue(-4, 1);
         } else {
-            SetFieldStateValue(data_ov001_020a0480->roomId, 1);
+            SetFieldStateValue(gFieldSessionWork->roomId, 1);
         }
         Set_SessionFlagBit0();
     }

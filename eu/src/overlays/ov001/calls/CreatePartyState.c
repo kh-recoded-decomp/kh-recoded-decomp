@@ -2,6 +2,6 @@
 #define CreatePartyState_0206cb38 CreatePartyState
 #define NNSi_FndGetCurrentRootHeap_0202a764 GetRunningTaskWork
 #define OpenFieldMessageContainers_0206d6d4 OpenFieldMessageContainers
-#define data_ov001_020a049c data_ov001_020a04bc
+#define data_ov001_020a049c gManagedActorGlobals
 #define func_ov001_0206cbd0 UpdatePartyState
 #include "src/ov001/shared_engine/CreatePartyState_0206cb38.c"

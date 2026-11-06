@@ -1,7 +1,7 @@
 #include "nitro/types.h"
 
-extern unsigned int *data_ov001_020a04fc;
+extern unsigned int *gFieldEntryPoolManager;
 
 unsigned int GetFieldEntryPoolAtIndex(int index) {
-  return *(unsigned int *)(*data_ov001_020a04fc + index * 4);
+  return *(unsigned int *)(*gFieldEntryPoolManager + index * 4);
 }

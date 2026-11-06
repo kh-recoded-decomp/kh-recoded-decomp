@@ -2,5 +2,5 @@
 #define FormatChoiceValueText_020724fc FormatChoiceValueText
 #define OS_SNPrintf_0202e080 OS_SNPrintf_0202e094
 #define data_ov001_0209edc4 gFieldChoiceStringFormat
-#define data_ov001_020a04a4 data_ov001_020a04c4
+#define data_ov001_020a04a4 gFieldSceneGlobals
 #include "src/ov001/text_rendering/FormatChoiceValueText_020724fc.c"

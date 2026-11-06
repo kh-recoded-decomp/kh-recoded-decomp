@@ -11,12 +11,12 @@ typedef struct GaugeMenu {
     GaugeSlot slots[3];
 } GaugeMenu;
 
-extern GaugeMenu *data_ov001_020a04cc;
+extern GaugeMenu *gFieldHudGaugeState;
 
 u16 GetGaugeSlotMaximum(int index)
 {
-    if (data_ov001_020a04cc == NULL) {
+    if (gFieldHudGaugeState == NULL) {
         return 0;
     }
-    return data_ov001_020a04cc->slots[index].maximum;
+    return gFieldHudGaugeState->slots[index].maximum;
 }

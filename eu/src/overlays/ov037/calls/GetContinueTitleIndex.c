@@ -5,9 +5,9 @@ typedef struct {
     s8 titleIndex;
 } GameState;
 
-extern GameState *data_ov001_020a0480;
+extern GameState *gFieldSessionWork;
 
 int GetContinueTitleIndex(void)
 {
-    return data_ov001_020a0480->titleIndex;
+    return gFieldSessionWork->titleIndex;
 }

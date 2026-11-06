@@ -2,5 +2,5 @@
 #define ActorRegistry_Remove_02036994 RemoveEmbeddedObjectFromQuadTreeIfFlagged
 #define CacheEntry_SetActive_02087258 CacheEntry_SetActive
 #define WritePackedBits_0202d560 WritePackedBits
-#define g_resourceCache_020a04dc data_ov001_020a04fc
+#define g_resourceCache_020a04dc gFieldEntryPoolManager
 #include "src/ov001/unclassified_helpers/CacheEntry_SetActive_02087258.c"

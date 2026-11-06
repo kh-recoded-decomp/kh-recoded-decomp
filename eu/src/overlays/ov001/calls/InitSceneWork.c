@@ -4,7 +4,7 @@
 #define ReleaseSharedRecordSlot_0202c8a8 ReleaseSharedRecordSlot
 #define RetainOrInitializeSharedRecord_0202c80c SND_RegisterSeq
 #define data_ov001_0209eb2c sOv001_BaEfTaPZ_0209eb4c
-#define data_ov001_020a0484 data_ov001_020a04a4
+#define data_ov001_020a0484 gFieldTargetSelectionWork
 #define func_0202c690 SetFileLoaderTextureUploadQueueMode
 #define func_0202c940 AcquireOrRefreshResourceBlock
 #define func_0202d3c8 IndexedPointer_GetFirstWord

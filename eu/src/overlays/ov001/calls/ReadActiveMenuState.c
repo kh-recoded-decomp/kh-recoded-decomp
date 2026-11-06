@@ -1,4 +1,4 @@
 #define ReadActiveMenuState_0206c328 ReadActiveMenuState
-#define data_ov001_020a0484 data_ov001_020a04a4
+#define data_ov001_020a0484 gFieldTargetSelectionWork
 #define func_ov001_0206b95c ResolveWaitTarget
 #include "src/ov001/shared_engine/ReadActiveMenuState_0206c328.c"

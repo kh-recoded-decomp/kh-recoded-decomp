@@ -46,7 +46,7 @@ typedef struct Session {
     StateMachine machine;
 } Session;
 
-extern Session *data_ov001_020a0480;
+extern Session *gFieldSessionWork;
 extern s32 gSessionStateOverlayIds[];
 extern u8 sOv001_BaEfShBin_0209e700[];
 extern u8 OVERLAY_21_ID[];
@@ -75,7 +75,7 @@ extern void ActivateSubModeHandlers(void);
 extern void InstallSessionOv038Handlers(void);
 
 s32 SetSessionState(s32 newState, s32 mode) {
-    Session *session = data_ov001_020a0480;
+    Session *session = gFieldSessionWork;
     StateMachine *machine = &session->machine;
     s32 overlayId;
 

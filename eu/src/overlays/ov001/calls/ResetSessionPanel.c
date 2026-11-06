@@ -1,6 +1,6 @@
 #define OS_SPrintf_02002428 OS_SPrintf
 #define ResetSessionPanel_02062b9c ResetSessionPanel
 #define data_ov001_0209e6d8 sOv001_M_0209e6f8
-#define data_ov001_020a0460 data_ov001_020a0480
+#define data_ov001_020a0460 gFieldSessionWork
 #define func_ov022_020a787c InitMovieSceneCallbacks
 #include "src/ov001/shared_engine/ResetSessionPanel_02062b9c.c"

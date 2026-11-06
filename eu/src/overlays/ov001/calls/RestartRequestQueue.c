@@ -1,7 +1,7 @@
 #define FindActiveRecordById_020b8184 FindActiveRecordById
 #define GetSceneTagTracker_020711b0 GetSceneTagTracker
 #define RestartRequestQueue_02075008 RestartRequestQueue
-#define data_ov001_020a04ac data_ov001_020a04cc
+#define data_ov001_020a04ac gFieldHudGaugeState
 #define func_ov001_0207421c RefreshGaugeDisplay
 #define func_ov001_020742e0 RelayoutGaugeRows
 #define func_ov027_020b7f60 DeactivateTrackerRecord

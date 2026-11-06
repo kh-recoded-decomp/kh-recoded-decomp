@@ -20,7 +20,7 @@ typedef struct FieldSceneHandle {
     FieldScene *scene;
 } FieldSceneHandle;
 
-extern FieldSceneHandle data_ov001_020a04c4;
+extern FieldSceneHandle gFieldSceneGlobals;
 extern char data_ov045_020c0820[];
 extern char OVERLAY_45_ID[];
 extern void LoadOverlayAfterGeometryTransfer(int processor, int overlay_id);
@@ -33,7 +33,7 @@ extern int CountAreaEntriesOfKind0(void);
 
 void OpenResultScreen(int rank, int arg)
 {
-    FieldScene *scene = data_ov001_020a04c4.scene;
+    FieldScene *scene = gFieldSceneGlobals.scene;
     ResultScreenParams params;
 
     LoadOverlayAfterGeometryTransfer(0, (int)OVERLAY_45_ID);

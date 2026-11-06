@@ -1,4 +1,4 @@
 #define RefreshMenuWindows_0206ca34 RefreshMenuWindows
-#define data_ov001_020a0498 data_ov001_020a04b8
+#define data_ov001_020a0498 gFieldMessageSpriteManager
 #define func_ov001_0206c8ec FlushScrolledEntryPosition
 #include "src/ov001/shared_engine/RefreshMenuWindows_0206ca34.c"

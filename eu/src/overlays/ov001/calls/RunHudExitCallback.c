@@ -1,6 +1,6 @@
 #define func_ov001_02072040 InvokeFieldMinigameActiveCallback
 #define RunHudExitCallback_02071fec RunHudExitCallback
-#define data_020a04a4 data_ov001_020a04c4
+#define data_020a04a4 gFieldSceneGlobals
 #define func_ov001_02077b90 SetFieldMenuSuspended
 #define func_ov001_0207a89c RefreshModeWindow
 #include "src/ov001/shared_engine/RunHudExitCallback_02071fec.c"

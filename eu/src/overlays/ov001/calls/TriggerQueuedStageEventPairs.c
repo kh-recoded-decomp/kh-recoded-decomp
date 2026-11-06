@@ -21,19 +21,19 @@ typedef struct Session {
     u32 forceRefresh : 1;
 } Session;
 
-extern EntryList *data_ov001_020a0490;
-extern Session *data_ov001_020a0480;
+extern EntryList *gStageEventContext;
+extern Session *gFieldSessionWork;
 extern s32 GetFieldSessionState(void);
 extern void ClearStageTablesIfActive(void);
 extern void StageEvents_Trigger(u16 first, u16 second);
 
 void TriggerQueuedStageEventPairs(void)
 {
-    EntryList *list = data_ov001_020a0490;
+    EntryList *list = gStageEventContext;
     int index;
 
     if (GetFieldSessionState() != 10) {
-        Session *session = data_ov001_020a0480;
+        Session *session = gFieldSessionWork;
         if (!session->suppressRefresh) {
             if (session->forceRefresh || session->unk_20A != session->unk_212) {
                 ClearStageTablesIfActive();

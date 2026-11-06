@@ -6,9 +6,9 @@ typedef struct TaskManager {
     u8 secondaryCount;
 } TaskManager;
 
-extern TaskManager *data_ov001_020a0498;
+extern TaskManager *gFieldTaskManagerWork;
 
 void ClearSecondaryTaskCount(void)
 {
-    data_ov001_020a0498->secondaryCount = 0;
+    gFieldTaskManagerWork->secondaryCount = 0;
 }

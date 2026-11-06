@@ -4,7 +4,7 @@
 #define AdvanceAnimationTracks_0202ef24 AdvanceAnimationTracks
 #define SetFieldCaptionText_02072178 SetFieldCaptionText
 #define UpdateSceneAnimsAndCaption_02067d80 UpdateSceneAnimsAndCaption
-#define data_ov001_020a046c data_ov001_020a048c
+#define data_ov001_020a046c gFieldSceneEntryContext
 #define func_0202f4b8 GetModelAnimationDurationFx32
 #define func_0202f4d8 Flags16_SetBit1
 #include "src/ov001/shared_engine/UpdateSceneAnimsAndCaption_02067d80.c"

@@ -4,5 +4,5 @@
 #define func_ov001_0206ce00 UpdateActorTargetLink
 #define func_ov001_0206ce78 UpdateTriggerWallContact
 #define func_ov001_0206d02c DropInactiveGroupMember
-#define g_eventContext_020a049c data_ov001_020a04bc
+#define g_eventContext_020a049c gManagedActorGlobals
 #include "src/ov001/shared_engine/UpdatePrimaryEventRecord_0206cd9c.c"

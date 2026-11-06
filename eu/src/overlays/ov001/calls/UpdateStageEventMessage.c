@@ -9,5 +9,5 @@
 #define UpdateStageEventMessage_0206c528 UpdateStageEventMessage
 #define func_ov001_02071690 SetClampedMenuCursorAnimated
 #define func_ov001_02087960 GetStageEventTargetInfo
-#define g_manager_020a0484 data_ov001_020a04a4
+#define g_manager_020a0484 gFieldTargetSelectionWork
 #include "src/ov001/shared_engine/UpdateStageEventMessage_0206c528.c"

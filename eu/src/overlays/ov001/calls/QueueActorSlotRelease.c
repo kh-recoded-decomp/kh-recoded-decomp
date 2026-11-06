@@ -1,4 +1,4 @@
 #define ActorSlot_SetFlag8ByIndex_02036120 ActorSlot_SetFlag8ByIndex
 #define QueueActorSlotRelease_02088a44 QueueActorSlotRelease
-#define data_ov001_020a04e0 data_ov001_020a0500
+#define data_ov001_020a04e0 gActorSceneManager
 #include "src/ov001/actor_animation/QueueActorSlotRelease_02088a44.c"

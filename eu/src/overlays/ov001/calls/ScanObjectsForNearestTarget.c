@@ -6,5 +6,5 @@
 #define func_ov001_0206ba2c ClassifyTargetRange
 #define func_ov001_020863f4 GetEntryPoolTargetPosition
 #define func_ov001_0208723c GetFieldEntryListHead
-#define g_manager_020a0484 data_ov001_020a04a4
+#define g_manager_020a0484 gFieldTargetSelectionWork
 #include "src/ov001/shared_engine/ScanObjectsForNearestTarget_0206b598.c"

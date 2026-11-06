@@ -2,7 +2,7 @@
 #define ReleaseSessionHandle_02062c98 ReleaseSessionHandle
 #define RunSessionScriptFrame_02063638 RunSessionScriptFrame
 #define StepSessionScriptOrAbort_020625b8 StepSessionScriptOrAbort
-#define data_ov001_020a0460 data_ov001_020a0480
+#define data_ov001_020a0460 gFieldSessionWork
 #define func_ov001_02062cd4 RunPendingCallback
 #define func_ov001_020630e4 FlushPendingEntryRefresh
 #define func_ov001_020631e4 SetPendingFieldValue

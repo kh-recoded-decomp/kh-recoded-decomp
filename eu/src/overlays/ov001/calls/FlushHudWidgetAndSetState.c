@@ -1,4 +1,4 @@
 #define FlushHudWidgetAndSetState_020724e0 FlushHudWidgetAndSetState
-#define data_020a04a4 data_ov001_020a04c4
+#define data_020a04a4 gFieldSceneGlobals
 #define func_ov001_020701a8 ClearChoiceHighlight
 #include "src/ov001/shared_engine/FlushHudWidgetAndSetState_020724e0.c"

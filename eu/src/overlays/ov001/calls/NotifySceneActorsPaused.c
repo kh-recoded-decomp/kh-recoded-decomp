@@ -1,3 +1,3 @@
 #define NotifySceneActorsPaused_0206e4f0 NotifySceneActorsPaused
-#define data_ov001_020a049c data_ov001_020a04bc
+#define data_ov001_020a049c gManagedActorGlobals
 #include "src/ov001/shared_engine/NotifySceneActorsPaused_0206e4f0.c"

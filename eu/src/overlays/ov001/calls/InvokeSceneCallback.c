@@ -1,3 +1,3 @@
 #define InvokeSceneCallback_020677fc InvokeSceneCallback
-#define data_ov001_020a046c data_ov001_020a048c
+#define data_ov001_020a046c gFieldSceneEntryContext
 #include "src/ov001/unclassified_helpers/InvokeSceneCallback_020677fc.c"

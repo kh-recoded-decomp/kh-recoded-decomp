@@ -2,14 +2,14 @@
 
 extern int ZeroHalfThenFree(void *arg0);
 
-extern u32 data_ov001_020a04bc;
+extern u32 gManagedActorGlobals;
 
 void ReleaseEventContextResources(void)
 {
     int base;
     int i;
 
-    base = data_ov001_020a04bc;
+    base = gManagedActorGlobals;
     i = 0;
     do {
         ZeroHalfThenFree(*(void **)(base + i * 4 + 0xb8));

@@ -3,6 +3,6 @@
 #define FindFieldMenuEntryById_020754d8 FindFieldMenuEntryById
 #define NNSi_FndFreeFromDefaultHeap_0202a1c4 NNSi_FndFreeFromDefaultHeap
 #define NNSi_FndGetCurrentRootHeap_0202a764 GetRunningTaskWork
-#define data_ov001_020a04b0 data_ov001_020a04d0
+#define data_ov001_020a04b0 gFieldCommandMenuGlobals
 #define func_0204f768 GetOverlaySelectionRecord
 #include "src/ov001/field_manager/DestroyFieldMenu_02077944.c"

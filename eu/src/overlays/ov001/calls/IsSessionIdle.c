@@ -1,7 +1,7 @@
 #define func_ov001_020645c8 IsSessionFlagSet
 #define IsFirstEntryFlagSet_0206e584 IsFirstEntryFlagSet
 #define IsSessionIdle_02063860 IsSessionIdle
-#define data_ov001_020a0460 data_ov001_020a0480
+#define data_ov001_020a0460 gFieldSessionWork
 #define func_ov001_0206a814 IsScreenModeIdle
 #define func_ov001_020642a0 IsFieldTrackFlagSet
 #include "src/ov001/unclassified_helpers/IsSessionIdle_02063860.c"

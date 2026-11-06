@@ -2,7 +2,7 @@
 
 #pragma opt_propagation off
 
-extern CounterHud *data_ov001_020a04ec;
+extern CounterHud *gCounterHudWork;
 extern void DrawCounterDigits(CounterHud *hud);
 extern void DrawScaledTextureQuad(const FieldScreenPoint *position, fx32 scale,
                                   HudDigit *digit, u32 color);
@@ -49,7 +49,7 @@ int UpdateAndDrawCounterHud(void)
 {
     CounterHandlers handlers = gCounterHudStateHandlers;
     FadeHandlers fades = gFadeSequenceHandlers;
-    CounterHud *hud = data_ov001_020a04ec;
+    CounterHud *hud = gCounterHudWork;
     if (hud->enabled && hud->counter.enabled) {
         DrawCounterDigits(hud);
     }

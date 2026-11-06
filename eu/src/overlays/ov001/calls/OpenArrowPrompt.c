@@ -9,7 +9,7 @@
 #define TagTracker_InvokeCallback_020b8210 TagTracker_InvokeCallback
 #define data_ov001_0209dff8 gArrowPromptDifficultySteps
 #define data_ov001_0209e008 gArrowPromptTimeLimits
-#define data_ov001_020a04d0 data_ov001_020a04f0
+#define data_ov001_020a04d0 gArrowPromptWork
 #define func_0202a7a4 GetTaskUpdateCount
 #define func_ov001_0207d838 NextRandomArrowDirection
 #define func_ov027_020b9d54 ClearTileTableRect

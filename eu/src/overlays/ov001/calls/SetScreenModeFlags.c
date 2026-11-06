@@ -1,3 +1,3 @@
 #define SetScreenModeFlags_0206a670 SetScreenModeFlags
-#define data_ov001_020a0480 data_ov001_020a04a0
+#define data_ov001_020a0480 gFieldScreenTransitionWork
 #include "src/ov001/unclassified_helpers/SetScreenModeFlags_0206a670.c"

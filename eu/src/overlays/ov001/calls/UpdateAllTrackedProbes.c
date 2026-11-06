@@ -1,4 +1,4 @@
 #define UpdateAllTrackedProbes_0206c9fc UpdateAllTrackedProbes
-#define data_ov001_020a0498 data_ov001_020a04b8
+#define data_ov001_020a0498 gFieldMessageSpriteManager
 #define func_ov001_0206c880 UpdateTrackedTargetMarker
 #include "src/ov001/unclassified_helpers/UpdateAllTrackedProbes_0206c9fc.c"

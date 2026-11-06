@@ -4,7 +4,7 @@
 #define GetBoundedEntryField_0206db5c GetBoundedEntryField
 #define RefreshFieldMenuPage_0206d248 RefreshFieldMenuPage
 #define UpdateActionCommand_0206d0ac UpdateActionCommand
-#define data_ov001_020a049c data_ov001_020a04bc
+#define data_ov001_020a049c gManagedActorGlobals
 #define func_020359f8 ApplyRecordTableEntry5
 #define func_ov021_020a74f0 ClearFieldButtonInput
 #include "src/ov001/field_manager/ActivateFieldPlayerEntry_0206dd90.c"

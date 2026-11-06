@@ -42,7 +42,7 @@ typedef struct ScriptOperand {
     short type;
     LayoutU8 undecodedPayload[6];
 } ScriptOperand;
-extern unsigned int data_ov001_020a0500;
+extern unsigned int gActorSceneManager;
 extern unsigned int ActorChannel_SelectBuffer();
 extern unsigned int LoadDefaultProjectionValues();
 extern unsigned int SceneNode_Draw();
@@ -59,10 +59,10 @@ void DrawTrackedActorSceneSlots(void) {
   int slot;
   u8 projection [56];
 
-  work = data_ov001_020a0500;
+  work = gActorSceneManager;
   index = 0;
   do {
-    if (*(int *)(data_ov001_020a0500 + index * 4 + 0x3f08) != -1) break;
+    if (*(int *)(gActorSceneManager + index * 4 + 0x3f08) != -1) break;
     index = index + 1;
   } while (index < 5);
   if (index != 5) {

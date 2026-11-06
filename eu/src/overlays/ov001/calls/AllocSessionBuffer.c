@@ -1,4 +1,4 @@
 #define AllocSessionBuffer_02064660 AllocSessionBuffer
 #define NNSi_FndAllocFromDefaultHeapEx_0202a19c NNS_FndAllocFromDefaultExpHeapEx
-#define data_ov001_020a0460 data_ov001_020a0480
+#define data_ov001_020a0460 gFieldSessionWork
 #include "src/ov001/unclassified_helpers/AllocSessionBuffer_02064660.c"

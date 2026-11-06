@@ -1,5 +1,5 @@
-extern int data_ov001_020a04fc;
+extern int gFieldEntryPoolManager;
 
 unsigned short GetActiveFieldEntryListCount(void) {
-    return *(unsigned short *)(*(int *)&data_ov001_020a04fc + 6);
+    return *(unsigned short *)(*(int *)&gFieldEntryPoolManager + 6);
 }

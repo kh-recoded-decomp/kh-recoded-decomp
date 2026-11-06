@@ -1,6 +1,6 @@
 #define DispatchPartyEntryArgByMode_0206e65c DispatchPartyEntryArgByMode
 #define GetBoundedEntryField_0206db5c GetBoundedEntryField
-#define data_ov001_020a049c data_ov001_020a04bc
+#define data_ov001_020a049c gManagedActorGlobals
 #define func_ov052_020ceaf4 SetSubModelsEnabled
 #define func_ov059_020cd078 Actor_SetModelSetsVisible
 #include "src/ov001/shared_engine/DispatchPartyEntryArgByMode_0206e65c.c"

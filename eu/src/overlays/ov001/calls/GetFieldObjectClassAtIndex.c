@@ -1,7 +1,7 @@
 #include "nitro/types.h"
 
-extern unsigned int *data_ov001_020a04f8;
+extern unsigned int *gFieldObjectClassManager;
 
 unsigned int GetFieldObjectClassAtIndex(int index) {
-  return *(unsigned int *)(*data_ov001_020a04f8 + index * 4);
+  return *(unsigned int *)(*gFieldObjectClassManager + index * 4);
 }

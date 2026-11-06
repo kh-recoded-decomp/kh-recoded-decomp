@@ -6,7 +6,7 @@
 #define func_ov001_0207723c InitFieldCommandMenu
 #define NNSi_FndGetCurrentRootHeap_0202a764 GetRunningTaskWork
 #define UpdateFieldMenu_020779f0 UpdateFieldMenu
-#define data_ov001_020a04b0 data_ov001_020a04d0
+#define data_ov001_020a04b0 gFieldCommandMenuGlobals
 #define func_01ff8830 MI_CpuFill8
 #define func_ov001_020769f4 DrawMenuPanelPage
 #include "src/ov001/field_manager/InitFieldMenu_020778bc.c"

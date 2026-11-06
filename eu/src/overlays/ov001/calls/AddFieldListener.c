@@ -1,5 +1,5 @@
 #define AddFieldListener_0207157c AddFieldListener
 #define AppendIntrusiveListObject_020128d0 NNS_FndAppendListObject
 #define NNSi_FndAllocFromDefaultHeap_0202a178 NNSi_FndAllocFromDefaultHeap
-#define data_ov001_020a04a4 data_ov001_020a04c4
+#define data_ov001_020a04a4 gFieldSceneGlobals
 #include "src/ov001/field_manager/AddFieldListener_0207157c.c"

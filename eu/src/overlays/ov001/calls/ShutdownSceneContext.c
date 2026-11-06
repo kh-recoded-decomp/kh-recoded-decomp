@@ -11,14 +11,14 @@ typedef struct SceneContext {
     u8 loaded;
 } SceneContext;
 
-extern SceneContext *data_ov001_020a048c;
+extern SceneContext *gFieldSceneEntryContext;
 extern void ReleaseAllSceneSlotResources(void);
 extern void NNSi_FndFreeFromDefaultHeap(void *ptr);
 extern void ShutdownAllActorSlots(void);
 
 void ShutdownSceneContext(void)
 {
-    SceneContext *ctx = data_ov001_020a048c;
+    SceneContext *ctx = gFieldSceneEntryContext;
 
     ReleaseAllSceneSlotResources();
     if (ctx->buffer != NULL) {

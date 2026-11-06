@@ -3,13 +3,13 @@
 extern void ReleaseChannelManagerResources(int obj);
 extern void NNSi_FndFreeFromDefaultHeap(u32 obj);
 
-extern u32 data_ov001_020a04b8;
+extern u32 gFieldMessageSpriteManager;
 
 void DestroyFieldMessageLoaderManager(void)
 {
-    if (data_ov001_020a04b8 != 0) {
-        ReleaseChannelManagerResources(data_ov001_020a04b8);
-        NNSi_FndFreeFromDefaultHeap(data_ov001_020a04b8);
-        data_ov001_020a04b8 = 0;
+    if (gFieldMessageSpriteManager != 0) {
+        ReleaseChannelManagerResources(gFieldMessageSpriteManager);
+        NNSi_FndFreeFromDefaultHeap(gFieldMessageSpriteManager);
+        gFieldMessageSpriteManager = 0;
     }
 }

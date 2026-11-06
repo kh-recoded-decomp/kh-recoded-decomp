@@ -5,12 +5,12 @@ typedef struct OverlayFactoryContext {
     u32 unk_0e8;
 } OverlayFactoryContext;
 
-extern OverlayFactoryContext *data_ov001_020a04bc;
+extern OverlayFactoryContext *gManagedActorGlobals;
 
 u32 GetPendingWorldEntryData(void)
 {
-    if (data_ov001_020a04bc == 0) {
+    if (gManagedActorGlobals == 0) {
         return 0;
     }
-    return data_ov001_020a04bc->unk_0e8;
+    return gManagedActorGlobals->unk_0e8;
 }

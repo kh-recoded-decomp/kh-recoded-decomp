@@ -3,6 +3,6 @@
 #define GetLevelExperience_020500fc GetEntryParam
 #define IsGlobalPackedBitSet_02027304 IsGlobalPackedBitSet
 #define SetGlobalPackedBit_02027320 SetGlobalPackedBit
-#define g_eventContext_020a049c data_ov001_020a04bc
+#define g_eventContext_020a049c gManagedActorGlobals
 #define g_saveData_0205fe0c data_0205fe0c
 #include "src/ov001/shared_engine/ApplyPendingLevelUps_0206ccd8.c"

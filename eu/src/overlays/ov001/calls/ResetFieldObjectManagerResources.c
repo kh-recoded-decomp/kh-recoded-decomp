@@ -1,6 +1,6 @@
 #include "nitro/types.h"
 
-extern u32 data_ov001_020a04f8;
+extern u32 gFieldObjectClassManager;
 extern void DestroyListNodes(void);
 extern void ReleaseResourceAndDetach();
 extern void NNSi_FndFreeFromDefaultHeap(void *ptr);
@@ -10,7 +10,7 @@ void ResetFieldObjectManagerResources(void)
 {
     u8 *context;
 
-    context = (u8 *)data_ov001_020a04f8;
+    context = (u8 *)gFieldObjectClassManager;
     DestroyListNodes();
     *(u32 *)(context + 0x120) = 0;
     if (*(s32 *)(context + 0x11c) != 0) {

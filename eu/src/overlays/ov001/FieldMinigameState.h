@@ -12,7 +12,7 @@ typedef struct FieldMinigameState {
     int level;
 } FieldMinigameState;
 
-extern FieldMinigameState *data_ov001_020a04f4;
-#define gFieldMinigameState data_ov001_020a04f4
+extern FieldMinigameState *gFieldMinigameWork;
+#define gFieldMinigameState gFieldMinigameWork
 
 #endif

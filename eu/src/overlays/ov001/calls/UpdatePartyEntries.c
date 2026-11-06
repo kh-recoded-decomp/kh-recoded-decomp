@@ -6,7 +6,7 @@
 #define UpdateAllTrackedProbes_0206c9fc UpdateAllTrackedProbes
 #define UpdatePartyEntries_0206d95c UpdatePartyEntries
 #define WakeNearbyIdleNodes_02066874 WakeNearbyIdleNodes
-#define data_ov001_020a049c data_ov001_020a04bc
+#define data_ov001_020a049c gManagedActorGlobals
 #define func_ov001_020784a4 SetFieldEntryEnabled
 #define func_ov021_020a746c UpdateFieldButton
 #define func_ov021_020a8ab4 ResetAnimationTrackState

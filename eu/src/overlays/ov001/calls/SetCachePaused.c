@@ -11,7 +11,7 @@ typedef struct EntryCache {
     CacheEntry *head;
 } EntryCache;
 
-extern EntryCache *data_ov001_020a04fc;
+extern EntryCache *gFieldEntryPoolManager;
 extern void CacheEntry_SetActive(CacheEntry *entry, BOOL active);
 
 void SetCachePaused(BOOL paused)
@@ -19,11 +19,11 @@ void SetCachePaused(BOOL paused)
     CacheEntry *entry;
 
     if (paused) {
-        data_ov001_020a04fc->flags |= 0x10;
+        gFieldEntryPoolManager->flags |= 0x10;
     } else {
-        data_ov001_020a04fc->flags &= ~0x10;
+        gFieldEntryPoolManager->flags &= ~0x10;
     }
-    entry = data_ov001_020a04fc->head;
+    entry = gFieldEntryPoolManager->head;
     if (entry != NULL) {
         BOOL active = TRUE;
 

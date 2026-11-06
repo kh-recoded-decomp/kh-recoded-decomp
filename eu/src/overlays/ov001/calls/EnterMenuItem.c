@@ -6,6 +6,6 @@
 #define MI_CpuFill8_01ff8830 MI_CpuFill8
 #define MIi_CpuClearFast_01ff8740 MIi_CpuClearFast
 #define NNSi_FndAllocFromDefaultHeap_0202a178 NNSi_FndAllocFromDefaultHeap
-#define data_ov001_020a046c data_ov001_020a048c
+#define data_ov001_020a046c gFieldSceneEntryContext
 #define func_ov001_02066f20 UpdatePointTriggerBox
 #include "src/ov001/field_manager/EnterMenuItem_02067618.c"

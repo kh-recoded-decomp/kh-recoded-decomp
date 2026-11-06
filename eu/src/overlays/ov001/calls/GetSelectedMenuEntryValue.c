@@ -2,6 +2,6 @@
 #define IsFieldFlag10Set_020728c4 IsFieldFlag10Set
 #define IsHudFlag7Set_020725bc IsHudFlag7Set
 #define IsModeSetOrFlag370aClear_0207259c IsModeSetOrFlag370aClear
-#define data_ov001_020a04b0 data_ov001_020a04d0
+#define data_ov001_020a04b0 gFieldCommandMenuGlobals
 #define func_ov001_02075348 CycleMenuEntry
 #include "src/ov001/field_manager/GetSelectedMenuEntryValue_02077f80.c"

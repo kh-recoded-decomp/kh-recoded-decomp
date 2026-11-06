@@ -2,6 +2,6 @@
 #define ClearHudPopup_0207248c ClearHudPopup
 #define FindActiveRecordById_020b8184 FindActiveRecordById
 #define InvokeCallback40_020b8268 InvokeCallback40
-#define data_020a04a4 data_ov001_020a04c4
+#define data_020a04a4 gFieldSceneGlobals
 #define func_02001520 Text_UploadTileBuffer
 #include "src/ov001/shared_engine/ClearHudPopup_0207248c.c"

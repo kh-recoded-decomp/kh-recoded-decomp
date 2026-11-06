@@ -1,3 +1,3 @@
 #define RunFlaggedEventCallbacks_0206daa8 RunFlaggedEventCallbacks
-#define g_eventContext_020a049c data_ov001_020a04bc
+#define g_eventContext_020a049c gManagedActorGlobals
 #include "src/ov001/shared_engine/RunFlaggedEventCallbacks_0206daa8.c"

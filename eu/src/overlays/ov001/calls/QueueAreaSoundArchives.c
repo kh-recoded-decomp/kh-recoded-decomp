@@ -6,7 +6,7 @@
 #define data_ov001_0209d9a8 gAreaSoundArchiveIds
 #define data_ov001_0209d9ba gUnlockedAreaSoundArchiveIds
 #define data_ov001_0209d9f0 gStageMeshValues
-#define data_ov001_020a046c data_ov001_020a048c
+#define data_ov001_020a046c gFieldSceneEntryContext
 #define func_02036230 GetActorRegistry
 #define func_02036288 FindWorldMeshEntryByName
 #include "src/ov001/unclassified_helpers/QueueAreaSoundArchives_02067870.c"

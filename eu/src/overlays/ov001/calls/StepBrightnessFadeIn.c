@@ -20,15 +20,15 @@ typedef struct FieldState {
     u32 flags;
 } FieldState;
 
-extern FadeState *data_ov001_020a04a0;
-extern FieldState *data_ov001_020a0480;
+extern FadeState *gFieldScreenTransitionWork;
+extern FieldState *gFieldSessionWork;
 extern void SetBrightnessAndSyncMain(int level);
 extern void SetSecondaryBrightness(int level);
 extern void *SelectScreenFadeHandler(void);
 
 FadeStepFn StepBrightnessFadeIn(void)
 {
-    FadeState *fade = data_ov001_020a04a0;
+    FadeState *fade = gFieldScreenTransitionWork;
 
     if (fade->flags & 0x20) {
         return NULL;
@@ -41,7 +41,7 @@ FadeStepFn StepBrightnessFadeIn(void)
         fade->flags &= ~0x14;
         fade->step = 0x1800;
         if (fade->fadeSub) {
-            data_ov001_020a0480->flags &= ~0x40000;
+            gFieldSessionWork->flags &= ~0x40000;
             fade->fadeSub = 0;
         }
         return SelectScreenFadeHandler;

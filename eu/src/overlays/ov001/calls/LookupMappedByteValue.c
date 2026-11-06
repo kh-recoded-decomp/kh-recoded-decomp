@@ -1,3 +1,3 @@
 #define LookupMappedByteValue_02068530 LookupMappedByteValue
-#define data_ov001_020a0470 data_ov001_020a0490
+#define data_ov001_020a0470 gStageEventContext
 #include "src/ov001/unclassified_helpers/LookupMappedByteValue_02068530.c"

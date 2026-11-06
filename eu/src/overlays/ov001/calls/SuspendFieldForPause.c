@@ -4,7 +4,7 @@
 #define InvokeCallback40_020b8268 InvokeCallback40
 #define NNSi_FndAllocFromDefaultHeapEx_0202a19c NNS_FndAllocFromDefaultExpHeapEx
 #define SuspendFieldForPause_02071270 SuspendFieldForPause
-#define data_ov001_020a04a4 data_ov001_020a04c4
+#define data_ov001_020a04a4 gFieldSceneGlobals
 #define func_01ff878c MIi_CpuCopyFast
 #define func_02003fd4 OS_GetTick
 #define func_ov001_02077b90 SetFieldMenuSuspended

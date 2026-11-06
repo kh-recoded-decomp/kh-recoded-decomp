@@ -6,7 +6,7 @@ typedef struct Context {
     u8 slotMask;
 } Context;
 
-extern Context *data_ov001_020a04ec;
+extern Context *gCounterHudWork;
 
 BOOL PlaceSlotPanelAtWorldPosition(int slot, const VecFx32 *position, int animate)
 {
@@ -16,7 +16,7 @@ BOOL PlaceSlotPanelAtWorldPosition(int slot, const VecFx32 *position, int animat
     int screenY;
     int frame;
 
-    context = data_ov001_020a04ec;
+    context = gCounterHudWork;
     panel = NULL;
     if (context == NULL || (u16)slot >= 4) {
         return FALSE;

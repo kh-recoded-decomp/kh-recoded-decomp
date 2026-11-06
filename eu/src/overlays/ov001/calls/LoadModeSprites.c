@@ -10,6 +10,6 @@
 #define data_ov001_0209db20 gNormalModeSprites
 #define data_ov001_0209db50 gCommonModeSprites
 #define data_ov001_0209ec3c gLocalizedSpritePathFormat
-#define data_ov001_020a049c data_ov001_020a04bc
+#define data_ov001_020a049c gManagedActorGlobals
 #define func_ov021_020a89a8 func_ov021_020a89c8
 #include "src/ov001/unclassified_helpers/LoadModeSprites_0206d308.c"

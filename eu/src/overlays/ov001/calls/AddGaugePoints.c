@@ -24,7 +24,7 @@ typedef struct LevelThresholdTable {
     s32 values[5];
 } LevelThresholdTable;
 
-extern GaugeGlobals data_ov001_020a04c4;
+extern GaugeGlobals gFieldSceneGlobals;
 extern LevelFileTable gMenuGaugePointLevelFileIds;
 extern const LevelThresholdTable gMenuGaugePointThresholds;
 
@@ -48,7 +48,7 @@ extern void BlendIconTiles(u32 value);
 
 void AddGaugePoints(int delta, BOOL loadNow)
 {
-    GaugeContext *context = data_ov001_020a04c4.context;
+    GaugeContext *context = gFieldSceneGlobals.context;
     LevelFileTable files = gMenuGaugePointLevelFileIds;
     LevelThresholdTable thresholds = gMenuGaugePointThresholds;
     int maxLevel;

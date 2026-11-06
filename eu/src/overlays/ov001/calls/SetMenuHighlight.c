@@ -1,5 +1,5 @@
 #define ResetPendingRequest_0206c614 ResetPendingRequest
 #define SetMenuHighlight_0206c2f8 SetMenuHighlight
-#define data_ov001_020a0484 data_ov001_020a04a4
+#define data_ov001_020a0484 gFieldTargetSelectionWork
 #define func_ov001_0206bb74 SetMenuOpenState
 #include "src/ov001/shared_engine/SetMenuHighlight_0206c2f8.c"

@@ -1,3 +1,3 @@
 #define IsSceneEntryFlag2Set_0206835c IsSceneEntryFlag2Set
-#define data_ov001_020a046c data_ov001_020a048c
+#define data_ov001_020a046c gFieldSceneEntryContext
 #include "src/ov001/shared_engine/IsSceneEntryFlag2Set_0206835c.c"

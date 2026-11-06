@@ -21,7 +21,7 @@ typedef struct FieldManager {
     int entryCount;
 } FieldManager;
 
-extern FieldManager *data_ov001_020a04bc;
+extern FieldManager *gManagedActorGlobals;
 extern s32 GetFieldSessionState(void);
 extern void SetMenuHighlight(int value);
 extern void ConfigureChannelSlot(int kind, int value, int index);
@@ -29,7 +29,7 @@ extern void SetFieldMessageLoaderUpdatesPaused(u32 enabled);
 
 void DeactivateManagerEntries(void)
 {
-    FieldManager *manager = data_ov001_020a04bc;
+    FieldManager *manager = gManagedActorGlobals;
     int entryIndex;
 
     if (manager == NULL) {

@@ -1,5 +1,5 @@
 #define data_ov001_0209eb3c gSessionTaskClassDescriptor
-#define g_sessionState_020a0488 data_ov001_020a04a8
+#define g_sessionState_020a0488 gSessionCallbackTaskHandle
 #define func_0202a448 CreateTaskObject
 #define CreateSessionTask_0206c6dc CreateSessionTask
 #include "src/ov001/shared_engine/CreateSessionTask_0206c6dc.c"

@@ -1,5 +1,5 @@
-extern int *data_ov001_020a0480;
+extern int *gFieldSessionWork;
 
 int func_ov001_02063a4c(void) {
-    return *(int *)((char *)data_ov001_020a0480 + 0x1c);
+    return *(int *)((char *)gFieldSessionWork + 0x1c);
 }

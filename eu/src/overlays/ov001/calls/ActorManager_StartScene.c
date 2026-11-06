@@ -3,5 +3,5 @@
 #define func_0202a5ac Obj_SetWord14
 #define func_ov001_02088384 TryFinishIntroSequence
 #define func_ov001_020883fc ReloadModeMessageArchive
-#define g_actorManager_020a04e0 data_ov001_020a0500
+#define g_actorManager_020a04e0 gActorSceneManager
 #include "src/ov001/object_creation/ActorManager_StartScene_02088974.c"

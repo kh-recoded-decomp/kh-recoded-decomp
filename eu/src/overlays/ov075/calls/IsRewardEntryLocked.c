@@ -1,7 +1,7 @@
 #define GetCtxModeByte_02068084 GetCtxModeByte
 #define IsPartyLevelSufficient_020cec34 IsPartyLevelSufficient
 #define IsRewardEntryLocked_020ced28 IsRewardEntryLocked
-#define data_ov001_020a0460 data_ov001_020a0480
+#define data_ov001_020a0460 gFieldSessionWork
 #define func_ov075_020cec04 IsItemPickerPartyHpFull
 #define func_ov075_020cecd0 AreItemPickerSessionStatesZero
 #define func_ov075_020ced0c IsItemPickerSessionState10

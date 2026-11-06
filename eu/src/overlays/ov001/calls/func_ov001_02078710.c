@@ -35,7 +35,7 @@ typedef struct {
     FieldMenu *menu;
 } FieldMenuHandle;
 
-extern FieldMenuHandle data_ov001_020a04d0;
+extern FieldMenuHandle gFieldCommandMenuGlobals;
 
 extern BOOL IsFieldFlag8Set(void);
 extern BOOL IsFieldFlag13OrSessionFlagSet(void);
@@ -50,7 +50,7 @@ extern FieldEntry *CycleMenuEntry(FieldMenu *menu, s32 index, s32 arg2, s32 arg3
 
 void func_ov001_02078710(s32 index, s32 kind)
 {
-    FieldMenu *menu = data_ov001_020a04d0.menu;
+    FieldMenu *menu = gFieldCommandMenuGlobals.menu;
     FieldEntry *entry;
     void *savedNode;
     MessageSet messages;

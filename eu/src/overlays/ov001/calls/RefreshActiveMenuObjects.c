@@ -1,6 +1,6 @@
 #define RefreshActiveMenuObjects_0206c46c RefreshActiveMenuObjects
 #define SetupMirroredObjectPair_0206c218 SetupMirroredObjectPair
-#define data_ov001_020a0484 data_ov001_020a04a4
+#define data_ov001_020a0484 gFieldTargetSelectionWork
 #define func_ov001_0206c048 UpdateCornerSpread
 #define func_ov001_02087960 GetStageEventTargetInfo
 #include "src/ov001/shared_engine/RefreshActiveMenuObjects_0206c46c.c"

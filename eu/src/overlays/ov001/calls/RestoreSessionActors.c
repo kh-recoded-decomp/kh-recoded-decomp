@@ -3,7 +3,7 @@
 #define GetBoundedEntryField_0206db5c GetBoundedEntryField
 #define RestoreSessionActors_02063404 RestoreSessionActors
 #define func_ov001_0206e444 SetFieldEntriesPaused
-#define data_ov001_020a0460 data_ov001_020a0480
+#define data_ov001_020a0460 gFieldSessionWork
 #define func_ov001_0206dd90 ActivateFieldPlayerEntry
 #define func_ov021_020af7b8 ForwardSubModeStart
 #define func_ov052_020d13b4 ApplyModeCallbackAndBlock

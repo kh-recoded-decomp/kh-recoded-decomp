@@ -1,5 +1,5 @@
 #define ResetPendingRequest_0206c614 ResetPendingRequest
 #define ResumeOrResetRequest_0206bbe4 ResumeOrResetRequest
-#define data_ov001_020a0484 data_ov001_020a04a4
+#define data_ov001_020a0484 gFieldTargetSelectionWork
 #define func_ov001_0206c528 UpdateStageEventMessage
 #include "src/ov001/shared_engine/ResumeOrResetRequest_0206bbe4.c"

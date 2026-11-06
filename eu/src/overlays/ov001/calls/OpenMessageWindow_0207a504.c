@@ -8,5 +8,5 @@
 #define QueueFileLoadRequest_020ba114 QueueFileLoadRequest
 #define SetTextAndChoices_02079338 SetTextAndChoices
 #define data_ov001_0209df24 gMessageWindowGraphicsSlots
-#define data_ov001_020a04c4 data_ov001_020a04e4
+#define data_ov001_020a04c4 gMessageWindowWork
 #include "src/ov001/text_rendering/OpenMessageWindow_0207a504.c"

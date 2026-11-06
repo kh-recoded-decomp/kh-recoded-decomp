@@ -1,5 +1,5 @@
 #define ShutdownSessionOverlays_02062a54 ShutdownSessionOverlays
-#define data_ov001_020a0460 data_ov001_020a0480
+#define data_ov001_020a0460 gFieldSessionWork
 #define func_01ff86fc MIi_CpuClear32
 #define func_02029f98 UnloadOverlayAfterGeometryTransfer
 #define func_0203574c InitActorRegistry

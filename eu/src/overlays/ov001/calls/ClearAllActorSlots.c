@@ -3,5 +3,5 @@
 #define func_ov001_020888dc ClearAllActorSlots
 #define func_ov001_02089f1c ActorObject_ReleaseResources
 #define func_ov001_0208a8b8 Actor_RestoreAnimState
-#define g_actorManager_020a04e0 data_ov001_020a0500
+#define g_actorManager_020a04e0 gActorSceneManager
 #include "src/ov001/object_creation/func_ov001_020888dc.c"

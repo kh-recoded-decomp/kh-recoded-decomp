@@ -1,5 +1,5 @@
 #define OpenMessageWindowLayers_0207a1d0 OpenMessageWindowLayers
 #define func_02052514 ConfigureTween
 #define func_0205255c StartTween
-#define data_ov001_020a04c4 data_ov001_020a04e4
+#define data_ov001_020a04c4 gMessageWindowWork
 #include "src/ov001/field_manager/OpenMessageWindowLayers_0207a1d0.c"

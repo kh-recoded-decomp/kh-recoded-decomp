@@ -19,7 +19,7 @@ typedef struct {
     FieldMenu *menu;
 } FieldMenuHandle;
 
-extern FieldMenuHandle data_ov001_020a04d0;
+extern FieldMenuHandle gFieldCommandMenuGlobals;
 
 extern BOOL IsModeSetOrFlag370aClear(void);
 extern BOOL IsHudFlag7Set(void);
@@ -29,7 +29,7 @@ extern void *CycleMenuEntry(FieldMenu *menu, s32 group, s32 slot, s32 *outIndex)
 
 BOOL TryCycleFieldMenuCursor(void)
 {
-    FieldMenu *menu = data_ov001_020a04d0.menu;
+    FieldMenu *menu = gFieldCommandMenuGlobals.menu;
 
     if (menu->unk_138 == 0) {
         return FALSE;

@@ -1,7 +1,7 @@
 #define func_ov001_02067ed4 GetCurrentSceneEntryIndex
 #define IsObjectFlagClear_0207f7a4 IsObjectFlagClear
 #define UpdateFieldObjectStates_0207ecc4 UpdateFieldObjectStates
-#define data_ov001_020a0460 data_ov001_020a0480
-#define data_ov001_020a04d8 data_ov001_020a04f8
+#define data_ov001_020a0460 gFieldSessionWork
+#define data_ov001_020a04d8 gFieldObjectClassManager
 #define func_ov001_02086c60 UpdateEffectManager
 #include "src/ov001/field_objects/UpdateFieldObjectStates_0207ecc4.c"

@@ -1,7 +1,7 @@
 #define func_ov001_02070e98 UpdateFieldHud
 #define StartSceneMinigameTask_02070cfc StartSceneMinigameTask
 #define data_ov001_0209f004 gSceneMinigameTaskDescriptor
-#define data_ov001_020a04a4 data_ov001_020a04c4
+#define data_ov001_020a04a4 gFieldSceneGlobals
 #define func_0202a448 CreateTaskObject
 #define func_0204f768 GetOverlaySelectionRecord
 #define func_ov001_0207ea14 StartFieldMinigameRound

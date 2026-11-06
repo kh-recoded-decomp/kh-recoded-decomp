@@ -1,7 +1,7 @@
 #define IsModeSetOrFlag370aClear_0207259c IsModeSetOrFlag370aClear
 #define PlaySoundEffect_0204d924 PlaySoundEffect
 #define SelectFieldMenuEntryById_02077f3c SelectFieldMenuEntryById
-#define data_ov001_020a04b0 data_ov001_020a04d0
+#define data_ov001_020a04b0 gFieldCommandMenuGlobals
 #define func_ov001_0207531c IsLeadEntryFlag80Set
 #define func_ov001_020754d8 FindFieldMenuEntryById
 #define func_ov001_020769f4 DrawMenuPanelPage

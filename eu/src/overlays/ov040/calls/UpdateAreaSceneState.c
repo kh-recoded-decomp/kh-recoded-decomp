@@ -26,7 +26,7 @@ typedef struct {
 
 extern AreaState *gMovieContextState;
 extern SceneState *gAreaRewardSceneWork;
-extern FieldGlobals *data_ov001_020a0480;
+extern FieldGlobals *gFieldSessionWork;
 extern BOOL IsSessionFlagSet(int id);
 extern void ClearSessionPackedBit(int id);
 extern void SetFieldEntriesPaused(int paused);
@@ -111,13 +111,13 @@ int UpdateAreaSceneState(void) {
         return 10;
     }
     if (GetMainBrightnessSetting() == 0) {
-        if (data_ov001_020a0480->pendingReward > 0) {
-            AwardSlotLevelProgress(data_ov001_020a0480->pendingReward);
-            data_ov001_020a0480->pendingReward = 0;
+        if (gFieldSessionWork->pendingReward > 0) {
+            AwardSlotLevelProgress(gFieldSessionWork->pendingReward);
+            gFieldSessionWork->pendingReward = 0;
         }
-        if (data_ov001_020a0480->regionProgress > 0) {
-            AddRegionProgress(data_ov001_020a0480->regionProgress);
-            data_ov001_020a0480->regionProgress = 0;
+        if (gFieldSessionWork->regionProgress > 0) {
+            AddRegionProgress(gFieldSessionWork->regionProgress);
+            gFieldSessionWork->regionProgress = 0;
         }
     }
     return -1;

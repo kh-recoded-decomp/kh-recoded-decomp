@@ -1,7 +1,7 @@
 #include "nitro/types.h"
 
-extern u32 data_ov001_020a0480;
+extern u32 gFieldSessionWork;
 
 u32 GetSessionResourceArchive(void) {
-    return *(u32 *)(data_ov001_020a0480 + 0x272c);
+    return *(u32 *)(gFieldSessionWork + 0x272c);
 }

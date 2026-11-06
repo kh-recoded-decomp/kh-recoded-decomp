@@ -1,5 +1,5 @@
 #define func_ov001_020789b8 FindFieldMenuEntryValueById
 #define ApplyCurrentFieldMode_02072dec ApplyCurrentFieldMode
-#define data_ov001_020a04a4 data_ov001_020a04c4
+#define data_ov001_020a04a4 gFieldSceneGlobals
 #define func_020cf0b4 AddStageCaptionLine
 #include "src/ov001/field_manager/ApplyCurrentFieldMode_02072dec.c"

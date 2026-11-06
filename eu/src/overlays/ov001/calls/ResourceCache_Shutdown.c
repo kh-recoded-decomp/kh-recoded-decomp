@@ -4,5 +4,5 @@
 #define NNSi_FndFreeFromDefaultHeap_0202a1c4 NNSi_FndFreeFromDefaultHeap
 #define ResourceCache_Shutdown_02087190 ResourceCache_Shutdown
 #define func_ov001_02086aec func_ov001_02086b14
-#define g_resourceCache_020a04dc data_ov001_020a04fc
+#define g_resourceCache_020a04dc gFieldEntryPoolManager
 #include "src/ov001/unclassified_helpers/ResourceCache_Shutdown_02087190.c"

@@ -1,4 +1,4 @@
 #define RestoreBrightnessOnce_0206a630 RestoreBrightnessOnce
 #define SetBrightnessAndSyncMain_02029e7c SetBrightnessAndSyncMain
-#define data_ov001_020a0480 data_ov001_020a04a0
+#define data_ov001_020a0480 gFieldScreenTransitionWork
 #include "src/ov001/unclassified_helpers/RestoreBrightnessOnce_0206a630.c"

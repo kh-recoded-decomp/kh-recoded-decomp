@@ -3,7 +3,7 @@
 #define LoadMenuSoundArcs_020d2688 LoadMenuSoundArcs
 #define RefreshModeMenuHighlights_020d2aa0 RefreshModeMenuHighlights
 #define ShutdownOverlay054_020d2520 ShutdownOverlay054
-#define data_ov001_020a0460 data_ov001_020a0480
+#define data_ov001_020a0460 gFieldSessionWork
 #define func_0204f768 GetOverlaySelectionRecord
 #define func_ov052_020cce6c InstallActorCallbacks
 #define func_ov054_020d2320 LoadOverlay054EntityResources

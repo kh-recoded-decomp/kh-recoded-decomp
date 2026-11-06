@@ -1,11 +1,11 @@
 #include "nitro/types.h"
 
-extern unsigned int *data_ov001_020a048c;
+extern unsigned int *gFieldSceneEntryContext;
 
 u8 GetSceneEntryPrimaryBgmId(int index) {
   int entry;
 
-  entry = *(int *)(*data_ov001_020a048c + index * 4 + 8);
+  entry = *(int *)(*gFieldSceneEntryContext + index * 4 + 8);
   if (entry == 0) {
     return 0xff;
   }

@@ -29,7 +29,7 @@ typedef struct {
     u32 flags;
 } FieldState;
 
-extern FieldState *data_ov001_020a0480;
+extern FieldState *gFieldSessionWork;
 extern VecFx32 gZeroVecFx32;
 extern BOOL func_ov001_02063620(void);
 extern BOOL InvokeSessionCheckCallbackOrDefault(void);
@@ -49,7 +49,7 @@ BOOL TryLaunchWanderActor(WanderActor *actor) {
     if (actor->state != 0) {
         return FALSE;
     }
-    if (func_ov001_02063620() || (data_ov001_020a0480->flags & 0x10) || InvokeSessionCheckCallbackOrDefault()) {
+    if (func_ov001_02063620() || (gFieldSessionWork->flags & 0x10) || InvokeSessionCheckCallbackOrDefault()) {
         return FALSE;
     }
     heading = actor->heading;

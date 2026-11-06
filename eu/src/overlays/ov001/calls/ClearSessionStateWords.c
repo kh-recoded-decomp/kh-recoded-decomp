@@ -13,11 +13,11 @@ typedef struct SessionStateOwnerView {
     SessionStateWordsView stateWords;
 } SessionStateOwnerView;
 
-extern SessionStateOwnerView *data_ov001_020a0480;
+extern SessionStateOwnerView *gFieldSessionWork;
 
 void ClearSessionStateWords(void)
 {
-    SessionStateWordsView *stateWords = &data_ov001_020a0480->stateWords;
+    SessionStateWordsView *stateWords = &gFieldSessionWork->stateWords;
     int i;
 
     for (i = 0; i < 3; i++) {

@@ -22,12 +22,12 @@ typedef struct {
     SessionSceneState scene;
 } Session;
 
-extern Session *data_ov001_020a0480;
+extern Session *gFieldSessionWork;
 extern void StopPostIntroElapsedTimer(void);
 
 void StopPostIntroElapsedTimerIfActive(void)
 {
-    SessionSceneState *scene = &data_ov001_020a0480->scene;
+    SessionSceneState *scene = &gFieldSessionWork->scene;
 
     if (scene->flags.bit15)
     {

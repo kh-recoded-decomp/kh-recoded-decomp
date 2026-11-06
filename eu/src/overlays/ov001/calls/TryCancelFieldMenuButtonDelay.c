@@ -10,7 +10,7 @@ typedef struct {
     FieldMenu *menu;
 } FieldMenuHandle;
 
-extern FieldMenuHandle data_ov001_020a04d0;
+extern FieldMenuHandle gFieldCommandMenuGlobals;
 
 extern void *GetSceneTagTracker(void);
 extern BOOL InvokeFieldMinigameActiveCallback(void);
@@ -35,6 +35,6 @@ BOOL TryCancelFieldMenuButtonDelay(void)
     InvokeCallback40(pool, FindActiveRecordById(pool, 0x5d));
     InvokeCallback40(pool, FindActiveRecordById(pool, 0x5b));
     InvokeCallback40(pool, FindActiveRecordById(pool, 0x5c));
-    data_ov001_020a04d0.menu->unk_144 = -1;
+    gFieldCommandMenuGlobals.menu->unk_144 = -1;
     return TRUE;
 }

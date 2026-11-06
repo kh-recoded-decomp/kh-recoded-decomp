@@ -13,7 +13,7 @@
 #define UpdateFieldHud_02070e98 UpdateFieldHud
 #define data_ov001_0209dbc4 gFieldHudRefreshLayerIds
 #define data_ov001_0209eccc gHudNoticeStateHandlers
-#define data_ov001_020a04a4 data_ov001_020a04c4
+#define data_ov001_020a04a4 gFieldSceneGlobals
 #define func_020cf048 UpdateStageCaption
 #define func_ov001_020645c8 IsSessionFlagSet
 #define func_ov001_0207023c ExpireNoticeWindow

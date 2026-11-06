@@ -16,7 +16,7 @@
 #define data_ov001_0209e40c gScreenFadeBaseScale
 #define data_ov001_0209e418 gScreenFadeBaseTranslation
 #define data_ov001_0209e424 gScreenFadeCameraPosition
-#define data_ov001_020a04e0 data_ov001_020a0500
+#define data_ov001_020a04e0 gActorSceneManager
 #define func_01ff87c4 MI_Copy36B
 #define func_01ff90ec MTX_Identity33_
 #define func_020192ec NNS_G3dGlbSetBaseTrans

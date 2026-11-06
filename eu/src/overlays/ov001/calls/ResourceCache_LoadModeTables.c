@@ -7,5 +7,5 @@
 #define NNSi_FndAllocFromDefaultHeap_0202a178 NNSi_FndAllocFromDefaultHeap
 #define ReleaseRecordSlot_02051dfc ReleaseRecordSlot
 #define ResourceCache_LoadModeTables_02087348 ResourceCache_LoadModeTables
-#define g_resourceCache_020a04dc data_ov001_020a04fc
+#define g_resourceCache_020a04dc gFieldEntryPoolManager
 #include "src/ov001/unclassified_helpers/ResourceCache_LoadModeTables_02087348.c"

@@ -1,11 +1,11 @@
 #include "nitro/types.h"
 
-extern u32 data_ov001_020a04e8;
+extern u32 gSubscenePanelWork;
 
 u32 GetLoadedSubsceneMode(void)
 {
-    if (data_ov001_020a04e8 == 0) {
+    if (gSubscenePanelWork == 0) {
         return 0xffffffff;
     }
-    return *(u32 *)(data_ov001_020a04e8 + 0xdc);
+    return *(u32 *)(gSubscenePanelWork + 0xdc);
 }

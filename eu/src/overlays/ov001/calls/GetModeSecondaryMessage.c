@@ -1,5 +1,5 @@
 #define GetModeSecondaryMessage_02072d98 GetModeSecondaryMessage
 #define data_ov001_0209ec70 gHudSlideData
-#define data_ov001_020a04a4 data_ov001_020a04c4
+#define data_ov001_020a04a4 gFieldSceneGlobals
 #define func_ov027_020ba2a8 GetPackedFileEntry
 #include "src/ov001/shared_engine/GetModeSecondaryMessage_02072d98.c"

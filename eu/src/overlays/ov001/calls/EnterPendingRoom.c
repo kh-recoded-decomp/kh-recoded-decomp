@@ -11,7 +11,7 @@
 #define data_ov001_0209e6d0 sFieldSessionArchiveSuffix_0209e6f0
 #define data_ov001_0209e6d4 sOv001_I_0209e6f4
 #define data_ov001_0209e6f8 gFieldScriptCommandHandlers
-#define data_ov001_020a0460 data_ov001_020a0480
+#define data_ov001_020a0460 gFieldSessionWork
 #define func_020257c4 AllocateScriptVmBuffer
 #define func_ov001_02064364 SaveSessionCheckpoint
 #define func_ov001_020645e8 ClearSessionPackedBit

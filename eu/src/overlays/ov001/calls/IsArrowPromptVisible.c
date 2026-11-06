@@ -7,9 +7,9 @@ typedef struct ArrowPrompt {
     BOOL visible;
 } ArrowPrompt;
 
-extern ArrowPrompt *data_ov001_020a04f0;
+extern ArrowPrompt *gArrowPromptWork;
 
 BOOL IsArrowPromptVisible(void)
 {
-    return data_ov001_020a04f0->visible;
+    return gArrowPromptWork->visible;
 }

@@ -3,7 +3,7 @@
 #define PXI_Init_020880d8 GetFocusEventActorPositionWrapper
 #define WriteSessionPackedBits_0206459c WriteSessionPackedBits
 #define data_ov001_0209d918 gSessionCounterLimits
-#define data_ov001_020a0460 data_ov001_020a0480
+#define data_ov001_020a0460 gFieldSessionWork
 #define func_0202737c AddClampedGlobalPackedBits
 #define func_ov001_02064574 ReadSessionPackedBits
 #define func_ov001_020645e8 ClearSessionPackedBit

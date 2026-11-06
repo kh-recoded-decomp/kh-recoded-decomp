@@ -1,7 +1,7 @@
 #include "nitro/types.h"
 
-extern u32 data_ov001_020a04fc;
+extern u32 gFieldEntryPoolManager;
 
 int GetFieldEntryPoolCount(void) {
-  return (int)*(char *)(data_ov001_020a04fc + 4);
+  return (int)*(char *)(gFieldEntryPoolManager + 4);
 }

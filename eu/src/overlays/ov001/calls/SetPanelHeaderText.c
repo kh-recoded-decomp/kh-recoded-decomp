@@ -8,7 +8,7 @@ typedef struct PanelHeaderState {
 typedef char PanelHeaderTextOffsetCheck[
     (u32)&((PanelHeaderState *)0)->headerText == 0x18 ? 1 : -1];
 
-extern PanelHeaderState *data_ov001_020a04e8;
+extern PanelHeaderState *gSubscenePanelWork;
 extern s32 GetLanguageIndex(void);
 extern s32 GetCtxModeByte(void);
 extern s32 GetCurrentSceneEntryIndex(void);
@@ -26,7 +26,7 @@ static inline BOOL HasHeaderCharacter(const u16 *text)
 
 void SetPanelHeaderText(const u16 *prefix, const u16 *name)
 {
-    PanelHeaderState *panel = data_ov001_020a04e8;
+    PanelHeaderState *panel = gSubscenePanelWork;
     BOOL showPrefix = TRUE;
     const u16 *separator;
     s32 mode, panelId;

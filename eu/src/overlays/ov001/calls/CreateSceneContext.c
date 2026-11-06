@@ -2,6 +2,6 @@
 #define Msg_OpenContainerAndReadHeader_0202cc6c Msg_OpenContainerAndReadHeader
 #define NNSi_FndAllocFromDefaultHeap_0202a178 NNSi_FndAllocFromDefaultHeap
 #define data_ov001_0209ea80 sOv001_MiWdWdmdl_0209eaa0
-#define data_ov001_020a046c data_ov001_020a048c
+#define data_ov001_020a046c gFieldSceneEntryContext
 #define func_01ff8740 MIi_CpuClearFast
 #include "src/ov001/shared_engine/CreateSceneContext_02067438.c"

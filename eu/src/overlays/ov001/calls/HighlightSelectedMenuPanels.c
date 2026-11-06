@@ -1,5 +1,5 @@
 #define HighlightSelectedMenuPanels_0206781c HighlightSelectedMenuPanels
 #define OpenFieldMenuForMode_0207214c OpenFieldMenuForMode
 #define SetPanelItemHighlight_0207b19c SetPanelItemHighlight
-#define data_ov001_020a046c data_ov001_020a048c
+#define data_ov001_020a046c gFieldSceneEntryContext
 #include "src/ov001/field_manager/HighlightSelectedMenuPanels_0206781c.c"

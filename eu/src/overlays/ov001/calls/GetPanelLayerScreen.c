@@ -1,3 +1,3 @@
 #define GetPanelLayerScreen_0206ea08 GetPanelLayerScreen
-#define data_ov001_020a04a4 data_ov001_020a04c4
+#define data_ov001_020a04a4 gFieldSceneGlobals
 #include "src/ov001/field_manager/GetPanelLayerScreen_0206ea08.c"

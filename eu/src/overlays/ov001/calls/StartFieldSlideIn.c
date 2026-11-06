@@ -6,7 +6,7 @@
 #define SetMenuHiddenAndReloadChars_0207525c SetMenuHiddenAndReloadChars
 #define SetupFieldBgLayers_0206ec80 SetupFieldBgLayers
 #define StartFieldSlideIn_02071898 StartFieldSlideIn
-#define data_ov001_020a04a4 data_ov001_020a04c4
+#define data_ov001_020a04a4 gFieldSceneGlobals
 #define func_02052514 ConfigureTween
 #define func_0205255c StartTween
 #include "src/ov001/field_manager/StartFieldSlideIn_02071898.c"

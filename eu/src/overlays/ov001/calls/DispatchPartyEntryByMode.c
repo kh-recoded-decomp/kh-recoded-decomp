@@ -1,6 +1,6 @@
 #define DispatchPartyEntryByMode_0206e690 DispatchPartyEntryByMode
 #define GetBoundedEntryField_0206db5c GetBoundedEntryField
-#define data_ov001_020a049c data_ov001_020a04bc
+#define data_ov001_020a049c gManagedActorGlobals
 #define func_ov052_020cfb28 AnySubObjectFlagsActive
 #define func_ov059_020cd124 Actor_AnyAnimSlotBusy
 #include "src/ov001/shared_engine/DispatchPartyEntryByMode_0206e690.c"

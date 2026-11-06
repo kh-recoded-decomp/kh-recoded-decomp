@@ -1,6 +1,6 @@
 #include "nitro/types.h"
 
-extern u32 data_ov001_020a04f0;
+extern u32 gArrowPromptWork;
 extern void *GetRunningTaskWork(void);
 extern void MI_CpuFill8(void *dest, s32 value, u32 size);
 extern void LoadBg2CharAndFrames(void *context);
@@ -13,7 +13,7 @@ u32 InitArrowPromptWork(u8 *param)
     u8 *context;
 
     context = GetRunningTaskWork();
-    data_ov001_020a04f0 = (u32)context;
+    gArrowPromptWork = (u32)context;
     MI_CpuFill8(context, 0, 0x4c);
     LoadBg2CharAndFrames(context);
     *(void **)(context + 0x30) = NNSi_FndAllocFromDefaultHeap(0x20);

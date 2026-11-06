@@ -2,7 +2,7 @@
 #define LoadOffsetTableFile_02069498 LoadOffsetTableFile
 #define NNSi_FndAllocFromDefaultHeap_0202a178 NNSi_FndAllocFromDefaultHeap
 #define data_ov001_0209eae0 sOv001_Im_0209eb00
-#define data_ov001_020a047c data_ov001_020a049c
+#define data_ov001_020a047c gFieldOffsetTableHolder
 #define findSharedResourceByName_0202cd8c findSharedResourceByName
 #define func_01ff8740 MIi_CpuClearFast
 #define func_0202c478 Archive_LoadFile

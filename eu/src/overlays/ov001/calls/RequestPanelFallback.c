@@ -2,5 +2,5 @@
 
 void RequestPanelFallback(void)
 {
-    data_ov001_020a04e8->fallbackRequested = TRUE;
+    gSubscenePanelWork->fallbackRequested = TRUE;
 }

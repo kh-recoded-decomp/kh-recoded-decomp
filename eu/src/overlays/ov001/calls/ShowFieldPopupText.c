@@ -6,8 +6,8 @@
 #define SetFieldCaptionText_02072178 SetFieldCaptionText
 #define ShowFieldPopupText_02071e44 ShowFieldPopupText
 #define Text_UploadTileBuffer_02001520 Text_UploadTileBuffer
-#define data_ov001_020a0460 data_ov001_020a0480
-#define data_ov001_020a04a4 data_ov001_020a04c4
+#define data_ov001_020a0460 gFieldSessionWork
+#define data_ov001_020a04a4 gFieldSceneGlobals
 #define func_01ff869c MIi_CpuCopy16
 #define func_01ff878c MIi_CpuCopyFast
 #define func_02052514 ConfigureTween

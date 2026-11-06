@@ -1,7 +1,7 @@
 #include "nitro/types.h"
 
-extern u32 data_ov001_020a048c;
+extern u32 gFieldSceneEntryContext;
 
 int GetCurrentSceneEntryIndex(void) {
-  return (int)*(char *)(data_ov001_020a048c + 0xd);
+  return (int)*(char *)(gFieldSceneEntryContext + 0xd);
 }

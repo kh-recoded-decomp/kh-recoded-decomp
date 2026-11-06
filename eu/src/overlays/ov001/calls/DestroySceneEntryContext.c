@@ -1,6 +1,6 @@
 #include "nitro/types.h"
 
-extern u32 data_ov001_020a048c;
+extern u32 gFieldSceneEntryContext;
 extern void ShutdownSceneContext(void);
 extern void ZeroHalfThenFree(void *block);
 extern void FreeLayerContextData(void);
@@ -10,10 +10,10 @@ void DestroySceneEntryContext(void)
 {
     u8 *ctx;
 
-    ctx = (u8 *)data_ov001_020a048c;
+    ctx = (u8 *)gFieldSceneEntryContext;
     ShutdownSceneContext();
     ZeroHalfThenFree(*(void **)(ctx + 4));
     FreeLayerContextData();
-    NNSi_FndFreeFromDefaultHeap((void *)data_ov001_020a048c);
-    data_ov001_020a048c = 0;
+    NNSi_FndFreeFromDefaultHeap((void *)gFieldSceneEntryContext);
+    gFieldSceneEntryContext = 0;
 }

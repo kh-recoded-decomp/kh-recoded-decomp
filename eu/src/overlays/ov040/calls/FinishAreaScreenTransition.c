@@ -13,7 +13,7 @@ typedef struct SessionState {
 } SessionState;
 
 extern ScreenState *gMovieContextState;
-extern SessionState *data_ov001_020a0480;
+extern SessionState *gFieldSessionWork;
 extern BOOL IsScreenModeIdle(void);
 extern void Panel_CaptureBrightness(void);
 
@@ -26,7 +26,7 @@ int FinishAreaScreenTransition(void)
     }
     if (!(screen->flags & 0x4000)) {
         if (screen->subMode != 3) {
-            data_ov001_020a0480->flags &= ~0x40000;
+            gFieldSessionWork->flags &= ~0x40000;
             Panel_CaptureBrightness();
         }
         screen->subMode = -1;

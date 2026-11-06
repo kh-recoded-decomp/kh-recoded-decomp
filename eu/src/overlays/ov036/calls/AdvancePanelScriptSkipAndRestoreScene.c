@@ -46,7 +46,7 @@ typedef struct {
 } GameState;
 
 extern SceneHolder data_ov036_020c3940;
-extern GameState *data_ov001_020a0480;
+extern GameState *gFieldSessionWork;
 extern s32 RunPanelSubScriptFrame(void);
 extern int GetScriptBgmSelection(void);
 extern int QueueSoundKind4(int id, int fade);
@@ -77,7 +77,7 @@ s32 AdvancePanelScriptSkipAndRestoreScene(void)
         SetScriptBgmSelection(context->bgmId);
     }
     if (!IsSessionFlagSet(0x3308) && GetScriptBgmSelection() == -1) {
-        data_ov001_020a0480->resetFlag = 0;
+        gFieldSessionWork->resetFlag = 0;
     }
     if (GetMainBrightnessSetting() == 0) {
         for (i = 0; i < 8; i++) {

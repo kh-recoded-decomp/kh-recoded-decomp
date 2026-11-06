@@ -17,8 +17,8 @@ typedef struct Session {
     u32 flags;
 } Session;
 
-extern ScreenState *data_ov001_020a04a0;
-extern Session *data_ov001_020a0480;
+extern ScreenState *gFieldScreenTransitionWork;
+extern Session *gFieldSessionWork;
 extern u8 sOv001_RefreshWnd_0209eb2c[];
 extern void SetScreenModeFlags(int enable, int mode);
 extern void RestoreBrightnessOnce(void);
@@ -29,7 +29,7 @@ extern void InvokeForChannelOrBoth(u32 arg0, u32 arg1, int arg2, int channel);
 
 void BeginFieldScreenModeTransition(int mode)
 {
-    ScreenState *screen = data_ov001_020a04a0;
+    ScreenState *screen = gFieldScreenTransitionWork;
 
     SetScreenModeFlags(1, mode);
     if (mode == 3) {
@@ -46,6 +46,6 @@ void BeginFieldScreenModeTransition(int mode)
         InvokeForChannelOrBoth(1, (u32)sOv001_RefreshWnd_0209eb2c, (int)RestoreBrightnessOnce, 0);
     }
     if (screen->clearsSessionFlag) {
-        data_ov001_020a0480->flags &= ~0x40000;
+        gFieldSessionWork->flags &= ~0x40000;
     }
 }

@@ -30,8 +30,8 @@ typedef struct SessionWork {
     s32 pendingScore;
 } SessionWork;
 
-extern FieldSceneHandle data_ov001_020a04c4;
-extern SessionWork *data_ov001_020a0480;
+extern FieldSceneHandle gFieldSceneGlobals;
+extern SessionWork *gFieldSessionWork;
 extern char data_ov045_020c0820[];
 extern char OVERLAY_45_ID[];
 extern void LoadOverlayAfterGeometryTransfer(int processor, int overlay_id);
@@ -48,7 +48,7 @@ extern void GX_LoadBGPltt(void *dest, u32 srcOffset, u32 size);
 
 void ReopenFieldScoreScreen(void)
 {
-    FieldScene *scene = data_ov001_020a04c4.scene;
+    FieldScene *scene = gFieldSceneGlobals.scene;
     u32 saved = ReadSessionPackedBits(0x35a7, 0x20);
     ScoreScreenParams params;
 
@@ -58,7 +58,7 @@ void ReopenFieldScoreScreen(void)
     params.timeScore = CountAreaEntriesOfKind0() * 1000;
     params.total = params.timeScore + (saved + params.bonus);
     WriteSessionPackedBits(0x35a7, 0x20, params.total);
-    data_ov001_020a0480->pendingScore = 0;
+    gFieldSessionWork->pendingScore = 0;
     if (scene->resultScreen == NULL) {
         scene->sceneFlags &= ~1;
         scene->sceneFlags &= ~0x40;

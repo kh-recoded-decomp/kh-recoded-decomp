@@ -20,13 +20,13 @@ typedef struct EffectEntry {
     u8 kind;
 } EffectEntry;
 
-extern EffectManager *data_ov001_020a04fc;
+extern EffectManager *gFieldEntryPoolManager;
 
 extern void *NNS_FndAllocFromDefaultExpHeapEx(u32 size, int alignment);
 
 void AllocEffectBufferSlot(EffectEntry *entry, u32 size)
 {
-    BufferSlot *slots = data_ov001_020a04fc->slots;
+    BufferSlot *slots = gFieldEntryPoolManager->slots;
     BufferSlot *slot = &slots[entry->slotIndex];
 
     slot->kind = entry->kind;

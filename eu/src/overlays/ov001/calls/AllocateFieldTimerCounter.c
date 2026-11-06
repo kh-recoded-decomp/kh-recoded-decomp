@@ -1,6 +1,6 @@
 #include "nitro/types.h"
 
-extern u32 data_ov001_020a0494;
+extern u32 gSessionTimerWork;
 extern s32 FindFreeMaskBit(s32 param1, s32 param2);
 extern void SetFieldTimerCounterMilliseconds(u32 value, s32 index);
 extern void SetSessionStateBit(u32 param1, s32 param2);
@@ -10,7 +10,7 @@ s32 AllocateFieldTimerCounter(s32 index)
     u32 ctx;
     s32 slot;
 
-    ctx = data_ov001_020a0494;
+    ctx = gSessionTimerWork;
     slot = index + 3;
     if (index < 0) {
         slot = FindFreeMaskBit(3, 1);

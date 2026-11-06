@@ -1,7 +1,7 @@
 #include "nitro/types.h"
 
-extern unsigned int data_ov001_020a0480;
-extern unsigned int data_ov001_020a04fc;
+extern unsigned int gFieldSessionWork;
+extern unsigned int gFieldEntryPoolManager;
 extern unsigned int NNSi_FndAllocFromDefaultHeap();
 extern unsigned int ResourceCache_FreeAll();
 extern unsigned int MIi_CpuClear32();
@@ -13,7 +13,7 @@ void InitFieldEntryPoolTable(int count) {
   void *entries;
   int currentState;
 
-  cache = data_ov001_020a04fc;
+  cache = gFieldEntryPoolManager;
   entries = NNSi_FndAllocFromDefaultHeap(count * 4);
   *cache = entries;
   MIi_CpuClear32(0,entries,count * 4);
@@ -22,7 +22,7 @@ void InitFieldEntryPoolTable(int count) {
   if ((currentState == 0) &&
      (((currentState = func_ov001_020644c0(), *(short *)((int)cache + 0x132) != currentState ||
        (*(char *)(cache + 0x4d) != count)) ||
-      ((*(u32 *)(data_ov001_020a0480 + 0x214) << 0x1b >> 0x1f) != 0)))) {
+      ((*(u32 *)(gFieldSessionWork + 0x214) << 0x1b >> 0x1f) != 0)))) {
     ResourceCache_FreeAll();
   }
 }

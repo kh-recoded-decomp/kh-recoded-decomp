@@ -1,3 +1,3 @@
 #define LookupStagePairValue_02068850 LookupStagePairValue
-#define data_ov001_020a0470 data_ov001_020a0490
+#define data_ov001_020a0470 gStageEventContext
 #include "src/ov001/unclassified_helpers/LookupStagePairValue_02068850.c"

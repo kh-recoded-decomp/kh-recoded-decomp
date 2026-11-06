@@ -2,7 +2,7 @@
 #define NNSi_FndFreeFromDefaultHeap_0202a1c4 NNSi_FndFreeFromDefaultHeap
 #define StoreGlobalArrayEntry_02025668 StoreGlobalArrayEntry
 #define ZeroHalfThenFree_0202cd78 ZeroHalfThenFree
-#define data_ov001_020a04d8 data_ov001_020a04f8
+#define data_ov001_020a04d8 gFieldObjectClassManager
 #define func_ov001_0207f3d0 FieldObjectClass_Destroy
 #define func_ov001_02086db8 DestroyFieldEntryPoolManager
 #define func_ov001_02087414 ReleaseFieldEntryRewardTables

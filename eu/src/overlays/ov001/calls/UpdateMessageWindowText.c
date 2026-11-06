@@ -6,5 +6,5 @@
 #define func_020019f4 GetNestedModeByte
 #define func_ov001_02079524 StartWindow1Fade
 #define func_ov001_02079c88 UpdateMessageWindowText
-#define g_activeContext_020a04c4 data_ov001_020a04e4
+#define g_activeContext_020a04c4 gMessageWindowWork
 #include "src/ov001/text_rendering/func_ov001_02079c88.c"

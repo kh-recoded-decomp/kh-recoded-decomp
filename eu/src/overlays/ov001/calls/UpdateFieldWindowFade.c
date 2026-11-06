@@ -20,7 +20,7 @@ typedef struct {
     FieldScreen *screen;
 } FieldManager;
 
-extern FieldManager data_ov001_020a04c4;
+extern FieldManager gFieldSceneGlobals;
 extern void ConfigureFieldBgLayers(void);
 
 static inline void G2_SetWnd0InsidePlane(int wnd, BOOL effect)
@@ -54,7 +54,7 @@ static inline void GX_SetVisibleWnd(int window)
 
 void UpdateFieldWindowFade(void)
 {
-    FieldScreen *screen = data_ov001_020a04c4.screen;
+    FieldScreen *screen = gFieldSceneGlobals.screen;
     s32 size = screen->fadeSize;
 
     if (screen->phase > 0) {

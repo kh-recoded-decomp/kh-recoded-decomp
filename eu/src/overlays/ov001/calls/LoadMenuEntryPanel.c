@@ -1,5 +1,5 @@
 #define LoadMenuEntryPanel_0207a17c LoadMenuEntryPanel
 #define QueueFileLoadRequest_020ba114 QueueFileLoadRequest
-#define data_ov001_020a04c4 data_ov001_020a04e4
+#define data_ov001_020a04c4 gMessageWindowWork
 #define func_ov001_02078d24 LoadModeBg1Characters
 #include "src/ov001/field_manager/LoadMenuEntryPanel_0207a17c.c"

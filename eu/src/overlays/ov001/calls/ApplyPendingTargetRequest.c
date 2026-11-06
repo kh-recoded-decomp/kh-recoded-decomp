@@ -4,6 +4,6 @@
 #define ClearWords124And128_0206c038 ClearWords124And128
 #define ProjectWorldToScreenFx_0206ad34 ProjectWorldToScreenFx
 #define SelectCursorTarget_0206bf7c SelectCursorTarget
-#define data_ov001_020a0484 data_ov001_020a04a4
+#define data_ov001_020a0484 gFieldTargetSelectionWork
 #define func_ov001_02087960 GetStageEventTargetInfo
 #include "src/ov001/shared_engine/ApplyPendingTargetRequest_0206bdbc.c"

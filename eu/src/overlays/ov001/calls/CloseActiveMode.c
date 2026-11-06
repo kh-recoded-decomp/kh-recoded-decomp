@@ -4,5 +4,5 @@
 #define func_ov001_02079490 RefreshWindowHighlight
 #define func_ov027_020b8390 FindLoadedElementById
 #define func_ov027_020b83e8 SetTagRecordArmed
-#define g_activeContext_020a04c4 data_ov001_020a04e4
+#define g_activeContext_020a04c4 gMessageWindowWork
 #include "src/ov001/leaf_research/CloseActiveMode_0207a820.c"

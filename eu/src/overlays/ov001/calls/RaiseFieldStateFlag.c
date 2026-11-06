@@ -5,11 +5,11 @@ typedef struct FieldState {
     u8 flags;
 } FieldState;
 
-extern FieldState *data_ov001_020a0498;
+extern FieldState *gFieldTaskManagerWork;
 
 void RaiseFieldStateFlag(void)
 {
-    FieldState *state = data_ov001_020a0498;
+    FieldState *state = gFieldTaskManagerWork;
 
     if (!(state->flags & 1)) {
         state->flags = 1;

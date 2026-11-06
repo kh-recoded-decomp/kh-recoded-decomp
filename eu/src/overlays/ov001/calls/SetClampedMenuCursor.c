@@ -1,4 +1,4 @@
 #define SetClampedMenuCursor_020750a4 SetClampedMenuCursor
-#define data_ov001_020a04ac data_ov001_020a04cc
+#define data_ov001_020a04ac gFieldHudGaugeState
 #define func_ov001_02074b7c UpdateGaugeUnits
 #include "src/ov001/field_manager/SetClampedMenuCursor_020750a4.c"

@@ -1,5 +1,5 @@
 #define FreeLayerContextData_02067aa8 FreeLayerContextData
 #define NNSi_FndFreeFromDefaultHeap_0202a1c4 NNSi_FndFreeFromDefaultHeap
 #define ZeroHalfThenFree_0202cd78 ZeroHalfThenFree
-#define data_ov001_020a046c data_ov001_020a048c
+#define data_ov001_020a046c gFieldSceneEntryContext
 #include "src/ov001/unclassified_helpers/FreeLayerContextData_02067aa8.c"

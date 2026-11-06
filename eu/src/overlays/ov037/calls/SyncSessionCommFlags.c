@@ -1,7 +1,7 @@
 #define func_ov001_020645c8 IsSessionFlagSet
 #define RefreshSessionSelections_02064c44 RefreshSessionSelections
 #define SyncSessionCommFlags_020ba764 SyncSessionCommFlags
-#define data_ov001_020a0460 data_ov001_020a0480
+#define data_ov001_020a0460 gFieldSessionWork
 #define func_ov037_020ba544 ClassifySessionStateForMode
 #define g_commState_020bb760 gContinueSceneState
 #include "src/ov037/unclassified_helpers/SyncSessionCommFlags_020ba764.c"

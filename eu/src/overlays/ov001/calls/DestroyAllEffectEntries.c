@@ -1,5 +1,5 @@
 #define DestroyAllEffectEntries_020868d0 DestroyAllEffectEntries
 #define NNSi_FndFreeFromDefaultHeap_0202a1c4 NNSi_FndFreeFromDefaultHeap
-#define data_ov001_020a04dc data_ov001_020a04fc
+#define data_ov001_020a04dc gFieldEntryPoolManager
 #define func_ov001_02086298 DestroyEntryPool
 #include "src/ov001/field_objects/DestroyAllEffectEntries_020868d0.c"

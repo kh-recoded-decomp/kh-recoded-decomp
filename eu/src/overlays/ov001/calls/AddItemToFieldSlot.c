@@ -36,7 +36,7 @@ typedef struct FieldMenuHandle {
     FieldMenu *menu;
 } FieldMenuHandle;
 
-extern FieldMenuHandle data_ov001_020a04d0;
+extern FieldMenuHandle gFieldCommandMenuGlobals;
 extern void *GetSceneTagTracker(void);
 extern BOOL IsFieldFlag8Set(void);
 extern void NNS_FndAppendListObject(NNSFndList *list, void *object);
@@ -49,7 +49,7 @@ extern void func_ov001_02075e10(
 
 void AddItemToFieldSlot(s32 slotId, u32 itemId, u16 amount)
 {
-    FieldMenu *menu = data_ov001_020a04d0.menu;
+    FieldMenu *menu = gFieldCommandMenuGlobals.menu;
     s32 previousCount = menu->listedCount;
     void *tracker = GetSceneTagTracker();
     FieldEntry *slot;

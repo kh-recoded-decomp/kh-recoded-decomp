@@ -1,3 +1,3 @@
 #define MarkFieldValueNegative_0206430c MarkFieldValueNegative
-#define data_ov001_020a0460 data_ov001_020a0480
+#define data_ov001_020a0460 gFieldSessionWork
 #include "src/ov001/field_manager/MarkFieldValueNegative_0206430c.c"

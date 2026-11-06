@@ -1,5 +1,5 @@
 #define NNSi_FndAllocFromDefaultHeap_0202a178 NNSi_FndAllocFromDefaultHeap
 #define NNSi_FndFreeFromDefaultHeap_0202a1c4 NNSi_FndFreeFromDefaultHeap
 #define ReallocTableEntry_02087138 ReallocTableEntry
-#define data_ov001_020a04dc data_ov001_020a04fc
+#define data_ov001_020a04dc gFieldEntryPoolManager
 #include "src/ov001/unclassified_helpers/ReallocTableEntry_02087138.c"

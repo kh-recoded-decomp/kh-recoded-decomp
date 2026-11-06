@@ -1,3 +1,3 @@
 #define StoreSessionSpawnPoint_02063524 StoreSessionSpawnPoint
-#define data_ov001_020a0460 data_ov001_020a0480
+#define data_ov001_020a0460 gFieldSessionWork
 #include "src/ov001/unclassified_helpers/StoreSessionSpawnPoint_02063524.c"

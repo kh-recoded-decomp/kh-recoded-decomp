@@ -26,7 +26,7 @@ typedef struct {
     s16 hasTail;
 } WindowRect;
 
-extern MessageContext *data_ov001_020a04e4;
+extern MessageContext *gMessageWindowWork;
 extern int GetTailOverhang(MessageWindow *window);
 
 int PlaceMessageWindow(MessageWindow *window, TextSize *size, WindowRect *rect, int extraWidth)
@@ -35,7 +35,7 @@ int PlaceMessageWindow(MessageWindow *window, TextSize *size, WindowRect *rect, 
     int pos;
     int limit;
 
-    switch (data_ov001_020a04e4->layout) {
+    switch (gMessageWindowWork->layout) {
     case 2:
         if (extraWidth > 0) {
             window->tileX = 1;

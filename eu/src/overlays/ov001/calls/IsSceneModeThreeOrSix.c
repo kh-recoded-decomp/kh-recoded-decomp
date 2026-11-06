@@ -1,3 +1,3 @@
 #define IsSceneModeThreeOrSix_0207b60c IsSceneModeThreeOrSix
-#define data_ov001_020a04c8 data_ov001_020a04e8
+#define data_ov001_020a04c8 gSubscenePanelWork
 #include "src/ov001/shared_engine/IsSceneModeThreeOrSix_0207b60c.c"

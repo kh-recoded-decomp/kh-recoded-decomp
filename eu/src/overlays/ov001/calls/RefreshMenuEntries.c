@@ -2,5 +2,5 @@
 #define func_ov001_02063a38 GetFieldSessionState
 #define RefreshMenuEntries_0206e378 RefreshMenuEntries
 #define SetMenuHighlight_0206c2f8 SetMenuHighlight
-#define data_ov001_020a049c data_ov001_020a04bc
+#define data_ov001_020a049c gManagedActorGlobals
 #include "src/ov001/shared_engine/RefreshMenuEntries_0206e378.c"

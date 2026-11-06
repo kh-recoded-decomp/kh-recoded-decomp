@@ -1,15 +1,15 @@
 #include "nitro/types.h"
 
-extern u32 data_ov001_020a04f0;
+extern u32 gArrowPromptWork;
 extern void NNSi_FndFreeFromDefaultHeap(void *ptr);
 
 void ReleaseArrowPromptWork(void)
 {
     u8 *context;
 
-    context = (u8 *)data_ov001_020a04f0;
-    NNSi_FndFreeFromDefaultHeap(*(void **)(data_ov001_020a04f0 + 0x30));
+    context = (u8 *)gArrowPromptWork;
+    NNSi_FndFreeFromDefaultHeap(*(void **)(gArrowPromptWork + 0x30));
     NNSi_FndFreeFromDefaultHeap(*(void **)(context + 0x34));
     NNSi_FndFreeFromDefaultHeap(*(void **)(context + 0x38));
-    data_ov001_020a04f0 = 0;
+    gArrowPromptWork = 0;
 }

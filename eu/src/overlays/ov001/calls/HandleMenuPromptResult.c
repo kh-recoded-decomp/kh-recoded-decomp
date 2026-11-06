@@ -1,7 +1,7 @@
 #define func_ov001_020645dc SetSessionFlag
 #define HandleMenuPromptResult_020623e8 HandleMenuPromptResult
 #define ReadGlobalPackedBits_02027348 ReadGlobalPackedBits
-#define data_ov001_020a0460 data_ov001_020a0480
+#define data_ov001_020a0460 gFieldSessionWork
 #define func_ov001_0206317c ConfigureFieldTracks
 #define func_ov001_020631e4 SetPendingFieldValue
 #define func_ov001_020641d4 OpenFieldMenuMode

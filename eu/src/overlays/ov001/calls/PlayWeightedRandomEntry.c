@@ -1,5 +1,5 @@
 #define func_ov001_020664f0 TrySpawnFieldEffect
 #define PlayWeightedRandomEntry_02069530 PlayWeightedRandomEntry
-#define data_ov001_020a047c data_ov001_020a049c
+#define data_ov001_020a047c gFieldOffsetTableHolder
 #define func_0202a9d0 NextSharedRandom16Scaled
 #include "src/ov001/shared_engine/PlayWeightedRandomEntry_02069530.c"

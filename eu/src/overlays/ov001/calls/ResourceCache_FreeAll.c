@@ -1,5 +1,5 @@
 #define NNSi_FndFreeFromDefaultHeap_0202a1c4 NNSi_FndFreeFromDefaultHeap
 #define ResourceCache_FreeAll_02086df0 ResourceCache_FreeAll
 #define func_01ff86fc MIi_CpuClear32
-#define g_resourceCache_020a04dc data_ov001_020a04fc
+#define g_resourceCache_020a04dc gFieldEntryPoolManager
 #include "src/ov001/unclassified_helpers/ResourceCache_FreeAll_02086df0.c"

@@ -1,7 +1,7 @@
 #include "nitro/types.h"
 
-extern u32 data_ov001_020a04f8;
+extern u32 gFieldObjectClassManager;
 
 u32 GetFieldObjectShadowModel(void) {
-  return *(u32 *)(data_ov001_020a04f8 + 0x11c);
+  return *(u32 *)(gFieldObjectClassManager + 0x11c);
 }

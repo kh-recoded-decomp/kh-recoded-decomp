@@ -3,7 +3,7 @@
 #define DrawMessageWindowPage_02079b4c DrawMessageWindowPage
 #define FinishMessageWindowPage_02079f2c FinishMessageWindowPage
 #define Text_UploadTileBuffer_02001520 Text_UploadTileBuffer
-#define data_ov001_020a04c4 data_ov001_020a04e4
+#define data_ov001_020a04c4 gMessageWindowWork
 #define func_ov001_02079a9c PrintNextShadowedGlyph
 #define func_ov001_02079c88 UpdateMessageWindowText
 #include "src/ov001/field_manager/UpdateMessageWindow_0207a68c.c"

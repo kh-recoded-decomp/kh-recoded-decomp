@@ -1,4 +1,4 @@
 #define SetPendingSlotFlagWithValue_0207d504 SetPendingSlotFlagWithValue
-#define data_ov001_020a04cc data_ov001_020a04ec
+#define data_ov001_020a04cc gCounterHudWork
 
 #include "src/ov001/unclassified_helpers/SetPendingSlotFlagWithValue_0207d504.c"

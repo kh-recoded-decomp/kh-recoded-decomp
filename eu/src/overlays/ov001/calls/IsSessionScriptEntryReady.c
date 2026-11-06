@@ -2,14 +2,14 @@
 
 typedef unsigned int code();
 
-extern unsigned int data_ov001_020a0480;
+extern unsigned int gFieldSessionWork;
 extern unsigned int IsEntryFlag2Active();
 
 unsigned int IsSessionScriptEntryReady(void) {
   int result;
 
-  if ((*(code **)(data_ov001_020a0480 + 0x2828) != (code *)0x0) &&
-     (result = (**(code **)(data_ov001_020a0480 + 0x2828))(), result == 0)) {
+  if ((*(code **)(gFieldSessionWork + 0x2828) != (code *)0x0) &&
+     (result = (**(code **)(gFieldSessionWork + 0x2828))(), result == 0)) {
     return 0;
   }
   result = IsEntryFlag2Active(0);

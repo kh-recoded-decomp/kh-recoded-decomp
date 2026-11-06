@@ -1,5 +1,5 @@
 #define Actor_AttachSource_02089e94 Actor_AttachSource
 #define PlayIndexedActorMotion_020889ec PlayIndexedActorMotion
-#define data_ov001_020a04e0 data_ov001_020a0500
+#define data_ov001_020a04e0 gActorSceneManager
 #define func_ov001_0208a54c SetActorAnimSlot
 #include "src/ov001/scripted_actor_behavior/PlayIndexedActorMotion_020889ec.c"

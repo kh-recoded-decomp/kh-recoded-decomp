@@ -21,7 +21,7 @@
 #define UpdateWidgetLayerDefault_020b9df0 UpdateWidgetLayerDefault_020b9e10
 #define data_ov001_0209dd00 gResumeFieldLayerIds
 #define data_ov001_0209ecf0 gBgScreenLoaders
-#define data_ov001_020a04a4 data_ov001_020a04c4
+#define data_ov001_020a04a4 gFieldSceneGlobals
 #define func_020033e0 DC_FlushAll
 #define func_0202d60c func_0202d620
 #define func_ov001_0206ec80 SetupFieldBgLayers

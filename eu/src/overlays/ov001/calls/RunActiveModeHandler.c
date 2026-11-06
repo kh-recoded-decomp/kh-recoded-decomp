@@ -1,5 +1,5 @@
 #define RunActiveModeHandler_0207a4d0 RunActiveModeHandler
 #define data_ov001_0209ef04 gMessageWindowStateHandlers
 #define func_ov001_0207a370 HandleModeMenuInput
-#define g_activeContext_020a04c4 data_ov001_020a04e4
+#define g_activeContext_020a04c4 gMessageWindowWork
 #include "src/ov001/leaf_research/RunActiveModeHandler_0207a4d0.c"

@@ -4,7 +4,7 @@
 #include "src/overlays/ov041/StageWork.h"
 #include "src/overlays/ov041/StageEntryRender.h"
 
-extern FieldProgressState *data_ov001_020a0480;
+extern FieldProgressState *gFieldSessionWork;
 extern s32 IsScreenModeIdle(void);
 extern void UpdateStageEntry(u8 entryIndex);
 extern void SumStageTotals(StageWork **work, int *totals);
@@ -50,7 +50,7 @@ void StageStateFinish(void)
         }
         StoreMovieCounter(i, value);
     }
-    data_ov001_020a0480->pendingExperience += totals[3];
+    gFieldSessionWork->pendingExperience += totals[3];
     AddSessionCounter(0, totals[4]);
     if (work->flags & 0x2000) {
         for (i = work->primaryCount; i < work->entryCount; i++) {
@@ -62,7 +62,7 @@ void StageStateFinish(void)
     }
     context->flags &= 0xfff3;
     ReleaseAllSceneSlotResources();
-    data_ov001_020a048c->unk10b8 = 0;
+    gFieldSceneEntryContext->unk10b8 = 0;
     ReleaseAreaFadeModelIfLoaded();
     context->pendingChoice = 2;
     if (work->flags & 0x8000) {

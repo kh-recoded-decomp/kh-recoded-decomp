@@ -3,7 +3,7 @@
 #define SampleTweenValue_0205258c SampleTweenValue
 #define UpdateModeWidget_0207a11c UpdateModeWidget
 #define UpdateWidgetLayerDefault_020b9df0 UpdateWidgetLayerDefault_020b9e10
-#define data_ov001_020a04c4 data_ov001_020a04e4
+#define data_ov001_020a04c4 gMessageWindowWork
 #define func_ov001_020796f8 DrawScaledWindowFrame
 #define func_ov027_020b9e00 MarkTileTableRowDirty
 #include "src/ov001/shared_engine/UpdateModeWidget_0207a11c.c"

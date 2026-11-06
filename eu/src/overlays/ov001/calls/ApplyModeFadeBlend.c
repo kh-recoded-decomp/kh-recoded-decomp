@@ -1,4 +1,4 @@
 #define ApplyModeFadeBlend_0207a8c8 ApplyModeFadeBlend
 #define G2x_SetBlendAlpha_02006850 G2x_SetBlendAlpha_
-#define g_activeContext_020a04c4 data_ov001_020a04e4
+#define g_activeContext_020a04c4 gMessageWindowWork
 #include "src/ov001/leaf_research/ApplyModeFadeBlend_0207a8c8.c"

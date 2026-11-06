@@ -1,7 +1,7 @@
 #define func_ov001_02064490 InvokeSessionCheckCallbackOrDefault
 #define RequestPanelModeChange_0207b27c RequestPanelModeChange
 #define SetDisplaySetting_02029f28 SetDisplaySetting
-#define data_ov001_020a04c8 data_ov001_020a04e8
+#define data_ov001_020a04c8 gSubscenePanelWork
 #define func_ov001_0207b20c Panel_InitFromModeTables
 #define func_ov001_0207b3cc GetLoadedSubsceneMode
 #define func_ov025_020b6270 LookupChannelEntry

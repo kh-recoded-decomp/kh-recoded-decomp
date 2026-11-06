@@ -1,13 +1,13 @@
 #include "nitro/types.h"
 
-extern u32 *data_ov001_020a04b8;
+extern u32 *gFieldMessageSpriteManager;
 
 void SetFieldMessageLoaderUpdatesPaused(int enabled) {
-  if (data_ov001_020a04b8 != (u32 *)0x0) {
+  if (gFieldMessageSpriteManager != (u32 *)0x0) {
     if (enabled != 0) {
-      *data_ov001_020a04b8 = *data_ov001_020a04b8 | 1;
+      *gFieldMessageSpriteManager = *gFieldMessageSpriteManager | 1;
       return;
     }
-    *data_ov001_020a04b8 = *data_ov001_020a04b8 & 0xfffffffe;
+    *gFieldMessageSpriteManager = *gFieldMessageSpriteManager & 0xfffffffe;
   }
 }

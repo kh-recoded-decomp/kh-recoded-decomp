@@ -1,3 +1,3 @@
 #define InitSlotLayoutCompact_0207d320 InitSlotLayoutCompact
-#define data_ov001_020a04cc data_ov001_020a04ec
+#define data_ov001_020a04cc gCounterHudWork
 #include "src/ov001/shared_engine/InitSlotLayoutCompact_0207d320.c"

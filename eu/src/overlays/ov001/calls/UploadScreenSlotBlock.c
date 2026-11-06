@@ -1,5 +1,5 @@
 #define GFXi_EnqueueCommand_02014090 NNS_GfdRegisterNewVramTransferTask
 #define UploadScreenSlotBlock_02071770 UploadScreenSlotBlock
-#define data_ov001_020a04a4 data_ov001_020a04c4
+#define data_ov001_020a04a4 gFieldSceneGlobals
 #define func_01ff878c MIi_CpuCopyFast
 #include "src/ov001/field_manager/UploadScreenSlotBlock_02071770.c"

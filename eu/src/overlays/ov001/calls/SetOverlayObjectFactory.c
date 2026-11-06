@@ -1,3 +1,3 @@
 #define SetOverlayObjectFactory_0206dd84 SetOverlayObjectFactory
-#define data_ov001_020a049c data_ov001_020a04bc
+#define data_ov001_020a049c gManagedActorGlobals
 #include "src/ov001/object_creation/SetOverlayObjectFactory_0206dd84.c"

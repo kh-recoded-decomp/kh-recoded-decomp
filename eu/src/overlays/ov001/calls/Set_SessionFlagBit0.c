@@ -1,3 +1,3 @@
 #define Set_SessionFlagBit0_020642b4 Set_SessionFlagBit0
-#define data_ov001_020a0460 data_ov001_020a0480
+#define data_ov001_020a0460 gFieldSessionWork
 #include "src/ov001/unclassified_helpers/Set_SessionFlagBit0_020642b4.c"

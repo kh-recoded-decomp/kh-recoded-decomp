@@ -1,5 +1,5 @@
 #define RunSessionScriptFrame_02063638 RunSessionScriptFrame
 #define StepSessionScriptState_02061f64 StepSessionScriptState
-#define data_ov001_020a0460 data_ov001_020a0480
+#define data_ov001_020a0460 gFieldSessionWork
 #define func_ov001_020645e8 ClearSessionPackedBit
 #include "src/ov001/unclassified_helpers/StepSessionScriptState_02061f64.c"

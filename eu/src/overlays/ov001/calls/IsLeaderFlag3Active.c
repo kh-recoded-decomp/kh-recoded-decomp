@@ -1,4 +1,4 @@
 #define GetBoundedEntryField_0206db5c GetBoundedEntryField
 #define IsLeaderFlag3Active_0206e198 IsLeaderFlag3Active
-#define data_ov001_020a049c data_ov001_020a04bc
+#define data_ov001_020a049c gManagedActorGlobals
 #include "src/ov001/shared_engine/IsLeaderFlag3Active_0206e198.c"

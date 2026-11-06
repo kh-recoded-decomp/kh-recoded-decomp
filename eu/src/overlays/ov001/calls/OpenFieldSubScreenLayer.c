@@ -19,7 +19,7 @@ typedef struct FieldManagerHandle {
     FieldManager *manager;
 } FieldManagerHandle;
 
-extern FieldManagerHandle data_ov001_020a04c4;
+extern FieldManagerHandle gFieldSceneGlobals;
 extern const u8 data_ov045_020c0820[];
 extern char OVERLAY_45_ID[];
 extern void LoadOverlayAfterGeometryTransfer(int processor, int overlayId);
@@ -27,7 +27,7 @@ extern void *CreateTaskObject(const void *descriptor, LayerSpec *spec);
 
 void OpenFieldSubScreenLayer(int argument)
 {
-    FieldManager *manager = data_ov001_020a04c4.manager;
+    FieldManager *manager = gFieldSceneGlobals.manager;
     LayerSpec spec;
 
     LoadOverlayAfterGeometryTransfer(0, (int)OVERLAY_45_ID);

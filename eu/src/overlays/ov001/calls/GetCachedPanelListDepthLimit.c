@@ -1,8 +1,8 @@
 #include "nitro/types.h"
 
-extern u32 data_ov001_020a04e8;
+extern u32 gSubscenePanelWork;
 
 u8 GetCachedPanelListDepthLimit(void)
 {
-    return *(u8 *)(data_ov001_020a04e8 + 0x102);
+    return *(u8 *)(gSubscenePanelWork + 0x102);
 }

@@ -1,4 +1,4 @@
 #define AreAllListNodesReady_0207ed2c AreAllListNodesReady
-#define data_ov001_020a04d8 data_ov001_020a04f8
+#define data_ov001_020a04d8 gFieldObjectClassManager
 #define func_ov001_0207f508 FieldObject_TrySpawn
 #include "src/ov001/unclassified_helpers/AreAllListNodesReady_0207ed2c.c"

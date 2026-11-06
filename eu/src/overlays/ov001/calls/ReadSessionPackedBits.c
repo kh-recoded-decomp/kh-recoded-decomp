@@ -1,5 +1,5 @@
 #define ReadGlobalPackedBits_02027348 ReadGlobalPackedBits
 #define ReadPackedBitField_0202d4c4 ReadPackedBitField
 #define ReadSessionPackedBits_02064574 ReadSessionPackedBits
-#define data_ov001_020a0460 data_ov001_020a0480
+#define data_ov001_020a0460 gFieldSessionWork
 #include "src/ov001/unclassified_helpers/ReadSessionPackedBits_02064574.c"

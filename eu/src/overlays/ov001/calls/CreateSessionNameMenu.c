@@ -5,7 +5,7 @@
 #define SNDi_LockMutex_020baf94 IsSessionFlag3701Set
 #define ShowSessionNameEntry_020639ac ShowSessionNameEntry
 #define data_ov001_0209ecdc gFieldManagerClassDescriptor
-#define data_ov001_020a0460 data_ov001_020a0480
+#define data_ov001_020a0460 gFieldSessionWork
 #define func_01ff86fc MIi_CpuClear32
 #define func_0202a448 CreateTaskObject
 #define func_ov035_020baf88 IsSessionFlag3700Set

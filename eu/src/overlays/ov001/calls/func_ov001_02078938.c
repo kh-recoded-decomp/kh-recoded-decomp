@@ -10,9 +10,9 @@ typedef struct {
     FieldMenu *menu;
 } FieldMenuHandle;
 
-extern FieldMenuHandle data_ov001_020a04d0;
+extern FieldMenuHandle gFieldCommandMenuGlobals;
 
 void func_ov001_02078938(s32 value)
 {
-    data_ov001_020a04d0.menu->unk_118 = value;
+    gFieldCommandMenuGlobals.menu->unk_118 = value;
 }

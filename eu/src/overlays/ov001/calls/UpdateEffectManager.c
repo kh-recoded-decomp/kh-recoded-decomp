@@ -1,7 +1,7 @@
 #define func_ov001_02067ed4 GetCurrentSceneEntryIndex
 #define IsNodeFlagBitClear_020872b8 IsNodeFlagBitClear
 #define UpdateEffectManager_02086c60 UpdateEffectManager
-#define data_ov001_020a04dc data_ov001_020a04fc
+#define data_ov001_020a04dc gFieldEntryPoolManager
 #define func_ov001_0206e584 IsFirstEntryFlagSet
 #define func_ov001_02086b1c ResetLinkedActorOffsets
 #define func_ov001_02087054 SetEntryPoolConditionalUpdatePause

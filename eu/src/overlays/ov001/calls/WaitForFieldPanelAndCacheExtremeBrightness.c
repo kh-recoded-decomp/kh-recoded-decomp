@@ -10,7 +10,7 @@ typedef struct ActorManager {
     AxisState axes[2];
 } ActorManager;
 
-extern ActorManager *data_ov001_020a0500;
+extern ActorManager *gActorSceneManager;
 extern BOOL IsScreenModeIdle(void);
 extern BOOL OpenFieldPanel(void);
 extern int GetMainBrightnessSetting(void);
@@ -23,7 +23,7 @@ s32 WaitForFieldPanelAndCacheExtremeBrightness(void)
     ActorManager *manager;
     int axisIndex;
 
-    manager = data_ov001_020a0500;
+    manager = gActorSceneManager;
     if (IsScreenModeIdle() && OpenFieldPanel()) {
         manager->axes[0].value = GetMainBrightnessSetting();
         manager->axes[1].value = GetSubBrightnessSetting();

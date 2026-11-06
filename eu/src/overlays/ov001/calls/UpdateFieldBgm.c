@@ -17,7 +17,7 @@ typedef struct FieldSession {
     BgmState bgm;
 } FieldSession;
 
-extern FieldSession *data_ov001_020a0480;
+extern FieldSession *gFieldSessionWork;
 extern int GetCurrentSceneEntryIndex(void);
 extern BOOL IsSessionFlagSet(u32 value);
 extern BOOL IsEntryFlag2Active(int index);
@@ -48,14 +48,14 @@ void UpdateFieldBgm(FieldSession *session) {
     if (IsEntryFlag2Active(0)) {
         return;
     }
-    if (data_ov001_020a0480->bgm.override != -1 && bgm->track != 0x27) {
+    if (gFieldSessionWork->bgm.override != -1 && bgm->track != 0x27) {
         bgm->track = 0x27;
         QueueSoundKind4(bgm->track, 30);
     }
     if (session->bgm.kind != 4 && session->bgm.kind != 7) {
         battle = IsFieldTrackFlagSet();
     }
-    if (data_ov001_020a0480->bgm.override != -1) {
+    if (gFieldSessionWork->bgm.override != -1) {
         s8 mode = 1;
         if (battle == 0) {
             mode = 2;

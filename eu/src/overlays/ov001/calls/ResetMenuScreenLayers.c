@@ -4,6 +4,6 @@
 #define GetSceneTagTracker_020711b0 GetSceneTagTracker
 #define InvokeCallback40_020b8268 InvokeCallback40
 #define ResetMenuScreenLayers_0207de48 ResetMenuScreenLayers
-#define data_ov001_020a04d0 data_ov001_020a04f0
+#define data_ov001_020a04d0 gArrowPromptWork
 #define func_ov027_020b9d54 ClearTileTableRect
 #include "src/ov001/unclassified_helpers/ResetMenuScreenLayers_0207de48.c"

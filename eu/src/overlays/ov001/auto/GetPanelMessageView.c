@@ -1,8 +1,8 @@
 #include "nitro/types.h"
 
-extern u8 *data_ov001_020a04e8;
+extern u8 *gSubscenePanelWork;
 
 void *GetPanelMessageView(void)
 {
-    return data_ov001_020a04e8 + 0x20;
+    return gSubscenePanelWork + 0x20;
 }

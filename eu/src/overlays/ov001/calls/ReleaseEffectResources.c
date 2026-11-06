@@ -3,7 +3,7 @@
 #define NNSi_FndFreeFromDefaultHeap_0202a1c4 NNSi_FndFreeFromDefaultHeap
 #define ReleaseEffectResources_020870cc ReleaseEffectResources
 #define ReleaseSharedRecordSlot_0202c8a8 ReleaseSharedRecordSlot
-#define data_ov001_020a04dc data_ov001_020a04fc
+#define data_ov001_020a04dc gFieldEntryPoolManager
 #define func_ov001_020645e8 ClearSessionPackedBit
 #define func_ov001_02086fe8 StopAndClearFieldEntryList
 #include "src/ov001/field_objects/ReleaseEffectResources_020870cc.c"

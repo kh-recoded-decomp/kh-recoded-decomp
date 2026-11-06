@@ -3,7 +3,7 @@
 #define GetRecordTableEPointer_020522a0 GetRecordTableEPointer
 #define NNSi_FndAllocFromDefaultHeap_0202a178 NNSi_FndAllocFromDefaultHeap
 #define ReleaseRecordSlot_02051dfc ReleaseRecordSlot
-#define data_ov001_020a04dc data_ov001_020a04fc
+#define data_ov001_020a04dc gFieldEntryPoolManager
 #define func_01ff8740 MIi_CpuClearFast
 #define func_01ff89a8 MI_CpuCopy8
 #include "src/ov001/field_manager/CreateRecordViewer_02086c10.c"

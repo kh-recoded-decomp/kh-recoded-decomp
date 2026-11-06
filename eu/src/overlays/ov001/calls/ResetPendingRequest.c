@@ -1,4 +1,4 @@
 #define ResetPendingRequest_0206c614 ResetPendingRequest
 #define func_ov001_0207166c HideFieldMessageLine
-#define g_manager_020a0484 data_ov001_020a04a4
+#define g_manager_020a0484 gFieldTargetSelectionWork
 #include "src/ov001/shared_engine/ResetPendingRequest_0206c614.c"

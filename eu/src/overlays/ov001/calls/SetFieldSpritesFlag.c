@@ -13,12 +13,12 @@ typedef struct FieldSpriteSet {
     int spriteCount;
 } FieldSpriteSet;
 
-extern FieldSpriteSet *data_ov001_020a04bc;
+extern FieldSpriteSet *gManagedActorGlobals;
 extern void ClearFieldButtonInput(void *cell);
 
 void SetFieldSpritesFlag(BOOL enable)
 {
-    FieldSpriteSet *set = data_ov001_020a04bc;
+    FieldSpriteSet *set = gManagedActorGlobals;
     int i;
 
     if (set != NULL) {

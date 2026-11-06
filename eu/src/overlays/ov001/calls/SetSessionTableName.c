@@ -1,6 +1,6 @@
 #define NNSi_FndAllocFromDefaultHeap_0202a178 NNSi_FndAllocFromDefaultHeap
 #define SetSessionTableName_02063978 SetSessionTableName
 #define Strlen_02021e44 strlen
-#define data_ov001_020a0460 data_ov001_020a0480
+#define data_ov001_020a0460 gFieldSessionWork
 #define strcpy_02021e60 strcpy
 #include "src/ov001/unclassified_helpers/SetSessionTableName_02063978.c"

@@ -1,5 +1,5 @@
 #define Msg_OpenContainerAndReadHeader_0202cc6c Msg_OpenContainerAndReadHeader
 #define OpenFieldMessageContainers_0206d6d4 OpenFieldMessageContainers
 #define data_ov001_0209ec18 gFieldMessagePaths
-#define data_ov001_020a049c data_ov001_020a04bc
+#define data_ov001_020a049c gManagedActorGlobals
 #include "src/ov001/text_rendering/OpenFieldMessageContainers_0206d6d4.c"

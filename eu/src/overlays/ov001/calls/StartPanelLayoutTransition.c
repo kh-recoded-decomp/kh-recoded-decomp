@@ -18,13 +18,13 @@ typedef struct ScrollPanel {
     VecFx32 *targetPosition;
 } ScrollPanel;
 
-extern ScrollPanel *data_ov001_020a04ec;
+extern ScrollPanel *gCounterHudWork;
 extern void ApplyVerticalLayoutOffset(BOOL raised);
 extern u32 GetSessionCounter(int index);
 
 BOOL StartPanelLayoutTransition(int layoutMode)
 {
-    ScrollPanel *panel = data_ov001_020a04ec;
+    ScrollPanel *panel = gCounterHudWork;
     u32 resourceId;
     if (panel != NULL) {
         if (layoutMode == 0) {

@@ -2,6 +2,6 @@
 #define FindGroupItemById_02067108 FindGroupItemById
 #define SetPanelItemHighlight_0207b19c SetPanelItemHighlight
 #define UpdateGroupItemStats_02067b1c UpdateGroupItemStats
-#define data_ov001_020a046c data_ov001_020a048c
+#define data_ov001_020a046c gFieldSceneEntryContext
 #define func_ov001_020671e0 SyncDoorMeshState
 #include "src/ov001/unclassified_helpers/UpdateGroupItemStats_02067b1c.c"

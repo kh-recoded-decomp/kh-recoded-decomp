@@ -1,4 +1,4 @@
 #define DropInactiveGroupMember_0206d02c DropInactiveGroupMember
 #define IsGroupMemberActive_020a8d1c IsGroupMemberActive
-#define data_ov001_020a049c data_ov001_020a04bc
+#define data_ov001_020a049c gManagedActorGlobals
 #include "src/ov001/shared_engine/DropInactiveGroupMember_0206d02c.c"

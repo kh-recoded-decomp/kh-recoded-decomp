@@ -38,7 +38,7 @@ typedef struct OrbReceiver {
     void (*onCollect)(struct OrbReceiver *receiver, int kind, int payload);
 } OrbReceiver;
 
-extern OrbHost *data_ov001_020a0484;
+extern OrbHost *gFieldEffectPool;
 extern const s16 gSinFx12Table[];
 extern BOOL IsEntryFlag2Active(int mode);
 extern BOOL GetFocusEventActorPositionWrapper(VecFx32 *out);
@@ -61,10 +61,10 @@ void UpdatePrizeOrbs(void)
     VecFx32 target;
     fx32 distance;
 
-    if (data_ov001_020a0484->suspended) {
+    if (gFieldEffectPool->suspended) {
         return;
     }
-    orb = data_ov001_020a0484->activeList;
+    orb = gFieldEffectPool->activeList;
     while (orb != NULL) {
         next = orb->next;
         if (orb->targetSlot >= 0) {

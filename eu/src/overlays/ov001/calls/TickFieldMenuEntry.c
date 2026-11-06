@@ -1,5 +1,5 @@
 #define TickFieldMenuEntry_02078000 TickFieldMenuEntry
-#define data_ov001_020a04b0 data_ov001_020a04d0
+#define data_ov001_020a04b0 gFieldCommandMenuGlobals
 #define GetSceneTagTracker_020711b0 GetSceneTagTracker
 #define FindFieldMenuEntryById_020754d8 FindFieldMenuEntryById
 #define CycleMenuEntry_02075348 CycleMenuEntry

@@ -1,8 +1,8 @@
 #include "nitro/types.h"
 
-extern u32 data_ov001_020a04e8;
+extern u32 gSubscenePanelWork;
 
 u32 GetPanelEntryName(s32 index)
 {
-    return *(u32 *)(*(s32 *)(data_ov001_020a04e8 + 0x110) + index * 4);
+    return *(u32 *)(*(s32 *)(gSubscenePanelWork + 0x110) + index * 4);
 }

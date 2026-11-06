@@ -2,6 +2,6 @@
 #define DrawFieldHeaderText_02071df0 DrawFieldHeaderText
 #define DrawTextAnchored_020015a0 DrawTextAnchored
 #define GFXi_EnqueueCommand_02014090 NNS_GfdRegisterNewVramTransferTask
-#define data_ov001_020a04a4 data_ov001_020a04c4
+#define data_ov001_020a04a4 gFieldSceneGlobals
 #define func_ov001_0207b3cc GetLoadedSubsceneMode
 #include "src/ov001/text_rendering/DrawFieldHeaderText_02071df0.c"

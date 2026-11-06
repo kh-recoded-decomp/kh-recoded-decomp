@@ -12,7 +12,7 @@ typedef struct MenuScene {
     s8 selected;
 } MenuScene;
 
-extern MenuScene *data_ov001_020a048c;
+extern MenuScene *gFieldSceneEntryContext;
 extern const char sOv001_FormatSFormat02d_0209ea90[];
 extern const char sOv001_FormatSFormat02dFormatD_0209eac0[];
 extern const char sOv001_Pent_0209eab8[];
@@ -26,7 +26,7 @@ void GetMenuItemWorldMarker(int variant, u32 itemId, VecFx32 *position, u16 *ang
     char name[16];
     WorldMarker *marker;
 
-    FindGroupItemById(itemId, data_ov001_020a048c->selected);
+    FindGroupItemById(itemId, gFieldSceneEntryContext->selected);
     if (variant == 0) {
         OS_SPrintf(name, sOv001_FormatSFormat02d_0209ea90, sOv001_Pent_0209eab8, itemId);
     } else {

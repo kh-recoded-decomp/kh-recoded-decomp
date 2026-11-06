@@ -1,5 +1,5 @@
 #define FieldMenu_FocusEntryById_02078800 FieldMenu_FocusEntryById
-#define data_ov001_020a04b0 data_ov001_020a04d0
+#define data_ov001_020a04b0 gFieldCommandMenuGlobals
 #define func_ov001_02075348 CycleMenuEntry
 #define func_ov001_020769f4 DrawMenuPanelPage
 #include "src/ov001/field_manager/FieldMenu_FocusEntryById_02078800.c"

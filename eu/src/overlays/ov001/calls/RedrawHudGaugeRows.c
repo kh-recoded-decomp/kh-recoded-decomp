@@ -2,5 +2,5 @@
 #define DrawShortLayoutRow_020737fc DrawShortLayoutRow
 #define MIi_CpuCopyFast_01ff878c MIi_CpuCopyFast
 #define RedrawHudGaugeRows_020745e0 RedrawHudGaugeRows
-#define data_ov001_020a04ac data_ov001_020a04cc
+#define data_ov001_020a04ac gFieldHudGaugeState
 #include "src/ov001/field_manager/RedrawHudGaugeRows_020745e0.c"

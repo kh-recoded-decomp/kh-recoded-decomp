@@ -1,3 +1,3 @@
 #define PostPendingRequest_0207d630 PostPendingRequest
-#define data_ov001_020a04cc data_ov001_020a04ec
+#define data_ov001_020a04cc gCounterHudWork
 #include "src/ov001/unclassified_helpers/PostPendingRequest_0207d630.c"

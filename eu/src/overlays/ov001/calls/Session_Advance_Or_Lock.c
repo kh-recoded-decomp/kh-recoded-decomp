@@ -1,4 +1,4 @@
-#define data_ov001_020a0460 data_ov001_020a0480
+#define data_ov001_020a0460 gFieldSessionWork
 #define func_ov001_0206257c Session_Advance_Or_Lock
 #define func_ov001_02062c98 ReleaseSessionHandle
 #define func_ov001_020630e4 FlushPendingEntryRefresh

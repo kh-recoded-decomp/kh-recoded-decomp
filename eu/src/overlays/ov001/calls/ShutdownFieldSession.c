@@ -18,7 +18,7 @@
 #define TP_RequestAutoSamplingStopAsync_0200fe84 TP_RequestAutoSamplingStopAsync
 #define TP_WaitBusy_0201018c TP_WaitBusy
 #define ZeroHalfThenFree_0202cd78 ZeroHalfThenFree
-#define data_ov001_020a0460 data_ov001_020a0480
+#define data_ov001_020a0460 gFieldSessionWork
 #define func_02029f98 UnloadOverlayAfterGeometryTransfer
 #define func_0202a638 DestroyTaskObjectWrapper
 #define func_02035774 ShutdownActorRegistry

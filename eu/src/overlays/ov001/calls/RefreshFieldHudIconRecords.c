@@ -11,7 +11,7 @@ typedef struct FieldManagerHandle {
     FieldManager *manager;
 } FieldManagerHandle;
 
-extern FieldManagerHandle data_ov001_020a04c4;
+extern FieldManagerHandle gFieldSceneGlobals;
 
 extern void *FindActiveRecordById(void *pool, u32 recordId);
 extern void TagTracker_InvokeCallback(void *pool, void *record);
@@ -19,7 +19,7 @@ extern void BlendIconTiles(u32 value);
 
 void RefreshFieldHudIconRecords(void)
 {
-    FieldManager *manager = data_ov001_020a04c4.manager;
+    FieldManager *manager = gFieldSceneGlobals.manager;
 
     TagTracker_InvokeCallback(manager->recordPool, FindActiveRecordById(manager->recordPool, 10));
     TagTracker_InvokeCallback(manager->recordPool, FindActiveRecordById(manager->recordPool, 11));

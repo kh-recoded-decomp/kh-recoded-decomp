@@ -7,7 +7,7 @@ typedef struct Session {
     u32 modeFlags;
 } Session;
 
-extern Session *data_ov001_020a0480;
+extern Session *gFieldSessionWork;
 extern void DeactivateManagerEntries(void);
 extern void SetFieldEntriesPaused(s32 enable);
 extern void SetSubModeFrozen(s32 value);
@@ -33,7 +33,7 @@ extern int GetMainBrightnessSetting(void);
 void func_ov001_0206375c(void) {
     int index;
 
-    data_ov001_020a0480->flags &= ~0x20;
+    gFieldSessionWork->flags &= ~0x20;
     DeactivateManagerEntries();
     SetFieldEntriesPaused(1);
     SetSubModeFrozen(0);
@@ -64,6 +64,6 @@ void func_ov001_0206375c(void) {
         }
     }
     if (GetMainBrightnessSetting() == 0) {
-        data_ov001_020a0480->modeFlags &= ~0x40000;
+        gFieldSessionWork->modeFlags &= ~0x40000;
     }
 }

@@ -1,3 +1,3 @@
 #include "nitro/types.h"
 
-static u32 data_ov001_020a04a0;
+static u32 gFieldScreenTransitionWork;

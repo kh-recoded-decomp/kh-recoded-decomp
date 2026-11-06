@@ -1,6 +1,6 @@
 #define CloseSceneMessage_0206fe7c CloseSceneMessage
 #define NNSi_FndFreeFromDefaultHeap_0202a1c4 NNSi_FndFreeFromDefaultHeap
-#define data_ov001_020a04a4 data_ov001_020a04c4
+#define data_ov001_020a04a4 gFieldSceneGlobals
 #define func_02003fd4 OS_GetTick
 #define func_ov001_0206ed30 LoadFieldBottomRowTiles
 #define func_ov001_0207b3cc GetLoadedSubsceneMode

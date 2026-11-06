@@ -1,4 +1,4 @@
 #define LoadNextSceneSlotResources_020672a0 LoadNextSceneSlotResources
 #define ResetSceneSlots_02067704 ResetSceneSlots
-#define data_ov001_020a046c data_ov001_020a048c
+#define data_ov001_020a046c gFieldSceneEntryContext
 #include "src/ov001/shared_engine/ResetSceneSlots_02067704.c"

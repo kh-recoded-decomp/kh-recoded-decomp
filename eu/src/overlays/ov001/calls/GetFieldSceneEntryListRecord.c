@@ -10,9 +10,9 @@ typedef struct FieldManagerHandle {
     FieldManager *manager;
 } FieldManagerHandle;
 
-extern FieldManagerHandle data_ov001_020a04c4;
+extern FieldManagerHandle gFieldSceneGlobals;
 
 u32 GetFieldSceneEntryListRecord(void)
 {
-    return data_ov001_020a04c4.manager->unk_1338;
+    return gFieldSceneGlobals.manager->unk_1338;
 }

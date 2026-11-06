@@ -2,5 +2,5 @@
 
 void ClearPanelInputActive(void)
 {
-    data_ov001_020a04e8->inputActive = FALSE;
+    gSubscenePanelWork->inputActive = FALSE;
 }

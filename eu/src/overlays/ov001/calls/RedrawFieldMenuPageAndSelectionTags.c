@@ -11,7 +11,7 @@ typedef struct {
     FieldMenu *menu;
 } FieldMenuHandle;
 
-extern FieldMenuHandle data_ov001_020a04d0;
+extern FieldMenuHandle gFieldCommandMenuGlobals;
 
 extern void DrawMenuPanelPage(FieldMenu *menu);
 extern void *GetSceneTagTracker(void);
@@ -19,7 +19,7 @@ extern void func_ov001_02075e10(FieldMenu *menu, void *tracker, s32 mode);
 
 void RedrawFieldMenuPageAndSelectionTags(void)
 {
-    FieldMenu *menu = data_ov001_020a04d0.menu;
+    FieldMenu *menu = gFieldCommandMenuGlobals.menu;
 
     DrawMenuPanelPage(menu);
     func_ov001_02075e10(menu, GetSceneTagTracker(), menu->unk_104);

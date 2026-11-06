@@ -1,4 +1,4 @@
 #define func_01ffb2f8 SetModelAnimationFrameWithSingleWrap
 #define StartSlotLayoutAnimation_0207d3d8 StartSlotLayoutAnimation
-#define data_ov001_020a04cc data_ov001_020a04ec
+#define data_ov001_020a04cc gCounterHudWork
 #include "src/ov001/shared_engine/StartSlotLayoutAnimation_0207d3d8.c"

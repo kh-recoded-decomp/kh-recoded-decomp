@@ -1,5 +1,5 @@
 #define HandleShoulderLockOn_0206bd30 HandleShoulderLockOn
 #define SelectNearestTarget_0206afec SelectNearestTarget
 #define SetMenuOpenState_0206bb74 SetMenuOpenState
-#define data_ov001_020a0484 data_ov001_020a04a4
+#define data_ov001_020a0484 gFieldTargetSelectionWork
 #include "src/ov001/shared_engine/HandleShoulderLockOn_0206bd30.c"

@@ -8,5 +8,5 @@
 #define func_ov001_02079b4c DrawMessageWindowPage
 #define func_ov001_02079c88 UpdateMessageWindowText
 #define func_ov001_02079a9c PrintNextShadowedGlyph
-#define g_activeContext_020a04c4 data_ov001_020a04e4
+#define g_activeContext_020a04c4 gMessageWindowWork
 #include "src/ov001/field_manager/UpdateMessageWindow_02079ff8.c"

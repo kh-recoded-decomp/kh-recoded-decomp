@@ -1,5 +1,5 @@
 #define FieldObject_AdvanceRandomVariant_020846a4 FieldObject_AdvanceRandomVariant
 #define FieldObject_SetSavedBits1To6_02084728 FieldObject_SetSavedBits1To6
-#define data_ov001_020a0460 data_ov001_020a0480
+#define data_ov001_020a0460 gFieldSessionWork
 #define random_next_scaled_0202aa04 random_next_scaled
 #include "src/ov001/field_objects/FieldObject_AdvanceRandomVariant_020846a4.c"

@@ -10,12 +10,12 @@ typedef struct GaugeGraphicsState {
     s32 soundPlaying;
 } GaugeGraphicsState;
 
-extern GaugeGraphicsState *data_ov001_020a04cc;
+extern GaugeGraphicsState *gFieldHudGaugeState;
 extern void NNSi_FndFreeFromDefaultHeap(void *buffer);
 
 void DestroyFieldHudGaugeState(void)
 {
-    GaugeGraphicsState *state = data_ov001_020a04cc;
+    GaugeGraphicsState *state = gFieldHudGaugeState;
     s32 index;
 
     if (state->frameBuffer != NULL) {
@@ -38,5 +38,5 @@ void DestroyFieldHudGaugeState(void)
         index = index + 1;
     } while (index < 3);
     state->soundPlaying = 0;
-    data_ov001_020a04cc = NULL;
+    gFieldHudGaugeState = NULL;
 }

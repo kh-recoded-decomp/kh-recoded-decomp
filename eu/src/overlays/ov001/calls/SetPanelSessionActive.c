@@ -2,5 +2,5 @@
 
 void SetPanelSessionActive(void)
 {
-    data_ov001_020a04e8->sessionActive = TRUE;
+    gSubscenePanelWork->sessionActive = TRUE;
 }

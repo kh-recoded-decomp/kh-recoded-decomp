@@ -61,7 +61,7 @@ typedef struct FieldManagerHandle {
     FieldManager *manager;
 } FieldManagerHandle;
 
-extern FieldManagerHandle data_ov001_020a04c4;
+extern FieldManagerHandle gFieldSceneGlobals;
 extern char sOv001_UiBtlStrLanguageP2_0209ed90[];
 extern char sOv001_UiBtlBtluiP2_0209eda0[];
 extern char sOv001_UiBtlBtlLanguageP2_0209edb4[];
@@ -132,9 +132,9 @@ void *InitFieldManager(FieldParams *params)
     SaveSlots *slots;
 
     manager = GetRunningTaskWork();
-    data_ov001_020a04c4.manager = manager;
+    gFieldSceneGlobals.manager = manager;
     MI_CpuFill8(manager, 0, 0x1358);
-    data_ov001_020a04c4.active = 1;
+    gFieldSceneGlobals.active = 1;
     manager->messages74 = Msg_OpenContainerAndReadHeader(sOv001_UiBtlStrLanguageP2_0209ed90, 0xE, FALSE);
     manager->startupFlag = IsModeSetOrFlag370aClear() != FALSE;
     manager->paletteBuffer0 = NNS_FndAllocFromDefaultExpHeapEx(0x80, 4);

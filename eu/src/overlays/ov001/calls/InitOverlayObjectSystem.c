@@ -7,7 +7,7 @@ typedef struct ActorManager {
     void *rootObject;
 } ActorManager;
 
-extern ActorManager *data_ov001_020a0500;
+extern ActorManager *gActorSceneManager;
 extern u32 gActorChannelClassDescriptor;
 extern u32 gActorScriptCommandHandlers;
 extern void MI_CpuFill8(void *dst, int val, u32 size);
@@ -22,7 +22,7 @@ u32 InitOverlayObjectSystem(void)
     ActorManager *manager;
 
     manager = (ActorManager *)GetRunningTaskWork();
-    data_ov001_020a0500 = manager;
+    gActorSceneManager = manager;
     MI_CpuFill8(manager, 0, 0x3f20);
     StoreGlobalArrayEntry(1, &gActorScriptCommandHandlers);
     manager->heapHandle = GetCurrentTaskObject();

@@ -10,14 +10,14 @@ typedef struct FieldManagerHandle {
     FieldManager *manager;
 } FieldManagerHandle;
 
-extern FieldManagerHandle data_ov001_020a04c4;
+extern FieldManagerHandle gFieldSceneGlobals;
 
 extern u32 GetLoadedSubsceneMode(void);
 extern void LoadFieldBottomRowTiles(FieldManager *manager);
 
 void SetFieldHudBottomRowEnabled(s32 value)
 {
-    FieldManager *manager = data_ov001_020a04c4.manager;
+    FieldManager *manager = gFieldSceneGlobals.manager;
 
     if (value != 0 && manager->unk_5c8 == 0 && GetLoadedSubsceneMode() == 0) {
         LoadFieldBottomRowTiles(manager);

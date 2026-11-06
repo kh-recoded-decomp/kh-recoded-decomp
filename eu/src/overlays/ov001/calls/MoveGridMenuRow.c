@@ -1,12 +1,12 @@
 #include "src/overlays/ov001/GridMenuNavigation.h"
 
-extern GridMenuRoot *data_ov001_020a04e4;
+extern GridMenuRoot *gMessageWindowWork;
 extern void DrawGridMenuCells(void *menu, s32 flag);
 extern void PlaySoundEffect(s32 sound, s32 arg);
 
 BOOL MoveGridMenuRow(u32 direction)
 {
-    GridMenuRoot *root = data_ov001_020a04e4;
+    GridMenuRoot *root = gMessageWindowWork;
     GridMenu *menu = &root->menu;
     GridNavigation *grid = &menu->grid;
     BOOL changed = FALSE;

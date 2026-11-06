@@ -6,14 +6,14 @@ extern void ReleaseSubscenePanelBuffers(s32 panel);
 extern void NNSi_FndFreeFromDefaultHeap();
 extern void SetDisplaySetting(u32 flag);
 
-extern u32 data_ov001_020a04e8;
+extern u32 gSubscenePanelWork;
 
 void ReleaseSubscenePanelWork(void)
 {
     s32 panel;
 
-    panel = data_ov001_020a04e8;
-    UnloadSubsceneOverlayAndDestroyTask(data_ov001_020a04e8);
+    panel = gSubscenePanelWork;
+    UnloadSubsceneOverlayAndDestroyTask(gSubscenePanelWork);
     FreeBufferArray(panel);
     ReleaseSubscenePanelBuffers(panel);
     if (*(u32 *)(panel + 4) != 0) {
@@ -37,5 +37,5 @@ void ReleaseSubscenePanelWork(void)
         *(u32 *)(panel + 0x18) = 0;
     }
     SetDisplaySetting(0);
-    data_ov001_020a04e8 = 0;
+    gSubscenePanelWork = 0;
 }

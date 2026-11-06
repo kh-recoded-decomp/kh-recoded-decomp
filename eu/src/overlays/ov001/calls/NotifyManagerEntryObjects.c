@@ -1,3 +1,3 @@
 #define NotifyManagerEntryObjects_0206e4b4 NotifyManagerEntryObjects
-#define g_manager_020a049c data_ov001_020a04bc
+#define g_manager_020a049c gManagedActorGlobals
 #include "src/ov001/shared_engine/NotifyManagerEntryObjects_0206e4b4.c"

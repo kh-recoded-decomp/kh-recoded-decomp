@@ -1,4 +1,4 @@
 #define StartIdleSceneObjects_02066810 StartIdleSceneObjects
-#define data_ov001_020a0464 data_ov001_020a0484
+#define data_ov001_020a0464 gFieldEffectPool
 #define func_ov001_0206604c SetNodeStateRandomDir
 #include "src/ov001/shared_engine/StartIdleSceneObjects_02066810.c"

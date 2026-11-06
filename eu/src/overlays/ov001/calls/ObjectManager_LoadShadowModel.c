@@ -2,6 +2,6 @@
 #define NNSi_FndAllocFromDefaultHeap_0202a178 NNSi_FndAllocFromDefaultHeap
 #define ObjectManager_LoadShadowModel_0207efac ObjectManager_LoadShadowModel
 #define func_0202ecf8 InitSharedRecordAndDispatch
-#define g_objectManager_020a04d8 data_ov001_020a04f8
+#define g_objectManager_020a04d8 gFieldObjectClassManager
 #define s_shadowModelPath_0209f020 sOv001_MoSdZ_0209f040
 #include "src/ov001/unclassified_helpers/ObjectManager_LoadShadowModel_0207efac.c"

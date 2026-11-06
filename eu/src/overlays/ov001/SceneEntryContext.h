@@ -32,7 +32,7 @@ typedef struct SceneEntryContext {
     u8 unk10b8;
 } SceneEntryContext;
 
-extern SceneEntryContext *data_ov001_020a048c;
-#define gSceneEntryContext data_ov001_020a048c
+extern SceneEntryContext *gFieldSceneEntryContext;
+#define gSceneEntryContext gFieldSceneEntryContext
 
 #endif

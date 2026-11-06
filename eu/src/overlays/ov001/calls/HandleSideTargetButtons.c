@@ -38,7 +38,7 @@ enum {
 
 extern u16 data_020604fc;
 extern u16 data_02060500;
-extern void *data_ov001_020a04a4;
+extern void *gFieldTargetSelectionWork;
 extern BOOL ResolveCameraTargetPosition(VecFx32 *position);
 extern BOOL FindSideTarget(s32 direction, const VecFx32 *position, fx32 *limit);
 extern BOOL MatchesTaggedKey(TaggedKey *expected, TaggedKey *actual);
@@ -74,7 +74,7 @@ BOOL HandleSideTargetButtons(void)
         return TRUE;
     }
 
-    context = data_ov001_020a04a4;
+    context = gFieldTargetSelectionWork;
     previous = context->selected;
     if (FindSideTarget(direction, &position, NULL)) {
         if (!MatchesTaggedKey(&context->selected.target, &previous.target)) {

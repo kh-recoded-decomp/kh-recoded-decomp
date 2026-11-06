@@ -4,7 +4,7 @@
 #define FreeCueTable_020a7cac FreeCueTable_020a7ccc
 #define NNSi_FndFreeFromDefaultHeap_0202a1c4 NNSi_FndFreeFromDefaultHeap
 #define ResetGaugeDisplay_020734f8 ResetGaugeDisplay
-#define data_ov001_020a049c data_ov001_020a04bc
+#define data_ov001_020a049c gManagedActorGlobals
 #define func_02029f98 UnloadOverlayAfterGeometryTransfer
 #define func_02050a44 ReleaseMapLayoutReference
 #define func_ov021_020a892c DestroyAllPools

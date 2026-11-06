@@ -19,7 +19,7 @@ typedef struct FieldMenuPaletteHandleView {
     u16 fade[3];
 } FieldMenuPaletteHandleView;
 
-/* fade begins at the separately named BSS symbol data_ov001_020a04dc. */
-extern FieldMenuPaletteHandleView data_ov001_020a04d0;
+/* fade begins at the separately named BSS symbol gFieldMenuFadePalette. */
+extern FieldMenuPaletteHandleView gFieldCommandMenuGlobals;
 
 #endif

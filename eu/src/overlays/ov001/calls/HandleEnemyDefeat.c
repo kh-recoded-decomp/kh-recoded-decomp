@@ -7,7 +7,7 @@
 #define RollEnemyDrop_0206844c RollEnemyDrop
 #define SetGlobalPackedBit_02027320 SetGlobalPackedBit
 #define SpawnDropsPerTenUnits_0206671c SpawnDropsPerTenUnits
-#define data_ov001_020a0470 data_ov001_020a0490
+#define data_ov001_020a0470 gStageEventContext
 #define func_0202737c AddClampedGlobalPackedBits
 #define func_ov001_0206e074 AddRegionProgress
 #define func_ov035_020bae74 GetOverlay41PhaseActiveFlag

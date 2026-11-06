@@ -1,3 +1,3 @@
 #define ObjectManager_GetFirstEntryParam_0207ee14 ObjectManager_GetFirstEntryParam
-#define g_objectManager_020a04d8 data_ov001_020a04f8
+#define g_objectManager_020a04d8 gFieldObjectClassManager
 #include "src/ov001/unclassified_helpers/ObjectManager_GetFirstEntryParam_0207ee14.c"

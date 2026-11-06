@@ -1,4 +1,4 @@
 #define FlushBufferAndRunCallback_0200153c FlushBufferAndRunCallback
 #define RefreshModeWindow_0207a89c RefreshModeWindow
-#define g_activeContext_020a04c4 data_ov001_020a04e4
+#define g_activeContext_020a04c4 gMessageWindowWork
 #include "src/ov001/leaf_research/RefreshModeWindow_0207a89c.c"

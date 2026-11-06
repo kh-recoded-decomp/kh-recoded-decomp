@@ -10,14 +10,14 @@ typedef struct Manager {
     TargetInfo target;
 } Manager;
 
-extern Manager *data_ov001_020a04a4;
+extern Manager *gFieldTargetSelectionWork;
 extern u32 GetTargetSelectionActiveMask(void);
 extern BOOL ReadActiveMenuState(TargetInfo *target);
 extern BOOL GetWaitTargetPosition(TargetInfo *target);
 
 BOOL ResolveSelectedTargetPosition(void)
 {
-    Manager *manager = data_ov001_020a04a4;
+    Manager *manager = gFieldTargetSelectionWork;
 
     if (manager == NULL || GetTargetSelectionActiveMask() == 0) {
         return FALSE;

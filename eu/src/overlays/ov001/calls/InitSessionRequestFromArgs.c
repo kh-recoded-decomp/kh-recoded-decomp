@@ -1,3 +1,3 @@
 #define InitSessionRequestFromArgs_02061430 InitSessionRequestFromArgs
-#define data_ov001_020a0460 data_ov001_020a0480
+#define data_ov001_020a0460 gFieldSessionWork
 #include "src/ov001/unclassified_helpers/InitSessionRequestFromArgs_02061430.c"

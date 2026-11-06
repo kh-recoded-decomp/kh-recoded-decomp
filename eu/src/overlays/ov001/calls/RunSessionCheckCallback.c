@@ -1,3 +1,3 @@
 #define RunSessionCheckCallback_02064e04 RunSessionCheckCallback
-#define data_ov001_020a0460 data_ov001_020a0480
+#define data_ov001_020a0460 gFieldSessionWork
 #include "src/ov001/shared_engine/RunSessionCheckCallback_02064e04.c"

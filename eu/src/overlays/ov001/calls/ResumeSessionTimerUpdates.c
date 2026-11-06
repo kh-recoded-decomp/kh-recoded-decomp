@@ -1,7 +1,7 @@
 #include "nitro/types.h"
 
-extern u32 data_ov001_020a0494;
+extern u32 gSessionTimerWork;
 
 void ResumeSessionTimerUpdates(void) {
-  *(u8 *)(data_ov001_020a0494 + 0x24) = 1;
+  *(u8 *)(gSessionTimerWork + 0x24) = 1;
 }

@@ -18,8 +18,8 @@ typedef struct {
     u32 busy : 1;
 } FlagBlock;
 
-extern SlotTable *data_ov001_020a04fc;
-extern FlagBlock *data_ov001_020a0480;
+extern SlotTable *gFieldEntryPoolManager;
+extern FlagBlock *gFieldSessionWork;
 extern BOOL IsSessionFlagSet(u32 value);
 extern int CreatePanelEntryPool(u16 id, int arg);
 extern int CreateKind2EntryPool(u16 id, int arg);
@@ -32,11 +32,11 @@ extern int CreateGridEntryPool(u16 id, int arg);
 extern int CreateFieldUnit(u16 id, int arg, void *handle);
 
 int DispatchOverlayLoadByKind(u32 kind, int slot, u32 id, int arg) {
-    SlotTable *table = data_ov001_020a04fc;
+    SlotTable *table = gFieldEntryPoolManager;
     int result = 0;
     void *handle = NULL;
 
-    if (!IsSessionFlagSet(0x3614) && !data_ov001_020a0480->busy) {
+    if (!IsSessionFlagSet(0x3614) && !gFieldSessionWork->busy) {
         void *found = table->slots[slot].handle;
         if (found != NULL && id == table->slots[slot].id && kind == table->slots[slot].kind) {
             handle = found;

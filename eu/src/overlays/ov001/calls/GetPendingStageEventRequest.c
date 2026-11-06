@@ -1,2 +1,2 @@
-extern int data_ov001_020a0490;
-int GetPendingStageEventRequest(void) { return data_ov001_020a0490 + 4; }
+extern int gStageEventContext;
+int GetPendingStageEventRequest(void) { return gStageEventContext + 4; }

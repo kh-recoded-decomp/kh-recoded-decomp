@@ -1,6 +1,6 @@
 #define func_ov001_020645dc SetSessionFlag
 #define EnterSceneSlot_020647a4 EnterSceneSlot
-#define data_ov001_020a0460 data_ov001_020a0480
+#define data_ov001_020a0460 gFieldSessionWork
 #define func_01ff8740 MIi_CpuClearFast
 #define func_02027348 ReadGlobalPackedBits
 #define func_ov001_0206317c ConfigureFieldTracks

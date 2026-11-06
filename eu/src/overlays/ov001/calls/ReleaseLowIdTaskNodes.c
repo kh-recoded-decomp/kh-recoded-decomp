@@ -1,5 +1,5 @@
 #define ReleaseLowIdTaskNodes_02069194 ReleaseLowIdTaskNodes
 #define ReleaseTaskNode_02069030 ReleaseTaskNode
-#define data_ov001_020a0478 data_ov001_020a0498
+#define data_ov001_020a0478 gFieldTaskManagerWork
 #define func_01ff8684 MIi_CpuClear16
 #include "src/ov001/unclassified_helpers/ReleaseLowIdTaskNodes_02069194.c"

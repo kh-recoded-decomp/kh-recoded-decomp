@@ -1,5 +1,5 @@
 #define DrawFieldScreenPiece_0206ead4 DrawFieldScreenPiece
-#define data_ov001_020a04a4 data_ov001_020a04c4
+#define data_ov001_020a04a4 gFieldSceneGlobals
 #define func_ov001_0206ea44 GetFieldLayerScreen
 #define func_ov027_020b9a74 BlitWidgetToTileTable
 #define func_ov027_020b9b18 CopyWidgetScreenRegion

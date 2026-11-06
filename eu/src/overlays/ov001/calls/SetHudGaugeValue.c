@@ -42,7 +42,7 @@ typedef struct HudGaugeSet {
     GaugeTween tween;
 } HudGaugeSet;
 
-extern HudGaugeSet *data_ov001_020a04cc;
+extern HudGaugeSet *gFieldHudGaugeState;
 
 extern BOOL RedrawGaugeCells(void *target, u16 value, u16 scale, HudGaugeSlot *counts, GaugeCellFn draw, BOOL rebuild);
 extern void RefreshMenuGaugeState(HudGaugeSet *set, int index, BOOL force);
@@ -58,7 +58,7 @@ extern void BlitFourPixelLabelPattern(void *layer, int cell, int mode);
 
 void SetHudGaugeValue(int index, u16 value, int notifyIndex, BOOL animate, BOOL rebuild, BOOL force)
 {
-    HudGaugeSet *set = data_ov001_020a04cc;
+    HudGaugeSet *set = gFieldHudGaugeState;
     u16 shown;
     u16 cells;
     BOOL changed = TRUE;

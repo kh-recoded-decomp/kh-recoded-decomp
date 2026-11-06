@@ -26,27 +26,27 @@ typedef struct {
     SceneInfo *sceneInfo;
 } Session;
 
-extern Session *data_ov001_020a0480;
+extern Session *gFieldSessionWork;
 extern void LoadDifficultyPresetIntoSession(void);
 extern void ConfigureFieldTracks(int sceneId, int subSceneId, int mode, int param);
 extern void SetPendingFieldValue(int request);
 
 void func_ov001_020648c8(u32 value)
 {
-    Session *session = data_ov001_020a0480;
+    Session *session = gFieldSessionWork;
 
     if (!session->flags.skipPreset)
     {
         LoadDifficultyPresetIntoSession();
         ConfigureFieldTracks(session->sceneInfo->sceneId, session->sceneInfo->subSceneId, 1, -1);
     }
-    if (data_ov001_020a0480->callback != NULL)
+    if (gFieldSessionWork->callback != NULL)
     {
-        data_ov001_020a0480->callback(data_ov001_020a0480->callbackArg);
+        gFieldSessionWork->callback(gFieldSessionWork->callbackArg);
     }
-    data_ov001_020a0480->flags.finished = TRUE;
-    data_ov001_020a0480->pendingValue = value;
-    if (data_ov001_020a0480->flags.skipPreset)
+    gFieldSessionWork->flags.finished = TRUE;
+    gFieldSessionWork->pendingValue = value;
+    if (gFieldSessionWork->flags.skipPreset)
     {
         SetPendingFieldValue(2);
     }

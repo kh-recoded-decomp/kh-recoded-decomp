@@ -2,5 +2,5 @@
 
 void RequestPanelBrightnessRestore(void)
 {
-    data_ov001_020a04e8->brightnessRestoreRequested = TRUE;
+    gSubscenePanelWork->brightnessRestoreRequested = TRUE;
 }

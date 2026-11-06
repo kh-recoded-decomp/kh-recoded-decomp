@@ -1,5 +1,5 @@
 #define SetDisplaySetting_02029f28 SetDisplaySetting
 #define UpdateDisplayFadeState_0207ac90 UpdateDisplayFadeState
-#define data_ov001_020a0460 data_ov001_020a0480
+#define data_ov001_020a0460 gFieldSessionWork
 #define func_02029f58 GetSubBrightnessSetting
 #include "src/ov001/field_manager/UpdateDisplayFadeState_0207ac90.c"

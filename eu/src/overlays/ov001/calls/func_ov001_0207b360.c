@@ -4,7 +4,7 @@ extern u32 IsSessionFlagSet(u32 id);
 extern u32 func_ov001_02064784(void);
 extern void RequestPanelModeChange(u32 arg);
 
-extern u32 data_ov001_020a04e8;
+extern u32 gSubscenePanelWork;
 
 void func_ov001_0207b360(u32 arg)
 {
@@ -12,7 +12,7 @@ void func_ov001_0207b360(u32 arg)
 
     fault = func_ov001_02064784();
     if ((fault == 0) && (fault = IsSessionFlagSet(0x370b), fault != 0)) {
-        *(u32 *)(data_ov001_020a04e8 + 0x108) = 2;
+        *(u32 *)(gSubscenePanelWork + 0x108) = 2;
     }
     RequestPanelModeChange(arg);
 }

@@ -1,4 +1,4 @@
 #define InitLayerSlotsFromData_02066e8c InitLayerSlotsFromData
-#define data_ov001_020a046c data_ov001_020a048c
+#define data_ov001_020a046c gFieldSceneEntryContext
 #define func_01ff8740 MIi_CpuClearFast
 #include "src/ov001/unclassified_helpers/InitLayerSlotsFromData_02066e8c.c"

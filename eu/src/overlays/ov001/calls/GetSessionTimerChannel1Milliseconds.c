@@ -1,5 +1,5 @@
-extern int data_ov001_020a0494;
+extern int gSessionTimerWork;
 
 int GetSessionTimerChannel1Milliseconds(void) {
-    return *(int *)(*(int *)&data_ov001_020a0494 + 4);
+    return *(int *)(*(int *)&gSessionTimerWork + 4);
 }

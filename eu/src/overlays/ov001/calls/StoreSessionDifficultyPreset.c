@@ -1,5 +1,5 @@
 #define StoreSessionDifficultyPreset_0206452c StoreSessionDifficultyPreset
-#define data_ov001_020a0460 data_ov001_020a0480
+#define data_ov001_020a0460 gFieldSessionWork
 #define func_01ff878c MIi_CpuCopyFast
 #define func_02027348 ReadGlobalPackedBits
 #include "src/ov001/unclassified_helpers/StoreSessionDifficultyPreset_0206452c.c"

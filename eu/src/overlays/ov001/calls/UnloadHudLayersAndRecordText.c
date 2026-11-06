@@ -33,7 +33,7 @@ typedef struct HudGlobals {
     HudContext *context;
 } HudGlobals;
 
-extern HudGlobals data_ov001_020a04c4;
+extern HudGlobals gFieldSceneGlobals;
 extern const LayerIdTable gFieldHudRestoreLayerIds;
 
 extern void *GetFieldSceneManager(void);
@@ -50,7 +50,7 @@ extern void Text_UploadTileBuffer(void *window);
 
 void UnloadHudLayersAndRecordText(void)
 {
-    HudContext *context = data_ov001_020a04c4.context;
+    HudContext *context = gFieldSceneGlobals.context;
     void *widgets = GetFieldSceneManager();
     LayerIdTable layers = gFieldHudRestoreLayerIds;
     int i;

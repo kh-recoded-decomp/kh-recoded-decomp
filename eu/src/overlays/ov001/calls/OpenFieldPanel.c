@@ -1,5 +1,5 @@
 #define OpenFieldPanel_020717e4 OpenFieldPanel
-#define data_ov001_020a04a4 data_ov001_020a04c4
+#define data_ov001_020a04a4 gFieldSceneGlobals
 #define func_02052514 ConfigureTween
 #define func_0205255c StartTween
 #define func_ov001_0206fcc8 BackupSceneVram

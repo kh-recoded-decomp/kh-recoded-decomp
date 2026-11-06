@@ -6,7 +6,7 @@
 #define VEC_DotProduct_01ff9e6c VEC_DotProduct
 #define VEC_Subtract_01ff9e3c VEC_Subtract
 #define data_0205356c gSinFx12Table
-#define data_ov001_020a0484 data_ov001_020a04a4
+#define data_ov001_020a0484 gFieldTargetSelectionWork
 #define func_01ff9f88 VEC_Normalize
 #define func_01ffa0f4 VEC_Distance
 #include "src/ov001/field_objects/ClassifyTargetRange_0206ba2c.c"

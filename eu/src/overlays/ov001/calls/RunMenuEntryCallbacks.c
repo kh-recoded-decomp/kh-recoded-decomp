@@ -12,7 +12,7 @@ typedef struct FieldState {
 } FieldState;
 
 extern const ModeTable gFieldEntryModes;
-extern FieldState *data_ov001_020a0480;
+extern FieldState *gFieldSessionWork;
 extern BOOL IsSessionFlagSet(u32 flag);
 extern void UploadPaletteSlotBlock(int menu, int value);
 
@@ -28,7 +28,7 @@ void RunMenuEntryCallbacks(void *context, int menu, int count, void (*callback)(
     }
     value = table.values[mode];
     if (value == 2) {
-        if (menu == 0 && (IsSessionFlagSet(0x3525) || data_ov001_020a0480->hintShown)) {
+        if (menu == 0 && (IsSessionFlagSet(0x3525) || gFieldSessionWork->hintShown)) {
             skip = TRUE;
         } else {
             skip = FALSE;

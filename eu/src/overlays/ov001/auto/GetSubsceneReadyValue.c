@@ -1,8 +1,8 @@
 #include "nitro/types.h"
 
-extern u8 *data_ov001_020a04e8;
+extern u8 *gSubscenePanelWork;
 
 u32 GetSubsceneReadyValue(void)
 {
-    return *(const u32 *)(data_ov001_020a04e8 + 0x38);
+    return *(const u32 *)(gSubscenePanelWork + 0x38);
 }

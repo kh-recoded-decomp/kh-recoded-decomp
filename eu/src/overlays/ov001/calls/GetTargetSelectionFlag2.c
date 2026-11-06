@@ -1,10 +1,10 @@
 #include "nitro/types.h"
 
-extern u32 *data_ov001_020a04a4;
+extern u32 *gFieldTargetSelectionWork;
 
 u32 GetTargetSelectionFlag2(void) {
-  if (data_ov001_020a04a4 == (u32 *)0x0) {
+  if (gFieldTargetSelectionWork == (u32 *)0x0) {
     return 0;
   }
-  return *data_ov001_020a04a4 & 2;
+  return *gFieldTargetSelectionWork & 2;
 }

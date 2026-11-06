@@ -1,6 +1,6 @@
 #define func_ov001_0206674c ReleaseFieldEffectSlot
 #define SuspendTaskAndSetFlag_020667b4 SuspendTaskAndSetFlag
-#define data_ov001_020a0460 data_ov001_020a0480
-#define data_ov001_020a0464 data_ov001_020a0484
+#define data_ov001_020a0460 gFieldSessionWork
+#define data_ov001_020a0464 gFieldEffectPool
 #define func_02036748 ActorSlot_UnlinkRoot
 #include "src/ov001/unclassified_helpers/SuspendTaskAndSetFlag_020667b4.c"

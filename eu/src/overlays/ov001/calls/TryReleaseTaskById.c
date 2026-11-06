@@ -1,5 +1,5 @@
 #define FindTaskNodeById_02069014 FindSceneNodeById
 #define ReleaseTaskNode_02069030 ReleaseTaskNode
 #define TryReleaseTaskById_02069160 TryReleaseTaskById
-#define data_ov001_020a0478 data_ov001_020a0498
+#define data_ov001_020a0478 gFieldTaskManagerWork
 #include "src/ov001/unclassified_helpers/TryReleaseTaskById_02069160.c"

@@ -18,13 +18,13 @@ typedef struct MenuScene {
     u8 animMode;
 } MenuScene;
 
-extern MenuScene *data_ov001_020a048c;
+extern MenuScene *gFieldSceneEntryContext;
 
 extern void BlendToAnimationTrack(ScenePanelAnim *state, u16 trackIndex, s16 *table, s16 blendIndex, int frameCount);
 
 void SetScenePanelAnimation(int panelIndex, int blendIndex, int arg, BOOL keepFlag)
 {
-    MenuScene *scene = data_ov001_020a048c;
+    MenuScene *scene = gFieldSceneEntryContext;
     ScenePanelAnim *panel = &scene->panels[panelIndex];
     int i;
 

@@ -21,7 +21,7 @@ typedef struct {
     SessionStateFlags stateFlags;
 } Session;
 
-extern Session *data_ov001_020a0480;
+extern Session *gFieldSessionWork;
 extern s32 GetFieldSessionState(void);
 extern int GetCameraColliderOffsetMagnitude(void);
 extern ManagerEntry *GetBoundedEntryField(int index);
@@ -35,7 +35,7 @@ BOOL func_ov001_020656d4(void)
         if (GetBoundedEntryField(0)->info->count == 0)
         {
             ClearSessionPackedBit(0x3525);
-            data_ov001_020a0480->stateFlags.bit4 = FALSE;
+            gFieldSessionWork->stateFlags.bit4 = FALSE;
             SetSessionFlag(0x3637);
         }
         return FALSE;

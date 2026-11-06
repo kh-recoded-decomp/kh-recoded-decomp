@@ -5,7 +5,7 @@
 #define Strlen_02021e44 strlen
 #define data_ov001_0209ea70 sOv001_FormatSFormat02d_0209ea90
 #define data_ov001_0209ea78 sOv001_Gate_0209ea98
-#define data_ov001_020a046c data_ov001_020a048c
+#define data_ov001_020a046c gFieldSceneEntryContext
 #define func_01ff8710 MIi_CpuCopy32
 #define func_02036230 GetActorRegistry
 #define func_ov001_02067184 ExpandBoundsByArea

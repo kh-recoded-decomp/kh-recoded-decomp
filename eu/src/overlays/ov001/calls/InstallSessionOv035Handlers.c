@@ -7,9 +7,9 @@ typedef struct Session {
 
 typedef void (*OverlayWorkFunc)(void *work);
 
-extern Session *data_ov001_020a0480;
+extern Session *gFieldSessionWork;
 extern u8 InitMovieSourceOps[];
 
 void InstallSessionOv035Handlers(void) {
-    ((OverlayWorkFunc)InitMovieSourceOps)(data_ov001_020a0480->overlayWork);
+    ((OverlayWorkFunc)InitMovieSourceOps)(gFieldSessionWork->overlayWork);
 }

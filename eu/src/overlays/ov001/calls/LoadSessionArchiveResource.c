@@ -1,6 +1,6 @@
 #define LoadSessionArchiveResource_02062e30 LoadSessionArchiveResource
 #define data_ov001_0209e6dc sOv001_Fz_0209e6fc
-#define data_ov001_020a0460 data_ov001_020a0480
+#define data_ov001_020a0460 gFieldSessionWork
 #define findSharedResourceByName_0202cd8c findSharedResourceByName
 #define func_0202c478 Archive_LoadFile
 #include "src/ov001/unclassified_helpers/LoadSessionArchiveResource_02062e30.c"

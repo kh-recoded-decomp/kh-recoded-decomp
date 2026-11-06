@@ -22,11 +22,11 @@ typedef struct MenuScene {
     MenuPanel *panels;
 } MenuScene;
 
-extern MenuScene *data_ov001_020a048c;
+extern MenuScene *gFieldSceneEntryContext;
 
 void SyncMenuPanelDefinition(const MenuPanelDefinition *definition, int index)
 {
-    MenuPanel *panel = &data_ov001_020a048c->panels[index];
+    MenuPanel *panel = &gFieldSceneEntryContext->panels[index];
 
     panel->value = definition->value;
     panel->level = definition->level;

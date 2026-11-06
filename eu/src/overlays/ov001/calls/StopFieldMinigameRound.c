@@ -1,6 +1,6 @@
 #include "nitro/types.h"
 
-extern u32 data_ov001_020a04f4;
+extern u32 gFieldMinigameWork;
 extern u32 GetSceneTagTracker(void);
 extern void HideArrowPromptTimedCounters(void);
 extern u32 FindActiveRecordById(u32 handle, u32 tag);
@@ -15,5 +15,5 @@ void StopFieldMinigameRound(void)
     HideArrowPromptTimedCounters();
     value = FindActiveRecordById(handle, 0x12e);
     InvokeCallback40(handle, value);
-    *(u32 *)(data_ov001_020a04f4 + 0x20) = 0;
+    *(u32 *)(gFieldMinigameWork + 0x20) = 0;
 }

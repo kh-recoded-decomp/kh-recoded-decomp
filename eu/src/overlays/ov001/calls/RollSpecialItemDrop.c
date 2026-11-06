@@ -22,7 +22,7 @@ enum { RANDOM_SPECIAL_ITEM = 0x87, ITEM_EFFECT_KIND = 6 };
 
 typedef char SpecialDropRowSizeCheck[(sizeof(SpecialDropRow) == 0x18) ? 1 : -1];
 
-extern SpecialDrops *data_ov001_020a04fc;
+extern SpecialDrops *gFieldEntryPoolManager;
 extern s8 GetCtxModeByte(void);
 extern u32 NextSharedRandom16Scaled(u32 range);
 extern void SpawnRewardOrbs(RewardAmounts *amounts, void *target, int mode);
@@ -42,7 +42,7 @@ static inline void ClearRewardAmounts(RewardAmounts *reward)
 
 void RollSpecialItemDrop(int itemId, void *target)
 {
-    SpecialDrops *drops = data_ov001_020a04fc;
+    SpecialDrops *drops = gFieldEntryPoolManager;
     SpecialDropRow *row;
     RewardAmounts amounts;
     u16 first, second, cumulative;

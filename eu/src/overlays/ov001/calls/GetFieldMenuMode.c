@@ -10,9 +10,9 @@ typedef struct {
     FieldMenu *menu;
 } FieldMenuHandle;
 
-extern FieldMenuHandle data_ov001_020a04d0;
+extern FieldMenuHandle gFieldCommandMenuGlobals;
 
 u32 GetFieldMenuMode(void)
 {
-    return data_ov001_020a04d0.menu->unk_68;
+    return gFieldCommandMenuGlobals.menu->unk_68;
 }

@@ -4,7 +4,7 @@
 #define ResetLinkedActorOffsets_02086b1c ResetLinkedActorOffsets
 #define SetCollisionObjectPosition_02033f48 SetCollisionObjectPosition
 #define data_02053438 gZeroVecFx32
-#define data_ov001_020a04dc data_ov001_020a04fc
+#define data_ov001_020a04dc gFieldEntryPoolManager
 #define func_02036230 GetActorRegistry
 #define func_02036240 ActorRegistry_GetEntityByIndex
 #include "src/ov001/shared_engine/ResetLinkedActorOffsets_02086b1c.c"

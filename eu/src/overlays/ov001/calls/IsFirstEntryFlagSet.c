@@ -1,3 +1,3 @@
 #define IsFirstEntryFlagSet_0206e584 IsFirstEntryFlagSet
-#define g_manager_020a049c data_ov001_020a04bc
+#define g_manager_020a049c gManagedActorGlobals
 #include "src/ov001/shared_engine/IsFirstEntryFlagSet_0206e584.c"

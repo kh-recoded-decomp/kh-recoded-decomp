@@ -3,7 +3,7 @@
 #define InitSlotLayout_0207d2c0 InitSlotLayout
 #define ReadSessionPackedBits_02064574 ReadSessionPackedBits
 #define SetupSlotPanelMode_020640d8 SetupSlotPanelMode
-#define data_ov001_020a0460 data_ov001_020a0480
+#define data_ov001_020a0460 gFieldSessionWork
 #define func_0200d594 PopCount32
 #define func_ov001_020645e8 ClearSessionPackedBit
 #define func_ov001_0207d384 SetCounterHudEnabledIfActive

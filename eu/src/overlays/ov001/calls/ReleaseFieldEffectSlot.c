@@ -1,6 +1,6 @@
 #include "nitro/types.h"
 
-extern unsigned int *data_ov001_020a0484;
+extern unsigned int *gFieldEffectPool;
 extern unsigned int ActorSlot_UnlinkRoot();
 extern unsigned int SetPackedBit();
 extern unsigned int UnlinkContainerListNode();
@@ -12,6 +12,6 @@ void ReleaseFieldEffectSlot(int entry) {
       ActorSlot_UnlinkRoot(*(void **)(entry + 0x24));
     }
     *(unsigned int *)(entry + 0x24) = 0;
-    SetPackedBit((void *)*data_ov001_020a0484,(u32)*(u8 *)(entry + 0x2d));
+    SetPackedBit((void *)*gFieldEffectPool,(u32)*(u8 *)(entry + 0x2d));
   }
 }

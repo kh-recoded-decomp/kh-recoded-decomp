@@ -9,7 +9,7 @@ typedef struct OverlayFactoryContext {
 } OverlayFactoryContext;
 
 extern s32 gPanelActive;
-extern OverlayFactoryContext *data_ov001_020a04bc;
+extern OverlayFactoryContext *gManagedActorGlobals;
 extern s32 GXx_GetMasterBrightness_(u32 reg);
 extern void SetBrightnessAndSyncMain(s32 callerId);
 extern s32 GetMainBrightnessSetting(void);
@@ -21,9 +21,9 @@ s32 TryBeginTrackedMainBrightness(s32 callerId)
     s32 ok;
     s32 busy;
 
-    ctx = data_ov001_020a04bc;
+    ctx = gManagedActorGlobals;
     ok = 1;
-    if (data_ov001_020a04bc == 0) {
+    if (gManagedActorGlobals == 0) {
         return 0;
     }
     busy = GXx_GetMasterBrightness_(0x400006c);

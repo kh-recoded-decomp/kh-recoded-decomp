@@ -1,11 +1,11 @@
 #include "nitro/types.h"
 
-extern u32 data_ov001_020a04bc;
+extern u32 gManagedActorGlobals;
 
 u32 GetFieldActorUpdateStepFx12(void)
 {
-    if (data_ov001_020a04bc == 0) {
+    if (gManagedActorGlobals == 0) {
         return 0x1000;
     }
-    return *(u32 *)(data_ov001_020a04bc + 0x9c);
+    return *(u32 *)(gManagedActorGlobals + 0x9c);
 }

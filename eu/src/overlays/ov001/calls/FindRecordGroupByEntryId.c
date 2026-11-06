@@ -34,11 +34,11 @@ typedef char RecordGroupTableGroupsOffsetCheck[
 typedef char RecordGroupSelectionOffsetCheck[
     (u32)&((RecordGroupSelection *)0)->selectedGroup == 0xd ? 1 : -1];
 
-extern RecordGroupSelection *data_ov001_020a048c;
+extern RecordGroupSelection *gFieldSceneEntryContext;
 
 BOOL FindRecordGroupByEntryId(int itemId, int *outGroup)
 {
-    RecordGroupSelection *scene = data_ov001_020a048c;
+    RecordGroupSelection *scene = gFieldSceneEntryContext;
 
     /* Preserve the original four preferred-group probes before the full scan. */
     for (int attempt = 0; attempt < 4; attempt++) {

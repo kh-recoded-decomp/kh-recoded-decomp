@@ -1,4 +1,4 @@
 #define GetBoundedEntryField_0206db5c GetBoundedEntryField
 #define IsHeldEntryFlag2Active_0206e33c IsHeldEntryFlag2Active
-#define data_ov001_020a049c data_ov001_020a04bc
+#define data_ov001_020a049c gManagedActorGlobals
 #include "src/ov001/unclassified_helpers/IsHeldEntryFlag2Active_0206e33c.c"

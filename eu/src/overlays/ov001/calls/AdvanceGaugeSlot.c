@@ -31,7 +31,7 @@ typedef struct GaugeScene {
 
 typedef void (*GaugeDrawFn)(void *context, int index, int mode);
 
-extern GaugeScene *data_ov001_020a04cc;
+extern GaugeScene *gFieldHudGaugeState;
 extern u64 OS_GetTick(void);
 extern void DrawShortLayoutRow(void *context, int index, int mode);
 extern void BlitFourPixelLabelPattern(void *context, int index, int mode);
@@ -39,7 +39,7 @@ extern void RunMenuEntryCallbacks(void *context, int menu, int count, GaugeDrawF
 
 int AdvanceGaugeSlot(int index, GaugeSlot *slot)
 {
-    GaugeScene *scene = data_ov001_020a04cc;
+    GaugeScene *scene = gFieldHudGaugeState;
     u64 now = OS_GetTick();
     int result;
     int value;

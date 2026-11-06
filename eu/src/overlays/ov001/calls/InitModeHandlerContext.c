@@ -4,5 +4,5 @@
 #define func_ov001_02071248 MakePrimaryVramKey_02071248
 #define func_0202c478 Archive_LoadFile
 #define func_020524e8 InitTween
-#define g_activeContext_020a04c4 data_ov001_020a04e4
+#define g_activeContext_020a04c4 gMessageWindowWork
 #include "src/ov001/leaf_research/func_ov001_0207a458.c"

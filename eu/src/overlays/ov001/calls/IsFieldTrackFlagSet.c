@@ -19,8 +19,8 @@ typedef struct FieldContext {
     TrackState track;
 } FieldContext;
 
-extern FieldContext *data_ov001_020a0480;
+extern FieldContext *gFieldSessionWork;
 
 u32 IsFieldTrackFlagSet(void) {
-    return data_ov001_020a0480->track.flag;
+    return gFieldSessionWork->track.flag;
 }

@@ -1,4 +1,4 @@
 #define InvokeFieldModeOp1a4_02072e20 InvokeFieldModeOp1a4
-#define data_ov001_020a04a4 data_ov001_020a04c4
+#define data_ov001_020a04a4 gFieldSceneGlobals
 #define func_020cf1a4 GetQueuedCaptionLine
 #include "src/ov001/field_manager/InvokeFieldModeOp1a4_02072e20.c"

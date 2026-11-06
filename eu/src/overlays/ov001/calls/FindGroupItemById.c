@@ -1,3 +1,3 @@
 #define FindGroupItemById_02067108 FindGroupItemById
-#define data_ov001_020a046c data_ov001_020a048c
+#define data_ov001_020a046c gFieldSceneEntryContext
 #include "src/ov001/unclassified_helpers/FindGroupItemById_02067108.c"

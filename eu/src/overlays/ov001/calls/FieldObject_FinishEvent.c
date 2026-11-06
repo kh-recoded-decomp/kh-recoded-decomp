@@ -19,14 +19,14 @@ typedef struct FieldObject {
     s8 configFlags;
 } FieldObject;
 
-extern Session *data_ov001_020a0480;
+extern Session *gFieldSessionWork;
 extern void SetFieldEntriesPaused(BOOL paused);
 extern void FieldObject_SetSavedValue(FieldObject *object, u32 value);
 
 void FieldObject_FinishEvent(FieldObject *object)
 {
     object->eventState = 0;
-    if (!data_ov001_020a0480->flags.eventActive) {
+    if (!gFieldSessionWork->flags.eventActive) {
         SetFieldEntriesPaused(FALSE);
     }
     FieldObject_SetSavedValue(object, 1);

@@ -13,6 +13,6 @@ typedef struct PanelState {
     BOOL brightnessRestoreRequested;
 } PanelState;
 
-extern PanelState *data_ov001_020a04e8;
+extern PanelState *gSubscenePanelWork;
 
 #endif

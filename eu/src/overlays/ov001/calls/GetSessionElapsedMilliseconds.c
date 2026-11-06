@@ -1,5 +1,5 @@
-extern int *data_ov001_020a0494;
+extern int *gSessionTimerWork;
 
 int GetSessionElapsedMilliseconds(void) {
-    return *data_ov001_020a0494;
+    return *gSessionTimerWork;
 }

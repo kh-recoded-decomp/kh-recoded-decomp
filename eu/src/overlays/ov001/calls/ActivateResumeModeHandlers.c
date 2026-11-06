@@ -1,4 +1,4 @@
 #define ActivateResumeModeHandlers_02062b08 ActivateResumeModeHandlers
-#define data_ov001_020a0460 data_ov001_020a0480
+#define data_ov001_020a0460 gFieldSessionWork
 #define func_ov033_020ba9cc InstallResumeModeHandlers
 #include "src/ov001/unclassified_helpers/ActivateResumeModeHandlers_02062b08.c"

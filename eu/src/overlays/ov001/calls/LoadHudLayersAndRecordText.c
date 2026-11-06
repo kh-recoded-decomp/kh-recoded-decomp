@@ -45,7 +45,7 @@ typedef struct HudGlobals {
     HudContext *context;
 } HudGlobals;
 
-extern HudGlobals data_ov001_020a04c4;
+extern HudGlobals gFieldSceneGlobals;
 extern const LayerSourceTable gMainBgScreenGetters;
 extern const LayerIdTable gMainBgLayerIds;
 
@@ -89,7 +89,7 @@ static inline u16 EnableIme(void)
 
 void LoadHudLayersAndRecordText(void)
 {
-    HudContext *context = data_ov001_020a04c4.context;
+    HudContext *context = gFieldSceneGlobals.context;
     void *tracker = GetSceneTagTracker();
     LayerSourceTable sources = gMainBgScreenGetters;
     void *widgets = GetFieldSceneManager();

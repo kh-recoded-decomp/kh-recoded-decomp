@@ -4,7 +4,7 @@
 #define ShowHudCaption_02072bac ShowHudCaption
 #define TagTracker_InvokeCallback_020b8210 TagTracker_InvokeCallback
 #define UpdateWidgetLayerDefault_020b9df0 UpdateWidgetLayerDefault_020b9e10
-#define data_020a04a4 data_ov001_020a04c4
+#define data_020a04a4 gFieldSceneGlobals
 #define func_02001520 Text_UploadTileBuffer
 #define func_020015a0 DrawTextAnchored
 #include "src/ov001/shared_engine/ShowHudCaption_02072bac.c"

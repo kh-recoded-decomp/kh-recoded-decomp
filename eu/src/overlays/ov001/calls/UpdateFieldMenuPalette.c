@@ -23,7 +23,7 @@ extern char FieldMenuFadeYellow[];                       /* = 0x3ff, RGB555 (31,
 void UpdateFieldMenuPalette(FieldMenuPaletteView *menu, BOOL advance)
 {
     BOOL restore = FALSE;
-    FieldMenuPaletteHandleView *handle = &data_ov001_020a04d0;
+    FieldMenuPaletteHandleView *handle = &gFieldCommandMenuGlobals;
     const u16 *palette;
 
     if (menu->paletteMode == -1) {
@@ -56,7 +56,7 @@ void UpdateFieldMenuPalette(FieldMenuPaletteView *menu, BOOL advance)
         handle->fade[1] = LerpColor555_02076e30(gFieldMenuFadeRamps.red[1], 0x0318, menu->fadeLevel, 8);
         handle->fade[2] = LerpColor555_02076e30(gFieldMenuFadeRamps.red[2], (int)FieldMenuFadeYellow,
                                                 menu->fadeLevel, 8);
-        handle->palette = palette = data_ov001_020a04d0.fade;
+        handle->palette = palette = gFieldCommandMenuGlobals.fade;
         break;
     case 10:
         handle->palette = palette = gFieldMenuStateRamps.blue;
@@ -65,7 +65,7 @@ void UpdateFieldMenuPalette(FieldMenuPaletteView *menu, BOOL advance)
         handle->palette = palette = gFieldMenuStateRamps.green;
         break;
     }
-    handle = &data_ov001_020a04d0;
+    handle = &gFieldCommandMenuGlobals;
     if (restore) {
         menu->paletteMode = -1;
         NNS_GfdRegisterNewVramTransferTask(15, 0x138, palette, 6);

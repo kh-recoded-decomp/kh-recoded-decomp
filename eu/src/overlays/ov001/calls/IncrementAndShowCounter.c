@@ -1,4 +1,4 @@
 #define IncrementAndShowCounter_0207e0f0 IncrementAndShowCounter
 #define ShowTwoDigitCounters_0207d984 ShowTwoDigitCounters
-#define data_ov001_020a04d0 data_ov001_020a04f0
+#define data_ov001_020a04d0 gArrowPromptWork
 #include "src/ov001/field_manager/IncrementAndShowCounter_0207e0f0.c"

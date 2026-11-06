@@ -1,3 +1,3 @@
 #include "nitro/types.h"
 
-static u32 data_ov001_020a04c4[2];
+static u32 gFieldSceneGlobals[2];

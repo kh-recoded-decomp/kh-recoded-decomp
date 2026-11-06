@@ -1,6 +1,6 @@
 #include "nitro/types.h"
 
-extern u32 data_ov001_020a04f0;
+extern u32 gArrowPromptWork;
 extern u32 GetFieldSceneManager(void);
 extern u32 GetSceneTagTracker(void);
 extern void ClearTileTableRect(u32 a, u32 b, u32 c, u32 d, u32 e, u32 f);
@@ -14,7 +14,7 @@ void HideArrowPromptTimedCounters(void)
     u32 handle;
     u32 value;
 
-    context = (u8 *)data_ov001_020a04f0;
+    context = (u8 *)gArrowPromptWork;
     group = GetFieldSceneManager();
     handle = GetSceneTagTracker();
     *(u32 *)(context + 8) = 0;

@@ -1,6 +1,6 @@
 #define FindModelResourceIndexByName_0208950c FindModelResourceIndexByName
 #define FindResourceIndexByName_0201aafc NNS_G3dGetResDictIdxByName
-#define data_ov001_020a04e4 data_ov001_020a0504
+#define data_ov001_020a04e4 gModelDictionaryNameScratch
 #define func_01ff86fc MIi_CpuClear32
 #define strcpy_02021e60 strcpy
 #include "src/ov001/shared_engine/FindModelResourceIndexByName_0208950c.c"

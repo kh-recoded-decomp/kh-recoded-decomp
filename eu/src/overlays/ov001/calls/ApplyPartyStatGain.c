@@ -26,7 +26,7 @@ typedef struct SessionData {
     StatTable *statTable;
 } SessionData;
 
-extern SessionData *data_ov001_020a0484;
+extern SessionData *gFieldEffectPool;
 extern BOOL IsSessionFlagSet(u32 bitOffset);
 extern void SpawnRewardOrbs(StatDelta *delta, void *target, int mode);
 extern void RollRewardOrbDrop(int index, void *target);
@@ -45,7 +45,7 @@ static inline void ClearStatDelta(StatDelta *delta)
 
 void ApplyPartyStatGain(int index, void *target, int amount, BOOL scaled)
 {
-    SessionData *session = data_ov001_020a0484;
+    SessionData *session = gFieldEffectPool;
     StatEntry *entry;
     StatDelta delta;
     u16 savedA;

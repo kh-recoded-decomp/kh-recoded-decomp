@@ -4,5 +4,5 @@
 #define func_ov001_0206b4a4 IsActorTargetable
 #define func_ov001_0207f08c GetFieldObjectListHead
 #define func_ov001_0207f870 CallFieldObjectHook13IfPresent
-#define g_manager_020a0484 data_ov001_020a04a4
+#define g_manager_020a0484 gFieldTargetSelectionWork
 #include "src/ov001/shared_engine/ScanActorsForSideTarget_0206b25c.c"

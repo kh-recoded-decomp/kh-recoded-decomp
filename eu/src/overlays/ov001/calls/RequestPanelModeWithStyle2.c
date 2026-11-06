@@ -1,4 +1,4 @@
 #define RequestPanelModeChange_0207b27c RequestPanelModeChange
 #define RequestPanelModeWithStyle2_0207b320 RequestPanelModeWithStyle2
-#define data_ov001_020a04c8 data_ov001_020a04e8
+#define data_ov001_020a04c8 gSubscenePanelWork
 #include "src/ov001/leaf_research/RequestPanelModeWithStyle2_0207b320.c"

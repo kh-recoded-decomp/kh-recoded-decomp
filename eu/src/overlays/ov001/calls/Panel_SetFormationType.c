@@ -1,5 +1,5 @@
 #define func_ov001_0207a8fc IsPanelMapUpdateAllowed
 #define ApplyFormationSlots_020b6d90 ApplyFormationSlots
 #define Panel_SetFormationType_0207b478 Panel_SetFormationType
-#define g_activePanel_020a04c8 data_ov001_020a04e8
+#define g_activePanel_020a04c8 gSubscenePanelWork
 #include "src/ov001/leaf_research/Panel_SetFormationType_0207b478.c"

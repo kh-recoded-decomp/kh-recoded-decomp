@@ -1,6 +1,6 @@
 #define func_ov001_02063838 GetSessionFlagsMask20
 #define IsFirstEntryFlagSet_0206e584 IsFirstEntryFlagSet
 #define IsSessionIdleForSceneChange_020638ec IsSessionIdleForSceneChange
-#define data_ov001_020a0460 data_ov001_020a0480
+#define data_ov001_020a0460 gFieldSessionWork
 #define func_ov001_0206a814 IsScreenModeIdle
 #include "src/ov001/unclassified_helpers/IsSessionIdleForSceneChange_020638ec.c"

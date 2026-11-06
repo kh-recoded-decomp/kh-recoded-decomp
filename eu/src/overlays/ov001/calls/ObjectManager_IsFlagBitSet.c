@@ -1,3 +1,3 @@
 #define ObjectManager_IsFlagBitSet_0207f068 ObjectManager_IsFlagBitSet
-#define g_objectManager_020a04d8 data_ov001_020a04f8
+#define g_objectManager_020a04d8 gFieldObjectClassManager
 #include "src/ov001/unclassified_helpers/ObjectManager_IsFlagBitSet_0207f068.c"

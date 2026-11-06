@@ -1,3 +1,3 @@
 #define SetPanelItemHighlight_0207b19c SetPanelItemHighlight
-#define g_panelScene_020a04c8 data_ov001_020a04e8
+#define g_panelScene_020a04c8 gSubscenePanelWork
 #include "src/ov001/leaf_research/SetPanelItemHighlight_0207b19c.c"

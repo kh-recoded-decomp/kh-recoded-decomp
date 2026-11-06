@@ -29,11 +29,11 @@ typedef struct MenuScene {
     MenuPanel *panels;
 } MenuScene;
 
-extern MenuScene *data_ov001_020a048c;
+extern MenuScene *gFieldSceneEntryContext;
 
 MenuPanel *FindMenuPanelById(int panelId)
 {
-    MenuScene *scene = data_ov001_020a048c;
+    MenuScene *scene = gFieldSceneEntryContext;
     MenuItem *item;
     int index;
     int panelCount;

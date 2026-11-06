@@ -1,3 +1,3 @@
 #define StartCountdownTimer_0207d134 StartCountdownTimer
-#define data_ov001_020a04cc data_ov001_020a04ec
+#define data_ov001_020a04cc gCounterHudWork
 #include "src/ov001/unclassified_helpers/StartCountdownTimer_0207d134.c"

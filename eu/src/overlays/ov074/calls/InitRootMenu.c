@@ -14,7 +14,7 @@
 #define SetGlobalPackedBit_02027320 SetGlobalPackedBit
 #define SetSecondaryElementEnabled_020bc084 SetSecondaryElementEnabled
 #define SetSelectionIfChanged_020bc92c SetSelectionIfChanged_020bc94c
-#define data_ov001_020a0460 data_ov001_020a0480
+#define data_ov001_020a0460 gFieldSessionWork
 #define data_ov074_020c5920 sOv074_WeaponTg01_020c5940
 #define data_ov074_020c5930 sOv074_WeaponTg00_020c5950
 #define data_ov074_020c5940 data_ov074_020c5960

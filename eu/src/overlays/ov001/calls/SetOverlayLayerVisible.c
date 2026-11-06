@@ -1,5 +1,5 @@
 #define SetOverlayLayerVisible_0207ef40 SetOverlayLayerVisible
-#define data_ov001_020a04d8 data_ov001_020a04f8
+#define data_ov001_020a04d8 gFieldObjectClassManager
 #define func_ov001_02087030 SetEntryPoolUpdatesBlocked
 
 #include "src/ov001/unclassified_helpers/SetOverlayLayerVisible_0207ef40.c"

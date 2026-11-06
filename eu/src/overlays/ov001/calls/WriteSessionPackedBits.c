@@ -1,5 +1,5 @@
 #define WriteGlobalPackedBits_02027360 WriteGlobalPackedBits
 #define WritePackedBits_0202d560 WritePackedBits
 #define WriteSessionPackedBits_0206459c WriteSessionPackedBits
-#define data_ov001_020a0460 data_ov001_020a0480
+#define data_ov001_020a0460 gFieldSessionWork
 #include "src/ov001/unclassified_helpers/WriteSessionPackedBits_0206459c.c"

@@ -36,7 +36,7 @@ typedef char GaugeStyleOffsetCheck[GAUGE_OFFSET(HudGaugeTable, markerStyle) == 0
 typedef char GaugeTableSizeCheck[sizeof(HudGaugeTable) == 40 ? 1 : -1];
 #undef GAUGE_OFFSET
 
-extern GaugeState *data_ov001_020a04cc;
+extern GaugeState *gFieldHudGaugeState;
 extern SceneTagTracker *GetSceneTagTracker(void);
 extern SceneRecord *FindActiveRecordById(SceneTagTracker *tracker, u32 id);
 extern SceneRecord *CopyElementLayout(SceneTagTracker *tracker, SceneRecord *record, const SceneRecord *layout);
@@ -48,7 +48,7 @@ extern void TagTracker_InvokeCallback(SceneTagTracker *tracker, SceneRecord *rec
 void UpdateGaugeMarker(int row, BOOL filled, BOOL last)
 {
     int *style = &gHudGaugeTable.markerStyle;
-    GaugeState *state = data_ov001_020a04cc;
+    GaugeState *state = gFieldHudGaugeState;
     int odd = row % 2;
     SceneTagTracker *tracker = GetSceneTagTracker();
     int half;

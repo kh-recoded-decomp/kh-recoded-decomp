@@ -17,12 +17,12 @@ typedef struct MenuState {
     int hidden;
 } MenuState;
 
-extern MenuState *data_ov001_020a04cc;
+extern MenuState *gFieldHudGaugeState;
 extern void GX_LoadBG3Char(const void *src, u32 offset, u32 size);
 
 void SetMenuHiddenAndReloadChars(int hidden)
 {
-    MenuState *menu = data_ov001_020a04cc;
+    MenuState *menu = gFieldHudGaugeState;
     int i;
 
     menu->hidden = hidden;

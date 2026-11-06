@@ -16,12 +16,12 @@ typedef struct GaugeContext {
     Gauge gauges[2];
 } GaugeContext;
 
-extern GaugeContext *data_ov001_020a04cc;
+extern GaugeContext *gFieldHudGaugeState;
 extern s64 _s32_div_f(int numerator, int denominator);
 extern void RedrawHudGaugeRows(void);
 
 void SetGaugeValues(int amount, int maximum) {
-    GaugeContext *context = data_ov001_020a04cc;
+    GaugeContext *context = gFieldHudGaugeState;
     Gauge *lower = &context->gauges[0];
     Gauge *upper = &context->gauges[1];
 

@@ -1,3 +1,3 @@
 #define ConfigureChannelSlot_0206ca68 ConfigureChannelSlot
-#define g_channelManager_020a0498 data_ov001_020a04b8
+#define g_channelManager_020a0498 gFieldMessageSpriteManager
 #include "src/ov001/shared_engine/ConfigureChannelSlot_0206ca68.c"

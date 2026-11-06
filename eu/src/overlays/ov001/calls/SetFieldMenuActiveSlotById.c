@@ -21,14 +21,14 @@ typedef struct {
     FieldMenu *menu;
 } FieldMenuHandle;
 
-extern FieldMenuHandle data_ov001_020a04d0;
+extern FieldMenuHandle gFieldCommandMenuGlobals;
 
 extern void ClearHudPopup(void);
 
 void SetFieldMenuActiveSlotById(s32 id, u16 value)
 {
     FieldSlot *slot;
-    FieldMenu *menu = data_ov001_020a04d0.menu;
+    FieldMenu *menu = gFieldCommandMenuGlobals.menu;
     s32 index;
 
     if (value == 0) {

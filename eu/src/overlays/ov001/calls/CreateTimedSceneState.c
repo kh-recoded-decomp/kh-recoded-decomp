@@ -3,7 +3,7 @@
 #define GetSceneTagTracker_020711b0 GetSceneTagTracker
 #define NNSi_FndGetCurrentRootHeap_0202a764 GetRunningTaskWork
 #define data_ov001_0209de74 gTimedSceneRecordIds
-#define data_ov001_020a04ac data_ov001_020a04cc
+#define data_ov001_020a04ac gFieldHudGaugeState
 #define func_01ff8830 MI_CpuFill8
 #define func_ov001_020743c0 LoadMenuGaugeData
 #define func_ov001_02074d14 UpdateHudGauges

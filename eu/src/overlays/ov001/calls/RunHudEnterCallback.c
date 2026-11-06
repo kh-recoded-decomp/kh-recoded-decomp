@@ -1,5 +1,5 @@
 #define RunHudEnterCallback_02071fb4 RunHudEnterCallback
-#define data_020a04a4 data_ov001_020a04c4
+#define data_020a04a4 gFieldSceneGlobals
 #define func_ov001_020720cc UpdateFieldFlag18
 #define func_ov001_02072178 SetFieldCaptionText
 #define func_ov001_02077b90 SetFieldMenuSuspended

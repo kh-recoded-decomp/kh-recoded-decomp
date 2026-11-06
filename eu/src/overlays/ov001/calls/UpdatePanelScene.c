@@ -25,7 +25,7 @@ typedef struct TouchSample {
     u16 validity;
 } TouchSample;
 
-extern PanelScene *data_ov001_020a04e8;
+extern PanelScene *gSubscenePanelWork;
 extern PanelStateTable gMenuOverlayStateHandlers;
 extern u8 GetPrimarySelectionByte1E(void);
 extern BOOL IsSessionFlagSet(u32 value);
@@ -42,7 +42,7 @@ extern void ClearCapturedTouchState(void);
 
 int UpdatePanelScene(void)
 {
-    PanelScene *panel = data_ov001_020a04e8;
+    PanelScene *panel = gSubscenePanelWork;
     TouchSample sample;
     PanelStateTable table = gMenuOverlayStateHandlers;
     u8 channel = GetPrimarySelectionByte1E();

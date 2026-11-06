@@ -1,8 +1,8 @@
 #include "nitro/types.h"
 
-extern u8 *data_ov001_020a04f8;
+extern u8 *gFieldObjectClassManager;
 
 u32 GetFieldObjectListHead(void)
 {
-    return *(const u32 *)(data_ov001_020a04f8 + 0x8);
+    return *(const u32 *)(gFieldObjectClassManager + 0x8);
 }

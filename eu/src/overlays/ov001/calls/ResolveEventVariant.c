@@ -1,5 +1,5 @@
 #define IsFieldFlag13OrSessionFlagSet_020728e4 IsFieldFlag13OrSessionFlagSet
 #define IsFieldFlag8Set_020728a4 IsFieldFlag8Set
 #define ResolveEventVariant_02078948 ResolveEventVariant
-#define data_ov001_020a04b0 data_ov001_020a04d0
+#define data_ov001_020a04b0 gFieldCommandMenuGlobals
 #include "src/ov001/field_manager/ResolveEventVariant_02078948.c"

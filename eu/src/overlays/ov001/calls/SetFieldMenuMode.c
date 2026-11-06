@@ -11,7 +11,7 @@
 #define TagTracker_InvokeCallback_020b8210 TagTracker_InvokeCallback
 #define Text_UploadTileBuffer_02001520 Text_UploadTileBuffer
 #define UpdateFieldWidgetLayer_020736b4 UpdateFieldWidgetLayer
-#define data_ov001_020a04b0 data_ov001_020a04d0
+#define data_ov001_020a04b0 gFieldCommandMenuGlobals
 #define func_ov001_020769f4 DrawMenuPanelPage
 #define func_ov001_02078360 SetFieldMenuMode_02078360
 #define func_ov027_020b9e00 MarkTileTableRowDirty

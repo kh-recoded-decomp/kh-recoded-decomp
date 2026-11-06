@@ -1,4 +1,4 @@
 #define Panel_CaptureBrightness_0207b704 Panel_CaptureBrightness
 #define func_02029f58 GetSubBrightnessSetting
-#define g_activePanel_020a04c8 data_ov001_020a04e8
+#define g_activePanel_020a04c8 gSubscenePanelWork
 #include "src/ov001/leaf_research/Panel_CaptureBrightness_0207b704.c"

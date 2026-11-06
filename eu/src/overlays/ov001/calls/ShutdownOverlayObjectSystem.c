@@ -2,5 +2,5 @@
 #define StoreGlobalArrayEntry_02025668 StoreGlobalArrayEntry
 #define func_020257e4 ReleaseScriptVmBuffer
 #define func_0202a638 DestroyTaskObjectWrapper
-#define g_actorManager_020a04e0 data_ov001_020a0500
+#define g_actorManager_020a04e0 gActorSceneManager
 #include "src/ov001/object_creation/ShutdownOverlayObjectSystem_020884b0.c"

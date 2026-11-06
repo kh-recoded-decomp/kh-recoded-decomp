@@ -2,7 +2,7 @@
 #define func_ov001_02063a38 GetFieldSessionState
 #define func_ov001_0206dc4c GetManagedActorPosition
 #define FieldObject_UpdateZoneTrigger_02081728 FieldObject_UpdateZoneTrigger
-#define data_ov001_020a0460 data_ov001_020a0480
+#define data_ov001_020a0460 gFieldSessionWork
 #define func_ov001_020642a0 IsFieldTrackFlagSet
 #define ActorSlot_SetFlag8ByIndex_02036120 ActorSlot_SetFlag8ByIndex
 #define SceneObject_IsPointWithinOneUnit_02081a88 SceneObject_IsPointWithinOneUnit

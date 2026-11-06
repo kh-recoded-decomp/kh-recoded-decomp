@@ -4,6 +4,6 @@
 #define DrawTextPackedColor_0200174c DrawTextPackedColor
 #define SampleTweenValue_0205258c SampleTweenValue
 #define Text_UploadTileBuffer_02001520 Text_UploadTileBuffer
-#define data_ov001_020a04c4 data_ov001_020a04e4
+#define data_ov001_020a04c4 gMessageWindowWork
 #define func_ov001_02079524 StartWindow1Fade
 #include "src/ov001/field_manager/DrawMessageWindowPage_02079b4c.c"

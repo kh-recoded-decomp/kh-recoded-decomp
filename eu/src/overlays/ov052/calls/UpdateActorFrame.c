@@ -7,6 +7,6 @@
 #define TickActorTimers_020c7bac TickActorTimers
 #define UpdateActorFrame_020c967c UpdateActorFrame
 #define UpdateDriveGaugeCharge_020cc910 UpdateDriveGaugeCharge
-#define data_ov001_020a0460 data_ov001_020a0480
+#define data_ov001_020a0460 gFieldSessionWork
 #define func_ov052_020ca31c Actor_UpdateComboStage_020ca33c
 #include "src/ov052/unclassified_helpers/UpdateActorFrame_020c967c.c"

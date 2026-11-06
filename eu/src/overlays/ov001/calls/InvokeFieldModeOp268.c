@@ -1,4 +1,4 @@
 #define InvokeFieldModeOp268_02072e50 InvokeFieldModeOp268
-#define data_ov001_020a04a4 data_ov001_020a04c4
+#define data_ov001_020a04a4 gFieldSceneGlobals
 #define func_020cf268 ClearStageCaption
 #include "src/ov001/field_manager/InvokeFieldModeOp268_02072e50.c"

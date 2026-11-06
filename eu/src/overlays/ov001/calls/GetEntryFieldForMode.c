@@ -1,4 +1,4 @@
 #define GetBoundedEntryField_0206db5c GetBoundedEntryField
 #define GetEntryFieldForMode_0206e6c0 GetEntryFieldForMode
-#define g_eventContext_020a049c data_ov001_020a04bc
+#define g_eventContext_020a049c gManagedActorGlobals
 #include "src/ov001/shared_engine/GetEntryFieldForMode_0206e6c0.c"

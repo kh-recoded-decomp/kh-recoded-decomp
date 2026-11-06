@@ -1,3 +1,3 @@
 #define SetSessionScriptParams_02063678 SetSessionScriptParams
-#define data_ov001_020a0460 data_ov001_020a0480
+#define data_ov001_020a0460 gFieldSessionWork
 #include "src/ov001/unclassified_helpers/SetSessionScriptParams_02063678.c"

@@ -1,4 +1,4 @@
 #define DeactivateTaskById_0206922c DeactivateTaskById
 #define FindTaskNodeById_02069014 FindSceneNodeById
-#define data_ov001_020a0478 data_ov001_020a0498
+#define data_ov001_020a0478 gFieldTaskManagerWork
 #include "src/ov001/unclassified_helpers/DeactivateTaskById_0206922c.c"

@@ -15,17 +15,17 @@ typedef struct Session {
     u32 flags;
 } Session;
 
-extern ScreenState *data_ov001_020a04a0;
-extern Session *data_ov001_020a0480;
+extern ScreenState *gFieldScreenTransitionWork;
+extern Session *gFieldSessionWork;
 extern void SetScreenModeFlags(int enable, int mode);
 extern int GetMainBrightnessSetting(void);
 extern int GetSubBrightnessSetting(void);
 
 void BeginScreenFadeOut(int mode)
 {
-    ScreenState *screen = data_ov001_020a04a0;
+    ScreenState *screen = gFieldScreenTransitionWork;
 
-    data_ov001_020a0480->flags |= 0x40000;
+    gFieldSessionWork->flags |= 0x40000;
     SetScreenModeFlags(0, mode);
     if (mode == 3) {
         return;

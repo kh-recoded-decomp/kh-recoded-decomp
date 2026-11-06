@@ -1,13 +1,13 @@
 #include "nitro/types.h"
 
-extern u32 *data_ov001_020a04a4;
+extern u32 *gFieldTargetSelectionWork;
 
 u32 GetTargetSelectionFadeLevel2(void) {
-  if (data_ov001_020a04a4 == (u32 *)0x0) {
+  if (gFieldTargetSelectionWork == (u32 *)0x0) {
     return 0x7fffffff;
   }
-  if ((*data_ov001_020a04a4 & 4) != 0) {
+  if ((*gFieldTargetSelectionWork & 4) != 0) {
     return 0x7fffffff;
   }
-  return data_ov001_020a04a4[0xd];
+  return gFieldTargetSelectionWork[0xd];
 }

@@ -15,7 +15,7 @@
 #define SetSlotEntryValue_020a8f4c SetSlotEntryValue
 #define StopSoundSeqHandle_0204dbe4 StopSoundSeqHandle
 #define VEC_Subtract_01ff9e3c VEC_Subtract
-#define data_ov001_020a0460 data_ov001_020a0480
+#define data_ov001_020a0460 gFieldSessionWork
 #define func_ov001_020645c8 IsSessionFlagSet
 #define func_ov001_0206db78 GetPlayerControlState
 #define func_ov021_020a8ab4 ResetAnimationTrackState

@@ -1,4 +1,4 @@
 #define AppendNodeToActiveList_02086fac AppendNodeToActiveList
-#define data_ov001_020a04dc data_ov001_020a04fc
+#define data_ov001_020a04dc gFieldEntryPoolManager
 #define func_ov001_02087224 GetFieldEntryByPoolAndIndex
 #include "src/ov001/unclassified_helpers/AppendNodeToActiveList_02086fac.c"

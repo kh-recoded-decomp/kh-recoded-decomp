@@ -1,6 +1,6 @@
 #include "nitro/types.h"
 
-extern unsigned int data_ov001_020a0480;
+extern unsigned int gFieldSessionWork;
 extern unsigned int gResumeModeWorkStorage;
 extern unsigned int SetPanelEnabled();
 extern unsigned int StoreToGlobalPtr4Field28();
@@ -17,7 +17,7 @@ unsigned int FinishResumeMenuAndRestoreField(void) {
   FadeBgmVolume(0x7f,10);
   mode = 1;
   SetPanelEnabled(1);
-  if ((*(u32 *)(data_ov001_020a0480 + 0x214) << 0x12 >> 0x1f) == 0) {
+  if ((*(u32 *)(gFieldSessionWork + 0x214) << 0x12 >> 0x1f) == 0) {
     if (*(int *)(gResumeModeWorkStorage + 0xc) != 0) {
       if (*(int *)(gResumeModeWorkStorage + 8) == 6) {
         mode = 3;

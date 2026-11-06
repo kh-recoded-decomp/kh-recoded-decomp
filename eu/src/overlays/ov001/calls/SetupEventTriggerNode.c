@@ -4,7 +4,7 @@
 #define InitArithmeticNode_02069d9c InitArithmeticNode
 #define SetupEventTriggerNode_02069370 SetupEventTriggerNode
 #define WriteSessionPackedBits_0206459c WriteSessionPackedBits
-#define data_ov001_020a0478 data_ov001_020a0498
+#define data_ov001_020a0478 gFieldTaskManagerWork
 #define func_01ff86fc MIi_CpuClear32
 #define func_ov001_02069014 FindSceneNodeById
 #include "src/ov001/shared_engine/SetupEventTriggerNode_02069370.c"

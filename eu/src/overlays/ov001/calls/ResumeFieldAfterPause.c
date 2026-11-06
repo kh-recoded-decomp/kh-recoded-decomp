@@ -7,6 +7,6 @@
 #define SetBrightnessAndSyncMain_02029e7c SetBrightnessAndSyncMain
 #define SetPanelReadyState_02028968 SetPanelReadyState
 #define SetSecondaryBrightness_02029ed0 SetSecondaryBrightness
-#define data_ov001_020a04a4 data_ov001_020a04c4
+#define data_ov001_020a04a4 gFieldSceneGlobals
 #define func_ov001_0207b3cc GetLoadedSubsceneMode
 #include "src/ov001/field_manager/ResumeFieldAfterPause_020704fc.c"

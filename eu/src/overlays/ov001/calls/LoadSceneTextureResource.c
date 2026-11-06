@@ -6,7 +6,7 @@
 #define Tex_LoadVram_0202d14c Tex_LoadVram
 #define data_02055c4c sDefaultAllocTexVramFunc
 #define data_02055c54 sDefaultAllocPlttVramFunc
-#define data_ov001_020a0480 data_ov001_020a04a0
+#define data_ov001_020a0480 gFieldScreenTransitionWork
 #define func_02018978 Obj_SetWord2C
 #define func_0202c690 SetFileLoaderTextureUploadQueueMode
 #define func_0202d204 SubmitResourcePaletteUpload

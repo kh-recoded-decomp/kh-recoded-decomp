@@ -15,11 +15,11 @@ typedef struct SlotLayout {
     SlotLayoutFlags flags;
 } SlotLayout;
 
-extern SlotLayout *data_ov001_020a04ec;
+extern SlotLayout *gCounterHudWork;
 extern int GetClampedTimerValue(void);
 
 BOOL SetSlotLayoutHighlight(int enable) {
-    SlotLayout *layout = data_ov001_020a04ec;
+    SlotLayout *layout = gCounterHudWork;
     u8 on;
 
     if (layout != NULL && (layout->state == 1 || layout->state == 3)) {

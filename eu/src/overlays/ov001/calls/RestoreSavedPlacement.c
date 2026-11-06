@@ -7,7 +7,7 @@
 #define VEC_Add_01ff9e0c VEC_Add
 #define WriteSessionPackedBits_0206459c WriteSessionPackedBits
 #define data_0205356c gSinFx12Table
-#define data_ov001_020a0460 data_ov001_020a0480
+#define data_ov001_020a0460 gFieldSessionWork
 #define func_0204fb1c RefreshSelectionLinkValues
 #define g_followerOffsets_0209e634 gFollowerOffsets
 #include "src/ov001/unclassified_helpers/RestoreSavedPlacement_02061c6c.c"

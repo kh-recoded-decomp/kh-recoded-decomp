@@ -1,6 +1,6 @@
 #define ArrowPrompt_HandleDpad_0207dfe4 ArrowPrompt_HandleDpad
 #define PlaySoundEffect_0204d924 PlaySoundEffect
-#define data_ov001_020a04d0 data_ov001_020a04f0
+#define data_ov001_020a04d0 gArrowPromptWork
 #define func_ov001_0207da58 AdvanceCounterPanel
 #define func_ov001_0207daf0 ScrollCounterPanelUp
 #include "src/ov001/unclassified_helpers/ArrowPrompt_HandleDpad_0207dfe4.c"

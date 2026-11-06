@@ -23,7 +23,7 @@ typedef struct TaskParams {
     u8 pad[0xe];
 } TaskParams;
 
-extern OverlayGlobals data_ov001_020a04c4;
+extern OverlayGlobals gFieldSceneGlobals;
 extern char data_ov045_020c0820[];
 extern char OVERLAY_45_ID[];
 extern void LoadOverlayAfterGeometryTransfer(int processor, int overlayId);
@@ -36,7 +36,7 @@ extern void *CreateTaskObject(void *descriptor, void *userData);
 
 void OpenOverlayWidgets(void)
 {
-    OverlayState *state = data_ov001_020a04c4.state;
+    OverlayState *state = gFieldSceneGlobals.state;
     TaskParams params;
 
     LoadOverlayAfterGeometryTransfer(0, (int)OVERLAY_45_ID);

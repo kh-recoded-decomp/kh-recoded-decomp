@@ -5,7 +5,7 @@
 #define InitPairFieldTask_02069e84 InitPairFieldTask
 #define InitRangeTriggerNode_020697ac InitRangeTriggerNode
 #define NNSi_FndAllocFromDefaultHeap_0202a178 NNSi_FndAllocFromDefaultHeap
-#define data_ov001_020a0478 data_ov001_020a0498
+#define data_ov001_020a0478 gFieldTaskManagerWork
 #define func_01ff86fc MIi_CpuClear32
 #define func_01ff8740 MIi_CpuClearFast
 #define func_0202d44c SetPackedBit

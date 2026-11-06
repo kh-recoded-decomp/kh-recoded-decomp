@@ -1,4 +1,4 @@
 #define UpdateIdleTimeout_0206e1c8 UpdateIdleTimeout
-#define data_ov001_020a049c data_ov001_020a04bc
+#define data_ov001_020a049c gManagedActorGlobals
 #define func_ov001_020642a0 IsFieldTrackFlagSet
 #include "src/ov001/field_manager/UpdateIdleTimeout_0206e1c8.c"

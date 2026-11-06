@@ -9,7 +9,7 @@
 #define SetPendingFromTable_020a9598 SetPendingFromTable
 #define SetSubModelsEnabled_020ceaf4 SetSubModelsEnabled
 #define ZeroBytes0x14_020a8adc ZeroBytes0x14
-#define data_ov001_020a0460 data_ov001_020a0480
+#define data_ov001_020a0460 gFieldSessionWork
 #define func_0204f768 GetOverlaySelectionRecord
 #define func_ov021_020a89a8 func_ov021_020a89c8
 #include "src/ov053/object_factory/LoadOverlay053EntityModel_020d22dc.c"

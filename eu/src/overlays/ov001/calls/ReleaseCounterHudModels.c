@@ -1,14 +1,14 @@
 #include "nitro/types.h"
 
-extern u32 data_ov001_020a04ec;
+extern u32 gCounterHudWork;
 extern void ReleaseResourceAndDetach(void *ptr);
 
 void ReleaseCounterHudModels(void)
 {
     u8 *context;
 
-    context = (u8 *)data_ov001_020a04ec;
-    if ((*(u16 *)(data_ov001_020a04ec + 0x108) & 2) != 0) {
+    context = (u8 *)gCounterHudWork;
+    if ((*(u16 *)(gCounterHudWork + 0x108) & 2) != 0) {
         ReleaseResourceAndDetach(context + 0x1b8);
         ReleaseResourceAndDetach(context + 700);
     }

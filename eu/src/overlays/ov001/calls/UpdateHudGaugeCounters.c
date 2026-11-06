@@ -5,8 +5,8 @@
 #define SetMenuGaugeActive_0207512c SetMenuGaugeActive
 #define UpdateHudGaugeCounters_02073e40 UpdateHudGaugeCounters
 #define data_ov001_0209edf4 gFieldGaugeLayouts
-#define data_ov001_020a0460 data_ov001_020a0480
-#define data_ov001_020a04ac data_ov001_020a04cc
+#define data_ov001_020a0460 gFieldSessionWork
+#define data_ov001_020a04ac gFieldHudGaugeState
 #define func_ov001_020645c8 IsSessionFlagSet
 #define func_ov001_02071770 UploadScreenSlotBlock
 #include "src/ov001/field_manager/UpdateHudGaugeCounters_02073e40.c"

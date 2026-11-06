@@ -1,10 +1,10 @@
 #include "nitro/types.h"
 
-extern u32 data_ov001_020a04bc;
+extern u32 gManagedActorGlobals;
 
 void SetPartyEntryUpdatesEnabled(u32 value)
 {
-    if (data_ov001_020a04bc != 0) {
-        *(u32 *)(data_ov001_020a04bc + 0x8c) = value;
+    if (gManagedActorGlobals != 0) {
+        *(u32 *)(gManagedActorGlobals + 0x8c) = value;
     }
 }

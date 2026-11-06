@@ -3,5 +3,5 @@
 #define func_01ff8740 MIi_CpuClearFast
 #define func_01ff8684 MIi_CpuClear16
 #define func_0202a178 NNSi_FndAllocFromDefaultHeap
-#define data_ov001_020a0478 data_ov001_020a0498
+#define data_ov001_020a0478 gFieldTaskManagerWork
 #include "src/ov001/unclassified_helpers/func_ov001_02068efc.c"

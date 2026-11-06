@@ -58,3 +58,29 @@ instruction bytes directly; it must not mask or ignore their contents.
 ```sh
 python tools/verify_idx.py src/overlays/ov073/calls/RefreshStatusMenuData.c RefreshStatusMenuData --thumb
 ```
+
+## Field/session global block
+
+The 27-global field/session block checks 777 affected functions. 768 standalone
+checks pass. The following nine reproduce their original relocation-map
+verdicts with the preserved source graph, headers and symbol configuration
+restored at the actual compilation paths. Their expected symbolic callback
+slots are still emitted as the same numeric pointer words. The current
+function instructions, pointer values and resolved targets are unchanged.
+
+| Function | EU identity | Expected relocation / existing literal word |
+|---|---|---|
+| [InitEventTriggerScene](../src/overlays/ov001/calls/InitEventTriggerScene.c) | ov001:02068efc | +0x4c `WaitForEventTriggerActivation` (`0x02068f4d`) |
+| [InitModeHandlerContext](../src/overlays/ov001/calls/InitModeHandlerContext.c) | ov001:0207a458 | +0x44 `RunActiveModeHandler` (`0x0207a4d1`) |
+| [InitOverlayObjectSystem](../src/overlays/ov001/calls/InitOverlayObjectSystem.c) | ov001:02088278 | +0x58 `func_ov001_020882d4` (`0x020882d5`) |
+| [InitScreenFadeContext](../src/overlays/ov001/calls/InitScreenFadeContext.c) | ov001:0206a0a0 | +0x74 `SelectScreenFadeHandler` (`0x0206a139`) |
+| [SelectScreenFadeHandler](../src/overlays/ov001/calls/SelectScreenFadeHandler.c) | ov001:0206a138 | +0x3c `ScreenFadeInStep` (`0x0206a185`); +0x40 `ScreenFadeOutStep` (`0x0206a209`); +0x44 `StepBrightnessFadeIn` (`0x0206a291`); +0x48 `StepBrightnessFade` (`0x0206a365`) |
+| [ShutdownSceneWork](../src/overlays/ov001/calls/ShutdownSceneWork.c) | ov001:0206ae58 | +0x24 `RefreshActiveMenuObjects` (`0x0206c46d`) |
+| [SubScene9_Create_02066c80](../src/overlays/ov001/calls/SubScene9_Create_02066c80.c) | ov001:02066c80 | +0x1c `FinishFadeTween` (`0x02066cb5`) |
+| [SubScene9_Create_02068c0c](../src/overlays/ov001/calls/SubScene9_Create_02068c0c.c) | ov001:02068c0c | +0x2c `StartTimerState` (`0x02068c51`) |
+| [TryShutdownActorSystem](../src/overlays/ov001/calls/TryShutdownActorSystem.c) | ov001:02088330 | +0x78 `func_ov001_020882d4` (`0x020882d5`) |
+
+These constructors/transitions need a separate source cleanup using their
+real callback symbols and demonstrated ABI. `func_ov001_020882d4` retains its
+numeric identity while its precise callback contract is under review. No
+parameter or callback role is added merely to force relocation emission.

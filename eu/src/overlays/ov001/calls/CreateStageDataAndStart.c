@@ -2,6 +2,6 @@
 #define CreateStageDataAndStart_02068568 CreateStageDataAndStart
 #define NNSi_FndAllocFromDefaultHeap_0202a178 NNSi_FndAllocFromDefaultHeap
 #define StageEvents_StartIfIdle_0208765c StageEvents_StartIfIdle
-#define data_ov001_020a0470 data_ov001_020a0490
+#define data_ov001_020a0470 gStageEventContext
 #define func_01ff8740 MIi_CpuClearFast
 #include "src/ov001/unclassified_helpers/CreateStageDataAndStart_02068568.c"

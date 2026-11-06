@@ -1,14 +1,14 @@
 #include "nitro/types.h"
 
-extern u32 *data_ov001_020a04a4;
+extern u32 *gFieldTargetSelectionWork;
 extern u32 FindNearestTargetInRange();
 
 void SetEventSlotAndEntryTargetSearchEnabled(int enableFirst,int enableSecond) {
   u32 *work;
 
-  work = data_ov001_020a04a4;
-  if (data_ov001_020a04a4 != (u32 *)0x0) {
-    *data_ov001_020a04a4 = *data_ov001_020a04a4 & 0xffffff3f;
+  work = gFieldTargetSelectionWork;
+  if (gFieldTargetSelectionWork != (u32 *)0x0) {
+    *gFieldTargetSelectionWork = *gFieldTargetSelectionWork & 0xffffff3f;
     if (enableFirst != 0) {
       *work = *work | 0x80;
     }

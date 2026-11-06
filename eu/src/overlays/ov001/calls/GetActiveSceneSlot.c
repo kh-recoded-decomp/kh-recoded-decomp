@@ -1,3 +1,3 @@
 #define GetActiveSceneSlot_02068214 GetActiveSceneSlot
-#define data_ov001_020a046c data_ov001_020a048c
+#define data_ov001_020a046c gFieldSceneEntryContext
 #include "src/ov001/unclassified_helpers/GetActiveSceneSlot_02068214.c"

@@ -6,5 +6,5 @@
 #define func_ov001_0206b744 FindBestEventSlotTarget
 #define func_ov001_0206b854 PickBestPartyTarget
 #define func_ov001_0206bb74 SetMenuOpenState
-#define g_manager_020a0484 data_ov001_020a04a4
+#define g_manager_020a0484 gFieldTargetSelectionWork
 #include "src/ov001/shared_engine/SelectNearestTarget_0206afec.c"

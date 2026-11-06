@@ -5,11 +5,11 @@ typedef struct ScreenState {
     u8 flags;
 } ScreenState;
 
-extern ScreenState *data_ov001_020a04a0;
+extern ScreenState *gFieldScreenTransitionWork;
 
 u32 SetScreenFlag1(void)
 {
-    ScreenState *state = data_ov001_020a04a0;
+    ScreenState *state = gFieldScreenTransitionWork;
     u32 flags = state->flags;
     u32 result = (flags & ~1) | 1;
 

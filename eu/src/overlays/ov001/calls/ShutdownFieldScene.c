@@ -24,7 +24,7 @@ typedef struct FieldSceneHandle {
     FieldScene *scene;
 } FieldSceneHandle;
 
-extern FieldSceneHandle data_ov001_020a04c4;
+extern FieldSceneHandle gFieldSceneGlobals;
 extern const char sOv001_BTLUITASK_0209edd8[];
 extern char OVERLAY_27_ID[];
 
@@ -51,7 +51,7 @@ void ShutdownFieldScene(void)
 {
     void *object;
     void *next;
-    FieldScene *scene = data_ov001_020a04c4.scene;
+    FieldScene *scene = gFieldSceneGlobals.scene;
 
     DestroyFieldHudTasks(scene);
     NotifyBothOrOne(1, sOv001_BTLUITASK_0209edd8, 0);
@@ -86,5 +86,5 @@ void ShutdownFieldScene(void)
     }
     SetParamHalf18(scene->savedParam);
     SetParamWord20(scene->savedFlag == 1);
-    data_ov001_020a04c4.scene = NULL;
+    gFieldSceneGlobals.scene = NULL;
 }

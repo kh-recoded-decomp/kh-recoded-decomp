@@ -1,4 +1,4 @@
 #define ResumeTaskAndClearFlags_02066780 ResumeTaskAndClearFlags
-#define data_ov001_020a0464 data_ov001_020a0484
+#define data_ov001_020a0464 gFieldEffectPool
 #define func_02036710 ActorSlot_LinkAsRoot
 #include "src/ov001/unclassified_helpers/ResumeTaskAndClearFlags_02066780.c"

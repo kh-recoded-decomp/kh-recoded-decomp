@@ -7,7 +7,7 @@
 #define IsLeadActorWithinRadius_02080e30 IsLeadActorWithinRadius
 #define RebindAnimTracks_020809d0 RebindAnimTracks
 #define UpdateTurningFieldObject_020810c8 UpdateTurningFieldObject
-#define data_ov001_020a0460 data_ov001_020a0480
+#define data_ov001_020a0460 gFieldSessionWork
 #define func_0202f4b8 GetModelAnimationDurationFx32
 #define func_02036240 ActorRegistry_GetEntityByIndex
 #include "src/ov001/field_objects/UpdateTurningFieldObject_020810c8.c"

@@ -14,7 +14,7 @@ typedef struct StageObjectList {
     u8 count;
 } StageObjectList;
 
-extern StageObjectList *data_ov001_020a0490;
-#define gStageObjectList data_ov001_020a0490
+extern StageObjectList *gStageEventContext;
+#define gStageObjectList gStageEventContext
 
 #endif

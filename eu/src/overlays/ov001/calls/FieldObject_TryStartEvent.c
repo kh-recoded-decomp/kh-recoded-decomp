@@ -6,6 +6,6 @@
 #define SetSessionFinishCallback_02063678 SetSessionScriptParams
 #define StartSessionScript_020635b0 OpenSessionArchive
 #define TryBeginSessionEvent_02063694 TryRaiseSessionScriptFlags
-#define data_ov001_020a0460 data_ov001_020a0480
+#define data_ov001_020a0460 gFieldSessionWork
 #define func_ov001_02080e5c FieldObject_FinishEvent
 #include "src/ov001/unclassified_helpers/FieldObject_TryStartEvent_02081014.c"

@@ -1,5 +1,5 @@
 #define FinishGroupTransition_020bb150 FinishGroupTransition
-#define _data_ov001_020a0460 data_ov001_020a0480
+#define _data_ov001_020a0460 gFieldSessionWork
 #define contextData_020c0060 gGroupSceneGlobals
 #define func_ov001_0206a814 IsScreenModeIdle
 #define func_ov001_0207b704 Panel_CaptureBrightness

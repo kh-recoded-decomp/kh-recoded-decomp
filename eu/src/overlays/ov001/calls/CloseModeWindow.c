@@ -6,7 +6,7 @@
 #define InvokeCallback40_020b8268 InvokeCallback40
 #define PlaySoundEffect_0204d924 PlaySoundEffect
 #define RefreshWindowHighlight_02079490 RefreshWindowHighlight
-#define data_ov001_020a04c4 data_ov001_020a04e4
+#define data_ov001_020a04c4 gMessageWindowWork
 #define func_02052514 ConfigureTween
 #define func_0205255c StartTween
 #define func_ov027_020b8390 FindLoadedElementById

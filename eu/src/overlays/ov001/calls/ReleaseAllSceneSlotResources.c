@@ -1,6 +1,6 @@
 #include "nitro/types.h"
 
-extern u32 data_ov001_020a048c;
+extern u32 gFieldSceneEntryContext;
 extern void ReleaseResourceAndDetach(void *entry);
 
 void ReleaseAllSceneSlotResources(void)
@@ -10,7 +10,7 @@ void ReleaseAllSceneSlotResources(void)
     u8 *entry;
 
     i = 0;
-    base = (u8 *)(data_ov001_020a048c + 0x18);
+    base = (u8 *)(gFieldSceneEntryContext + 0x18);
     do {
         entry = base + i * 0x108;
         if ((entry[0x104] & 0x80) != 0) {

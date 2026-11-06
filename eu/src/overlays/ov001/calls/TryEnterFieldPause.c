@@ -12,7 +12,7 @@
 #define SetAlternateMenuWidgets_020b61f4 SetAlternateMenuWidgets
 #define SuspendFieldForPause_02071270 SuspendFieldForPause
 #define TryEnterFieldPause_020703a8 TryEnterFieldPause
-#define data_ov001_020a04a4 data_ov001_020a04c4
+#define data_ov001_020a04a4 gFieldSceneGlobals
 #define func_02028958 SetPanelFieldA0
 #define func_0202c438 SleepIfFileLoaderBusy
 #define func_ov001_0207b3cc GetLoadedSubsceneMode

@@ -59,7 +59,7 @@ typedef struct SceneArgs {
     u32 unk_08;
 } SceneArgs;
 
-extern Session *data_ov001_020a0480;
+extern Session *gFieldSessionWork;
 extern SceneArgs data_02060850;
 extern u8 data_0206085c[];
 extern u8 *data_0205fe0c;
@@ -73,7 +73,7 @@ extern void MI_CpuCopy8(const void *src, void *dst, u32 size);
 extern void NNSi_FndFreeFromDefaultHeap(void *block);
 
 s32 ExitSessionAndCommitSave(void) {
-    Session *session = data_ov001_020a0480;
+    Session *session = gFieldSessionWork;
     SessionRequest *request = &session->request;
     s32 slotBase;
 
@@ -109,7 +109,7 @@ s32 ExitSessionAndCommitSave(void) {
             WriteGlobalPackedBits(slotBase + 0x3557, 0x20, session->staging->unk_D0);
             WriteGlobalPackedBits(slotBase + 0x3577, 0x20, session->staging->unk_D4);
             WriteGlobalPackedBits(slotBase + 0x3597, 0x10, session->staging->unk_D8);
-            if (data_ov001_020a0480->request.flags.saveExtra) {
+            if (gFieldSessionWork->request.flags.saveExtra) {
                 data_0205fe0c[0x28d4] = session->staging->unk_DE;
                 data_0205fe0c[0x28d5] = session->staging->unk_E0;
                 WriteGlobalPackedBits(slotBase + 0x330b, 10, session->staging->unk_DA);

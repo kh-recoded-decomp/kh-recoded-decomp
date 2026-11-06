@@ -5,5 +5,5 @@
 #define func_ov001_0206b598 ScanObjectsForNearestTarget
 #define func_ov001_0206b744 FindBestEventSlotTarget
 #define func_ov001_0206b854 PickBestPartyTarget
-#define g_manager_020a0484 data_ov001_020a04a4
+#define g_manager_020a0484 gFieldTargetSelectionWork
 #include "src/ov001/shared_engine/FindNearestTargetInRange_0206af7c.c"
