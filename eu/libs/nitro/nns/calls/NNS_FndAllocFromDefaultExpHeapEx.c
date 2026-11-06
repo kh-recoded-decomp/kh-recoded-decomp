@@ -1,3 +1,4 @@
+#define data_02060394 gEngineHeapReferences
 #define AllocateFromExpandedHeapEx_02013134 NNS_FndAllocFromExpHeapEx
 #define NNSi_FndAllocFromDefaultHeapEx_0202a19c NNS_FndAllocFromDefaultExpHeapEx
 #include "src/arm9/shared_engine/NNSi_FndAllocFromDefaultHeapEx_0202a19c.c"

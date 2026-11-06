@@ -6,4 +6,4 @@
 int PMi_WaitBusyMethod = 2;
 
 /* Initial power-management control value. */
-u32 data_02055c48 = 0x00010000;
+u32 gWmTgidCounter = 0x00010000;

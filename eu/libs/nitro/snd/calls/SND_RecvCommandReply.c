@@ -24,8 +24,8 @@ typedef struct SNDCommandState {
 #define SND_COMMAND_BLOCK 1
 #define SND_PXI_FIFO_MESSAGE_BUFSIZE 8
 
-extern SNDCommandState data_02057c50;
-extern SNDCommand *data_02057c74[SND_PXI_FIFO_MESSAGE_BUFSIZE + 1];
+extern SNDCommandState gSoundCommandQueueState;
+extern SNDCommand *gSoundSubmittedCommandListsStorage[SND_PXI_FIFO_MESSAGE_BUFSIZE + 1];
 extern OSIntrMode OS_DisableInterrupts(void);
 
 extern void OS_SpinWait(u32 cycles);
@@ -38,22 +38,22 @@ const SNDCommand *SND_RecvCommandReply(u32 flags)
     SNDCommand *commandListEnd;
 
     if (flags & SND_COMMAND_BLOCK) {
-        while (data_02057c50.finishedTag == SNDi_GetFinishedCommandTag()) {
+        while (gSoundCommandQueueState.finishedTag == SNDi_GetFinishedCommandTag()) {
             (void)OS_RestoreInterrupts(interruptState);
             OS_SpinWait(50);
             interruptState = OS_DisableInterrupts();
         }
     } else {
-        if (data_02057c50.finishedTag == SNDi_GetFinishedCommandTag()) {
+        if (gSoundCommandQueueState.finishedTag == SNDi_GetFinishedCommandTag()) {
             (void)OS_RestoreInterrupts(interruptState);
             return 0;
         }
     }
 
-    commandList = data_02057c74[data_02057c50.waitingQueueRead];
-    data_02057c50.waitingQueueRead++;
-    if (data_02057c50.waitingQueueRead > SND_PXI_FIFO_MESSAGE_BUFSIZE) {
-        data_02057c50.waitingQueueRead = 0;
+    commandList = gSoundSubmittedCommandListsStorage[gSoundCommandQueueState.waitingQueueRead];
+    gSoundCommandQueueState.waitingQueueRead++;
+    if (gSoundCommandQueueState.waitingQueueRead > SND_PXI_FIFO_MESSAGE_BUFSIZE) {
+        gSoundCommandQueueState.waitingQueueRead = 0;
     }
 
     commandListEnd = commandList;
@@ -61,15 +61,15 @@ const SNDCommand *SND_RecvCommandReply(u32 flags)
         commandListEnd = commandListEnd->next;
     }
 
-    if (data_02057c50.freeListEnd) {
-        data_02057c50.freeListEnd->next = commandList;
+    if (gSoundCommandQueueState.freeListEnd) {
+        gSoundCommandQueueState.freeListEnd->next = commandList;
     } else {
-        data_02057c50.freeList = commandList;
+        gSoundCommandQueueState.freeList = commandList;
     }
-    data_02057c50.freeListEnd = commandListEnd;
+    gSoundCommandQueueState.freeListEnd = commandListEnd;
 
-    data_02057c50.waitingListCount--;
-    data_02057c50.finishedTag++;
+    gSoundCommandQueueState.waitingListCount--;
+    gSoundCommandQueueState.finishedTag++;
 
     (void)OS_RestoreInterrupts(interruptState);
     return commandList;

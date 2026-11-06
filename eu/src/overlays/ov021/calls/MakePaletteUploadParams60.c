@@ -1,3 +1,3 @@
 #define MakePaletteUploadParams60_020a96b4 MakePaletteUploadParams60
-#define data_ov021_020b5620 data_ov021_020b5640
+#define data_ov021_020b5620 gEffectResourceContainersLoaded
 #include "src/ov021/shared_engine/MakePaletteUploadParams60_020a96b4.c"

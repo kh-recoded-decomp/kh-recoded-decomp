@@ -1,3 +1,4 @@
+#define data_02060500 gPadPressedStorage
 #define UpdateListCursorPad_02062f88 UpdateListCursorPad
 #define UpdateListCursor_02062fb4 UpdateListCursor
 #include "src/ov002/panel_state/UpdateListCursorPad_02062f88.c"

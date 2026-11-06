@@ -1,3 +1,5 @@
+#define data_020604fc gPadHeldAndPrevious
+#define data_02060500 gPadPressedStorage
 #define func_ov001_0206dc4c GetManagedActorPosition
 #define Camera_GetFocusPosition_020c1780 Camera_GetFocusPosition
 #define Camera_ShouldStartManualTurn_020c3ad8 Camera_ShouldStartManualTurn

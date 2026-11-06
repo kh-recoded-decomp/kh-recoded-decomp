@@ -1,3 +1,4 @@
+#define data_027e0068 gTexturedBoxYFaceColors
 #define func_020115ac WM_GetAllowedChannel
 #define func_020737c4 WH_ChangeSysState
 #define func_020737d4 WH_SetError

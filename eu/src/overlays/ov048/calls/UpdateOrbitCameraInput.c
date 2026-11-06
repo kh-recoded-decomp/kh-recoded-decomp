@@ -1,3 +1,4 @@
+#define data_020604fc gPadHeldAndPrevious
 #define AngleBetweenVecs_0204b070 AngleBetweenVecs
 #define NegateVecFx32_0204aa40 NegateVecFx32
 #define TransformVectorByBasis_0204bee8 TransformVectorByBasis

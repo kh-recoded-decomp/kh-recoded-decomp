@@ -1,5 +1,5 @@
-extern void data_02060878(void);
+extern void gCachedOwnerNickname(void);
 
 int GetCachedOwnerNickname(void) {
-    return (int)data_02060878;
+    return (int)gCachedOwnerNickname;
 }

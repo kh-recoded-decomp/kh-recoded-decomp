@@ -1,3 +1,4 @@
+#define data_020604fc gPadHeldAndPrevious
 #define func_01ffb2f8 SetModelAnimationFrameWithSingleWrap
 #define UpdateMatrixMenu_020c707c UpdateMatrixMenu
 #define FindNearestReachableNode_020c8eac FindNearestReachableNode

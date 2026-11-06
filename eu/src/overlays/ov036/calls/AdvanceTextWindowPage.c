@@ -1,3 +1,4 @@
+#define data_02060500 gPadPressedStorage
 #define AdvanceTextWindowPage_020c0e14 AdvanceTextWindowPage
 #define CallVirtualHandlerSlot1_02001574 CallVirtualHandlerSlot1
 #define FlushBufferAndRunCallback_0200153c FlushBufferAndRunCallback

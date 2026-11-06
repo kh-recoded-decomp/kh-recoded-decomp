@@ -1,6 +1,6 @@
 #define func_ov001_0206dc4c GetManagedActorPosition
 #define HandleOverlayExitFlag_020ba708 HandleOverlayExitFlag
 #define func_ov001_0206e444 SetFieldEntriesPaused
-#define _data_02060500 data_02060500
+#define _data_02060500 gPadPressedStorage
 #define _data_ov029_020baba0 gOv029SceneWorkStorage
 #include "src/ov029/unclassified_helpers/HandleOverlayExitFlag_020ba708.c"

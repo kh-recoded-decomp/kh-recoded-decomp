@@ -28,7 +28,7 @@ typedef struct {
     ScrollPanel panels[2];
 } Ov101State;
 
-extern u16 data_02060500;
+extern u16 gPadPressedStorage;
 extern void func_ov101_020c00b8(int listIndex, int entryIndex, int x, int y, Ov101State *state);
 extern void UpdateScrollPanel(int listId, Ov101State *state);
 
@@ -62,7 +62,7 @@ BOOL ScrollPanelCursorDown(int panelIndex, Ov101State *state)
         UpdateScrollPanel(panel->listId, state);
         return TRUE;
     }
-    if (data_02060500 & 0x80) {
+    if (gPadPressedStorage & 0x80) {
         panel->cursor = 0;
         panel->scroll = 0;
         entryIndex = panel->entryIndex;

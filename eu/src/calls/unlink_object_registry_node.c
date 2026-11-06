@@ -1,3 +1,4 @@
+#define data_020603d8 gTaskClassHeads
 #define data_020603c8 gTaskManager
 #define unlink_object_registry_node_0202a3a8 unlink_object_registry_node
 #include "src/arm9/graphics/unlink_object_registry_node_0202a3a8.c"

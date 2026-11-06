@@ -1,6 +1,6 @@
 #include "nitro/types.h"
 
-extern u16 data_02060500;
+extern u16 gPadPressedStorage;
 extern unsigned int IsGlobalPackedBitSet();
 extern unsigned int ReadGlobalPackedBits();
 extern unsigned int PlaySoundEffect();
@@ -18,7 +18,7 @@ void SelectPreviousMenuPage(int work) {
   pageCount = ReadGlobalPackedBits(pageCount * 2 + 0x9f7,2);
   if ((u32)(extraPage != 0) + pageCount != 0) {
     if (*(int *)(work + 0x5d4) == 0) {
-      if ((data_02060500 & 0x40) != 0) {
+      if ((gPadPressedStorage & 0x40) != 0) {
         pageCount = *(int *)(work + 0x5d0);
         extraPage = IsGlobalPackedBitSet(pageCount + 0xa01);
         pageCount = ReadGlobalPackedBits(pageCount * 2 + 0x9f7,2);

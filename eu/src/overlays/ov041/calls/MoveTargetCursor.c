@@ -8,8 +8,8 @@
 #define PAD_KEY_DOWN 0x0080
 #define PAD_BUTTON_L 0x0200
 
-extern u16 data_020604fc; /* buttons held */
-extern u16 data_02060500; /* buttons pressed this frame */
+extern u16 gPadHeldAndPrevious; /* buttons held */
+extern u16 gPadPressedStorage; /* buttons pressed this frame */
 
 extern StageEntry *FindStageEntryBySceneSlot(int sceneSlot);
 extern void PlayStageSound(int seqArcNo, int index, BOOL checked);
@@ -59,7 +59,7 @@ void MoveTargetCursor(int source)
     }
     switch (kind) {
     case STAGE_TARGET_ONE: /* up and down change the column, left and right the row */
-        if (data_02060500 & PAD_KEY_UP) {
+        if (gPadPressedStorage & PAD_KEY_UP) {
             do {
                 if (work->targetSlot % 3 == 0) {
                     work->targetSlot += 2;
@@ -67,7 +67,7 @@ void MoveTargetCursor(int source)
                     work->targetSlot -= 1;
                 }
             } while (!SLOT_IN_FIGHT(work->targetSlot));
-        } else if (data_02060500 & PAD_KEY_DOWN) {
+        } else if (gPadPressedStorage & PAD_KEY_DOWN) {
             do {
                 if (work->targetSlot % 3 == 2) {
                     work->targetSlot -= 2;
@@ -75,7 +75,7 @@ void MoveTargetCursor(int source)
                     work->targetSlot += 1;
                 }
             } while (!SLOT_IN_FIGHT(work->targetSlot));
-        } else if (data_02060500 & PAD_KEY_LEFT) {
+        } else if (gPadPressedStorage & PAD_KEY_LEFT) {
             /* the next row back, after the last one the first */
             int column = previousSlot % 3;
 
@@ -129,7 +129,7 @@ void MoveTargetCursor(int source)
             if (column != 1) {
                 work->targetColumn = column;
             }
-        } else if (data_02060500 & PAD_KEY_RIGHT) {
+        } else if (gPadPressedStorage & PAD_KEY_RIGHT) {
             /* the next row forward, before the first one the last */
             int column = previousSlot % 3;
 
@@ -187,7 +187,7 @@ void MoveTargetCursor(int source)
         break;
     case STAGE_TARGET_COLUMN:
         /* up and down both go to the next row of the same column */
-        if (data_02060500 & PAD_KEY_UP) {
+        if (gPadPressedStorage & PAD_KEY_UP) {
             do {
                 for (i = 0; i < 3; i++) {
                     work->targetSlot += 3;
@@ -199,7 +199,7 @@ void MoveTargetCursor(int source)
                     }
                 }
             } while (!SLOT_IN_FIGHT(work->targetSlot));
-        } else if (data_02060500 & PAD_KEY_DOWN) {
+        } else if (gPadPressedStorage & PAD_KEY_DOWN) {
             do {
                 for (i = 0; i < 3; i++) {
                     work->targetSlot += 3;
@@ -214,7 +214,7 @@ void MoveTargetCursor(int source)
         }
         break;
     case STAGE_TARGET_ONE_PRIMARY: /* up and down along the primary row */
-        if (data_02060500 & PAD_KEY_UP) {
+        if (gPadPressedStorage & PAD_KEY_UP) {
             do {
                 if (work->targetSlot % 3 == 0) {
                     work->targetSlot += 2;
@@ -222,7 +222,7 @@ void MoveTargetCursor(int source)
                     work->targetSlot -= 1;
                 }
             } while (!SLOT_IN_FIGHT(work->targetSlot));
-        } else if (data_02060500 & PAD_KEY_DOWN) {
+        } else if (gPadPressedStorage & PAD_KEY_DOWN) {
             do {
                 if (work->targetSlot % 3 == 2) {
                     work->targetSlot -= 2;
@@ -241,19 +241,19 @@ void MoveTargetCursor(int source)
     case 9:
         break; /* no cursor to move */
     case STAGE_TARGET_FIELD_MENU:
-        if (data_02060500 & PAD_BUTTON_L) {
+        if (gPadPressedStorage & PAD_BUTTON_L) {
             work->stateTimer = 1;
-        } else if (data_020604fc & PAD_BUTTON_L) {
-            if (data_02060500 & PAD_KEY_DOWN) {
+        } else if (gPadHeldAndPrevious & PAD_BUTTON_L) {
+            if (gPadPressedStorage & PAD_KEY_DOWN) {
                 TryEnterFieldMenuState3();
                 work->stateTimer = 2;
-            } else if (data_02060500 & PAD_KEY_UP) {
+            } else if (gPadPressedStorage & PAD_KEY_UP) {
                 TryCycleFieldMenuCursor();
                 work->stateTimer = 2;
-            } else if (GetFieldMenuListMode() == 0 && (data_02060500 & PAD_KEY_RIGHT)) {
+            } else if (GetFieldMenuListMode() == 0 && (gPadPressedStorage & PAD_KEY_RIGHT)) {
                 SetFieldMenuMode_02078360(1, 1);
                 work->stateTimer = 2;
-            } else if (GetFieldMenuListMode() == 1 && (data_02060500 & PAD_KEY_LEFT)) {
+            } else if (GetFieldMenuListMode() == 1 && (gPadPressedStorage & PAD_KEY_LEFT)) {
                 SetFieldMenuMode_02078360(0, 1);
                 work->stateTimer = 2;
             }

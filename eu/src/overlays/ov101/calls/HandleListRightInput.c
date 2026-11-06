@@ -1,7 +1,7 @@
 #include "src/overlays/ov101/ListSceneState.h"
 
 extern ListSceneState *gListMenuGlobalStorage;
-extern u16 data_02060500;
+extern u16 gPadPressedStorage;
 extern BOOL IsStateFlagSet(s32 set, s32 bit);
 extern u32 GetStatePhase(void);
 extern void SetStatePhase(u32 phase);
@@ -20,7 +20,7 @@ void HandleListRightInput(ListSceneState *scene)
         if (!IsStateFlagSet(0, list)) {
             return;
         }
-        if (!(data_02060500 & 0x10) && !(data_02060500 & 1)) {
+        if (!(gPadPressedStorage & 0x10) && !(gPadPressedStorage & 1)) {
             return;
         }
         if (GetStatePhase() == 1) {

@@ -1,3 +1,4 @@
+#define data_02060500 gPadPressedStorage
 #define LoadSlotIntoGame_020c58c4 LoadSlotIntoGame
 #define PlaySoundEffect_0204d924 PlaySoundEffect
 #define SelectSlotOnDown_020c5968 SelectSlotOnDown

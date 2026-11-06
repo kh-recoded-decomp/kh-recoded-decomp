@@ -1,3 +1,4 @@
+#define data_02060394 gEngineHeapReferences
 #define InitSoundSystem_0204d050 InitSoundSystem
 #define NNSi_FndAllocFromExpHeapEx_0202a1e4 NNSi_FndAllocFromExpHeapEx
 #define SndInit_0201d214 NNS_SndInit

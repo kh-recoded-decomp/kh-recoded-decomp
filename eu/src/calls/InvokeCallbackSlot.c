@@ -1,2 +1,4 @@
+#define data_0205fdc8 gCallbackSlotArguments
+#define data_0205fdd4 gCallbackSlotFunctions
 #define InvokeCallbackSlot_02025464 InvokeCallbackSlot
 #include "src/arm9/shared_engine/InvokeCallbackSlot_02025464.c"

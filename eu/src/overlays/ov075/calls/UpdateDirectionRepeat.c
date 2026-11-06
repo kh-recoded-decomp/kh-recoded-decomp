@@ -1,3 +1,4 @@
+#define data_020604fc gPadHeldAndPrevious
 #define ResetDirectionRepeat_020c430c ResetDirectionRepeat
 #define UpdateDirectionRepeat_020c62c8 UpdateDirectionRepeat
 #include "src/ov075/unclassified_helpers/UpdateDirectionRepeat_020c62c8.c"

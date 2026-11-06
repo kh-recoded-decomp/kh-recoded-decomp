@@ -1,3 +1,4 @@
+#define data_02056c3c gOsLauncherThreadStorage
 #define OS_CreateThread_02002898 OS_CreateThread
 #define OS_InitThread_0200274c OS_InitThread
 #define OSi_IdleThreadProc_02002d60 OSi_IdleThreadProc

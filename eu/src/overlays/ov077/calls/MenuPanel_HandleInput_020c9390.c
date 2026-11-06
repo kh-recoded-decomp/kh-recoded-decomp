@@ -1,3 +1,4 @@
+#define data_02060500 gPadPressedStorage
 #define CanUseItemEntry_020c7b6c CanUseItemEntry
 #define CancelAndCloseMenu_020c79a4 CancelAndCloseMenu
 #define FindWidgetById_020b90a4 FindWidgetById

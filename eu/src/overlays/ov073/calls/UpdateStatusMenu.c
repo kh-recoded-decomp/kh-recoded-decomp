@@ -72,8 +72,8 @@ struct StatusMenu {
     s64 openTick;
 };
 
-extern u16 data_020604fc;
-extern u16 data_02060500;
+extern u16 gPadHeldAndPrevious;
+extern u16 gPadPressedStorage;
 
 extern u64 OS_GetTick(void);
 extern void DrawPlayTimeDigits_020be470(void *cells, int first, int value, void *origin);
@@ -146,7 +146,7 @@ void UpdateStatusMenu(StatusMenu *menu)
                             PlaySoundEffect(0, 4);
                         }
                     }
-                } else if ((data_02060500 & 0x40a) || (touch == NULL && (GetEventStateWordCa48() & 3) == 1)) {
+                } else if ((gPadPressedStorage & 0x40a) || (touch == NULL && (GetEventStateWordCa48() & 3) == 1)) {
                     ClearSharedStateFlag(menu, 2);
                     SetEntrySlotsVisible(menu->widgets, menu->rowWidget, 0);
                     SetEntrySlotsVisible(menu->widgets, menu->progressWidget, 0);
@@ -157,7 +157,7 @@ void UpdateStatusMenu(StatusMenu *menu)
                     if (touch == NULL && (GetEventStateWordCa48() & 3) == 1) {
                         raw->state |= 1;
                     }
-                } else if (data_02060500 & 0x200) {
+                } else if (gPadPressedStorage & 0x200) {
                     PlaySoundEffect(0, 2);
                     handlers->close(menu, handlers->page);
                     menu->page--;
@@ -168,7 +168,7 @@ void UpdateStatusMenu(StatusMenu *menu)
                     ResetStatusPageState(menu);
                     handlers->open(menu, handlers->page);
                     menu->redraw = 1;
-                } else if (data_02060500 & 0x100) {
+                } else if (gPadPressedStorage & 0x100) {
                     PlaySoundEffect(0, 2);
                     handlers->close(menu, handlers->page);
                     menu->page++;
@@ -181,7 +181,7 @@ void UpdateStatusMenu(StatusMenu *menu)
                     menu->redraw = 1;
                 }
             }
-        } else if ((data_020604fc == 0x400 && data_02060500 == 0x400 && (touch != NULL || !(raw->state & 3)))
+        } else if ((gPadHeldAndPrevious == 0x400 && gPadPressedStorage == 0x400 && (touch != NULL || !(raw->state & 3)))
                    || (touch != NULL && (touch->state & 3) == 1)) {
             PlaySoundEffect(0, 2);
             AddStatusMenuFlags(menu, 2);
@@ -293,12 +293,12 @@ void UpdateStatusMenu(StatusMenu *menu)
         if (panel->listBusy == 0) {
             if (((REG_POWCNT & 0x8000) >> 15) == 1) {
                 if (menu->flags & 2) {
-                    UpdateListScroll(&panel->list, CopySourceBlock(block), data_02060500);
+                    UpdateListScroll(&panel->list, CopySourceBlock(block), gPadPressedStorage);
                 } else {
                     UpdateListScroll(&panel->list, NULL, 0);
                 }
             } else {
-                UpdateListScroll(&panel->list, NULL, (menu->flags & 2) ? data_02060500 : 0);
+                UpdateListScroll(&panel->list, NULL, (menu->flags & 2) ? gPadPressedStorage : 0);
             }
             FlushDirtyTileTableRows(panel->tileTable);
         }

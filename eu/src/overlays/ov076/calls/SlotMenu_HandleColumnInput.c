@@ -1,3 +1,4 @@
+#define data_02060500 gPadPressedStorage
 #define func_ov039_020bca00 GetMenuInputState
 #define func_ov039_020bc0d4 GetPrimaryElementEnabled
 #define func_ov039_020bc1bc GetMenuWork

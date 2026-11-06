@@ -1,6 +1,6 @@
 #include "nitro/types.h"
 
-extern unsigned int *data_ov021_020b56c0;
+extern unsigned int *gActiveSubModeState;
 extern unsigned int IsWithinPlaneSet_0203ebdc();
 extern unsigned int IsPointInViewBounds();
 extern unsigned int IsPointInViewDepth();
@@ -8,7 +8,7 @@ extern unsigned int IsPointInViewDepth();
 int IsPointWithinActiveCameraView(void *point,int planes) {
   int result;
 
-  switch(*data_ov021_020b56c0) {
+  switch(*gActiveSubModeState) {
   case 0:
     result = IsWithinPlaneSet_0203ebdc(point,planes);
     return result;

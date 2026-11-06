@@ -1,3 +1,4 @@
+#define data_02060394 gEngineHeapReferences
 #define FND_FreeExpandedHeapBlock_020132c4 NNS_FndFreeToExpHeap
 #define NNSi_FndFreeToExpHeap_0202a240 NNSi_FndFreeToExpHeap
 #include "src/arm9/shared_engine/NNSi_FndFreeToExpHeap_0202a240.c"

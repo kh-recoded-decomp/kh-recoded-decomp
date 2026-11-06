@@ -1,3 +1,3 @@
 #include "nitro/types.h"
 
-u32 data_027e00a0[2];
+u32 gIrqWaitThreadQueue[2];

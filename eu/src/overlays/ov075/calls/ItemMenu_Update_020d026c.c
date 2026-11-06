@@ -1,3 +1,4 @@
+#define data_02060500 gPadPressedStorage
 #define BuildTabItemList_020cde04 BuildTabItemList
 #define CancelItemPicker_020ceb60 CancelItemPicker
 #define ConfirmItemPicker_020ceb78 ConfirmItemPicker

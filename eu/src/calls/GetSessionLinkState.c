@@ -1,3 +1,4 @@
+#define data_020597fc gWmState
 #include "eu/libs/nitro/os/os_interrupt_state.h"
 
 #define GetSessionLinkState_020113b8 GetSessionLinkState

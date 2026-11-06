@@ -1,3 +1,4 @@
+#define data_02060500 gPadPressedStorage
 #define GetGridCell_020c0a48 GetGridCell
 #define MoveGridCursorDown_020c0ce0 MoveGridCursorDown
 #define RefreshCursorMarkers_020c1168 RefreshCursorMarkers

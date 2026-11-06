@@ -1,3 +1,5 @@
+#define data_020604d8 gSharedRandom32State
+#define data_020604e4 gSharedRandom64State
 #define InitRandomFromEntropy_02029ad8 InitRandomFromEntropy
 #define OS_GetLowEntropyData_02004c24 OS_GetLowEntropyData
 #include "src/arm9/random_number_generation/InitRandomFromEntropy_02029ad8.c"

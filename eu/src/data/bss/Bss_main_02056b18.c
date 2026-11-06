@@ -1,3 +1,3 @@
 #include "nitro/types.h"
 
-static u32 data_02056b18;
+static u32 gTimerIrqCallback0Function;

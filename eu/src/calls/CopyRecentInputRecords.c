@@ -1,3 +1,4 @@
+#define data_02060534 gRawTouchSamplingRing
 #define CopyRecentInputRecords_0202b6d0 CopyRecentInputRecords
 #define func_01ff89a8 MI_CpuCopy8
 #define func_0200ff50 TP_GetLatestIndexInAuto

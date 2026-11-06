@@ -30,7 +30,7 @@ typedef struct MovieStateGlobals {
 } MovieStateGlobals;
 
 extern MovieStateGlobals data_ov022_020b7da0;
-extern u16 data_02060500;
+extern u16 gPadPressedStorage;
 
 extern MovieState *GetRunningTaskWork(void);
 extern BOOL TickSubtitleTimer(void);
@@ -78,26 +78,26 @@ void *RunMoviePlaybackState(void)
                 }
             } else if (state->lidClosed == 0 && (state->flags & 8)) {
                 if ((OS_GetTick() - state->padTick) * 64 / 0x82ea <= 50) {
-                    data_02060500 = 0;
+                    gPadPressedStorage = 0;
                 } else {
                     Pad_Sample();
                     state->padTick = OS_GetTick();
                 }
                 if (state->mode == 1) {
-                    if (data_02060500 & 9) {
+                    if (gPadPressedStorage & 9) {
                         state->fadeLevel = 0;
                         state->flags |= 4;
                         data_ov022_020b7da0.skipRequested = 1;
                     }
                 } else if (state->captionVisible == 0) {
-                    if (data_02060500 & 8) {
+                    if (gPadPressedStorage & 8) {
                         state->captionVisible = 1;
                         DrawMovieCaption(FALSE);
                         state->captionDrawn = 1;
                         state->captionTick = OS_GetTick();
                     }
                 } else {
-                    if (data_02060500 & 8) {
+                    if (gPadPressedStorage & 8) {
                         state->fadeLevel = 0;
                         state->flags |= 4;
                         data_ov022_020b7da0.skipRequested = 1;

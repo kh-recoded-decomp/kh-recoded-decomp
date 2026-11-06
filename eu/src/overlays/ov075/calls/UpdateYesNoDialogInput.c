@@ -1,3 +1,4 @@
+#define data_02060500 gPadPressedStorage
 #define GetDialogPixelBounds_020ceff8 GetDialogPixelBounds
 #define PlaySoundEffect_0204d924 PlaySoundEffect
 #define UpdateYesNoDialogInput_020cf02c UpdateYesNoDialogInput

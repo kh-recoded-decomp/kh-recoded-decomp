@@ -1,3 +1,4 @@
+#define data_02060500 gPadPressedStorage
 #define FX_Sqrt_01ff9cfc FX_Sqrt
 #define FixedPointAtan2_020062bc FX_Atan2Idx
 #define PlaySoundEffect_0204d924 PlaySoundEffect

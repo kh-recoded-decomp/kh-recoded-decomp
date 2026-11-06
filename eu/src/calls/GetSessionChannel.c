@@ -1,3 +1,4 @@
+#define data_020597fc gWmState
 #include "eu/libs/nitro/os/os_interrupt_state.h"
 
 #define GetSessionChannel_02011394 GetSessionChannel

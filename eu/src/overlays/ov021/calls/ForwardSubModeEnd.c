@@ -1,4 +1,4 @@
 #define ForwardSubModeEnd_020af7e4 ForwardSubModeEnd
-#define data_ov021_020b56a0 data_ov021_020b56c0
+#define data_ov021_020b56a0 gActiveSubModeState
 #define func_ov046_020c1724 Camera_SetFlag18IfStandard
 #include "src/ov021/sub_mode/ForwardSubModeEnd_020af7e4.c"

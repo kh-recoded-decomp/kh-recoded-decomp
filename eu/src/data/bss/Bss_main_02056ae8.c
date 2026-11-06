@@ -1,3 +1,3 @@
 #include "nitro/types.h"
 
-static u32 data_02056ae8;
+static u32 gDmaIrqCallback0Function;

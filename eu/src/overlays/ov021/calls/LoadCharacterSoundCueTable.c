@@ -1,7 +1,7 @@
 #define LoadPathGraph_020a7cc8 LoadCharacterSoundCueTable
 #define NNSi_FndAllocFromDefaultHeap_0202a178 NNSi_FndAllocFromDefaultHeap
 #define NNSi_FndFreeFromDefaultHeap_0202a1c4 NNSi_FndFreeFromDefaultHeap
-#define data_ov021_020b5604 data_ov021_020b5624
+#define data_ov021_020b5604 gCharacterSoundCueArchive
 #define func_01ff8830 MI_CpuFill8
 #define func_02025658 GetCurrentSceneId
 #define func_0202c48c LoadFileAllocFromHeapTail

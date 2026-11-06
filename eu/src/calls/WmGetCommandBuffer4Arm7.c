@@ -1,2 +1,3 @@
+#define data_02059814 gWmCommandFreeQueue
 #define WmGetCommandBuffer4Arm7_02010f38 WmGetCommandBuffer4Arm7
 #include "src/arm9/library_nitro_wm/WmGetCommandBuffer4Arm7_02010f38.c"

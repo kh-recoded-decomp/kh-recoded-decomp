@@ -1,4 +1,4 @@
 #define ForwardSubModeStart_020af7b8 ForwardSubModeStart
-#define data_ov021_020b56a0 data_ov021_020b56c0
+#define data_ov021_020b56a0 gActiveSubModeState
 #define func_ov046_020c16f8 Camera_RefreshHeading
 #include "src/ov021/sub_mode/ForwardSubModeStart_020af7b8.c"

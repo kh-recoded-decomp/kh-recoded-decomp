@@ -30,8 +30,8 @@ typedef struct {
 extern PanelState *gOv002ProfilePanelWork;
 extern u8 sOv002_WXCVB_0206c35c[];
 extern SharedSettings data_0206085c;
-extern u16 data_02060878[];
-extern u16 data_0206088e[];
+extern u16 gCachedOwnerNickname[];
+extern u16 gCachedOwnerMessageStorage[];
 extern char OVERLAY_27_ID[];
 
 extern PanelState *GetRunningTaskWork(void);
@@ -80,10 +80,10 @@ void *InitProfilePanel(BOOL resumed)
         OS_GetOwnerInfo((unsigned char *)&profile);
         CopyWideStringLowercase(nickname, profile.nickname);
         CopyWideStringLowercase(message, profile.message);
-        CopyWideString(data_02060878, profile.nickname);
-        CopyWideString(data_0206088e, profile.message);
-        CensorBannedWords(data_02060878, (void *)0x16, nickname);
-        CensorBannedWords(data_0206088e, (void *)0x36, message);
+        CopyWideString(gCachedOwnerNickname, profile.nickname);
+        CopyWideString(gCachedOwnerMessageStorage, profile.message);
+        CensorBannedWords(gCachedOwnerNickname, (void *)0x16, nickname);
+        CensorBannedWords(gCachedOwnerMessageStorage, (void *)0x36, message);
         data_0206085c.censored = TRUE;
     }
     QueueSoundCommandForArc(2);

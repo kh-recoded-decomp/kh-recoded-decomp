@@ -1,13 +1,13 @@
 #include "nitro/types.h"
 
-extern unsigned int *data_ov021_020b56c0;
+extern unsigned int *gActiveSubModeState;
 extern unsigned int UpdateCameraBasisAndCommit();
 extern unsigned int CommitCameraFrame();
 extern unsigned int CommitPanelCameraFrame();
 extern unsigned int Camera_Update();
 
 void UpdateActiveSubModeCamera(int value) {
-  switch(*data_ov021_020b56c0) {
+  switch(*gActiveSubModeState) {
   case 0:
     Camera_Update();
     return;

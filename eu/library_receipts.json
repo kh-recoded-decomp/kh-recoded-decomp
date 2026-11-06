@@ -1231,7 +1231,7 @@
    "schema_version": 1,
    "sha256": "070f6d82f1bd97ce7f65d317fca3a86d7308021dffed818266dd2641ce4053cc",
    "source": "eu/src/asm_stubs/calls/OS_IrqHandler_ThreadSwitch.c",
-   "source_sha256": "478c813dcc9e0e2428e5994300a4ed714616a0964dcca2c8f698a2771590a75f",
+   "source_sha256": "05656c49f81a32161f9a9e57c3052a62e3e62cb65230bcfb82f3993055442321",
    "start": "0x01ff81b0",
    "symbol": "OS_IrqHandler_ThreadSwitch"
   },
@@ -1355,7 +1355,7 @@
    "schema_version": 1,
    "sha256": "29294fbd9b492b0d2a8756aaeda88184ace6c02123149d199090c17bb7508cd4",
    "source": "eu/libs/nitro/os/asm_stubs/calls/OSi_DisplayExContext.c",
-   "source_sha256": "e66a721746461893ebbb7ca79fdcf4b65851dd289d1785953a4339f57bf1aba1",
+   "source_sha256": "558fdb42cb9effca9c69bffe01d24e88fa243c022d5d63996738c29d1f26ffca",
    "start": "0x02003e3c",
    "symbol": "OSi_DisplayExContext"
   },

@@ -1,3 +1,4 @@
+#define data_0206039c gSceneHeapReference
 #define FreeResourceBufferAndProbeHeap_02001474 FreeResourceBufferAndProbeHeap
 #define NNSi_FndFreeFromDefaultHeap_0202a1c4 NNSi_FndFreeFromDefaultHeap
 #define findLargestAlignedHeapBlock_02013304 findLargestAlignedHeapBlock

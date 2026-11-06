@@ -1,3 +1,5 @@
+#define data_020604fc gPadHeldAndPrevious
+#define data_02060500 gPadPressedStorage
 #define HandleShoulderLockOn_0206bd30 HandleShoulderLockOn
 #define SelectNearestTarget_0206afec SelectNearestTarget
 #define SetMenuOpenState_0206bb74 SetMenuOpenState

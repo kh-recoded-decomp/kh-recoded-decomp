@@ -1,3 +1,5 @@
+#define data_020604fc gPadHeldAndPrevious
+#define data_02060500 gPadPressedStorage
 #define StepEntryListCursor_020bf448 StepEntryListCursor
 #define func_ov039_020bc1cc GetMenuWidgetContainer
 #define func_ov081_020c5bd8 GetTutorialMenuState

@@ -1,3 +1,3 @@
 #include "nitro/types.h"
 
-u32 data_01fffea0[8];
+u32 gGeometryDmaFastModeStorage[8];

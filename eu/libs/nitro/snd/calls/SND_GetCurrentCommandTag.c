@@ -1,3 +1,4 @@
+#define data_02057c50 gSoundCommandQueueState
 #include "eu/libs/nitro/os/os_interrupt_state.h"
 
 #define func_0200f288 SND_GetCurrentCommandTag

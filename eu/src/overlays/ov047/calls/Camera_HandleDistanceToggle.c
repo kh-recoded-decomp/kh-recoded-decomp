@@ -23,7 +23,7 @@ typedef struct CameraManager {
     u32 flags;
 } CameraManager;
 
-extern u16 data_02060500;
+extern u16 gPadPressedStorage;
 extern CameraTarget *GetBoundedEntryField(int index);
 extern u32 Camera_ComputeFollowDistance(u32 index);
 extern u32 Camera_GetPresetHeight(u32 index);
@@ -37,7 +37,7 @@ void Camera_HandleDistanceToggle(CameraTracking *tracking, CameraManager *camera
     u32 flags;
 
     if (((camera->flags & 0x40000) == 0) && ((camera->flags & 0x200) == 0) &&
-        ((data_02060500 & 4) != 0)) {
+        ((gPadPressedStorage & 4) != 0)) {
         flags = 0;
         target = GetBoundedEntryField(0);
         if (target->callback != NULL) {

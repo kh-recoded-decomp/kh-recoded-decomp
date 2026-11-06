@@ -1,6 +1,6 @@
 #include "nitro/types.h"
 
-extern u16 data_02060500;
+extern u16 gPadPressedStorage;
 extern unsigned int SetPanelState();
 extern unsigned int HasRecentTouchPoints();
 
@@ -36,7 +36,7 @@ unsigned int UpdateTitleTimedPanelPhase(void *work) {
   }
   timerOrInput = HasRecentTouchPoints();
   if ((*(int *)((int)work + 0x2c) == 0) &&
-     (((data_02060500 & 9) != 0 || ((*(int *)((int)work + 0x28) == 0 && (timerOrInput != 0)))))) {
+     (((gPadPressedStorage & 9) != 0 || ((*(int *)((int)work + 0x28) == 0 && (timerOrInput != 0)))))) {
     *(unsigned int *)((int)work + 0x24) = 0x3c;
   }
   *(int *)((int)work + 0x28) = timerOrInput;

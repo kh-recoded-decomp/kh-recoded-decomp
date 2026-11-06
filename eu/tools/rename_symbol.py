@@ -60,6 +60,20 @@ def has_data_definition(text: str, name: str) -> bool:
         for match in pattern.finditer(text):
             prefix = text[:match.start()]
             if prefix.count("{") - prefix.count("}") == expected_depth:
+                if pattern is aggregate:
+                    # Storage class belongs to the opening declaration, not
+                    # the closing line. Nested anonymous fields may intervene.
+                    openings = []
+                    for position, char in enumerate(prefix):
+                        if char == "{":
+                            openings.append(position)
+                        elif char == "}" and openings:
+                            openings.pop()
+                    if len(openings) != 1:
+                        continue
+                    header = prefix[:openings[0]]
+                    if re.search(r"\b(?:extern|typedef)\b[^;{}]*$", header):
+                        continue
                 return True
     return False
 

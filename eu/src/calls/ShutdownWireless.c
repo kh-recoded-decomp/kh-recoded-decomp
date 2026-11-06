@@ -1,3 +1,4 @@
+#define data_020597fc gWmState
 #include "eu/libs/nitro/os/os_interrupt_state.h"
 
 #define Ov105_IsDeviceReady IsDeviceReady

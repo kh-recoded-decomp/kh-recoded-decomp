@@ -1,3 +1,4 @@
+#define data_020597fc gWmState
 #define PMi_InsertPreSleepCallback_02010aec PMi_InsertPreSleepCallbackEx
 #define PXI_Init_02011414 PXI_Init_02011428
 #define RegisterPxiPreSleepCallback_020113e0 RegisterPxiPreSleepCallback

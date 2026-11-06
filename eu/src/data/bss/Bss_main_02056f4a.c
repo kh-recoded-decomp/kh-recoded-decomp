@@ -1,3 +1,3 @@
 #include "nitro/types.h"
 
-static u16 data_02056f4a;
+static u16 gGXMainBgVramBank;

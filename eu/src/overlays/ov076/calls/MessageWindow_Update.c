@@ -1,3 +1,4 @@
+#define data_02060500 gPadPressedStorage
 #define FillBackgroundTileRectangle_02017adc NNS_G2dMapScrToCharText
 #define FindWidgetById_020b90a4 FindWidgetById
 #define G2_GetBG1ScrPtr_02006e34 G2_GetBG1ScrPtr

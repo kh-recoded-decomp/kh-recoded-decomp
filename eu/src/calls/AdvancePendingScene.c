@@ -1,3 +1,4 @@
+#define data_0206039c gSceneHeapReference
 #include "eu/src/HeapRecord.h"
 
 /* The shared scene view stores this record as an array of words. */

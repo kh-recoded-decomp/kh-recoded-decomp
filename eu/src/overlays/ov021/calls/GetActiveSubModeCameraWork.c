@@ -4,7 +4,7 @@ typedef struct SubModeState {
     s32 mode;
 } SubModeState;
 
-extern SubModeState *data_ov021_020b56c0;
+extern SubModeState *gActiveSubModeState;
 
 extern int GetCameraManagerWork(void);
 extern int Ov042Camera_GetState(void);
@@ -13,7 +13,7 @@ extern int GetPanelCameraState(void);
 
 int GetActiveSubModeCameraWork(void)
 {
-    switch (data_ov021_020b56c0->mode) {
+    switch (gActiveSubModeState->mode) {
     case 0:
         return GetCameraManagerWork();
     case 1:

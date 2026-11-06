@@ -1,3 +1,4 @@
+#define data_02060500 gPadPressedStorage
 #define func_01ff9b70 BuildCameraLookAtMatrix
 #define CallVirtualHandlerSlot1_02001574 CallVirtualHandlerSlot1
 #define DrawTextAnchored_020015a0 DrawTextAnchored

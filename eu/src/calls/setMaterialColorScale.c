@@ -1,2 +1,4 @@
+#define data_027e01ec gMaterialColorScaleEnabledStorage
+#define data_027e01f0 gMaterialColorScaleStorage
 #define setMaterialColorScale_01fff67c setMaterialColorScale
 #include "src/itcm/graphics/setMaterialColorScale_01fff67c.c"

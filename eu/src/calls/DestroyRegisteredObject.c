@@ -1,5 +1,5 @@
 #define DestroyRegisteredObject_0202a5b4 DestroyRegisteredObject
-#define default_heap data_02060394
+#define default_heap gEngineHeapReferences
 #define func_0202a134 SetDefaultHeap
 #define func_0202a240 NNSi_FndFreeToExpHeap
 #define func_0202a3a8 unlink_object_registry_node

@@ -1,3 +1,6 @@
+#define data_0205ab64 gG3dMaterialCacheStorage
+#define data_027e01ec gMaterialColorScaleEnabledStorage
+#define data_027e01f0 gMaterialColorScaleStorage
 #define GX_SendFifoWords NNS_G3dGeBufferOP_N
 #define NNSi_G3dFuncSbcMAT_01ffe3d8 NNSi_G3dFuncSbcMAT
 #define data_02055848 gMaterialColorOverrideMasks

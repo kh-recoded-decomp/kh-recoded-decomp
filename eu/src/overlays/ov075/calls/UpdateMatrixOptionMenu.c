@@ -145,7 +145,7 @@ struct MatrixMenu {
 };
 
 extern SaveData *data_0205fe0c;
-extern u16 data_02060500;
+extern u16 gPadPressedStorage;
 extern const PageTab gMatrixCategoryCycleEntries[];
 extern const OptionApplyFunc gOv075StateHandlers[];
 extern const OptionUpdateFunc gOv075CursorHandlers[];
@@ -312,7 +312,7 @@ int UpdateMatrixOptionMenu(MatrixMenu *menu)
     if ((menu->focusX << 12) == menu->viewX && (menu->focusY << 12) == menu->viewY) {
         atTarget = TRUE;
     }
-    pad = data_02060500;
+    pad = gPadPressedStorage;
     menu->onUpdate(menu);
     if (menu->mode == 0) {
         target = menu->targets[menu->page - 1];

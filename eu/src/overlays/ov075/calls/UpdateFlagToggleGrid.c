@@ -1,3 +1,4 @@
+#define data_02060500 gPadPressedStorage
 #define func_01ffb2f8 SetModelAnimationFrameWithSingleWrap
 #define PlaySoundEffect_0204d924 PlaySoundEffect
 #define UpdateFlagToggleGrid_020cc3bc UpdateFlagToggleGrid

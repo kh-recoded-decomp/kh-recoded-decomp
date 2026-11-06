@@ -1,3 +1,4 @@
+#define data_02060500 gPadPressedStorage
 #define func_ov001_0206c284 ResolveSelectedTargetPosition
 #define func_ov001_0206c2c8 GetTargetSelectionFlag2
 #define ApproachAngle_020c4824 ApproachAngle

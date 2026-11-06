@@ -1,3 +1,5 @@
+#define data_020604fc gPadHeldAndPrevious
+#define data_02060500 gPadPressedStorage
 #define DrawEntryCarousel_020bfeec DrawEntryCarousel
 #define OS_GetTick_02003fd4 OS_GetTick
 #define RefreshEntryCaption_020beff4 RefreshEntryCaption

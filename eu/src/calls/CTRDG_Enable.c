@@ -1,3 +1,4 @@
+#define data_0205a2a0 gCartridgeEnabled
 #include "eu/libs/nitro/os/os_interrupt_state.h"
 
 #define CTRDG_Enable_020124e8 CTRDG_Enable

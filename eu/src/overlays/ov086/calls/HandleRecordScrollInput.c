@@ -1,3 +1,5 @@
+#define data_020604fc gPadHeldAndPrevious
+#define data_02060500 gPadPressedStorage
 #define HandleRecordScrollInput_020c1828 HandleRecordScrollInput
 #define PlaySoundEffect_0204d924 PlaySoundEffect
 #define func_ov086_020c14c0 ScrollMenuToItem

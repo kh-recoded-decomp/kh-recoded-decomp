@@ -1,3 +1,4 @@
+#define data_02060500 gPadPressedStorage
 #define func_ov001_02063b68 GetSessionCounter
 #define func_ov001_02063d4c UpdateFieldTimer
 #define AddSessionCounter_02063a80 AddSessionCounter

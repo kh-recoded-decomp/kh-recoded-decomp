@@ -98,7 +98,7 @@ typedef struct ResultWork {
 
 extern ResultWork *gBattleGaugeGlobalStorage;
 extern GameState *data_0205fe0c;
-extern u16 data_02060500;
+extern u16 gPadPressedStorage;
 extern const u16 gResultNoRewardPlaceholderText[];
 
 extern void ScrollTileRowPairLeft(u16 *tilemap, int row, int shift);
@@ -398,7 +398,7 @@ int RunResultTallyStep(void)
             MIi_CpuCopy16(&work->subScreen[work->row * 32], work->subRows, 0x80);
             MIi_CpuCopy16(&work->mainScreen[work->row * 32], work->mainRows, 0x80);
             work->started = TRUE;
-        } else if (data_02060500 & 0x2f0f) {
+        } else if (gPadPressedStorage & 0x2f0f) {
             int tag;
 
             PlaySoundEffect(0, 1);

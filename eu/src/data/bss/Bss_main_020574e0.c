@@ -1,3 +1,3 @@
 #include "nitro/types.h"
 
-static u32 data_020574e0[8];
+static u32 gCardCommonTransferStateTail[8];

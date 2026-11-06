@@ -7,16 +7,16 @@ typedef struct NNSG3dGeBuffer {
 
 extern void WaitForGeometryTransfer(int unused);
 extern void MIi_CpuSend32(const void *src, volatile void *dest, u32 size);
-extern NNSG3dGeBuffer *data_027e00a8;
-extern volatile int data_027e00ac;
+extern NNSG3dGeBuffer *gGeometryCommandBuffer;
+extern volatile int gGeometryTransferBusy;
 
 void GXi_FlushCommandList(void) {
-    int busy = data_027e00ac;
+    int busy = gGeometryTransferBusy;
     if (busy != 0) {
         WaitForGeometryTransfer(busy);
     }
-    if (data_027e00a8 != NULL && data_027e00a8->idx != 0) {
-        MIi_CpuSend32(data_027e00a8->data, (volatile void *)0x04000400, data_027e00a8->idx << 2);
-        data_027e00a8->idx = 0;
+    if (gGeometryCommandBuffer != NULL && gGeometryCommandBuffer->idx != 0) {
+        MIi_CpuSend32(gGeometryCommandBuffer->data, (volatile void *)0x04000400, gGeometryCommandBuffer->idx << 2);
+        gGeometryCommandBuffer->idx = 0;
     }
 }

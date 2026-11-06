@@ -1,3 +1,5 @@
+#define data_020597fc gWmState
+#define data_0205985c gWmConnectionPortEventPrefix
 #define DC_InvalidateRange_02003414 DC_InvalidateRange
 #define DC_StoreRange_02003430 DC_StoreRange
 #define MI_CpuCopy8_01ff89a8 MI_CpuCopy8

@@ -1,6 +1,6 @@
 #include "nitro/types.h"
 
-extern unsigned int *data_ov021_020b56c0;
+extern unsigned int *gActiveSubModeState;
 extern unsigned char gSubModeOverlayIds;
 extern unsigned int NNSi_FndFreeToExpHeap();
 extern unsigned int ReleaseOv042CameraNoop();
@@ -10,7 +10,7 @@ extern unsigned int ReleaseOv044PanelCameraNoop();
 extern unsigned int ReleaseCameraLayerResources();
 
 void ReleaseActiveSubModeOverlay(void) {
-  switch(*data_ov021_020b56c0) {
+  switch(*gActiveSubModeState) {
   case 0:
     ReleaseCameraLayerResources();
     break;
@@ -23,9 +23,9 @@ void ReleaseActiveSubModeOverlay(void) {
   case 3:
     ReleaseOv044PanelCameraNoop();
   }
-  UnloadOverlayAfterGeometryTransfer(0,*(int *)(&gSubModeOverlayIds + *data_ov021_020b56c0 * 4));
-  *data_ov021_020b56c0 = -1;
+  UnloadOverlayAfterGeometryTransfer(0,*(int *)(&gSubModeOverlayIds + *gActiveSubModeState * 4));
+  *gActiveSubModeState = -1;
   NNSi_FndFreeToExpHeap
-            ((void *)data_ov021_020b56c0[1],(void *)data_ov021_020b56c0[3]);
-  data_ov021_020b56c0[1] = 0;
+            ((void *)gActiveSubModeState[1],(void *)gActiveSubModeState[3]);
+  gActiveSubModeState[1] = 0;
 }

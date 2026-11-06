@@ -1,5 +1,5 @@
 #define ForwardSubModeValue_020af694 ForwardSubModeValue
-#define data_ov021_020b56a0 data_ov021_020b56c0
+#define data_ov021_020b56a0 gActiveSubModeState
 #define func_ov044_020d0b84 PanelCamera_ApplyViewStateNoop
 #define func_ov046_020c1694 Camera_ApplyStateIfStandard
 #include "src/ov021/sub_mode/ForwardSubModeValue_020af694.c"

@@ -1,3 +1,4 @@
+#define data_0205a488 gCartridgeTaskThread
 #include "eu/libs/nitro/os/os_interrupt_state.h"
 
 #define JobQueue_WorkerLoop_020127f4 JobQueue_WorkerLoop_02012808

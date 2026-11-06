@@ -18,7 +18,7 @@ typedef struct NNSG3dRenderState {
 } NNSG3dRenderState;
 
 extern NNSG3dRenderState *NNS_G3dRS;
-extern NNSG3dScaleCacheEntry data_0205b970[];
+extern NNSG3dScaleCacheEntry gG3dJointInverseScale0X[];
 
 void NNSi_G3dGetJointScaleMaya(NNSG3dJntAnmResult *result, const fx32 *values,
                                const u8 *command, u32 options)
@@ -38,9 +38,9 @@ void NNSi_G3dGetJointScaleMaya(NNSG3dJntAnmResult *result, const fx32 *values,
         if (commandFlags & 2) {
             u32 nodeId = command[1];
             NNS_G3dRS->scaleCacheFlags[nodeId >> 5] &= ~(1 << (nodeId & 0x1f));
-            data_0205b970[nodeId].inverseScale.x = values[3];
-            data_0205b970[nodeId].inverseScale.y = values[4];
-            data_0205b970[nodeId].inverseScale.z = values[5];
+            gG3dJointInverseScale0X[nodeId].inverseScale.x = values[3];
+            gG3dJointInverseScale0X[nodeId].inverseScale.y = values[4];
+            gG3dJointInverseScale0X[nodeId].inverseScale.z = values[5];
         }
     }
 
@@ -50,7 +50,7 @@ void NNSi_G3dGetJointScaleMaya(NNSG3dJntAnmResult *result, const fx32 *values,
         if (NNS_G3dRS->scaleCacheFlags[parentId >> 5] & (1 << (parentId & 0x1f))) {
             result->flag |= 8;
         } else {
-            result->scaleEx0 = data_0205b970[parentId].inverseScale;
+            result->scaleEx0 = gG3dJointInverseScale0X[parentId].inverseScale;
         }
     }
 

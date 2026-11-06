@@ -1,12 +1,12 @@
 #include "nitro/types.h"
 
-extern unsigned int *data_ov021_020b56c0;
+extern unsigned int *gActiveSubModeState;
 extern unsigned int Camera_HasPendingModeChange();
 
 unsigned int HasDefaultSubModeCameraChangePending(void) {
   unsigned int result;
 
-  switch(*data_ov021_020b56c0) {
+  switch(*gActiveSubModeState) {
   case 0:
     result = Camera_HasPendingModeChange();
     return result;

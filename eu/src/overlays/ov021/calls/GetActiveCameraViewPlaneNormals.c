@@ -1,6 +1,6 @@
 #include "nitro/types.h"
 
-extern unsigned int *data_ov021_020b56c0;
+extern unsigned int *gActiveSubModeState;
 extern unsigned int Ov043Camera_GetViewState();
 extern unsigned int Panel_GetViewState();
 extern unsigned int Camera_GetViewPlaneNormals();
@@ -8,7 +8,7 @@ extern unsigned int Camera_GetViewPlaneNormals();
 unsigned int GetActiveCameraViewPlaneNormals(void) {
   unsigned int result;
 
-  switch(*data_ov021_020b56c0) {
+  switch(*gActiveSubModeState) {
   case 0:
     result = Camera_GetViewPlaneNormals();
     return result;

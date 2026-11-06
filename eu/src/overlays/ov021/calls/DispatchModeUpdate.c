@@ -1,5 +1,5 @@
 #define DispatchModeUpdate_020af4ac DispatchModeUpdate
-#define data_ov021_020b56a0 data_ov021_020b56c0
+#define data_ov021_020b56a0 gActiveSubModeState
 #define func_ov042_020bd020 CommitCameraProjection
 #define func_ov042_020bd590 GetCameraFrustumBounds
 #define func_ov043_020bc820 CommitCameraWithCache

@@ -1,3 +1,4 @@
+#define data_02060394 gEngineHeapReferences
 #define AllocFromHeapOrDefaultEx_0202a210 AllocFromHeapOrDefaultEx
 #define AllocateFromExpandedHeapEx_02013134 NNS_FndAllocFromExpHeapEx
 #include "src/arm9/shared_engine/AllocFromHeapOrDefaultEx_0202a210.c"

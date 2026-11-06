@@ -1,3 +1,4 @@
+#define data_02060500 gPadPressedStorage
 #define func_ov075_020d0014 UnlockableListPanel_Open
 #define func_ov027_020b90a4 FindWidgetById
 #define G2_GetBG1CharPtr_020070cc G2_GetBG1CharPtr

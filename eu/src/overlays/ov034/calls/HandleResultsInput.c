@@ -92,7 +92,7 @@ typedef struct SaveData {
 
 extern ResultsScreen data_ov034_020c0fa0;
 extern ShopEntry gResultsShopEntries[];
-extern u16 data_02060500;
+extern u16 gPadPressedStorage;
 extern SessionState data_0206085c;
 extern SaveData *data_0205fe0c;
 
@@ -137,7 +137,7 @@ void HandleResultsInput(Widget *widget, u32 pressed)
         return;
     }
     if (WORK->popupTimer > 0) {
-        if (!(data_02060500 & 1)) {
+        if (!(gPadPressedStorage & 1)) {
             return;
         }
         WORK->popupTimer = 0;
@@ -192,7 +192,7 @@ void HandleResultsInput(Widget *widget, u32 pressed)
                 }
                 WORK->scroll = next;
             }
-            if (WORK->shopOpen != 0 && (data_02060500 & 2)) {
+            if (WORK->shopOpen != 0 && (gPadPressedStorage & 2)) {
                 widget = FindWidgetById(WORK->widgets, 0xd9);
                 SetFocusedWidget(WORK->widgets, widget);
                 WORK->scroll = WORK->entryCount - 6;
@@ -207,7 +207,7 @@ void HandleResultsInput(Widget *widget, u32 pressed)
                 widget = FindWidgetById(WORK->widgets, 0xd5);
                 SetFocusedWidget(WORK->widgets, widget);
             }
-            if (WORK->shopOpen != 0 && (data_02060500 & 2)) {
+            if (WORK->shopOpen != 0 && (gPadPressedStorage & 2)) {
                 widget = FindWidgetById(WORK->widgets, WORK->entryCount + 0xd3);
                 SetFocusedWidget(WORK->widgets, widget);
             }
@@ -247,7 +247,7 @@ void HandleResultsInput(Widget *widget, u32 pressed)
     }
     sessionKind = WORK->sessionKind;
     if (sessionKind == 1 && data_0206085c.mode == 1) {
-        if (!(data_02060500 & 0x402)) {
+        if (!(gPadPressedStorage & 0x402)) {
             return;
         }
         if (WORK->busy != 0) {
@@ -258,21 +258,21 @@ void HandleResultsInput(Widget *widget, u32 pressed)
         PlaySoundEffect(0x19b, 1);
         return;
     }
-    if ((data_02060500 & 0x400) && WORK->mode >= 0 && WORK->mode <= 2 && !(WORK->flags & 0x4000)) {
+    if ((gPadPressedStorage & 0x400) && WORK->mode >= 0 && WORK->mode <= 2 && !(WORK->flags & 0x4000)) {
         WORK->prevMode = WORK->mode;
         SetResultsMode(3);
         WORK->menuIndex = 0;
         PlaySoundEffect(0, 2);
         return;
     }
-    if ((data_02060500 & 0x402) && WORK->mode == 3 && WORK->prevMode >= 0) {
+    if ((gPadPressedStorage & 0x402) && WORK->mode == 3 && WORK->prevMode >= 0) {
         SetResultsMode(WORK->prevMode);
         WORK->menuIndex = -1;
         WORK->prevMode = -1;
         PlaySoundEffect(0, 3);
         return;
     }
-    if (data_02060500 & 1) {
+    if (gPadPressedStorage & 1) {
         switch (WORK->mode) {
         case 0:
             WORK->mode = 1;
@@ -425,7 +425,7 @@ void HandleResultsInput(Widget *widget, u32 pressed)
             PlaySoundEffect(0, 1);
             return;
         }
-    } else if (data_02060500 & 2) {
+    } else if (gPadPressedStorage & 2) {
         switch (WORK->mode) {
         case 1:
             WORK->mode = 0;

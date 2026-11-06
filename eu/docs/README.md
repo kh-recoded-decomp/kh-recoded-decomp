@@ -49,6 +49,17 @@ links the complete sequence of documented naming blocks.
 - [Report Progress Record Data](REPORT_PROGRESS_RECORD_DATA.md).
 - [Report Ui Popup Native Storage](REPORT_UI_POPUP_NATIVE_STORAGE.md).
 
+- [Native Cartridge G3D17](NATIVE_CARTRIDGE_G3D17.md).
+- [Native Engine Services16](NATIVE_ENGINE_SERVICES16.md).
+- [Native Exception Handler Views2](NATIVE_EXCEPTION_HANDLER_VIEWS2.md).
+- [Native Irq Wireless11](NATIVE_IRQ_WIRELESS11.md).
+- [Native Os Wireless6](NATIVE_OS_WIRELESS6.md).
+- [Native Render Stage13](NATIVE_RENDER_STAGE13.md).
+- [Native Runtime13](NATIVE_RUNTIME13.md).
+- [Native Sdk Script Views9](NATIVE_SDK_SCRIPT_VIEWS9.md).
+- [Native Sound Pool Shared4](NATIVE_SOUND_POOL_SHARED4.md).
+- [Native Vram Thread7](NATIVE_VRAM_THREAD7.md).
+
 ## Unresolved function contracts
 
 At the `ad0a8778153f72218e4bdad3a5cec1bd8e2a7470` naming checkpoint,

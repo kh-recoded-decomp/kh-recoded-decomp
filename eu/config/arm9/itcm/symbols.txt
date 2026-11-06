@@ -137,4 +137,4 @@ SetModelFirstTexture kind:function(arm,size=0xf0) addr:0x01fff8b0
 DrawTexturedBox kind:function(arm,size=0x488) addr:0x01fff9a0
 CaptureSelectedJointMtx_01fffe28 kind:function(arm,size=0x54) addr:0x01fffe28
 CaptureContextJointMtx kind:function(arm,size=0x18) addr:0x01fffe7c
-data_01fffea0 kind:bss addr:0x01fffea0
+gGeometryDmaFastModeStorage kind:bss addr:0x01fffea0

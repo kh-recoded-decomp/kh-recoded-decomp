@@ -1,2 +1,4 @@
+#define data_027e00a8 gGeometryCommandBuffer
+#define data_027e00ac gGeometryTransferBusy
 #define QueueOrSendGeometryCommandPair_01ffcedc QueueOrSendGeometryCommandPair
 #include "src/itcm/library_nitro_nns/func_01ffcedc.c"

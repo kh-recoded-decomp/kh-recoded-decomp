@@ -1,3 +1,4 @@
+#define data_027e0078 gTexturedBoxZFaceColorStorage
 #define func_01fff8b0 SetModelFirstTexture
 #define DrawTexturedGridQuads_020866ac DrawTexturedGridQuads
 #define func_01ff80e4 GXi_FlushCommandList

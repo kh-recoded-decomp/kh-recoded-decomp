@@ -1,3 +1,4 @@
+#define data_02060500 gPadPressedStorage
 #define MoveSlotCursor_020c4514 MoveSlotCursor
 #define PlaySoundEffect_0204d924 PlaySoundEffect
 #define RefreshElementCellAnimation_020c9d34 RefreshElementCellAnimation

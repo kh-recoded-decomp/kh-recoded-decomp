@@ -14,13 +14,13 @@ typedef struct SDKBuildInfo {
     u32 nitroCodeByteSwapped;
 } SDKBuildInfo;
 
-extern u8 data_0205e100[];
-extern u8 data_0205e118[];
+extern u8 gSndPlayersLateRecordFields[];
+extern u8 gSndPlayersFinalRecordsTail[];
 extern u8 gMainDisplayState[];
 
 __declspec(sdkModuleParameters) const SDKBuildInfo BuildInfo = {
-    data_0205e100,
-    data_0205e118,
+    gSndPlayersLateRecordFields,
+    gSndPlayersFinalRecordsTail,
     gMainDisplayState,
     gMainDisplayState,
     (const void *)0x020613e0,

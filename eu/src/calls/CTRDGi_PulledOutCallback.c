@@ -1,2 +1,3 @@
+#define data_0205a2a8 gCartridgeRuntimeWork
 #define CTRDGi_PulledOutCallback_02012730 CTRDGi_PulledOutCallback
 #include "src/arm9/library_nitro_ctrdg/CTRDGi_PulledOutCallback_02012730.c"

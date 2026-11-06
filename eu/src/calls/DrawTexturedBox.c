@@ -46,9 +46,9 @@ static inline void G3_TexCoord(fx16 s, fx16 t)
 }
 
 /* Vertex colours of each pair of opposite faces: the positive face's row, then the negative one's. */
-extern u16 data_027e0058[2][4];
-extern u16 data_027e0068[2][4];
-extern u16 data_027e0078[2][4];
+extern u16 gTexturedBoxXFaceColors[2][4];
+extern u16 gTexturedBoxYFaceColors[2][4];
+extern u16 gTexturedBoxZFaceColorStorage[2][4];
 
 extern void SetupModelDrawState(ModelDrawObject *object, fx32 scale, const MtxFx33 *rotation, u32 alpha);
 extern void VEC_MultAdd(fx32 scale, const VecFx32 *a, const VecFx32 *b, VecFx32 *out);
@@ -95,16 +95,16 @@ void DrawTexturedBox(ModelDrawObject *object, fx32 size, const MtxFx33 *rotation
         fx32 start = -x;
         fx32 end = start + (x > 0 ? FX32_ONE : -FX32_ONE);
 
-        reg_G3_COLOR = FaceColors(data_027e0058, side)[0];
+        reg_G3_COLOR = FaceColors(gTexturedBoxXFaceColors, side)[0];
         G3_TexCoord(0, 0);
         G3_Vtx(x, FX32_ONE, end);
-        reg_G3_COLOR = FaceColors(data_027e0058, side)[1];
+        reg_G3_COLOR = FaceColors(gTexturedBoxXFaceColors, side)[1];
         G3_TexCoord(0, height >> 8);
         G3_VtxYZ(0, end);
-        reg_G3_COLOR = FaceColors(data_027e0058, side)[2];
+        reg_G3_COLOR = FaceColors(gTexturedBoxXFaceColors, side)[2];
         G3_TexCoord(width >> 8, height >> 8);
         G3_VtxYZ(0, start);
-        reg_G3_COLOR = FaceColors(data_027e0058, side)[3];
+        reg_G3_COLOR = FaceColors(gTexturedBoxXFaceColors, side)[3];
         G3_TexCoord(width >> 8, 0);
         G3_VtxYZ(FX32_ONE, start);
     }
@@ -114,16 +114,16 @@ void DrawTexturedBox(ModelDrawObject *object, fx32 size, const MtxFx33 *rotation
         fx32 start = -y;
         fx32 end = start + (y > 0 ? FX32_ONE : -FX32_ONE);
 
-        reg_G3_COLOR = FaceColors(data_027e0068, side)[0];
+        reg_G3_COLOR = FaceColors(gTexturedBoxYFaceColors, side)[0];
         G3_TexCoord(0, 0);
         G3_Vtx(start, y + 0x800, -0x800);
-        reg_G3_COLOR = FaceColors(data_027e0068, side)[1];
+        reg_G3_COLOR = FaceColors(gTexturedBoxYFaceColors, side)[1];
         G3_TexCoord(0, height >> 8);
         G3_VtxXZ(start, 0x800);
-        reg_G3_COLOR = FaceColors(data_027e0068, side)[2];
+        reg_G3_COLOR = FaceColors(gTexturedBoxYFaceColors, side)[2];
         G3_TexCoord(width >> 8, height >> 8);
         G3_VtxXZ(end, 0x800);
-        reg_G3_COLOR = FaceColors(data_027e0068, side)[3];
+        reg_G3_COLOR = FaceColors(gTexturedBoxYFaceColors, side)[3];
         G3_TexCoord(width >> 8, 0);
         G3_VtxXZ(end, -0x800);
     }
@@ -133,16 +133,16 @@ void DrawTexturedBox(ModelDrawObject *object, fx32 size, const MtxFx33 *rotation
         fx32 start = -z;
         fx32 end = start + (z > 0 ? FX32_ONE : -FX32_ONE);
 
-        reg_G3_COLOR = FaceColors(data_027e0078, side)[0];
+        reg_G3_COLOR = FaceColors(gTexturedBoxZFaceColorStorage, side)[0];
         G3_TexCoord(0, 0);
         G3_Vtx(start, FX32_ONE, z);
-        reg_G3_COLOR = FaceColors(data_027e0078, side)[1];
+        reg_G3_COLOR = FaceColors(gTexturedBoxZFaceColorStorage, side)[1];
         G3_TexCoord(0, height >> 8);
         G3_VtxXY(start, 0);
-        reg_G3_COLOR = FaceColors(data_027e0078, side)[2];
+        reg_G3_COLOR = FaceColors(gTexturedBoxZFaceColorStorage, side)[2];
         G3_TexCoord(width >> 8, height >> 8);
         G3_VtxXY(end, 0);
-        reg_G3_COLOR = FaceColors(data_027e0078, side)[3];
+        reg_G3_COLOR = FaceColors(gTexturedBoxZFaceColorStorage, side)[3];
         G3_TexCoord(width >> 8, 0);
         G3_VtxXY(end, FX32_ONE);
     }

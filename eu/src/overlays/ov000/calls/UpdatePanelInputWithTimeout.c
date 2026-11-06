@@ -1,3 +1,4 @@
+#define data_020604fc gPadHeldAndPrevious
 #define FS_UnloadOverlayImage_0204f5dc FS_UnloadOverlayImage_0204f5f0
 #define HighlightPanelCursorLayer_02061d04 HighlightPanelCursorLayer
 #define OS_GetTick_02003fd4 OS_GetTick

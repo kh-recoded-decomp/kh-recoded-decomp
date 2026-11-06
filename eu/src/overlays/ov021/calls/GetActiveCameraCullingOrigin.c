@@ -4,7 +4,7 @@ typedef struct SubModeState {
     s32 mode;
 } SubModeState;
 
-extern SubModeState *data_ov021_020b56c0;
+extern SubModeState *gActiveSubModeState;
 
 extern int Camera_GetActiveController(void);
 extern int Camera_GetGoalPosition(void);
@@ -13,7 +13,7 @@ extern int Panel_GetActiveController(void);
 
 int GetActiveCameraCullingOrigin(void)
 {
-    switch (data_ov021_020b56c0->mode) {
+    switch (gActiveSubModeState->mode) {
     case 0:
         return Camera_GetActiveController();
     case 1:

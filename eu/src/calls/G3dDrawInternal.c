@@ -58,7 +58,7 @@ extern void MIi_CpuClearFast(u32 data, void *dest, u32 size);
 extern const u32 gJointAnimationNodeDispatch[];
 extern const u32 gJointAnimationResultDispatch[];
 extern const u32 gMaterialAnimationDispatch[];
-extern NNSG3dSbcHandler data_027e01f8[];
+extern NNSG3dSbcHandler gSbcCommandHandlerStorage[];
 
 void G3dDrawInternal(NNSG3dRenderState *state, NNSG3dRenderObj *renderObj)
 {
@@ -112,7 +112,7 @@ void G3dDrawInternal(NNSG3dRenderState *state, NNSG3dRenderObj *renderObj)
 
         state->flags &= ~0x40;
         command = *state->pSbc;
-        data_027e01f8[command & 0x1f](state, command & 0xe0);
+        gSbcCommandHandlerStorage[command & 0x1f](state, command & 0xe0);
     } while ((state->flags & 0x20) == 0);
 
     renderObj->flags &= ~1;

@@ -1,2 +1,3 @@
+#define data_02056ae8 gDmaIrqCallback0Function
 #define OSi_EnterTimerCallback_02001eec OSi_EnterTimerCallback
 #include "src/arm9/library_nitro_os/OSi_EnterTimerCallback_02001eec.c"

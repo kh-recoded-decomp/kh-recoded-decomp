@@ -1,3 +1,6 @@
+#define data_0205a488 gCartridgeTaskThread
+#define data_0205a48c gCartridgeTaskInfoPrefix
+#define data_0205a8b0 gHeapRegistryInitialized
 #include "eu/libs/nitro/os/os_interrupt_state.h"
 
 #define CTRDGi_InitTaskThread_02012784 CTRDGi_InitTaskThread

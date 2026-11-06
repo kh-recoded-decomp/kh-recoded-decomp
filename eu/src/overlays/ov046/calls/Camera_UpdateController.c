@@ -1,3 +1,4 @@
+#define data_020604fc gPadHeldAndPrevious
 #define Camera_BlendToVelocityAim_020c132c Camera_BlendToVelocityAim
 #define Camera_UpdateController_020c0a70 Camera_UpdateController
 #define GetBoundedEntryField_0206db5c GetBoundedEntryField

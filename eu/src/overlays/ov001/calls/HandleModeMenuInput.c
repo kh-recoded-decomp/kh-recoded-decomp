@@ -1,3 +1,4 @@
+#define data_02060500 gPadPressedStorage
 #define HandleModeMenuInput_0207a370 HandleModeMenuInput
 #define func_ov001_0207a73c MoveGridMenuRow
 #define func_ov001_0207a68c UpdateMessageWindow_0207a68c

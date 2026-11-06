@@ -83,7 +83,7 @@ typedef struct {
     int popupEntry;
 } MatrixMenu;
 
-extern u16 data_020604fc;
+extern u16 gPadHeldAndPrevious;
 
 extern TouchState *GetMenuInputState(void);
 extern BOOL IsStatePhaseActive(void);
@@ -134,7 +134,7 @@ void UpdateMatrixMenuView(MatrixMenu *menu)
     fx32 snapStepX;
 
     touchPhase = GetMenuInputState()->flags & 3;
-    menu->buttonHistory = IsStatePhaseActive() ? 0 : ((data_020604fc & 0x800) ? 1 : 0) | (menu->buttonHistory << 1);
+    menu->buttonHistory = IsStatePhaseActive() ? 0 : ((gPadHeldAndPrevious & 0x800) ? 1 : 0) | (menu->buttonHistory << 1);
     if (!IsStatePhaseActive() && menu->initialized == 0) {
         menu->initialized = 1;
         if (menu->popup == -1) {

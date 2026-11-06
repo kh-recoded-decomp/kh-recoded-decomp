@@ -1,3 +1,4 @@
+#define data_02060394 gEngineHeapReferences
 #define NNSi_FndAllocFromExpHeapEx_0202a1e4 NNSi_FndAllocFromExpHeapEx
 #define Obj_CreateWithTailWork_0202a47c Obj_CreateWithTailWork
 #define func_0202a4b0 Obj_Construct

@@ -1,3 +1,4 @@
+#define data_02060500 gPadPressedStorage
 #define GetBoundedEntryField_0206db5c GetBoundedEntryField
 #define GetGroupMemberData_020a8eec GetGroupMemberData
 #define GetLinkedAngleOffset_020ceb7c GetLinkedAngleOffset

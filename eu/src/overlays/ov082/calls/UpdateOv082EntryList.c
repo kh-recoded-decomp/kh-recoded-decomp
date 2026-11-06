@@ -21,8 +21,8 @@ typedef struct Ov082State {
     int needsRedraw;
 } Ov082State;
 
-extern u16 data_020604fc;
-extern u16 data_02060500;
+extern u16 gPadHeldAndPrevious;
+extern u16 gPadPressedStorage;
 
 extern void *GetMenuWidgetContainer(void);
 extern void DrawEntryRowFrames(Ov082State *state);
@@ -44,8 +44,8 @@ void UpdateOv082EntryList(Ov082State *state)
     }
     if (state->list.slotIndex == 1
         && GetSlotEntry(0)->kind == 2
-        && ((data_020604fc & 0x40) || (data_020604fc & 0x20))
-        && !(data_02060500 & 0x40)) {
+        && ((gPadHeldAndPrevious & 0x40) || (gPadHeldAndPrevious & 0x20))
+        && !(gPadPressedStorage & 0x40)) {
         GetMenuInputState()->flags &= ~0x60;
     }
     ScriptCmd_ResetScreenLayer(&state->list, layout);

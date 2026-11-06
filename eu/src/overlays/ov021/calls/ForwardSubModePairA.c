@@ -1,5 +1,5 @@
 #define ForwardSubModePairA_020af544 ForwardSubModePairA
-#define data_ov021_020b56a0 data_ov021_020b56c0
+#define data_ov021_020b56a0 gActiveSubModeState
 #define func_ov043_020bc8cc SetCameraModeValue
 #define func_ov044_020d0560 PanelCamera_SetTrackingModeNoop
 #define func_ov046_020c1578 Camera_ChangeViewMode

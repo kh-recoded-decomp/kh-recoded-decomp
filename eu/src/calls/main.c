@@ -59,7 +59,7 @@ extern int PM_GoSleepMode(int mode, int wakeTrigger, int logic);
 extern int PM_GetLCDPower(void);
 extern void OS_Sleep(u32 milliseconds);
 
-extern void *data_02060394;
+extern void *gEngineHeapReferences;
 extern struct SceneSystemClassDescriptor gSceneSystemClassDescriptor;
 extern ObjectSystem gTaskManager;
 
@@ -102,7 +102,7 @@ int main(void)
         break;
     }
     SetGeometryCommandBufferIfUnset(&rootWork);
-    gMainDisplayState.resourceTable = NNSi_FndAllocFromExpHeapEx(FS_TryLoadTable(NULL, 0), data_02060394);
+    gMainDisplayState.resourceTable = NNSi_FndAllocFromExpHeapEx(FS_TryLoadTable(NULL, 0), gEngineHeapReferences);
     FS_TryLoadTable(gMainDisplayState.resourceTable, FS_TryLoadTable(NULL, 0));
     ResetTaskManagerState();
     ResetCallbackTable();

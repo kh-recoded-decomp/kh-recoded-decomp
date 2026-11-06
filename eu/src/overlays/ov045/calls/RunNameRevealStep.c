@@ -1,3 +1,4 @@
+#define data_02060500 gPadPressedStorage
 #define func_ov001_0207123c GetFieldSceneManager
 #define ClearTileTableRowAndMarkDirty_020b9d18 ClearTileTableRowAndMarkDirty
 #define DrawRotatedSprite_020c04c4 DrawRotatedSprite

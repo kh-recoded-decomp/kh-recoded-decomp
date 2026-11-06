@@ -1,3 +1,3 @@
 #include "nitro/types.h"
 
-static u16 data_02056f5c;
+static u16 gGXSubObjVramBank;

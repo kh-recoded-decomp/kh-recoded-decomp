@@ -1,3 +1,4 @@
+#define data_02060500 gPadPressedStorage
 #define HandleOv038PageInput_020baa98 HandleOv038PageInput
 #define PlaySoundEffect_0204d924 PlaySoundEffect
 #define ResetOv038ExitState_020bb638 ResetOv038ExitState

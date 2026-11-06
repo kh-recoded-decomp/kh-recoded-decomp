@@ -5,8 +5,8 @@
 #define SetWidgetRootDpadEnabled_020b9874 SetWidgetRootDpadEnabled
 #define UpdateEntryScroll_020c74f0 UpdateEntryScroll
 #define _s32_div_f _s32_div_f
-#define data_020604fc data_020604fc
-#define data_02060500 data_02060500
+#define data_020604fc gPadHeldAndPrevious
+#define data_02060500 gPadPressedStorage
 #define func_ov027_020b90f4 GetFocusedWidget
 #define func_ov039_020bc0d4 GetPrimaryElementEnabled
 #define func_ov039_020bc1bc GetMenuWork

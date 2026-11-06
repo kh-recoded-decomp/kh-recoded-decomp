@@ -1,3 +1,4 @@
+#define data_02060500 gPadPressedStorage
 #define AdvanceAnimationTracks_0202ef24 AdvanceAnimationTracks
 #define OS_GetTick_02003fd4 OS_GetTick
 #define PlaySoundEffect_0204d924 PlaySoundEffect

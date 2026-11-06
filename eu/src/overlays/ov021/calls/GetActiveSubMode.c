@@ -1,5 +1,5 @@
-extern int *data_ov021_020b56c0;
+extern int *gActiveSubModeState;
 
 int GetActiveSubMode(void) {
-    return *data_ov021_020b56c0;
+    return *gActiveSubModeState;
 }

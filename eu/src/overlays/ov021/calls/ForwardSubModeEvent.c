@@ -1,5 +1,5 @@
 #define ForwardSubModeEvent_020af664 ForwardSubModeEvent
-#define data_ov021_020b56a0 data_ov021_020b56c0
+#define data_ov021_020b56a0 gActiveSubModeState
 #define func_ov044_020d0b24 GetPanelViewEx
 #define func_ov046_020c1668 Camera_StartTargetView
 #include "src/ov021/sub_mode/ForwardSubModeEvent_020af664.c"

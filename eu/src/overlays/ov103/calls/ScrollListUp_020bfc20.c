@@ -1,3 +1,4 @@
+#define data_02060500 gPadPressedStorage
 #define ScrollListUp_020bfc00 ScrollListUp_020bfc20
 #define SetSlotPosition_020bf7b4 SetSlotPosition_020bf7d4
 #define func_ov103_020bfe7c RefreshListPanel_020bfe7c

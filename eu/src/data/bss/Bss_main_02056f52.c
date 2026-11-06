@@ -1,3 +1,3 @@
 #include "nitro/types.h"
 
-static u16 data_02056f52[2];
+static u16 gGXTexturePaletteAndClearImageBanks[2];

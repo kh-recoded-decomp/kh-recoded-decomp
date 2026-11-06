@@ -9,8 +9,8 @@
 #define PAD_BUTTON_X 0x0400
 
 extern int gStageCommandTimers[2]; /* [0] a short wait, [1] frames R has been held */
-extern u16 data_020604fc; /* buttons held */
-extern u16 data_02060500; /* buttons newly pressed */
+extern u16 gPadHeldAndPrevious; /* buttons held */
+extern u16 gPadPressedStorage; /* buttons newly pressed */
 extern void ForceHudState6IfActive(void);
 extern void HideStageHudMessage(void);
 extern BOOL TryEnterFieldMenuState3(void);
@@ -68,7 +68,7 @@ void StageStateCommandMenu(void)
         work->stateStep++;
     case 2:
         HandleCommandMenuShortcuts(TRUE);
-        if (data_020604fc & PAD_BUTTON_R) {
+        if (gPadHeldAndPrevious & PAD_BUTTON_R) {
             gStageCommandTimers[1]++;
             work->flags |= 0x100;
             if (work->flags & STAGE_WORK_SKIP_CHANCE_A) {
@@ -85,13 +85,13 @@ void StageStateCommandMenu(void)
                 work->flags |= STAGE_WORK_NO_TIMED_INPUT;
                 SetStageState(8, TRUE);
             }
-        } else if (!(data_020604fc & PAD_BUTTON_L)) {
+        } else if (!(gPadHeldAndPrevious & PAD_BUTTON_L)) {
             gStageCommandTimers[1] = 0;
             work->flags &= ~0x100;
             HideStageHudMessage();
-            if (data_02060500 & PAD_BUTTON_X) {
+            if (gPadPressedStorage & PAD_BUTTON_X) {
                 chosen = GetSelectedMenuEntryValue();
-            } else if (data_02060500 & PAD_BUTTON_B) {
+            } else if (gPadPressedStorage & PAD_BUTTON_B) {
                 if (GetFieldMenuListMode() == 0 && work->menuDepth > 0) {
                     work->menuDepth = InvokeFieldModeOp150();
                     SetMenuEntryHighlight(0, work->menuStack[work->menuDepth], TRUE);
@@ -101,7 +101,7 @@ void StageStateCommandMenu(void)
                     }
                     PlayStageSound(0, 3, FALSE);
                 }
-            } else if (data_02060500 & PAD_BUTTON_A) {
+            } else if (gPadPressedStorage & PAD_BUTTON_A) {
                 PlayStageSound(0, 1, FALSE);
                 SetStageState(7, FALSE);
             }

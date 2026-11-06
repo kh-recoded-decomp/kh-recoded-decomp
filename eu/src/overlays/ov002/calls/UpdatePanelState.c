@@ -1,3 +1,4 @@
+#define data_02060500 gPadPressedStorage
 #define func_02001520 Text_UploadTileBuffer
 #define func_02004990 OS_GetCpsrIrq
 #define func_020273d4 UpdateElapsedIntervals

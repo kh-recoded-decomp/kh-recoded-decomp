@@ -1,3 +1,4 @@
+#define data_02060500 gPadPressedStorage
 #define ToggleSelectedPanelSlot_02028104 ToggleSelectedPanelSlot
 #define func_0202849c AdjustPanelSlotSrcYAndDraw
 #define func_0204d924 PlaySoundEffect

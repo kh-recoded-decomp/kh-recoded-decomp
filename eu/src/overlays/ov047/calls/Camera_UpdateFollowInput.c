@@ -1,3 +1,4 @@
+#define data_020604fc gPadHeldAndPrevious
 #define func_ov001_0206c2c8 GetTargetSelectionFlag2
 #define Camera_ComputeFollowDistance_020c1a70 Camera_ComputeFollowDistance
 #define Camera_FollowLeaderTarget_020c491c Camera_FollowLeaderTarget

@@ -5,7 +5,7 @@
 #define PAD_BUTTON_A 0x0001
 #define PAD_BUTTON_B 0x0002
 
-extern u16 data_02060500;
+extern u16 gPadPressedStorage;
 extern void RequestFieldRefresh(void);
 extern void InvokeFieldModeOp2c4(int commandId);
 extern int GetCommandEffectKind(int commandId);
@@ -60,12 +60,12 @@ void StageStateChooseTarget(void)
     case 3:
     default:
         MoveTargetCursor(1);
-        if (data_02060500 & PAD_BUTTON_A) {
+        if (gPadPressedStorage & PAD_BUTTON_A) {
             work->targetIndex = FindStageEntryBySceneSlot(work->targetSlot)->index;
             ReleaseCommandMarkers();
             SetStageState(13, FALSE);
             PlayStageSound(0, 1, FALSE);
-        } else if (data_02060500 & PAD_BUTTON_B) {
+        } else if (gPadPressedStorage & PAD_BUTTON_B) {
             ReleaseCommandMarkers();
             ForceHudState6IfActive();
             InvokeFieldModeOp340();

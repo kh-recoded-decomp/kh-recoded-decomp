@@ -1,3 +1,4 @@
+#define data_02060500 gPadPressedStorage
 #define SetSlotObjPosition_020c0964 SetSlotObjPosition
 #define StepListCursorDown_020c0ee0 StepListCursorDown_020c0f00
 #define func_ov099_020c11b4 UpdateScrollList

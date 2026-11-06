@@ -1,3 +1,4 @@
+#define data_02057c50 gSoundCommandQueueState
 #include "eu/libs/nitro/os/os_interrupt_state.h"
 
 #define sound_command_tag_reached_0200f2b4 sound_command_tag_reached

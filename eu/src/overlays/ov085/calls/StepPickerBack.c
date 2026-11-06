@@ -1,3 +1,4 @@
+#define data_02060500 gPadPressedStorage
 #define ArrangeWidgetPair_020c0b38 ArrangeWidgetPair
 #define PlaySoundEffect_0204d924 PlaySoundEffect
 #define StepPickerBack_020c15f0 StepPickerBack

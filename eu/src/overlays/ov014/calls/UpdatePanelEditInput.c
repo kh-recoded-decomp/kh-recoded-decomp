@@ -1,3 +1,5 @@
+#define data_020604fc gPadHeldAndPrevious
+#define data_02060500 gPadPressedStorage
 #define func_ov002_02062000 GetOv002PanelKeyRepeatState
 #define func_ov002_020621c4 GetOv002PanelMessage
 #define BuildPanelGroupEntries_0206f0a0 BuildPanelGroupEntries

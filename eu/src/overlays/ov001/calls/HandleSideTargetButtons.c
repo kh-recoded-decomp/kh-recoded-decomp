@@ -36,8 +36,8 @@ enum {
     TARGET_PAD_LEFT = 0x20
 };
 
-extern u16 data_020604fc;
-extern u16 data_02060500;
+extern u16 gPadHeldAndPrevious;
+extern u16 gPadPressedStorage;
 extern void *gFieldTargetSelectionWork;
 extern BOOL ResolveCameraTargetPosition(VecFx32 *position);
 extern BOOL FindSideTarget(s32 direction, const VecFx32 *position, fx32 *limit);
@@ -53,10 +53,10 @@ BOOL HandleSideTargetButtons(void)
     VecFx32 position;
     CameraTargetSelection previous;
 
-    held = data_020604fc;
+    held = gPadHeldAndPrevious;
     changed = FALSE;
     direction = 0;
-    pressed = data_02060500;
+    pressed = gPadPressedStorage;
 
     /* Both shoulders enable cycling; Right takes priority over Left. */
     if ((held & TARGET_PAD_R) && (held & TARGET_PAD_L)) {

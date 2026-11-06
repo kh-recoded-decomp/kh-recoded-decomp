@@ -1,3 +1,6 @@
+#define data_0205a2a4 gCartridgeHandshakeAndLock
+#define data_0205a2a8 gCartridgeRuntimeWork
+#define data_0205a2e0 gCartridgeHeaderStartWord
 #define CTRDG_IsExisting_02012364 CTRDG_IsExisting
 #define CTRDGi_ChangeLatestAccessCycle_02012408 CTRDGi_ChangeLatestAccessCycle
 #define CTRDGi_InitModuleInfo_020125c8 CTRDGi_InitModuleInfo

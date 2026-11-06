@@ -1,3 +1,4 @@
+#define data_02060500 gPadPressedStorage
 #define GetGridCell_020c0a48 GetGridCell
 #define MoveGridCursorUp_020c0a64 MoveGridCursorUp
 #define func_ov095_020c02fc SetGridEntryPosition

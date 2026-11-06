@@ -1,3 +1,4 @@
+#define data_02060500 gPadPressedStorage
 #define EncodeTouchSlot_020c48e8 EncodeTouchSlot
 #define FX_Sqrt_01ff9cfc FX_Sqrt
 #define GetSlotCellOffset_020c493c GetSlotCellOffset

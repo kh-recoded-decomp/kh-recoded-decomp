@@ -1,3 +1,5 @@
+#define data_02056df4 gOsExceptionHandlerArgumentStorage
+#define data_02056dfc gOsExceptionHandlerPointerStorage
 #define OSi_DisplayExContext_02003e28 OSi_DisplayExContext
 #define data_02056df0 OSi_ExceptionState
 #define data_02056e20 OSi_ExContext

@@ -1,4 +1,4 @@
 #include "nitro/types.h"
 
-static u32 data_ov021_020b5644[5];
-static u32 data_ov021_020b5640;
+static u32 gEffectResourceContainerStorage[5];
+static u32 gEffectResourceContainersLoaded;

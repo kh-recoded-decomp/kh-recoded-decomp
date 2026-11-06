@@ -1,3 +1,4 @@
+#define data_02060088 gVramTransferTaskStorage
 #define ClearVideoMemory_0202993c ClearVideoMemory
 #define GfxQueue_Configure_02013fd0 NNS_GfdInitVramTransferManager
 #define InitEngine_02029b54 InitEngine

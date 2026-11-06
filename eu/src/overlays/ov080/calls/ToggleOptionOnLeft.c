@@ -1,3 +1,4 @@
+#define data_02060500 gPadPressedStorage
 #define PlaySoundEffect_0204d924 PlaySoundEffect
 #define ToggleOptionOnLeft_020c59ac ToggleOptionOnLeft
 #include "src/ov080/unclassified_helpers/ToggleOptionOnLeft_020c59ac.c"

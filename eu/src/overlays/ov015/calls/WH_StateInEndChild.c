@@ -463,9 +463,9 @@ extern WMBssDesc data_ov105_020c05c0;
 #define sBssDesc data_ov105_020c05c0
 
 extern u16 data_027e0064;
-extern u16 data_027e0068;
+extern u16 gTexturedBoxYFaceColors;
 #define sMyAid data_027e0064
-#define sConnectBitmap data_027e0068
+#define sConnectBitmap gTexturedBoxYFaceColors
 
 extern void WH_ChangeSysState(int nState);
 extern void WH_SetError(int nError);

@@ -1,4 +1,4 @@
 #include "nitro/types.h"
 
-static u32 data_0205bfa4[1584];
-static u32 data_0205bf64[16];
+static u32 gG3dNodeMixCacheTail[1584];
+static u32 gG3dNodeMixClipMatrix0[16];

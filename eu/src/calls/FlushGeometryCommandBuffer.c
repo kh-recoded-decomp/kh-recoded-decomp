@@ -1,3 +1,6 @@
+#define data_01fffea0 gGeometryDmaFastModeStorage
+#define data_027e00a8 gGeometryCommandBuffer
+#define data_027e00ac gGeometryTransferBusy
 #define func_01ffa1e8 ClearGeometryTransferBusy
 #define FlushGeometryCommandBuffer_01ffa204 FlushGeometryCommandBuffer
 #define data_02055c1c GXi_DmaId

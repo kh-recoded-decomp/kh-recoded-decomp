@@ -1,3 +1,7 @@
+#define data_020597fc gWmState
+#define data_02059814 gWmCommandFreeQueue
+#define data_02059834 gWmCommandFreeQueueSlots
+#define data_020598a0 gWmCommandBufferStorage
 #include "eu/libs/nitro/os/os_interrupt_state.h"
 
 #define IsGraphicsMemoryAddress_02003b18 OS_IsOnVram

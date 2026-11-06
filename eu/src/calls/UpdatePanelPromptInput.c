@@ -13,7 +13,7 @@ typedef struct PanelState {
 
 extern PanelState *gPanelState;
 extern u32 gPreviousPanelActive;
-extern u16 data_02060500;
+extern u16 gPadPressedStorage;
 
 extern void UpdateSoundAndSceneScriptSkip(void);
 extern BOOL PlaySoundEffect(int seqArcNo, int index);
@@ -42,7 +42,7 @@ BOOL UpdatePanelPromptInput(void)
         return TRUE;
     }
     if (panel->fadePending == 0) {
-        if (data_02060500 & 8) {
+        if (gPadPressedStorage & 8) {
             PlaySoundEffect(0, 3);
             ResetPanelFieldB8AndNotify();
             return TRUE;
@@ -52,7 +52,7 @@ BOOL UpdatePanelPromptInput(void)
             QueuePanelScreenTransferAndUpdateSound();
             return TRUE;
         }
-        if (!ToggleSelectedPanelSlot() && (data_02060500 & 1)) {
+        if (!ToggleSelectedPanelSlot() && (gPadPressedStorage & 1)) {
             if (panel->selectedSlot == 0) {
                 ResetPanelFieldB8AndNotify();
             } else {

@@ -5,20 +5,20 @@ typedef struct {
     void *buffers[3];
 } SharedBufferSet;
 
-extern BOOL data_ov021_020b5640;
-extern u8 data_ov021_020b5644;
+extern BOOL gEffectResourceContainersLoaded;
+extern u8 gEffectResourceContainerStorage;
 extern int ZeroHalfThenFree(void *buffer);
 
-#define gSharedBuffers (*(SharedBufferSet *)((u8 *)&data_ov021_020b5644 - 4))
+#define gSharedBuffers (*(SharedBufferSet *)((u8 *)&gEffectResourceContainerStorage - 4))
 
 void FreeSharedBuffers(void)
 {
     int i;
 
-    if (data_ov021_020b5640) {
+    if (gEffectResourceContainersLoaded) {
         for (i = 0; i < 3; i++) {
             ZeroHalfThenFree(gSharedBuffers.buffers[i]);
         }
     }
-    data_ov021_020b5640 = FALSE;
+    gEffectResourceContainersLoaded = FALSE;
 }

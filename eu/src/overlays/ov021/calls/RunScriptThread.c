@@ -41,7 +41,7 @@ typedef s32 (*ScriptHandler)(ScriptThread *thread, u32 operand);
 
 extern FieldContext data_ov021_020b56c4;
 extern FieldContext gActiveFieldContext;
-extern FieldContext data_ov021_020b56d0;
+extern FieldContext gStageScriptContextBackup;
 extern ScriptHandler gScriptHandlerTable[];
 
 extern void *GetStageManager(void);
@@ -61,7 +61,7 @@ s32 RunScriptThread(ScriptThread *thread)
 
     GetStageManager();
     running = TRUE;
-    data_ov021_020b56d0 = data_ov021_020b56c4;
+    gStageScriptContextBackup = data_ov021_020b56c4;
     MI_CpuFill8(&data_ov021_020b56c4, 0, sizeof(FieldContext));
     if (thread->ownerKind == 1) {
         gActiveFieldContext.eventRecord = GetStageEventRecord(thread->ownerId);
@@ -131,6 +131,6 @@ s32 RunScriptThread(ScriptThread *thread)
             break;
         }
     } while (running);
-    data_ov021_020b56c4 = data_ov021_020b56d0;
+    data_ov021_020b56c4 = gStageScriptContextBackup;
     return result;
 }

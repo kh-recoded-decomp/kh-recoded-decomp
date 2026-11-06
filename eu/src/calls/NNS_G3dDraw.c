@@ -11,7 +11,7 @@ extern void MIi_CpuClearFast(u32 value, void *dest, u32 size);
 extern void updateHintVec(u32 *hint, const NNSG3dAnmObj *anmObj);
 extern void G3dDrawInternal(NNSG3dRS *rs, NNSG3dRenderObj *renderObj);
 extern NNSG3dRS *NNS_G3dRS;
-extern u16 data_027e01ec;
+extern u16 gMaterialColorScaleEnabledStorage;
 
 void NNS_G3dDraw(NNSG3dRenderObj *renderObj) {
     if ((renderObj->flag & 0x10) == 0x10) {
@@ -35,5 +35,5 @@ void NNS_G3dDraw(NNSG3dRenderObj *renderObj) {
         G3dDrawInternal((NNSG3dRS *)&rs, renderObj);
         NNS_G3dRS = NULL;
     }
-    data_027e01ec = 0;
+    gMaterialColorScaleEnabledStorage = 0;
 }

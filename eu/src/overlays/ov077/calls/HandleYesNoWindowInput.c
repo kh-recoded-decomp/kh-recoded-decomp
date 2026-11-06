@@ -1,3 +1,4 @@
+#define data_02060500 gPadPressedStorage
 #define HandleYesNoWindowInput_020c7e70 HandleYesNoWindowInput
 #define MessageWindow_BeginClosing_020c849c MessageWindow_BeginClosing_020c84bc
 #define PlaySoundEffect_0204d924 PlaySoundEffect

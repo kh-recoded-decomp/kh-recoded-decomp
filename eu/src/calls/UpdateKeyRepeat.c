@@ -7,9 +7,9 @@ typedef struct KeyRepeatState {
     u16 repeatCounts[10];
 } KeyRepeatState;
 
-extern u16 data_020604fc;
-extern u16 data_02060500;
-extern u32 data_02060504[];
+extern u16 gPadHeldAndPrevious;
+extern u16 gPadPressedStorage;
+extern u32 gPadTransitionVBlankTicks[];
 extern const u16 gKeyRepeatButtonMasks[];
 extern const u16 gKeyRepeatTimestampIndices[];
 
@@ -28,11 +28,11 @@ void UpdateKeyRepeat(KeyRepeatState *state)
     now = GetVBlankCounter();
     do {
         mask = gKeyRepeatButtonMasks[keyIndex];
-        if (data_020604fc & mask) {
-            if (data_02060500 & mask) {
+        if (gPadHeldAndPrevious & mask) {
+            if (gPadPressedStorage & mask) {
                 state->repeatMask |= mask;
                 state->repeatCounts[keyIndex] = 0;
-            } else if ((elapsed = now - data_02060504[gKeyRepeatTimestampIndices[keyIndex]]) >= state->delayFrames * 2
+            } else if ((elapsed = now - gPadTransitionVBlankTicks[gKeyRepeatTimestampIndices[keyIndex]]) >= state->delayFrames * 2
                        && (elapsed -= state->delayFrames * 2) >= state->repeatCounts[keyIndex] * (state->intervalFrames * 2)) {
                 state->repeatMask |= mask;
                 state->repeatCounts[keyIndex] = _u32_div_f(elapsed, state->intervalFrames * 2) + 1;

@@ -1,6 +1,6 @@
 #define Camera_SetFrozen_020c0bec Camera_SetFrozen
 #define SetSubModeFrozen_020af434 SetSubModeFrozen
-#define data_ov021_020b56a0 data_ov021_020b56c0
+#define data_ov021_020b56a0 gActiveSubModeState
 #define func_ov043_020bcb14 SetCameraFlag4
 #define func_ov044_020d0120 SetPanelFlagBit1
 #include "src/ov021/sub_mode/SetSubModeFrozen_020af434.c"

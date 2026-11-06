@@ -20,7 +20,7 @@ typedef struct SceneWork {
 } SceneWork;
 
 extern SceneWork *gTrophySceneWork;
-extern u16 data_02060500;
+extern u16 gPadPressedStorage;
 
 extern int TrophyReport_GetState(void);
 extern BOOL IsEntryFlagSet_020c22c4(int flagSet, int entryIndex);
@@ -66,7 +66,7 @@ void MoveGridCursorRight(SceneWork *work)
         pager = &work->pager;
         column = work->selectedIndex % 5 + 1;
         page = pager->pageIndex + pager->pageOffset;
-        if (column > 4 && (data_02060500 & 0x10) != 0) {
+        if (column > 4 && (gPadPressedStorage & 0x10) != 0) {
             column = 0;
         }
         if (column > 4) {

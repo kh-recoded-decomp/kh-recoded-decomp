@@ -1,3 +1,4 @@
+#define data_027e00a0 gIrqWaitThreadQueue
 #define CP_SaveContext_0200a15c CP_SaveContext
 #define CPi_RestoreContext_0200a19c CPi_RestoreContext
 #define OS_IrqHandler_ThreadSwitch_01ff81b0 OS_IrqHandler_ThreadSwitch

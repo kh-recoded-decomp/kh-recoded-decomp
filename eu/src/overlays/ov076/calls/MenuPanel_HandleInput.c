@@ -1,3 +1,4 @@
+#define data_02060500 gPadPressedStorage
 #define FindWidgetById_020b90a4 FindWidgetById
 #define ItemList_IsRewardEntryLocked_020cab38 ItemList_IsRewardEntryLocked
 #define ItemList_UpdateHeaderText_020c95cc ItemList_UpdateHeaderText

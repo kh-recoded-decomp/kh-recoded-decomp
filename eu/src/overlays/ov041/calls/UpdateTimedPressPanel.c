@@ -5,7 +5,7 @@
 #define PAD_BUTTON_A 0x0001
 #define PAD_BUTTON_Y 0x0800
 
-extern u16 data_02060500;
+extern u16 gPadPressedStorage;
 extern fx32 FX_Mul(fx32 a, fx32 b);
 extern void VEC_Add(const VecFx32 *a, const VecFx32 *b, VecFx32 *ab);
 extern void PlaceSlotPanelAtWorldPosition(int panel, const VecFx32 *position, BOOL lit);
@@ -62,10 +62,10 @@ void UpdateTimedPressPanel(StageEntry *player, StageEntry *other, BOOL playerFir
         return;
     }
     if (playerFirst) {
-        if (data_02060500 & PAD_BUTTON_A) {
+        if (gPadPressedStorage & PAD_BUTTON_A) {
             pressed = TRUE;
         }
-    } else if (data_02060500 & PAD_BUTTON_Y) {
+    } else if (gPadPressedStorage & PAD_BUTTON_Y) {
         pressed = TRUE;
     }
     if (pressed) {

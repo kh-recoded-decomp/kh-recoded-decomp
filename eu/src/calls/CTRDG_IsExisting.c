@@ -1,3 +1,4 @@
+#define data_0205a2a0 gCartridgeEnabled
 #define CTRDG_IsExisting_02012364 CTRDG_IsExisting
 #define CTRDGi_ChangeLatestAccessCycle_02012408 CTRDGi_ChangeLatestAccessCycle
 #define CTRDGi_HasValidModuleInfo_02012320 CTRDGi_HasValidModuleInfo

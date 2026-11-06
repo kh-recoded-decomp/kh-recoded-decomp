@@ -6,7 +6,7 @@ typedef struct SelectMenuCursor {
     u8 changed;
 } SelectMenuCursor;
 
-extern u16 data_02060500;
+extern u16 gPadPressedStorage;
 extern void PlaySoundEffect(int group, int soundId);
 
 void SelectNextOption(SelectMenuCursor *cursor)
@@ -14,7 +14,7 @@ void SelectNextOption(SelectMenuCursor *cursor)
     do {
         cursor->selection++;
         if (cursor->selection >= 2) {
-            if ((data_02060500 & 0x80) == 0) {
+            if ((gPadPressedStorage & 0x80) == 0) {
                 cursor->selection = 1;
                 return;
             }

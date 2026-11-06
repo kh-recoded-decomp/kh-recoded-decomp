@@ -1,3 +1,4 @@
+#define data_02060500 gPadPressedStorage
 #define IsEntryFlagSet_020c22a4 IsEntryFlagSet_020c22c4
 #define MoveGridCursorLeft_020bf218 MoveGridCursorLeft
 #define PlaySoundEffect_0204d924 PlaySoundEffect

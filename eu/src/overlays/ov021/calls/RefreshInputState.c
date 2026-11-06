@@ -1,3 +1,5 @@
+#define data_020604fc gPadHeldAndPrevious
+#define data_02060500 gPadPressedStorage
 #define Camera_IsFlag3JustSet_020c298c Camera_IsFlag3JustSet
 #define QuerySubModeStatus_020af3f4 QuerySubModeStatus
 #define RefreshInputState_020a6edc RefreshInputState

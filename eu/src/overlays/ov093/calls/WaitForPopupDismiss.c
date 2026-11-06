@@ -1,6 +1,6 @@
 #include "nitro/types.h"
 
-extern u16 data_02060500;
+extern u16 gPadPressedStorage;
 extern u32 gTrophyPopupWorkStorage;
 extern u32 PlaySoundEffect();
 extern u32 GetMenuInputState();
@@ -13,7 +13,7 @@ void WaitForPopupDismiss(u32 context)
   int result;
 
   result = GetMenuInputState();
-  if (((((data_02060500 & 1) == 0) && ((data_02060500 & 2) == 0)) && ((data_02060500 & 8) == 0))
+  if (((((gPadPressedStorage & 1) == 0) && ((gPadPressedStorage & 2) == 0)) && ((gPadPressedStorage & 8) == 0))
      && ((*(u16 *)(result + 8) & 3) != 1)) {
     return;
   }

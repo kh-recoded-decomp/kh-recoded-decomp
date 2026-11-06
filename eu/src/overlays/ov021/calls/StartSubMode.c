@@ -2,7 +2,7 @@
 #define NNSi_FndGetCurrentRootHeap_0202a764 GetRunningTaskWork
 #define StartSubMode_020af260 StartSubMode
 #define data_ov021_020b5290 gSubModeOverlayIds
-#define data_ov021_020b56a0 data_ov021_020b56c0
+#define data_ov021_020b56a0 gActiveSubModeState
 #define func_01ff86fc MIi_CpuClear32
 #define func_01ff8830 MI_CpuFill8
 #define func_02029f78 LoadOverlayAfterGeometryTransfer

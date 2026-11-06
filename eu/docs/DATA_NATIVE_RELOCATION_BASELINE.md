@@ -144,3 +144,30 @@ python tools/verify_idx.py src/overlays/ov075/calls/UpdateMatrixEventAnimation.c
 The naming block preserves all 120 complete affected objects and all 108
 freshly linked module hashes. Original-source controls retain nonzero verifier
 verdicts; these are not reported as individual MATCH results.
+
+## Engine and platform storage block
+
+The 98-symbol engine/platform block checks 282 affected functions. 280
+standalone checks pass; two reproduce their preserved original-source-graph
+verdicts at the actual paths:
+
+| Function | Native identity/extent | Internal BL offsets recorded as external relocations |
+|---|---|---|
+| `HandleResultsInput` | ov034:020bd130, Thumb, 2656 bytes | +0x6e targets local 020bdb8c. |
+| `RefreshResultsScreen` | ov034:020bb598, Thumb, 6264 bytes | +0x30, +0x92, +0x11e, +0xa42, +0xc76, +0xcaa, +0x1498 and +0x1676 target labels inside the same function. |
+
+The maps also spell native DATA references using interior addresses or field
+aliases where the object uses its aggregate base and addend. Those word values
+remain unchanged; differing spellings alone do not establish an independent
+failure. The internal BL bytes must remain fully compared during the separate
+metadata repair.
+
+```sh
+python tools/verify_idx.py src/overlays/ov034/calls/HandleResultsInput.c HandleResultsInput --thumb
+python tools/verify_idx.py src/overlays/ov034/calls/RefreshResultsScreen.c RefreshResultsScreen --thumb
+```
+
+All 348 complete affected objects and all 108 freshly linked module hashes are
+unchanged. The official SDK verifiers separately reproduce 160 IRQ-thread-switch
+cases and 120 exception-display cases against the ROM instructions; only the
+source hashes in those two receipts are regenerated after their alias changes.

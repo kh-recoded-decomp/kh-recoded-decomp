@@ -5,7 +5,7 @@
 #define PAD_BUTTON_A 0x0001
 #define PAD_BUTTON_B 0x0002
 
-extern u16 data_02060500;
+extern u16 gPadPressedStorage;
 extern void RequestFieldRefresh(void);
 extern void ShowStageHudMessage(u8 kind, ...);
 extern void MoveTargetCursor(int source);
@@ -59,7 +59,7 @@ void StageStateChooseItemTarget(void)
         }
     default:
         MoveTargetCursor(0);
-        if (data_02060500 & PAD_BUTTON_A) {
+        if (gPadPressedStorage & PAD_BUTTON_A) {
             switch (work->itemActions[0].effect) {
             case 0xe4:
             case 0xe5:
@@ -75,7 +75,7 @@ void StageStateChooseItemTarget(void)
             ReleaseCommandMarkers();
             PlayStageSound(0, 1, FALSE);
             SetStageState(15, FALSE);
-        } else if (data_02060500 & PAD_BUTTON_B) {
+        } else if (gPadPressedStorage & PAD_BUTTON_B) {
             ReleaseCommandMarkers();
             ForceHudState6IfActive();
             HideStageHudMessage();

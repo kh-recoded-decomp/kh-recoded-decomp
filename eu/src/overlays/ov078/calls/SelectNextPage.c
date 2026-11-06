@@ -1,3 +1,4 @@
+#define data_02060500 gPadPressedStorage
 #define IsGlobalPackedBitSet_02027304 IsGlobalPackedBitSet
 #define PlaySoundEffect_0204d924 PlaySoundEffect
 #define ReadGlobalPackedBits_02027348 ReadGlobalPackedBits

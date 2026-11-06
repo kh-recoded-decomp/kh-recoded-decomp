@@ -1,2 +1,3 @@
+#define data_02060394 gEngineHeapReferences
 #define NNSi_FndGetAllocatorForDefaultHeap_0202a268 NNSi_FndGetAllocatorForDefaultHeap
 #include "src/arm9/shared_engine/NNSi_FndGetAllocatorForDefaultHeap_0202a268.c"

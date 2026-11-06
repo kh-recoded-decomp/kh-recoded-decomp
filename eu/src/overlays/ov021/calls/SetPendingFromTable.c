@@ -1,4 +1,4 @@
 #define SetPendingFromTable_020a9598 SetPendingFromTable
-#define data_ov021_020b5620 data_ov021_020b5640
-#define data_ov021_020b5624 data_ov021_020b5644
+#define data_ov021_020b5620 gEffectResourceContainersLoaded
+#define data_ov021_020b5624 gEffectResourceContainerStorage
 #include "src/ov021/unclassified_helpers/SetPendingFromTable_020a9598.c"

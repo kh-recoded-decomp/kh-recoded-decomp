@@ -1,3 +1,3 @@
 #define SeedSharedRandomState_0202a984 SeedSharedRandomState
-#define shared_rng_state data_020604d8
+#define shared_rng_state gSharedRandom32State
 #include "src/arm9/runtime_data_utilities/SeedSharedRandomState_0202a984.c"

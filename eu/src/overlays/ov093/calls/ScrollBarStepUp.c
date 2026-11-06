@@ -1,3 +1,4 @@
+#define data_02060500 gPadPressedStorage
 #define ScrollBarStepUp_020c0958 ScrollBarStepUp
 #define func_ov093_020c0458 SetSlotPosition
 #define func_ov093_020c0cb0 RefreshScrollBar_020c0cb0

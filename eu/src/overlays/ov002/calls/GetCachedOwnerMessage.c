@@ -1,5 +1,5 @@
-extern void data_0206088e(void);
+extern void gCachedOwnerMessageStorage(void);
 
 int GetCachedOwnerMessage(void) {
-    return (int)data_0206088e;
+    return (int)gCachedOwnerMessageStorage;
 }

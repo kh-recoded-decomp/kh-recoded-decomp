@@ -1,3 +1,8 @@
+#define data_02060394 gEngineHeapReferences
+#define data_020603a0 gDefaultEngineHeap
+#define data_020603a4 gDefaultEngineHeapAllocator
+#define data_020603b4 gSpecialEngineHeap
+#define data_020603b8 gSpecialEngineHeapAllocator
 #define InitEngineHeaps_0202a040 InitEngineHeaps
 #define NNS_FndInitAllocatorForExpHeap_02013740 NNS_FndInitAllocatorForExpHeap
 #define func_02029fb8 CreateEngineHeaps

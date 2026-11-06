@@ -1,3 +1,4 @@
+#define data_02059814 gWmCommandFreeQueue
 #define Ov105_WmGetCommandBuffer4Arm7 WmGetCommandBuffer4Arm7
 #define WMi_SendCommand_02010f80 WMi_SendCommand
 #include "src/arm9/library_nitro_wm/WMi_SendCommand_02010f80.c"

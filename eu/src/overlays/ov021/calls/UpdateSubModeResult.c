@@ -1,4 +1,4 @@
-#define data_ov021_020b56a0 data_ov021_020b56c0
+#define data_ov021_020b56a0 gActiveSubModeState
 #define func_ov046_020c1540 Camera_IsViewSettled
 #define func_ov040_020bd0d4 AreaSceneState_WaitForPanelReady
 #define func_ov036_020bc8b4 LoadTextureInChunks

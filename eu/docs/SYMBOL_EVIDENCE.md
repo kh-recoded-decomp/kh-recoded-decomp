@@ -793,3 +793,18 @@ Name 98 report-page, carousel, progress and popup storage identities using nativ
 [Overlay087 Carousel Choice Data](OVERLAY087_CAROUSEL_CHOICE_DATA.md),
 [Report Progress Record Data](REPORT_PROGRESS_RECORD_DATA.md),
 [Report Ui Popup Native Storage](REPORT_UI_POPUP_NATIVE_STORAGE.md).
+
+## Name engine and platform native storage
+
+Name 98 native engine/platform storage identities from writers, SDK operations and complete physical-span evidence. Preserve native queue/pool/thread views, staged script spans and opaque tails; regenerate affected library receipts through their official verifier.
+
+[Cartridge G3D17](NATIVE_CARTRIDGE_G3D17.md),
+[Engine Services16](NATIVE_ENGINE_SERVICES16.md),
+[Exception Handler Views2](NATIVE_EXCEPTION_HANDLER_VIEWS2.md),
+[Irq Wireless11](NATIVE_IRQ_WIRELESS11.md),
+[Os Wireless6](NATIVE_OS_WIRELESS6.md),
+[Render Stage13](NATIVE_RENDER_STAGE13.md),
+[Runtime13](NATIVE_RUNTIME13.md),
+[Sdk Script Views9](NATIVE_SDK_SCRIPT_VIEWS9.md),
+[Sound Pool Shared4](NATIVE_SOUND_POOL_SHARED4.md),
+[Vram Thread7](NATIVE_VRAM_THREAD7.md).

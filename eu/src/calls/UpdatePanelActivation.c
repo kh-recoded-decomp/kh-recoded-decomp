@@ -1,3 +1,4 @@
+#define data_02060500 gPadPressedStorage
 #define InvokeCallbackSlot_02025464 InvokeCallbackSlot
 #define UpdatePanelActivation_020288a0 UpdatePanelActivation
 #define data_0205fdc4 gPanelEnabled

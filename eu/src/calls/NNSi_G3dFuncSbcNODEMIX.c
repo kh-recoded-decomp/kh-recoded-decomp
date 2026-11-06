@@ -54,8 +54,8 @@ typedef struct NNSG3dRenderState {
     volatile u32 nodeMixCacheValid[2];
 } NNSG3dRenderState;
 
-extern NNSG3dNodeMixCacheEntry data_0205bf64[];
-extern MtxFx33 data_0205bfa4;
+extern NNSG3dNodeMixCacheEntry gG3dNodeMixClipMatrix0[];
+extern MtxFx33 gG3dNodeMixCacheTail;
 extern void MIi_CpuClearFast(u32 value, void *destination, u32 size);
 extern void GXi_FlushCommandList(void);
 extern void G3_MultMtx43(const MtxFx43 *matrix);
@@ -108,7 +108,7 @@ void NNSi_G3dFuncSbcNODEMIX(NNSG3dRenderState *state, u32 option)
         cached = state->nodeMixCacheValid[nodeId >> 5] &
                      (1U << (nodeId & 31));
         cache =
-            (NNSG3dNodeMixCacheEntry *)((u8 *)data_0205bf64 + cacheOffset);
+            (NNSG3dNodeMixCacheEntry *)((u8 *)gG3dNodeMixClipMatrix0 + cacheOffset);
         if (!cached) {
             volatile u32 *restoreRegister = (volatile u32 *)0x04000450;
             state->nodeMixCacheValid[nodeId >> 5] |= 1U << (nodeId & 31);
@@ -133,7 +133,7 @@ void NNSi_G3dFuncSbcNODEMIX(NNSG3dRenderState *state, u32 option)
         ADD_P(9,12); ADD_P(10,13); ADD_P(11,14);
 #undef ADD_P
         ++entry;
-        previousVector = (MtxFx33 *)((u8 *)&data_0205bfa4 + cacheOffset);
+        previousVector = (MtxFx33 *)((u8 *)&gG3dNodeMixCacheTail + cacheOffset);
         if (!cached) {
             while (G3X_GetVectorMtx(previousVector) != 0) {
             }

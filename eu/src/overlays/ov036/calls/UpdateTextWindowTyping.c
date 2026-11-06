@@ -1,3 +1,4 @@
+#define data_02060500 gPadPressedStorage
 #define UpdateTextWindowTyping_020c0d34 UpdateTextWindowTyping
 #define func_ov036_020beeec DrawNextTextWindowGlyph
 #define func_ov036_020bf0f0 DrawNextTextGlyph

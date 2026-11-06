@@ -1,3 +1,4 @@
+#define data_020604fc gPadHeldAndPrevious
 #define UpdateOverlayFrame_020bbb6c UpdateOverlayFrame
 #define data_ov039_020bea00 gMenuOverlayWork
 #define NNS_FndGetNextListObject_02012a38 NNS_FndGetNextListObject

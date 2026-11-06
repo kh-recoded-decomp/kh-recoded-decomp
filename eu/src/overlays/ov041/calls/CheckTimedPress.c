@@ -4,7 +4,7 @@
 #define PAD_BUTTON_A 0x0001
 #define PAD_BUTTON_Y 0x0800
 
-extern u16 data_02060500;
+extern u16 gPadPressedStorage;
 
 /* Marks an entry's timed press: A when it attacks, Y when it defends (unless status 9 stops it). */
 void CheckTimedPress(StageEntry *entry, BOOL defending)
@@ -21,10 +21,10 @@ void CheckTimedPress(StageEntry *entry, BOOL defending)
         return;
     }
     if (defending) {
-        if (data_02060500 & PAD_BUTTON_Y) {
+        if (gPadPressedStorage & PAD_BUTTON_Y) {
             pressed = TRUE;
         }
-    } else if (data_02060500 & PAD_BUTTON_A) {
+    } else if (gPadPressedStorage & PAD_BUTTON_A) {
         pressed = TRUE;
     }
     if (pressed) {

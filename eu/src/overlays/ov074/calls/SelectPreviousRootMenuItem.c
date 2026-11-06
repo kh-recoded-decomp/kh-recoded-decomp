@@ -1,4 +1,4 @@
 #define SelectPreviousRootMenuItem_020c54f0 SelectPreviousRootMenuItem
-#define _data_02060500 data_02060500
+#define _data_02060500 gPadPressedStorage
 #define func_0204d924 PlaySoundEffect
 #include "src/ov074/reviewed_helpers/SelectPreviousRootMenuItem_020c54f0.c"

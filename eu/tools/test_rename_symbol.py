@@ -275,6 +275,21 @@ class RenameSymbolTest(unittest.TestCase):
         self.assertEqual(shared.read_text(),'const int referenceData[2] = {1,2};\n')
         self.assertEqual(wrapper.read_text(),'#define referenceData gData\n#include "src/data/Shared.c"\n')
 
+    def test_anonymous_aggregate_extern_and_typedef_are_not_storage(self):
+        for storage in ('extern', 'typedef'):
+            with self.subTest(storage=storage):
+                body = storage+' struct {\n int flag;\n struct { int lock; } work;\n} oldData;\n'
+                self.assertFalse(rename_symbol.has_data_definition(body,'oldData'))
+
+    def test_data_aggregate_extern_view_does_not_duplicate_canonical_owner(self):
+        owner = self.put('src/data/Owner.c','unsigned int oldData;\n')
+        view = self.put('src/calls/Caller.c','extern struct {\n int flag;\n} oldData;\n')
+        with contextlib.redirect_stdout(io.StringIO()):
+            rename_symbol.rename_symbols([('oldData','gData')],
+                                         definition_sources={'oldData':'src/data/Owner.c'})
+        self.assertEqual(owner.read_text(),'unsigned int gData;\n')
+        self.assertEqual(view.read_text(),'extern struct {\n int flag;\n} gData;\n')
+
     def test_data_aligned_definition_preserves_native_declarator(self):
         body = 'const CellGrid oldGrid __attribute__((aligned(4))) = {1,2,0,0};\n'
         source = self.put('src/data/Tables.c', body)

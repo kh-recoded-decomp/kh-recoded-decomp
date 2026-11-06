@@ -13,7 +13,7 @@ typedef struct SceneSystemClassDescriptor {
 
 extern SceneStepFn InitSceneSystem(void);
 extern void PanelState_NoOpE(void);
-extern u8 data_02060394[];
+extern u8 gEngineHeapReferences[];
 
 /* Obj_Construct copies the IDs, allocates work, and calls initialize. */
 SceneSystemClassDescriptor gSceneSystemClassDescriptor = {
@@ -21,5 +21,5 @@ SceneSystemClassDescriptor gSceneSystemClassDescriptor = {
     InitSceneSystem,
     PanelState_NoOpE,
     8,
-    data_02060394
+    gEngineHeapReferences
 };

@@ -1,3 +1,4 @@
+#define data_02060500 gPadPressedStorage
 #define BeginPickerFadeOut_020cf518 BeginPickerFadeOut
 #define FillBackgroundTileRectangle_02017adc NNS_G2dMapScrToCharText
 #define FindWidgetById_020b90a4 FindWidgetById

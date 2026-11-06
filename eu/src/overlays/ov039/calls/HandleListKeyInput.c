@@ -1,6 +1,6 @@
 #define HandleListKeyInput_020bdc28 HandleListKeyInput
 #define PlaySoundEffect_0204d924 PlaySoundEffect
 #define func_ov039_020be138 RefreshScrollListLayout
-#define g_padHeld_020604fc data_020604fc
-#define g_padTrigger_02060500 data_02060500
+#define g_padHeld_020604fc gPadHeldAndPrevious
+#define g_padTrigger_02060500 gPadPressedStorage
 #include "src/ov039/input/HandleListKeyInput_020bdc28.c"

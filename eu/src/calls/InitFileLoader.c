@@ -1,3 +1,5 @@
+#define data_020569c8 gVBlankCallbackExecutionFlags
+#define data_02060394 gEngineHeapReferences
 #define data_020605a4 gFileLoaderThreadStorage
 #define data_02060664 gFileLoaderMessages
 #define AllocFromHeapOrDefaultEx_0202a210 AllocFromHeapOrDefaultEx

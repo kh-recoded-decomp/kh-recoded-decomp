@@ -1,3 +1,4 @@
+#define data_02060500 gPadPressedStorage
 #define DispatchOverlayEventPairA_020bd0fc DispatchOverlayEventPairA
 #define DispatchOverlayEventPairB_020bd264 DispatchOverlayEventPairB
 #define DispatchOverlayEventPairC_020bd3cc DispatchOverlayEventPairC

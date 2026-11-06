@@ -1,5 +1,5 @@
 #define HandleEntryConfirmInput_020c2064 HandleEntryConfirmInput
-#define _data_02060500 data_02060500
+#define _data_02060500 gPadPressedStorage
 #define _data_ov091_020c373c gReportTopPopupWork
 #define func_0204d924 PlaySoundEffect
 #define func_ov039_020bca00 GetMenuInputState

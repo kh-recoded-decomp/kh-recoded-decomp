@@ -19,8 +19,8 @@ typedef struct ShortcutSettings {
 } ShortcutSettings;
 
 extern ShortcutSettings *data_0205fe0c;
-extern u16 data_02060500;
-extern u16 data_020604fc;
+extern u16 gPadPressedStorage;
+extern u16 gPadHeldAndPrevious;
 extern BOOL TryEnterFieldMenuState3(void);
 extern BOOL TryCycleFieldMenuCursor(void);
 extern int GetFieldMenuListMode(void);
@@ -61,26 +61,26 @@ void HandleCommandMenuShortcuts(BOOL canSwitchMode)
         previous = next;
         next = swap;
     }
-    if (data_02060500 & modifier) {
+    if (gPadPressedStorage & modifier) {
         work->stateTimer = 1;
         return;
     }
-    if (data_020604fc & modifier) {
-        if (data_02060500 & next) {
+    if (gPadHeldAndPrevious & modifier) {
+        if (gPadPressedStorage & next) {
             work->stateTimer = 2;
             if (TryEnterFieldMenuState3()) {
                 PlayStageSound(0, 0, FALSE);
             }
             return;
         }
-        if (data_02060500 & previous) {
+        if (gPadPressedStorage & previous) {
             work->stateTimer = 2;
             if (TryCycleFieldMenuCursor()) {
                 PlayStageSound(0, 0, FALSE);
             }
             return;
         }
-        if (canSwitchMode && GetFieldMenuListMode() == 0 && (data_02060500 & openMode)) {
+        if (canSwitchMode && GetFieldMenuListMode() == 0 && (gPadPressedStorage & openMode)) {
             SetFieldMenuMode_02078360(1, 1);
             if (GetFieldMenuListMode() == 1) {
                 work->stateTimer = 2;
@@ -88,7 +88,7 @@ void HandleCommandMenuShortcuts(BOOL canSwitchMode)
             }
             return;
         }
-        if (canSwitchMode && GetFieldMenuListMode() == 1 && (data_02060500 & closeMode)) {
+        if (canSwitchMode && GetFieldMenuListMode() == 1 && (gPadPressedStorage & closeMode)) {
             SetFieldMenuMode_02078360(0, 1);
             if (GetFieldMenuListMode() == 0) {
                 work->stateTimer = 2;

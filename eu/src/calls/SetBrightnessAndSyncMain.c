@@ -1,3 +1,4 @@
+#define data_02060388 gPendingMasterBrightnessMask
 #define ClampValueByMode_02029e28 ClampValueByMode
 #define SetBrightnessAndSyncMain_02029e7c SetBrightnessAndSyncMain
 #define func_02006748 GXx_SetMasterBrightness_

@@ -1,3 +1,4 @@
+#define data_027e00a0 gIrqWaitThreadQueue
 #include "eu/libs/nitro/os/os_interrupt_state.h"
 
 #define OS_WaitIrq_02001bf8 OS_WaitIrq
