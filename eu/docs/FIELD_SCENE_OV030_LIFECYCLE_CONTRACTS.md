@@ -129,7 +129,7 @@ Native source view: preserve the stated result and the qualifications below. Thi
 Demonstrated behavior and evidence:
 
 - Obtains current event-context record; copies its signed bytes1and3 into the session transition-byte pair, sets scene flag2 and returns state7. Source: [eu/src/overlays/ov030/calls/Ov030SceneState_StoreEventRecordBytes.c:1-22](../src/overlays/ov030/calls/Ov030SceneState_StoreEventRecordBytes.c).
-- Returns current EventContext+0xe8 pointer, or0 for absent owner. Source: [eu/src/overlays/ov001/calls/func_ov001_0206e644.c:1-16](../src/overlays/ov001/calls/func_ov001_0206e644.c).
+- Returns current EventContext+0xe8 pointer, or0 for absent owner. Source: [GetPendingWorldEntryData.c](../src/overlays/ov001/calls/GetPendingWorldEntryData.c).
 - EU wrapper identifies signed byte1 getter. Source: [eu/src/overlays/ov001/auto/GetSignedByteAt1.c:1-2](../src/overlays/ov001/auto/GetSignedByteAt1.c).
 - Reads signed byte at input+1. Source: [src/ov001/shared_engine/GetSignedByteAt1_02067f9c.c:1-4](../../src/ov001/shared_engine/GetSignedByteAt1_02067f9c.c).
 - Reads signed byte at input+3. Source: [src/ov001/shared_engine/GetSignedByteAt3_02067f8c.c:1-4](../../src/ov001/shared_engine/GetSignedByteAt3_02067f8c.c).

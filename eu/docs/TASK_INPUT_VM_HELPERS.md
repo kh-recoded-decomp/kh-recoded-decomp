@@ -187,7 +187,7 @@ linked modules to retain their byte-exact hashes. Names add no C or DATA credit.
 
 Evidence references for operations beyond the task core:
 
-- `LockSoundCommandMutex`: `eu/src/calls/func_0200eddc.c` (1); `src/arm9/library_nitro_snd/func_0200ed90.c` (62); `eu/libs/nitro/snd/calls/SNDi_UnlockMutex.c` (1).
+- `LockSoundCommandMutex`: `eu/src/calls/LockSoundCommandMutex.c` (1); `src/arm9/library_nitro_snd/func_0200ed90.c` (62); `eu/libs/nitro/snd/calls/SNDi_UnlockMutex.c` (1).
 - `ResetPadSampleState`: `src/arm9/core_small/func_0202aba8.c` (1); `src/arm9/input_history/Pad_Sample_0202abc8.c` (3).
 - `InitKeyRepeatState`: `src/arm9/runtime/func_0204f58c.c` (1); `eu/src/calls/UpdateKeyRepeat.c` (3).
 - `StartTouchSamplingRing`: `src/arm9/runtime/func_0202b5d4.c` (1); `src/arm9/library_nitro_spi/TP_RequestAutoSamplingStartAsync_0200fdd8.c` (3); `eu/src/data/bss/Bss_main_02060534.c` (1).

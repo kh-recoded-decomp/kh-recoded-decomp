@@ -465,7 +465,7 @@ Additional producer/consumer sources include:
 - `src/overlays/ov001/calls/UpdateStageEvent.c` and
   `src/overlays/ov001/data/tables/gStageScriptStateHandlers.c`: same-owner word-0
   handler dispatch and nonzero-result state change, with EU table at 0x020a0298.
-- `src/overlays/ov001/calls/func_ov001_0207a8fc.c`: native map gate is loaded
+- `src/overlays/ov001/calls/IsPanelMapUpdateAllowed.c`: native map gate is loaded
   mode 0 and phase 3/4/6, rather than the list's loaded mode 2.
 - `src/overlays/ov023/calls/LoadMenuBackground.c`: copies exactly 12 bytes from
   the highlight palette getter into palette offset +0x1c2 before upload.

@@ -90,8 +90,10 @@ different compiler settings and is not an equivalent control automatically.
 Check affected functions and DATA layouts, relocation targets/types/addends,
 and every complete linked module with the existing tools. Keep library source
 and documentation receipts current through their official verifiers. The
-known [standalone relocation baseline](DATA_NATIVE_RELOCATION_BASELINE.md)
-remains explicit alongside the full 108-module gate.
+[standalone relocation history](DATA_NATIVE_RELOCATION_BASELINE.md) records
+21 former discrepancies, all now closed by fresh official function checks.
+Keep both the per-function checks and the full 108-module gate when validating
+future moves.
 
 ## References into a resident overlay
 
