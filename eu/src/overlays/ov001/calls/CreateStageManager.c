@@ -15,7 +15,7 @@
 #define data_ov001_020a0404 sOv001_EnEfEfP2f_020a0424
 #define func_ov001_020998ac HandleActorLifecycleEvent
 #define func_ov001_020998cc HandleCommandKind1
-#define func_ov001_02099acc func_ov001_02099af4
+#define func_ov001_02099acc StageManager_IdleTaskUpdate
 #if defined(__MWERKS__)
 #include "../src/ov001/shared_engine/CreateStageManager_02099628.c"
 #else

@@ -1,3 +1,4 @@
+#define func_ov001_02066e70 IsSubScene9RequestBusy
 #define FindTableEntryById_020a7c38 FindTableEntryById
 #define Handle_WritePayloadIfLive_0204db9c Handle_WritePayloadIfLive
 #define PlayCueGroupSounds_020a7fa4 PlayCueGroupSounds

@@ -37,7 +37,7 @@ extern void ScriptCmd_SetMenuItemKind(void);
 extern void ScriptCmd_SetSceneSlotDrawingEnabled(void);
 extern void ScriptOp_SetVector4(void); /* ScriptOp_SetVector4 */
 extern void ScriptCmd_RequestSubScene9(void); /* ScriptCmd_RequestSubScene9 */
-extern void func_ov001_020655c4(void); /* IsSceneState0 */
+extern void ScriptCmd_WaitForSubScene9RequestReady(void); /* IsSceneState0 */
 extern void ScriptCmd_ResetStageGroupRowsAndRestoreDefault(void); /* ScriptCmd_EnterPhase */
 extern void ScriptCmd_HandleFieldPanelCommand(void); /* return 1; ScriptVm_ReadOperandInt */
 extern void ScriptCmd_SetPartyEntryUpdatesEnabled(void); /* ScriptCmd_SetPartyEntryUpdatesEnabled */
@@ -74,8 +74,8 @@ extern void ScriptCmd_SaveCurrentSpawnPoint(void); /* return 1; ScriptVm_ReadOpe
 extern void ScriptCmd_SaveCheckpoint(void);
 extern void ScriptCmd_SetMenuHighlight(void); /* return 1; ScriptVm_ReadOperandInt */
 extern void ScriptCmd_ForwardSubModeStart(void); /* FS_UnloadOverlayImage */
-extern void func_ov001_02065a70(void);
-extern void func_ov001_02065a94(void);
+extern void ScriptCmd_BeginCommonFieldMessageSpriteWait(void);
+extern void ScriptCmd_AdvanceCommonFieldMessageSpriteWait(void);
 extern void ScriptCmd_ConfigureEventSlot(void); /* ScriptCmd_ConfigureEventSlot */
 extern void ScriptCmd_SpawnRewardAtActor(void); /* ScriptCmd_SpawnRewardAtActor */
 extern void ScriptCmd_WaitForFieldEffectsThenSuspend(void);
@@ -175,7 +175,7 @@ void (*gFieldScriptCommandHandlers[190])(void) = {
     ScriptOp_SetVector4, /* ScriptOp_SetVector4 */
     NULL,
     ScriptCmd_RequestSubScene9, /* ScriptCmd_RequestSubScene9 */
-    func_ov001_020655c4, /* IsSceneState0 */
+    ScriptCmd_WaitForSubScene9RequestReady, /* IsSceneState0 */
     ScriptCmd_ResetStageGroupRowsAndRestoreDefault, /* ScriptCmd_EnterPhase */
     NULL,
     ScriptCmd_HandleFieldPanelCommand, /* return 1; ScriptVm_ReadOperandInt */
@@ -244,8 +244,8 @@ void (*gFieldScriptCommandHandlers[190])(void) = {
     NULL,
     ScriptCmd_ForwardSubModeStart, /* FS_UnloadOverlayImage */
     NULL,
-    func_ov001_02065a70,
-    func_ov001_02065a94,
+    ScriptCmd_BeginCommonFieldMessageSpriteWait,
+    ScriptCmd_AdvanceCommonFieldMessageSpriteWait,
     ScriptCmd_ConfigureEventSlot, /* ScriptCmd_ConfigureEventSlot */
     NULL,
     ScriptCmd_SpawnRewardAtActor, /* ScriptCmd_SpawnRewardAtActor */

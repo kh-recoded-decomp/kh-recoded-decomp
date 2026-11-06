@@ -1,10 +1,10 @@
 #include "nitro/types.h"
 
-extern u32 func_ov001_0206cb20();
+extern u32 IsCommonFieldMessageSpriteActive();
 extern u32 SetFieldEntriesPaused();
 
-u32 func_ov001_02065a70(s32 entry) {
-    s32 result = func_ov001_0206cb20();
+u32 ScriptCmd_BeginCommonFieldMessageSpriteWait(s32 entry) {
+    s32 result = IsCommonFieldMessageSpriteActive();
     if (result != 0) {
         return 1;
     }

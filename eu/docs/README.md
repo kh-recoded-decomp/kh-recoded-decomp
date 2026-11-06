@@ -108,10 +108,10 @@ independent C allocations.
 
 ## Unresolved function contracts
 
-96 matched C functions retain numeric names. Every one has a mechanical
+89 matched C functions retain numeric names. Every one has a mechanical
 contract, a specific semantic blocker and a next useful proof:
 
-- [70 common field functions](EU_PENDING_FIELD_FUNCTIONS.md).
+- [63 common field functions](EU_PENDING_FIELD_FUNCTIONS.md).
 - [17 engine, script and scene functions](EU_PENDING_ENGINE_SCENE_FUNCTIONS.md).
 - [9 background/camera/other callbacks](EU_PENDING_CALLBACK_FUNCTIONS.md).
 
@@ -143,3 +143,5 @@ describes the platform adapters and validation expected at handoff.
 The [current board-node code](CURRENT_BOARD_NODE_CODE.md) connects the shared session buffer to its constructors, per-node writers and signed getter.
 
 The [field HP/camera script gate](FIELD_HP_CAMERA_SCRIPT_GATE.md) documents opcode 2/0x2e, its exact wait condition and HP-dependent flag effects without assigning an unproved command purpose.
+
+[Stage idle callbacks](STAGE_IDLE_CALLBACK_CONTRACTS.md), [SubScene9 request availability](SUBSCENE9_REQUEST_CONTRACT.md) and [common field message sprites](COMMON_FIELD_MESSAGE_SPRITE_WAIT.md) document their distinct owners and scheduling results.

@@ -12,7 +12,7 @@ typedef struct RetryContext {
 
 extern void ConfigureChannelSlot(int a, int b, int c);
 
-BOOL func_ov001_02065a94(RetryContext *context)
+BOOL ScriptCmd_AdvanceCommonFieldMessageSpriteWait(RetryContext *context)
 {
     ConfigureChannelSlot(0, 1, 0);
     context->counter->count++;

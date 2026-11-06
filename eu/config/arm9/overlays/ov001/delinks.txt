@@ -700,7 +700,7 @@ src/overlays/ov001/calls/ScriptCmd_RequestSubScene9.c:
     complete
     .text       start:0x020655a8 end:0x020655c2
 
-src/overlays/ov001/calls/func_ov001_020655c4.c:
+src/overlays/ov001/calls/ScriptCmd_WaitForSubScene9RequestReady.c:
     complete
     .text       start:0x020655c4 end:0x020655d6
 
@@ -848,11 +848,11 @@ src/overlays/ov001/calls/ScriptCmd_ForwardSubModeStart.c:
     complete
     .text       start:0x02065a64 end:0x02065a6e
 
-src/overlays/ov001/calls/func_ov001_02065a70.c:
+src/overlays/ov001/calls/ScriptCmd_BeginCommonFieldMessageSpriteWait.c:
     complete
     .text       start:0x02065a70 end:0x02065a94
 
-src/overlays/ov001/calls/func_ov001_02065a94.c:
+src/overlays/ov001/calls/ScriptCmd_AdvanceCommonFieldMessageSpriteWait.c:
     complete
     .text       start:0x02065a94 end:0x02065ac4
 
@@ -1100,7 +1100,7 @@ src/overlays/ov001/calls/SubScene9_Request.c:
     complete
     .text       start:0x02066e50 end:0x02066e70
 
-src/overlays/ov001/calls/func_ov001_02066e70.c:
+src/overlays/ov001/calls/IsSubScene9RequestBusy.c:
     complete
     .text       start:0x02066e70 end:0x02066e8c
 
@@ -2316,7 +2316,7 @@ src/overlays/ov001/calls/RemapIndex.c:
     complete
     .text       start:0x0206cad8 end:0x0206cb20
 
-src/overlays/ov001/calls/func_ov001_0206cb20.c:
+src/overlays/ov001/calls/IsCommonFieldMessageSpriteActive.c:
     complete
     .text       start:0x0206cb20 end:0x0206cb38
 
@@ -7612,7 +7612,7 @@ src/overlays/ov001/calls/RefreshStageEventDisplay_02093330.c:
     complete
     .text       start:0x02093358 end:0x02093604
 
-src/overlays/ov001/auto/func_ov001_02093604.c:
+src/overlays/ov001/auto/StageEventState_Idle.c:
     complete
     .text       start:0x02093604 end:0x02093608
 
@@ -7988,7 +7988,7 @@ src/overlays/ov001/calls/DrawVisibleStageQuads.c:
     complete
     .text       start:0x02099aac end:0x02099af4
 
-src/overlays/ov001/auto/func_ov001_02099af4.c:
+src/overlays/ov001/auto/StageManager_IdleTaskUpdate.c:
     complete
     .text       start:0x02099af4 end:0x02099af8
 

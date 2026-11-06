@@ -1,7 +1,7 @@
 #include "nitro/types.h"
 #include "src/overlays/ov001/StageManagerFlags.h"
 
-extern void func_ov001_02093604(void); /* FSi_CloseFileCommand */
+extern void StageEventState_Idle(void); /* Zero retains the current handler state. */
 extern void StartGroupStageScript(void); /* StartGroupStageScript */
 extern void UpdateProximityTrigger(void); /* UpdateProximityTrigger */
 extern void RunLeaderScriptSlotCommand(void); /* RunLeaderScriptSlotCommand */
@@ -14,7 +14,7 @@ extern void RunGateFadeSequence(void); /* RunGateFadeSequence */
 
 void (*gStageScriptStateHandlers[12])(void) = {
     NULL,
-    func_ov001_02093604, /* FSi_CloseFileCommand */
+    StageEventState_Idle, /* No state transition. */
     StartGroupStageScript, /* StartGroupStageScript */
     UpdateProximityTrigger, /* UpdateProximityTrigger */
     RunLeaderScriptSlotCommand, /* RunLeaderScriptSlotCommand */

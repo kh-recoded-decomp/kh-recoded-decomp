@@ -904,3 +904,7 @@ The former ov001:02063c94 / 0206550c helpers are RestorePrimaryActorHealth and S
 ## Field HP/camera script-gate follow-up
 
 The still-numeric ov001:020656d4 is both run and resume for group2/0x2e. [Its exact contract](FIELD_HP_CAMERA_SCRIPT_GATE.md) resolves the getter as fx32 VEC_Mag(camera+0x11c), separates the HP-zero side effects from its return condition and traces the flag consumers. The role of the complete state-4 wait remains open; no new function name or code change is made. Five original bodies and both table words agree with the ROM; all 108 last-validated module hashes remain unchanged.
+
+## Stage idle, subscene requests and common field message sprites
+
+Seven retained numeric helpers are named from their actual native owners, writers and result consumers. [Stage idle callbacks](STAGE_IDLE_CALLBACK_CONTRACTS.md) distinguish task-callback retention from event-state retention. [SubScene9 request availability](SUBSCENE9_REQUEST_CONTRACT.md) proves request rejection/readiness without assigning state3 a guessed lifecycle. [The common message-sprite pair](COMMON_FIELD_MESSAGE_SPRITE_WAIT.md) uses a projected/drawn sprite and counts 15 resume invocations; its scratch counter is caller-supplied extra context, not a nested VM. Ten individual checks, 12 complete objects and all 108 freshly linked modules retain their bytes and hashes.

@@ -1,0 +1,3 @@
+#define Game_PollSceneAlive IsSubScene9RequestBusy
+#define IsSceneState0_020655c4 ScriptCmd_WaitForSubScene9RequestReady
+#include "src/ov001/shared_engine/IsSceneState0_020655c4.c"
