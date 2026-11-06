@@ -950,3 +950,7 @@ Eleven numeric functions follow native presentation guards, tracker channels, ma
 ## Default actor methods, body sound and field camera requests
 
 Eleven numeric identities and one unsupported dialog-timer name now follow actual descriptor invokers, periodic body-sound consumers, session phase dispatch, VM run flags and bank-qualified camera backends. [The system index](README.md) links the contracts. Empty defaults retain their native erased arguments; request bytes remain signed on read and apply later through backend-specific behavior. The actor-scene handoff explicitly keeps field entries paused. All 49 affected official checks and 51 complete-object comparisons pass, with all 108 freshly linked module hashes unchanged.
+
+## Default stage-actor descriptor type
+
+The former gNearestEntrySyncHandlers is gDefaultStageActorDescriptor: one 52-byte fallback descriptor, with four scalar words and nine method words. [The contract](DEFAULT_STAGE_ACTOR_DESCRIPTOR.md) links its actual constructor and MAIN update/draw invokers, corrects the +0x1c member to draw and records native size/offset assertions. Both affected official function checks, all 18 complete-object comparisons and a fresh 108-module gate pass with unchanged native bytes and relocation values. The numeric C/DATA inventories remain 37/92; this corrects an already named object rather than claiming new recovered bytes.

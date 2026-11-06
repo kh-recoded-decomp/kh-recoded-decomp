@@ -1,22 +1,21 @@
-#include "nitro/types.h"
+#include "src/overlays/ov001/StageActorTables.h"
 
-extern void StageActor_DefaultInitNoop(void); /* _fp_init */
-extern void SyncNearestEntryPosition(void); /* SyncNearestEntryPosition */
-extern void StageActor_DefaultUpdateNoop(void); /* _fp_init */
-extern void StageActor_DefaultDrawNoop(void); /* _fp_init */
+/* Descriptor methods retain their native signatures; only addresses live here. */
+extern void StageActor_DefaultInitNoop(void);
+extern void SyncNearestEntryPosition();
+extern void StageActor_DefaultUpdateNoop(void);
+extern void StageActor_DefaultDrawNoop(void);
 
-void (*gNearestEntrySyncHandlers[13])(void) = {
-    NULL,
-    NULL,
-    NULL,
-    NULL,
-    StageActor_DefaultInitNoop, /* _fp_init */
-    SyncNearestEntryPosition, /* SyncNearestEntryPosition */
-    StageActor_DefaultUpdateNoop, /* _fp_init */
-    StageActor_DefaultDrawNoop, /* _fp_init */
-    NULL,
-    NULL,
-    NULL,
-    NULL,
-    NULL,
+typedef char DefaultStageDescriptorSizeCheck[(sizeof(StageActorDescriptor) == 0x34) ? 1 : -1];
+typedef char DefaultStageDescriptorInitOffsetCheck[((u32)&((StageActorDescriptor *)0)->initialize == 0x10) ? 1 : -1];
+typedef char DefaultStageDescriptorUpdateOffsetCheck[((u32)&((StageActorDescriptor *)0)->update == 0x18) ? 1 : -1];
+typedef char DefaultStageDescriptorDrawOffsetCheck[((u32)&((StageActorDescriptor *)0)->draw == 0x1c) ? 1 : -1];
+
+StageActorDescriptor gDefaultStageActorDescriptor = {
+    0, 0, 0, 0,
+    (void *)StageActor_DefaultInitNoop,
+    (void *)SyncNearestEntryPosition,
+    (void *)StageActor_DefaultUpdateNoop,
+    (void *)StageActor_DefaultDrawNoop,
+    NULL, NULL, NULL, NULL, NULL
 };

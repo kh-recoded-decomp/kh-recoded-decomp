@@ -14,7 +14,7 @@ typedef struct StageActorDescriptor {
     void *initialize;
     void *placeAtAnchor;
     void *update;
-    void *postUpdate;
+    void *draw;
     void *sweepMove;
     void *callback24;
     void *callback28;
@@ -38,6 +38,7 @@ typedef struct StageHeapConfig {
 
 extern char gDefaultAttachPointName[4];
 extern ActorControllerStateHandler gActorControllerStateHandlers[5];
+extern StageActorDescriptor gDefaultStageActorDescriptor;
 extern StageActorDescriptor gSpawnedActorDescriptor;
 extern StageActorDescriptor gStageObjectActorDescriptor;
 extern StageManagerTaskDescriptor gStageManagerTaskDescriptor;

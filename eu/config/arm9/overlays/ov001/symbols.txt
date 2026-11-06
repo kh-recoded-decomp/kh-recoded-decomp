@@ -2362,7 +2362,7 @@ gGroupEntries kind:data(any) addr:0x0209f62c
 data_ov001_020a0101 kind:data(any) addr:0x020a0101
 gDefaultActorAnimation kind:data(any) addr:0x020a0250
 gActorWorldUp kind:data(any) addr:0x020a0254
-gNearestEntrySyncHandlers kind:data(any) addr:0x020a0260
+gDefaultStageActorDescriptor kind:data(any) addr:0x020a0260
 sOv001_Bip_020a0294 kind:data(any) addr:0x020a0294
 gStageScriptStateHandlers kind:data(any) addr:0x020a0298
 gStageObjectActorDescriptor kind:data(any) addr:0x020a02c8

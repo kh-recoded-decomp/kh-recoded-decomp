@@ -1,6 +1,6 @@
 #define ActorEntry_Init_020357d8 ActorEntry_Init
 #define InitStageObjectActor_02090d98 InitStageObjectActor
-#define data_ov001_020a0240 gNearestEntrySyncHandlers
+#define data_ov001_020a0240 gDefaultStageActorDescriptor
 #define func_ov001_0208f658 CanActorReactToSource
 #define func_ov001_0209beb4 InitStageObjectModel
 #define func_ov001_0209c0a0 GetStageObjectRecord

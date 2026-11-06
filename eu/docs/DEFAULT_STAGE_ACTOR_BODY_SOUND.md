@@ -1,6 +1,6 @@
 # Default stage-actor hooks and periodic body sound
 
-`StageActor_DefaultInitNoop` (ov001:0208f6e0), `StageActor_DefaultUpdateNoop` (0208f708) and `StageActor_DefaultDrawNoop` (0208f70c) belong to the fallback descriptor selected by CreateStageActor when its descriptor argument is NULL. Its existing DATA name, gNearestEntrySyncHandlers, is misleading: the 52-byte object at 020a0260 is a descriptor with four scalar words and nine method words, not a homogeneous handler-index table. Its declaration and DATA name are handled separately from this function-name block.
+`StageActor_DefaultInitNoop` (ov001:0208f6e0), `StageActor_DefaultUpdateNoop` (0208f708) and `StageActor_DefaultDrawNoop` (0208f70c) belong to the fallback descriptor selected by CreateStageActor when its descriptor argument is NULL. The 52-byte object at 020a0260 is now gDefaultStageActorDescriptor, correcting the former gNearestEntrySyncHandlers identity. [Its typed definition](DEFAULT_STAGE_ACTOR_DESCRIPTOR.md) preserves four scalar words and nine method words; it is not a homogeneous handler-index table.
 
 The constructor invokes descriptor+0x10 with the actor in R0, copies +0x18 to actor-slot+0x1cc, and copies +0x1c to slot+0x1c8. The actual MAIN invokers establish the latter channels: ActorRegistry_ForEachCallback invokes +0x1cc as (slot, argument); UpdateActorSlotsAndBillboards invokes +0x1c8 as (slot, 0/1) during drawing passes. Historical postUpdate or private field labels are not evidence of a different role. Other descriptors can perform game logic on the draw channel.
 

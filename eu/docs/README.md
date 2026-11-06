@@ -159,3 +159,5 @@ The [field HP/camera script gate](FIELD_HP_CAMERA_SCRIPT_GATE.md) documents opco
 [Field menu/message operations](FIELD_MENU_MESSAGE_OPERATIONS.md), [controller release states](ACTOR_CONTROLLER_RELEASE_STATES.md) and [entry-pool drawing and actor-owner links](ENTRY_POOL_DRAW_OWNER_CONTRACTS.md) document actual callers, return consumers and lifecycle boundaries.
 
 [Default actor hooks and body sound](DEFAULT_STAGE_ACTOR_BODY_SOUND.md), [session phase and run mask](FIELD_SESSION_PHASE_RUN_MASK.md), [stored camera requests](FIELD_CAMERA_MODE_REQUEST.md) and [the actor-scene handoff](ACTOR_SCENE_FIELD_HANDOFF.md) distinguish native scheduling, deferred application and the still-paused field entries.
+
+[The default stage-actor descriptor](DEFAULT_STAGE_ACTOR_DESCRIPTOR.md) now uses its proved 52-byte native structure and init/update/draw channels, correcting the former handler-array name without new storage.
