@@ -18,7 +18,7 @@
 #define RetainOrInitializeSharedRecord_0202c80c SND_RegisterSeq
 #define SetSceneEntryAnimation_020c278c SetSceneEntryAnimation
 #define SpawnStageEntryActor_020c18cc SpawnStageEntryActor
-#define data_ov041_020cf740 data_ov041_020cf760
+#define data_ov041_020cf740 gStageSpawnActorRootNodeName
 #define data_ov041_020cf9d8 sOv041_RpgPlHeHeP2_020cf9f8
 #define data_ov041_020cf9e8 sOv041_RpgPlClClP2_020cfa08
 #define data_ov041_020cf9f8 sOv041_Root_020cfa18

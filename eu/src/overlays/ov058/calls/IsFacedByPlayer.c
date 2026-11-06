@@ -6,6 +6,6 @@
 #define func_01ffa0f4 VEC_Distance
 #define func_ov052_020ceb54 GetActorModelPosition
 #define func_ov052_020ceb7c GetLinkedAngleOffset
-#define g_player_020d8a20 data_ov058_020d8a40
+#define g_player_020d8a20 gOverlay058EntryZeroActor
 #define func_01ffaff4 VEC_NormalizeLength
 #include "src/ov058/unclassified_helpers/IsFacedByPlayer_020d46d8.c"

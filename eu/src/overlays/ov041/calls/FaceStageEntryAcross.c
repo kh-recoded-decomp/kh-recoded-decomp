@@ -1,11 +1,11 @@
 #include "nitro/types.h"
 #include "src/overlays/ov041/StageEntryRender.h"
 
-extern const u8 data_ov041_020cf7a0[];
+extern const u8 gStageEntryKindTiltValues[];
 
 /*
  * Turns a waiting entry to face the other side, unless its facing is locked: enemies by the angle their kind
- * has in data_ov041_020cf7a0 (degrees off 90), players to 0xc004. Clears entry flag 4.
+ * has in gStageEntryKindTiltValues (degrees off 90), players to 0xc004. Clears entry flag 4.
  */
 void FaceStageEntryAcross(u8 entryIndex)
 {
@@ -16,7 +16,7 @@ void FaceStageEntryAcross(u8 entryIndex)
         return;
     }
     if (entry->flags & STAGE_ENTRY_ENEMY) {
-        yaw = (90 - data_ov041_020cf7a0[entry->kind]) * 0xb6;
+        yaw = (90 - gStageEntryKindTiltValues[entry->kind]) * 0xb6;
         if (!(entry->slot.flags & STAGE_SLOT_FACING_LOCKED)) {
             entry->slot.node.yaw = yaw;
             entry->slot.node.flags |= STAGE_MODEL_USE_YAW;

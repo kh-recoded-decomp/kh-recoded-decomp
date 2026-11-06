@@ -3,6 +3,6 @@
 #define FX_Div_01ff9c84 FX_Div
 #define RunAreaBlastHitScan_020d7d20 RunAreaBlastHitScan
 #define UpdateBlastFadeSequence_020d72c4 UpdateBlastFadeSequence
-#define data_ov058_020d8a24 data_ov058_020d8a44
+#define data_ov058_020d8a24 gOverlay058SceneControlHead
 #define func_ov058_020d7404 ClearStageEventsAndPlayerFlags
 #include "src/ov058/unclassified_helpers/UpdateBlastFadeSequence_020d72c4.c"

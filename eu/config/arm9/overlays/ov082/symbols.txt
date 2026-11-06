@@ -7,6 +7,6 @@ ShutdownOv082Screen kind:function(arm,size=0x70) addr:0x020bf320
 UpdateOv082EntryList kind:function(arm,size=0xd8) addr:0x020bf390
 StepEntryListCursor kind:function(arm,size=0x1f8) addr:0x020bf468
 GetOv082SelectedSlot kind:function(arm,size=0x14) addr:0x020bf660
-data_ov082_020bf674 kind:data(any) addr:0x020bf674
+gOverlay082EntryListWindowStyle kind:data(any) addr:0x020bf674
 gOverlay082EntryListDescriptor kind:data(any) addr:0x020bf6a0 ambiguous
 gOv082State kind:bss addr:0x020bf6e0

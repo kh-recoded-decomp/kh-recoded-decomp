@@ -102,3 +102,22 @@ python tools/verify_idx.py src/overlays/ov015/calls/InstallResultPanelCallbacks.
 
 All affected production object layouts and instructions remain unchanged, and
 the fresh full-module gate passes all 108 modules with identical hashes.
+
+## Layout and stage-storage block
+
+The 86-symbol layout/stage block checks 102 affected functions. 100 standalone
+checks pass; the same-path original-source controls reproduce two verdicts.
+`SpawnStageEntryActor` retains the four previously documented callback
+relocations absent from its original map. `ModelRenderCallbackKindC`
+(ov041:020c2690, Thumb, 72 bytes) emits a call relocation at +0x38 to
+`NNS_G3dGetCurrentMtx` that its original map omits. The native instruction at
+020c26c8 is `57 f7 24 eb`, a BLX to the existing ARM function 02019d14.
+Its separate DATA relocation at +0x44 is present in both maps.
+
+```sh
+python tools/verify_idx.py src/overlays/ov041/calls/ModelRenderCallbackKindC.c ModelRenderCallbackKindC --thumb
+```
+
+The missing call classification needs a separate metadata repair based on the
+native instruction. This naming block preserves all 163 complete affected
+objects and all 108 freshly linked module hashes.

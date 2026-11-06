@@ -81,14 +81,14 @@ void EntryActionCombo(u8 entryIndex)
     VecFx32 backEnd;
 
     frame = GetEntryAnimationFrame(entry);
-    HandleTimedPressWindow(entry, action->comboAnimations[data_ov041_020cff48.comboStage],
-                           FRAME_TO_FX32(action->comboEndFrames[data_ov041_020cff48.comboStage]));
+    HandleTimedPressWindow(entry, action->comboAnimations[gStageEntryRenderCapturePrefix.comboStage],
+                           FRAME_TO_FX32(action->comboEndFrames[gStageEntryRenderCapturePrefix.comboStage]));
     switch (entry->stateStep) {
     case 0:
-        data_ov041_020cff48.comboStage = 0;
-        data_ov041_020cff48.comboHit = 1;
+        gStageEntryRenderCapturePrefix.comboStage = 0;
+        gStageEntryRenderCapturePrefix.comboHit = 1;
         ReleaseEntryStatusItem(entry->index);
-        data_ov041_020cff48.comboLength = action->maxRepeats - 1;
+        gStageEntryRenderCapturePrefix.comboLength = action->maxRepeats - 1;
         entry->stateStep++;
     case 1:
         ChooseEntryMainTarget(entry);
@@ -97,7 +97,7 @@ void EntryActionCombo(u8 entryIndex)
             again = TRUE;
             break;
         }
-        SetSceneEntryAnimation(entry, action->comboAnimations[data_ov041_020cff48.comboStage], 1, 1);
+        SetSceneEntryAnimation(entry, action->comboAnimations[gStageEntryRenderCapturePrefix.comboStage], 1, 1);
         frame = GetEntryAnimationFrame(entry);
         GetEntryMoveEnds(entry, &start, &end, TRUE);
         AimEntryPathModel(entry, &start, &end, TRUE, NULL);
@@ -125,7 +125,7 @@ void EntryActionCombo(u8 entryIndex)
         entry->stateStep++;
     case 2:
         MoveEntryAlongPath(entry, work->frameStep);
-        if (frame < FRAME_TO_FX32(action->comboEndFrames[data_ov041_020cff48.comboStage])) {
+        if (frame < FRAME_TO_FX32(action->comboEndFrames[gStageEntryRenderCapturePrefix.comboStage])) {
             break;
         }
         entry->stateStep = COMBO_HIT;
@@ -138,9 +138,9 @@ void EntryActionCombo(u8 entryIndex)
             again = TRUE;
             break;
         }
-        SetSceneEntryAnimation(entry, action->comboAnimations[data_ov041_020cff48.comboStage], 1, 1);
+        SetSceneEntryAnimation(entry, action->comboAnimations[gStageEntryRenderCapturePrefix.comboStage], 1, 1);
         frame = GetEntryAnimationFrame(entry);
-        switch (data_ov041_020cff48.comboStage) {
+        switch (gStageEntryRenderCapturePrefix.comboStage) {
         case 1:
             switch (action->comboStyle) {
             case 0:
@@ -183,7 +183,7 @@ void EntryActionCombo(u8 entryIndex)
         }
         GetEntryMoveEnds(entry, &from, &to, FALSE);
         AimEntryPathModel(entry, &from, &to, FALSE, &reach);
-        if (data_ov041_020cff48.comboStage == COMBO_FINISHER) {
+        if (gStageEntryRenderCapturePrefix.comboStage == COMBO_FINISHER) {
             PlayStageSound(gAttackVoices[0xff - entry->kind][2].seqArc, gAttackVoices[0xff - entry->kind][2].index,
                            TRUE);
         } else {
@@ -194,7 +194,7 @@ void EntryActionCombo(u8 entryIndex)
         entry->stateStep++;
     case COMBO_ATTACK + 2:
         MoveEntryAlongPath(entry, work->frameStep);
-        if (frame < FRAME_TO_FX32(action->comboEndFrames[data_ov041_020cff48.comboStage])) {
+        if (frame < FRAME_TO_FX32(action->comboEndFrames[gStageEntryRenderCapturePrefix.comboStage])) {
             break;
         }
         entry->stateStep = COMBO_HIT;
@@ -204,7 +204,7 @@ void EntryActionCombo(u8 entryIndex)
         switch (entry->kind) {
         case 0xff:
             seqArc = work->weapon.seqArc;
-            switch (data_ov041_020cff48.comboStage) {
+            switch (gStageEntryRenderCapturePrefix.comboStage) {
             case 0:
                 sound = 0;
                 break;
@@ -221,7 +221,7 @@ void EntryActionCombo(u8 entryIndex)
             break;
         case 0xfe:
             seqArc = 0x1a0;
-            switch (data_ov041_020cff48.comboStage) {
+            switch (gStageEntryRenderCapturePrefix.comboStage) {
             case 0:
                 sound = 8;
                 break;
@@ -238,7 +238,7 @@ void EntryActionCombo(u8 entryIndex)
             break;
         case 0xfd:
             seqArc = 0x1a0;
-            switch (data_ov041_020cff48.comboStage) {
+            switch (gStageEntryRenderCapturePrefix.comboStage) {
             case 0:
                 sound = 0xb;
                 break;
@@ -255,7 +255,7 @@ void EntryActionCombo(u8 entryIndex)
             break;
         }
         ComputeEntryHit(entry, &entry->hit);
-        if (data_ov041_020cff48.comboHit == data_ov041_020cff48.comboLength + 1 &&
+        if (gStageEntryRenderCapturePrefix.comboHit == gStageEntryRenderCapturePrefix.comboLength + 1 &&
             (entry->flags & STAGE_ENTRY_PRESS_PANEL)) {
             entry->flags |= STAGE_ENTRY_COMBO_FINISHED;
         }
@@ -268,22 +268,22 @@ void EntryActionCombo(u8 entryIndex)
         if (IsStageEntryFrozen(entry)) {
             break;
         }
-        if (data_ov041_020cff48.comboHit <= data_ov041_020cff48.comboLength &&
+        if (gStageEntryRenderCapturePrefix.comboHit <= gStageEntryRenderCapturePrefix.comboLength &&
             (entry->flags & STAGE_ENTRY_PRESSED_ATTACK) && CountActiveStageEntries(FALSE) != 0 &&
             !(entry->flags & STAGE_ENTRY_MISSED)) {
             entry->flags &= ~STAGE_ENTRY_PRESSED_ATTACK;
             if (work->entries[entry->mainTarget].state != STAGE_ENTRY_OUT) {
-                if (data_ov041_020cff48.comboHit == data_ov041_020cff48.comboLength) {
-                    data_ov041_020cff48.comboStage = COMBO_FINISHER;
-                } else if (data_ov041_020cff48.comboHit < data_ov041_020cff48.comboLength) {
-                    data_ov041_020cff48.comboStage = NextSharedRandom16Scaled(2) + 1;
+                if (gStageEntryRenderCapturePrefix.comboHit == gStageEntryRenderCapturePrefix.comboLength) {
+                    gStageEntryRenderCapturePrefix.comboStage = COMBO_FINISHER;
+                } else if (gStageEntryRenderCapturePrefix.comboHit < gStageEntryRenderCapturePrefix.comboLength) {
+                    gStageEntryRenderCapturePrefix.comboStage = NextSharedRandom16Scaled(2) + 1;
                 }
             } else {
-                data_ov041_020cff48.comboStage = 0;
+                gStageEntryRenderCapturePrefix.comboStage = 0;
             }
-            data_ov041_020cff48.comboHit++;
+            gStageEntryRenderCapturePrefix.comboHit++;
         } else {
-            data_ov041_020cff48.comboHit = 0;
+            gStageEntryRenderCapturePrefix.comboHit = 0;
         }
         if ((entry->flags & STAGE_ENTRY_PRESS_PANEL) && !(entry->flags & STAGE_ENTRY_MISSED) &&
             HasEntryWithClearState(entry->flags & STAGE_ENTRY_ENEMY) &&
@@ -303,7 +303,7 @@ void EntryActionCombo(u8 entryIndex)
         entry->stateStep++;
     case COMBO_HIT + 2:
         if (MatchesEitherSlotId(entry, action->comboAnimations[0])) {
-            if ((data_ov041_020cff48.comboHit == 0 || data_ov041_020cff48.comboHit == data_ov041_020cff48.comboLength) &&
+            if ((gStageEntryRenderCapturePrefix.comboHit == 0 || gStageEntryRenderCapturePrefix.comboHit == gStageEntryRenderCapturePrefix.comboLength) &&
                 frame < FRAME_TO_FX32(action->comboRecoverFrame)) {
                 break;
             }
@@ -311,9 +311,9 @@ void EntryActionCombo(u8 entryIndex)
             MoveEntryAlongPath(entry, work->frameStep);
             break;
         }
-        if (data_ov041_020cff48.comboHit != 0) {
+        if (gStageEntryRenderCapturePrefix.comboHit != 0) {
             ClearEntryActionState(entry);
-            if (data_ov041_020cff48.comboStage == 0) {
+            if (gStageEntryRenderCapturePrefix.comboStage == 0) {
                 entry->stateStep = 1;
                 entry->mainTarget = entry->index;
             } else {

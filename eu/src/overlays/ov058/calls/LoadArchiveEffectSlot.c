@@ -2,7 +2,7 @@
 #define LoadArchiveEffectSlot_020d7510 LoadArchiveEffectSlot
 #define NNSi_FndFreeFromDefaultHeap_0202a1c4 NNSi_FndFreeFromDefaultHeap
 #define RetainOrInitializeSharedRecord_0202c80c SND_RegisterSeq
-#define data_ov058_020d8a24 data_ov058_020d8a44
+#define data_ov058_020d8a24 gOverlay058SceneControlHead
 #define func_0202c48c LoadFileAllocFromHeapTail
 #define func_0202ed9c InitModelUsingTextureHeader
 #include "src/ov058/unclassified_helpers/LoadArchiveEffectSlot_020d7510.c"

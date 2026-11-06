@@ -1,4 +1,4 @@
 #define RebindEmitterSlots_020d7498 RebindEmitterSlots
 #define ResetEmitterRigOffset_020d75f8 ResetEmitterRigOffset
-#define data_ov058_020d8a2c data_ov058_020d8a4c
+#define data_ov058_020d8a2c gOverlay058SceneCenter
 #include "src/ov058/unclassified_helpers/ResetEmitterRigOffset_020d75f8.c"

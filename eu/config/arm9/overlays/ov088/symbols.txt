@@ -8,8 +8,8 @@ DestroyOverlay088CaptionLayer kind:function(arm,size=0x1c) addr:0x020bedf0
 InitializeOverlay088 kind:function(arm,size=0x2c) addr:0x020bee0c
 ShutdownOverlay088 kind:function(arm,size=0x20) addr:0x020bee38
 UpdateOverlay088CaptionLayerNoop kind:function(arm,size=0x4) addr:0x020bee58
-data_ov088_020bee5c kind:data(any) addr:0x020bee5c
-data_ov088_020bee6c kind:data(any) addr:0x020bee6c
+gOverlay088CaptionTextFrame kind:data(any) addr:0x020bee5c
+gOverlay088GridWidgetConfig kind:data(any) addr:0x020bee6c
 gOverlay088CaptionMenuDescriptor kind:data(any) addr:0x020bee80 ambiguous
-data_ov088_020beec0 kind:data(any) addr:0x020beec0
+gOverlay088GridWidgetIds kind:data(any) addr:0x020beec0
 sOv088_UiMenuStrLanguageCdSZ_020bef08 kind:data(any) addr:0x020bef08

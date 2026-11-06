@@ -13,7 +13,7 @@
 #define ResetSlotHandles_020bf0a0 ResetSlotHandles
 #define SelectFieldMenuPage_02072064 SelectFieldMenuPage
 #define SetMenuEntryHighlight_0207830c SetMenuEntryHighlight
-#define data_ov041_020cf698 data_ov041_020cf6b8
+#define data_ov041_020cf698 gStageSetupMemberSpawnOrder
 #define data_ov041_020cf91c sOv041_RpgEnpPP_020cf93c
 #define func_01ff8740 MIi_CpuClearFast
 #define func_02013b98 NNS_GfdDumpFrmPlttVramManager

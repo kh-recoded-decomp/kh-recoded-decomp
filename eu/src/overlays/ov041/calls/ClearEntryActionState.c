@@ -28,14 +28,14 @@ void ClearEntryActionState(StageEntry *entry)
         target->flags &= ~0x20000;
         target->flags &= ~0x800000;
     }
-    if (entry->kind == 0xfd && entry->actions[entry->actionIndex].kind == 5 && data_ov041_020cff48.unk00 != 3) {
+    if (entry->kind == 0xfd && entry->actions[entry->actionIndex].kind == 5 && gStageEntryRenderCapturePrefix.unk00 != 3) {
         return;
     }
     kind = entry->actions[entry->actionIndex].kind;
-    if (kind == 0 && data_ov041_020cff48.comboCount != 0) {
+    if (kind == 0 && gStageEntryRenderCapturePrefix.comboCount != 0) {
         return;
     }
-    if (kind == 3 && data_ov041_020cff48.comboCount != 0) {
+    if (kind == 3 && gStageEntryRenderCapturePrefix.comboCount != 0) {
         return;
     }
     if (kind == 6 || kind == 10) {

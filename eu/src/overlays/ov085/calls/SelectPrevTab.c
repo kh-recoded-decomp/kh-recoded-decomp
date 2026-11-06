@@ -1,6 +1,6 @@
 #define PlaySoundEffect_0204d924 PlaySoundEffect
 #define SelectPrevTab_020c1828 SelectPrevTab
-#define data_ov085_020c22c4 data_ov085_020c22e4
+#define data_ov085_020c22c4 gShopTabFilterCodes
 #define func_ov085_020c1164 MoveTabCursor
 #define func_ov085_020c14c0 FilterItemsForTab
 #define func_ov085_020c1550 ResetCursorPosition

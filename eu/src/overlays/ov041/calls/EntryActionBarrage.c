@@ -85,11 +85,11 @@ void EntryActionBarrage(u8 entryIndex)
     PlayEntryActionSound(entry, frame);
     switch (entry->stateStep) {
     case 0:
-        data_ov041_020cff48.shotsFired = 0;
-        data_ov041_020cff48.shotCount =
+        gStageEntryRenderCapturePrefix.shotsFired = 0;
+        gStageEntryRenderCapturePrefix.shotCount =
             NextSharedRandom16Scaled((action->maxRepeats - action->minRepeats) * 1000) / 1000 + action->minRepeats - 1;
         if (action->minRepeats == action->maxRepeats) {
-            data_ov041_020cff48.shotCount = action->minRepeats - 1;
+            gStageEntryRenderCapturePrefix.shotCount = action->minRepeats - 1;
         }
         entry->stateStep++;
     case 1:
@@ -131,16 +131,16 @@ void EntryActionBarrage(u8 entryIndex)
             MI_Copy48B(&entry->slot.node.rotation, &item->model.rotation);
         }
         SpawnPanelDriftPreset(2);
-        data_ov041_020cff48.shotTimer = action->shotInterval * 2;
+        gStageEntryRenderCapturePrefix.shotTimer = action->shotInterval * 2;
         entry->stateStep++;
     }
     case 4:
         if (IsStageEntryFrozen(entry)) {
             break;
         }
-        if (data_ov041_020cff48.shotTimer >= 0 && data_ov041_020cff48.shotTimer % action->shotInterval == 0 &&
-            data_ov041_020cff48.shotsFired < entry->targetCount) {
-            int target = data_ov041_020cff48.shotsFired;
+        if (gStageEntryRenderCapturePrefix.shotTimer >= 0 && gStageEntryRenderCapturePrefix.shotTimer % action->shotInterval == 0 &&
+            gStageEntryRenderCapturePrefix.shotsFired < entry->targetCount) {
+            int target = gStageEntryRenderCapturePrefix.shotsFired;
             StageResourceItem **shot = &entry->effects[target];
             VecFx32 position;
 
@@ -155,15 +155,15 @@ void EntryActionBarrage(u8 entryIndex)
                 }
             }
             start = AboveGroundOf(entry);
-            end = OverheadOf(&work->entries[entry->effects[data_ov041_020cff48.shotsFired]->variant]);
+            end = OverheadOf(&work->entries[entry->effects[gStageEntryRenderCapturePrefix.shotsFired]->variant]);
             start.x += 0x299a;
             start.z -= FX32_ONE;
             start.y = SHOT_HEIGHT;
             end.y = SHOT_HEIGHT;
-            StartStageMotion(&entry->effects[data_ov041_020cff48.shotsFired]->model.position,
-                             &entry->effects[data_ov041_020cff48.shotsFired]->model.motion, &start, &end,
+            StartStageMotion(&entry->effects[gStageEntryRenderCapturePrefix.shotsFired]->model.position,
+                             &entry->effects[gStageEntryRenderCapturePrefix.shotsFired]->model.motion, &start, &end,
                              FRAME_TO_FX32(action->effectLength - action->effectFrame), STAGE_MOTION_STEADY);
-            data_ov041_020cff48.shotsFired++;
+            gStageEntryRenderCapturePrefix.shotsFired++;
         }
         /* The frame is not needed any more: it runs through the shot slots. */
         for (frame = 0; frame < 5; frame++) {
@@ -201,8 +201,8 @@ void EntryActionBarrage(u8 entryIndex)
                 entry->effects[frame] = NULL;
             }
         }
-        if (data_ov041_020cff48.shotTimer >= 0) {
-            data_ov041_020cff48.shotTimer--;
+        if (gStageEntryRenderCapturePrefix.shotTimer >= 0) {
+            gStageEntryRenderCapturePrefix.shotTimer--;
         }
         if (!flying) {
             entry->stateStep = BARRAGE_OVER;

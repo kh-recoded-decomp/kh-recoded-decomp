@@ -1,5 +1,5 @@
 #define StartPanelTransition_020d02c0 StartPanelTransition
-#define data_ov044_020d0e80 data_ov044_020d0ea0
+#define data_ov044_020d0e80 gPanelCameraTransitionPathStorage
 #define func_ov044_020d0200 SnapshotPanelPose
 #define g_panel_020d0ea0 gPanelCameraGlobalStorage
 #include "src/ov044/panel_state/StartPanelTransition_020d02c0.c"

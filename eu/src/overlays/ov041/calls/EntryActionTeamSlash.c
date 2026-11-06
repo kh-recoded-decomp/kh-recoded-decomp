@@ -88,16 +88,16 @@ void EntryActionTeamSlash(u8 entryIndex)
             entry->stateStep = TEAM_RUN_TARGET;
             switch (partners) {
             case 0:
-                data_ov041_020cff48.teamLeader = 0;
+                gStageEntryRenderCapturePrefix.teamLeader = 0;
                 break;
             case 1:
-                data_ov041_020cff48.teamLeader = 1;
+                gStageEntryRenderCapturePrefix.teamLeader = 1;
                 break;
             case 2:
-                data_ov041_020cff48.teamLeader = 2;
+                gStageEntryRenderCapturePrefix.teamLeader = 2;
                 break;
             case 3:
-                data_ov041_020cff48.teamLeader = NextSharedRandom16Scaled(2000) / 1000 + 1;
+                gStageEntryRenderCapturePrefix.teamLeader = NextSharedRandom16Scaled(2000) / 1000 + 1;
                 break;
             }
             break;
@@ -142,7 +142,7 @@ void EntryActionTeamSlash(u8 entryIndex)
         end.z -= FX32_ONE;
         end.x += 0x2800;
         AimEntryPathModel(entry, &start, &end, TRUE, NULL);
-        if (data_ov041_020cff48.teamLeader == entry->index) {
+        if (gStageEntryRenderCapturePrefix.teamLeader == entry->index) {
             PlayStageSound(0x35, 0, TRUE);
         }
         entry->stateStep++;
@@ -195,7 +195,7 @@ void EntryActionTeamSlash(u8 entryIndex)
         SetSceneEntryAnimation(entry, action->animation, 1, 0);
         frame = GetEntryAnimationFrame(entry);
         SpawnRunDust(entry);
-        if (data_ov041_020cff48.teamLeader == entry->index) {
+        if (gStageEntryRenderCapturePrefix.teamLeader == entry->index) {
             PlayStageSound(0x42, 2, TRUE);
         }
         entry->stateStep++;
@@ -249,7 +249,7 @@ void EntryActionTeamSlash(u8 entryIndex)
             entry->waitFrames = 0x16;
             break;
         }
-        if (data_ov041_020cff48.teamLeader == entry->index) {
+        if (gStageEntryRenderCapturePrefix.teamLeader == entry->index) {
             PlayStageSound(0x43, 2, TRUE);
         }
         entry->stateStep++;

@@ -2,6 +2,6 @@
 #define GetLinkedAngleOffset_020ceb7c GetLinkedAngleOffset
 #define PlaceRigAtPlayerOffset_020d7818 PlaceRigAtPlayerOffset
 #define RotateOffsetAroundY_020a9160 RotateOffsetAroundY
-#define data_ov058_020d89b4 data_ov058_020d89d4
+#define data_ov058_020d89b4 gOverlay058RigPlayerOffsets
 #define func_ov052_020ceb54 GetActorModelPosition
 #include "src/ov058/unclassified_helpers/PlaceRigAtPlayerOffset_020d7818.c"

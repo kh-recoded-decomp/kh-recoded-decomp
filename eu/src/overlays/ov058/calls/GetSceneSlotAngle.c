@@ -1,4 +1,4 @@
 #define GetSceneSlotAngle_020d88e4 GetSceneSlotAngle
-#define data_ov058_020d8994 data_ov058_020d89b4
-#define data_ov058_020d8a24 data_ov058_020d8a44
+#define data_ov058_020d8994 gOverlay058SceneSlotAngleOffsets
+#define data_ov058_020d8a24 gOverlay058SceneControlHead
 #include "src/ov058/unclassified_helpers/GetSceneSlotAngle_020d88e4.c"

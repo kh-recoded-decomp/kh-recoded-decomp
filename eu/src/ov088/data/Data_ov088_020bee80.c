@@ -6,7 +6,7 @@ extern void InitializeOverlay088(void);
 extern void ShutdownOverlay088(void);
 extern void UpdateOverlay088CaptionLayerNoop(void);
 
-u32 data_ov088_020beec0[18] = {
+u32 gOverlay088GridWidgetIds[18] = {
     0x00000006, 0x00000007, 0x00000008, 0x00000009,
     0x0000000A, 0x0000000B, 0x0000000C, 0x0000000D,
     0x0000000E, 0x0000000F, 0x00000010, 0x00000011,

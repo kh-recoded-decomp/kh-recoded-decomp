@@ -1,6 +1,6 @@
 #define func_ov001_020645c8 IsSessionFlagSet
 #define GetCtxModeByte_02068084 GetCtxModeByte
 #define GetPlayerLevelTier_020c1418 GetPlayerLevelTier
-#define data_ov073_020c4090 data_ov073_020c40b0
+#define data_ov073_020c4090 gStatusTierThresholds
 #define func_020505a8 GetSelectionPackedValueBlock
 #include "src/ov073/status_menu/GetPlayerLevelTier_020c1418.c"

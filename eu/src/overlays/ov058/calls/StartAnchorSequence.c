@@ -7,8 +7,8 @@
 #define SweepWorldCollision_020364a0 SweepWorldCollision
 #define VEC_MultAdd_01ffa09c VEC_MultAdd
 #define VEC_Subtract_01ff9e3c VEC_Subtract
-#define data_ov058_020d89a8 data_ov058_020d89c8
-#define data_ov058_020d8a24 data_ov058_020d8a44
+#define data_ov058_020d89a8 gOverlay058AnchorPlacementOffset
+#define data_ov058_020d8a24 gOverlay058SceneControlHead
 #define func_01ff9f88 VEC_Normalize
 #define func_0203adcc InitAxisCylinderShape
 #define func_ov021_020a9268 IsObjHandleUsable

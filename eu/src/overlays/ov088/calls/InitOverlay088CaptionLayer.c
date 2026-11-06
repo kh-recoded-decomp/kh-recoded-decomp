@@ -1,6 +1,6 @@
 typedef struct Overlay088Pair { short first, second; } Overlay088Pair;
 typedef struct Overlay088PairSettings { Overlay088Pair entries[4]; } Overlay088PairSettings;
-extern const Overlay088PairSettings data_ov088_020bee5c;
+extern const Overlay088PairSettings gOverlay088CaptionTextFrame;
 extern char sOv088_UiMenuStrLanguageCdSZ_020bef08[];
 extern int UpdateScreenWidgetLayer(int id);
 extern void LoadPackedFileView(void *state, void *data, int flags);
@@ -11,7 +11,7 @@ extern void DrawTextAnchored(void *context, int first, int second, int third, in
 extern void Text_UploadTileBuffer(void *context);
 extern void SetScreenLayerDirty(int id);
 void InitOverlay088CaptionLayer(void *context) {
-    Overlay088PairSettings pairedSettings = data_ov088_020bee5c;
+    Overlay088PairSettings pairedSettings = gOverlay088CaptionTextFrame;
     int entry = UpdateScreenWidgetLayer(0x1a);
     LoadPackedFileView((char *)context + 0x34, sOv088_UiMenuStrLanguageCdSZ_020bef08, 0);
     InitTextLayerAt(context, 6, entry, GetMenuFont10(), &pairedSettings);

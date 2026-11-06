@@ -42,7 +42,7 @@ typedef struct {
     s32 speedTimer;
 } SceneState;
 
-extern SceneState data_ov058_020d8a44;
+extern SceneState gOverlay058SceneControlHead;
 
 extern void PlaySoundChecked(int id, int arg);
 extern void StopSeqArcOrDefault(int seqArcNo, int seqIndex, int fadeFrames);
@@ -75,7 +75,7 @@ extern void PurgeNearbyStageObjects(void);
 
 void UpdateSceneIntroSequence(fx32 delta)
 {
-    SceneState *scene = &data_ov058_020d8a44;
+    SceneState *scene = &gOverlay058SceneControlHead;
     PartyEntry *entries[3];
     int i;
 

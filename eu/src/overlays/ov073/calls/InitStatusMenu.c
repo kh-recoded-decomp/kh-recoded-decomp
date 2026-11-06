@@ -101,10 +101,10 @@ struct StatusMenu {
 };
 
 extern SaveData *data_0205fe0c;
-extern const ObjConfig data_ov073_020c40e0;
-extern const TextFrame data_ov073_020c4120;
-extern const TextFrame data_ov073_020c40c0;
-extern const TextFrame data_ov073_020c4100;
+extern const ObjConfig gStatusMenuWidgetConfig;
+extern const TextFrame gStatusMenuTextLayer0Frame;
+extern const TextFrame gStatusMenuTextLayer1Frame;
+extern const TextFrame gStatusMenuTextLayer2Frame;
 extern const char sOv073_UiMenuStrLanguageStatusSZ_020c41b8[];
 
 extern int GetMenuSelection(void);
@@ -226,7 +226,7 @@ int InitStatusMenu(StatusMenu *menu)
 
     pool = GetSecondaryMenuElement();
     widgets = GetMenuWidgetContainer();
-    config = data_ov073_020c40e0;
+    config = gStatusMenuWidgetConfig;
     config.words[0] = BuildSlotImageParams(0, 1);
     InitObjManagerAndMark(widgets, &config);
     CreateWidgetImageEntry(widgets, BuildSlotImageParams(1, 2));
@@ -310,9 +310,9 @@ int InitStatusMenu(StatusMenu *menu)
     ResultsScreenNoOpCallback(menu->list, widgets, 8, 0x14, 0xc, 0, 0x10, 0, 0);
     menu->widgets = widgets;
     menu->recordPool = pool;
-    frameA = data_ov073_020c4120;
-    frameB = data_ov073_020c40c0;
-    frameC = data_ov073_020c4100;
+    frameA = gStatusMenuTextLayer0Frame;
+    frameB = gStatusMenuTextLayer1Frame;
+    frameC = gStatusMenuTextLayer2Frame;
 
     screenBase = UpdateScreenWidgetLayer(0x19);
     menu->font = GetMenuFont10();

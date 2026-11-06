@@ -1,6 +1,6 @@
 #define IsFirstEntryFlagSet_0206e584 IsFirstEntryFlagSet
 #define PurgeNearbyStageObjects_020d7998 PurgeNearbyStageObjects
-#define data_ov058_020d8a2c data_ov058_020d8a4c
+#define data_ov058_020d8a2c gOverlay058SceneCenter
 #define func_01ffa0f4 VEC_Distance
 #define func_ov001_020863f4 GetEntryPoolTargetPosition
 #define func_ov001_0208723c GetFieldEntryListHead

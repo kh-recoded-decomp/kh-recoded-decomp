@@ -103,8 +103,8 @@ void EntryActionMagic(u8 entryIndex)
     HandleTimedPressWindow(entry, action->animation, FRAME_TO_FX32(action->effectLength));
     switch (entry->stateStep) {
     case 0:
-        data_ov041_020cff48.castsDone = 0;
-        data_ov041_020cff48.castCount =
+        gStageEntryRenderCapturePrefix.castsDone = 0;
+        gStageEntryRenderCapturePrefix.castCount =
             NextSharedRandom16Scaled((action->maxRepeats + 1 - action->minRepeats) * 1000) / 1000 + action->minRepeats;
         entry->stateStep++;
     case 1:
@@ -438,7 +438,7 @@ void EntryActionMagic(u8 entryIndex)
         if (!StepStageMotion(&entry->effects[0]->model.position, &entry->effects[0]->model.motion, work->frameStep)) {
             break;
         }
-        if (data_ov041_020cff48.castsDone < data_ov041_020cff48.castCount - 1) {
+        if (gStageEntryRenderCapturePrefix.castsDone < gStageEntryRenderCapturePrefix.castCount - 1) {
             entry->flags |= STAGE_ENTRY_PRESSED_ATTACK;
         } else {
             entry->flags &= ~STAGE_ENTRY_PRESSED_ATTACK;
@@ -474,7 +474,7 @@ void EntryActionMagic(u8 entryIndex)
         }
         if (entry->flags & STAGE_ENTRY_PRESSED_ATTACK) {
             entry->flags &= ~STAGE_ENTRY_PRESSED_ATTACK;
-            data_ov041_020cff48.castsDone++;
+            gStageEntryRenderCapturePrefix.castsDone++;
             entry->stateStep = 1;
             ClearEntryActionState(entry);
             break;
@@ -484,7 +484,7 @@ void EntryActionMagic(u8 entryIndex)
         FinishEntryAction(entry);
         break;
     }
-    if (action->castStyle == CAST_FROM_HAND && data_ov041_020cff48.castsDone == 0 &&
+    if (action->castStyle == CAST_FROM_HAND && gStageEntryRenderCapturePrefix.castsDone == 0 &&
         MatchesEitherSlotId(entry, action->animation) && frame >= FX32_ONE && frame < 2 * FX32_ONE) {
         PlayStageSound(0x44, 2, TRUE);
     }

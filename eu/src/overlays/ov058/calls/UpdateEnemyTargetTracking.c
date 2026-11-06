@@ -6,7 +6,7 @@
 #define SweepWorldCollision_020364a0 SweepWorldCollision
 #define UpdateEnemyTargetTracking_020d4b64 UpdateEnemyTargetTracking
 #define VEC_Subtract_01ff9e3c VEC_Subtract
-#define data_ov058_020d8a20 data_ov058_020d8a40
+#define data_ov058_020d8a20 gOverlay058EntryZeroActor
 #define func_01ffa0f4 VEC_Distance
 #define func_0203adcc InitAxisCylinderShape
 #define func_ov052_020ceb54 GetActorModelPosition

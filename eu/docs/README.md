@@ -36,6 +36,10 @@ links the complete sequence of documented naming blocks.
 - [Late Scene Global Storage](LATE_SCENE_GLOBAL_STORAGE.md).
 - [Gauge Actor Effect Data](GAUGE_ACTOR_EFFECT_DATA.md).
 
+- [Menu Layout Template Data](MENU_LAYOUT_TEMPLATE_DATA.md).
+- [Stage Camera Native Storage](STAGE_CAMERA_NATIVE_STORAGE.md).
+- [Overlay058 Scene Native Storage](OVERLAY058_SCENE_NATIVE_STORAGE.md).
+
 ## Unresolved function contracts
 
 At the `ad0a8778153f72218e4bdad3a5cec1bd8e2a7470` naming checkpoint,

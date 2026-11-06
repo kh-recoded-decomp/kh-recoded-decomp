@@ -4,9 +4,9 @@
 #define VEC_Mag_01ff9f28 VEC_Mag
 #define VEC_MultAdd_01ffa09c VEC_MultAdd
 #define VEC_Subtract_01ff9e3c VEC_Subtract
-#define data_ov058_020d899c data_ov058_020d89bc
-#define data_ov058_020d8a24 data_ov058_020d8a44
-#define data_ov058_020d8a2c data_ov058_020d8a4c
+#define data_ov058_020d899c gOverlay058ApproachOffset
+#define data_ov058_020d8a24 gOverlay058SceneControlHead
+#define data_ov058_020d8a2c gOverlay058SceneCenter
 #define func_ov058_020d88e4 GetSceneSlotAngle
 #define func_01ffaff4 VEC_NormalizeLength
 #include "src/ov058/unclassified_helpers/ComputeApproachTarget_020d8814.c"

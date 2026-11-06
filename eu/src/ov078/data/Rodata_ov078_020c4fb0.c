@@ -1,5 +1,5 @@
 #include "nitro/types.h"
 
-const u32 data_ov078_020c4fb0[4] = {
+const u32 gPageMenuWidgetConfig[4] = {
     0x00000000, 0x00000001, 0x00000000, 0x00000000,
 };

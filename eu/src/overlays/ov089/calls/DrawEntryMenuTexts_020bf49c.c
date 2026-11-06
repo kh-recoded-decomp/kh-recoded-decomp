@@ -41,9 +41,9 @@ typedef struct Ov089Menu {
 } Ov089Menu;
 
 extern GameState *data_0205fe0c;
-extern const TextFrame data_ov089_020c0530;
-extern u16 data_ov089_020c064c[];
-extern u16 data_ov089_020c0654[];
+extern const TextFrame gEntryCarouselTextFrame;
+extern u16 gEntryCarouselTitleLanguage2Separator[];
+extern u16 gEntryCarouselTitleDefaultSeparator[];
 extern char sOv089_UiMenuStrLanguageCsSZ_020c065c[];
 extern u16 gEntryCarouselTitleFormat[];
 
@@ -67,7 +67,7 @@ extern void DrawCenteredTextLine(TextLayer *layer, int unused, int y, int color,
 
 void DrawEntryMenuTexts_020bf49c(Ov089Menu *menu)
 {
-    TextFrame frame = data_ov089_020c0530;
+    TextFrame frame = gEntryCarouselTextFrame;
     u16 title[0x40];
     u16 *screen;
     u16 *separator;
@@ -79,9 +79,9 @@ void DrawEntryMenuTexts_020bf49c(Ov089Menu *menu)
     screen = UpdateScreenWidgetLayer(10);
     world = data_0205fe0c->world;
     if (GetLanguageIndex() == 2) {
-        separator = data_ov089_020c064c;
+        separator = gEntryCarouselTitleLanguage2Separator;
     } else {
-        separator = data_ov089_020c0654;
+        separator = gEntryCarouselTitleDefaultSeparator;
     }
     LoadPackedFileView(menu->messages, sOv089_UiMenuStrLanguageCsSZ_020c065c, FALSE);
     InitTextLayerAt(&menu->captionLayer, 2, screen, GetMenuFont10(), &frame);

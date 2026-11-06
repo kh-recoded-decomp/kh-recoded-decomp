@@ -9,7 +9,7 @@
 #define OpenTextFrame_020be5b8 OpenTextFrame
 #define SetTagRecordArmed_020b83e8 SetTagRecordArmed
 #define SetTextColorIfFits_020bcd04 SelectMenuFontForWidth
-#define data_ov079_020c4c10 data_ov079_020c4c30
+#define data_ov079_020c4c10 gConfigMenuWindowStyle
 #define data_ov079_020c4c84 sOv079_UiMenuStrLanguageConfigSZ_020c4ca4
 #define func_01ff8830 MI_CpuFill8
 #define func_ov027_020b7e24 LoadTagTrackerResourceFile

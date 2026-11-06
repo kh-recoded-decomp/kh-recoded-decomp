@@ -35,11 +35,11 @@ void StageEntryStateRevived(u8 entryIndex)
         entry->shownHp = entry->hp;
         entry->stateStep++;
     case 2:
-        if (data_ov041_020cff48.reviveWait < 15) {
-            data_ov041_020cff48.reviveWait++;
+        if (gStageEntryRenderCapturePrefix.reviveWait < 15) {
+            gStageEntryRenderCapturePrefix.reviveWait++;
             return;
         }
-        data_ov041_020cff48.reviveWait = 0;
+        gStageEntryRenderCapturePrefix.reviveWait = 0;
         SetSceneEntryAnimation(entry, entry->idleAnimation, 1, 0);
         entry->stateStep++;
     case 3:

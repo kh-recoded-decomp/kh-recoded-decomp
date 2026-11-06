@@ -30,7 +30,7 @@
 #define selectJointAnimationBlend_0202f2cc selectJointAnimationBlend
 #define PrepareAndStartStream_0204dd4c PrepareAndStartStream
 #define func_ov039_020bc7e0 RuntimeState_SetFlags
-#define data_ov084_020bfc40 data_ov084_020bfc60
+#define data_ov084_020bfc40 gTwoChoiceMenuWindowStyle
 #define data_ov084_020bfcc4 sOv084_UiMenuStrLanguageShopSZ_020bfce4
 #define data_02053438 gZeroVecFx32
 #if defined(__MWERKS__)

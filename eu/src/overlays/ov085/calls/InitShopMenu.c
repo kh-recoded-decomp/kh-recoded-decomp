@@ -16,9 +16,9 @@
 #define SetupStageParams_020bdf10 SetupStageParams
 #define Slot_SetMode2Bit_0204f480 SetIndexedRecordMode
 #define SumRecordTableAEntries_020521f8 SumRecordTableAEntries
-#define data_ov085_020c22d4 data_ov085_020c22f4
-#define data_ov085_020c22dc data_ov085_020c22fc
-#define data_ov085_020c22ec data_ov085_020c230c
+#define data_ov085_020c22d4 gShopWidget22Offset
+#define data_ov085_020c22dc gShopWidgetConfig
+#define data_ov085_020c22ec gShopWindowStyle
 #define data_ov085_020c2384 sOv085_UiMenuStrLanguageShopSZ_020c23a4
 #define func_01ff8710 MIi_CpuCopy32
 #define func_01ff8830 MI_CpuFill8

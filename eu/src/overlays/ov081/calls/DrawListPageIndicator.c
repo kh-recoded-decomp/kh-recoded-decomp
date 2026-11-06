@@ -5,7 +5,7 @@
 #define GetField84Bit1_020b9198 GetField84Bit1
 #define SampleTweenValue_0205258c SampleTweenValue
 #define SetEntrySlotsVisible_020b9580 SetEntrySlotsVisible
-#define data_020c5d5c data_ov081_020c5d7c
+#define data_020c5d5c gTutorialPageIndicatorPlaceholderText
 #define func_0202e060 SPrintfUnbounded
 #define func_02052514 ConfigureTween
 #define func_0205255c StartTween

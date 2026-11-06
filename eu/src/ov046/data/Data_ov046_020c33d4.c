@@ -2,7 +2,7 @@
 
 #pragma explicit_zero_data on
 
-u32 data_ov046_020c33d8[74] = {
+u32 gCameraModePresetTail[74] = {
     0x00001000, 0x00005000, 0xFFFFF800, 0x00001A00,
     0x00005000, 0x00001600, 0x00001000, 0x00004000,
     0x00001800, 0x00001000, 0x00005000, 0x00000000,
@@ -24,6 +24,6 @@ u32 data_ov046_020c33d8[74] = {
     0x00000000, 0x00000000,
 };
 
-u32 data_ov046_020c33d4[1] = {
+u32 gCameraModePresetHeightHead[1] = {
     0x00001000,
 };

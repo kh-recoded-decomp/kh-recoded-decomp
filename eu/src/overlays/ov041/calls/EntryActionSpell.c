@@ -51,11 +51,11 @@ void EntryActionSpell(u8 entryIndex)
     int i;
 
     if (!IsStageEntryFrozen(entry)) {
-        data_ov041_020cff48.castTimer += FX32_ONE;
+        gStageEntryRenderCapturePrefix.castTimer += FX32_ONE;
     }
     switch (entry->stateStep) {
     case 0:
-        data_ov041_020cff48.castTimer = 0;
+        gStageEntryRenderCapturePrefix.castTimer = 0;
         entry->stateStep++;
     case 1:
         FillActionTargets(entry);
@@ -68,7 +68,7 @@ void EntryActionSpell(u8 entryIndex)
         }
         entry->stateStep++;
     case 2:
-        if (data_ov041_020cff48.castTimer < FRAME_TO_FX32(action->castFrame)) {
+        if (gStageEntryRenderCapturePrefix.castTimer < FRAME_TO_FX32(action->castFrame)) {
             break;
         }
         switch (action->targetKind) {

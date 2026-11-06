@@ -17,8 +17,8 @@
 #define data_ov001_020a0460 gFieldSessionWork
 #define data_ov074_020c5920 sOv074_WeaponTg01_020c5940
 #define data_ov074_020c5930 sOv074_WeaponTg00_020c5950
-#define data_ov074_020c5940 data_ov074_020c5960
-#define data_ov074_020c5950 data_ov074_020c5970
+#define data_ov074_020c5940 gRootMenuWidgetConfig
+#define data_ov074_020c5950 gRootMenuWindowStyle
 #define data_ov074_020c59c4 sOv074_Root_020c59e4
 #define data_ov074_020c59cc sOv074_Smenu_020c59ec
 #define data_ov074_020c59d4 sOv074_UiMenuStrLanguageFormatSSZ_020c59f4

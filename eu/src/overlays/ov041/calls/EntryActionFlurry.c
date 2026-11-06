@@ -10,10 +10,10 @@ typedef float f32;
 
 /* Whether the flurry timer is in the window before a hit frame, or in the early stretch before that window. */
 #define IN_PRESS_WINDOW(f)                                                                                          \
-    (FRAME_TO_FX32(f) - window <= data_ov041_020cff48.castTimer && data_ov041_020cff48.castTimer < FRAME_TO_FX32(f))
+    (FRAME_TO_FX32(f) - window <= gStageEntryRenderCapturePrefix.castTimer && gStageEntryRenderCapturePrefix.castTimer < FRAME_TO_FX32(f))
 #define IN_EARLY_WINDOW(f)                                                                                          \
-    (FRAME_TO_FX32(f) - window - early < data_ov041_020cff48.castTimer &&                                          \
-     data_ov041_020cff48.castTimer < FRAME_TO_FX32(f) - window)
+    (FRAME_TO_FX32(f) - window - early < gStageEntryRenderCapturePrefix.castTimer &&                                          \
+     gStageEntryRenderCapturePrefix.castTimer < FRAME_TO_FX32(f) - window)
 
 #define FLURRY_RUN 10
 #define FLURRY_HITS 20 /* each further hit */
@@ -60,17 +60,17 @@ static inline void UpdateFlurryHitEnd(StageEntryAction *action)
 {
     fx32 hitEnd;
 
-    switch (data_ov041_020cff48.flurryHit) {
+    switch (gStageEntryRenderCapturePrefix.flurryHit) {
     default:
         return;
     case 4:
-        hitEnd = FRAME_TO_FX32(action->flurry[FLURRY_HIT_END + data_ov041_020cff48.flurryHit]);
+        hitEnd = FRAME_TO_FX32(action->flurry[FLURRY_HIT_END + gStageEntryRenderCapturePrefix.flurryHit]);
         break;
     case 5:
-        hitEnd = FRAME_TO_FX32(action->flurry[FLURRY_HIT_END + data_ov041_020cff48.flurryHit]);
+        hitEnd = FRAME_TO_FX32(action->flurry[FLURRY_HIT_END + gStageEntryRenderCapturePrefix.flurryHit]);
         break;
     }
-    data_ov041_020cff48.flurryHitEnd = hitEnd;
+    gStageEntryRenderCapturePrefix.flurryHitEnd = hitEnd;
 }
 
 static inline void SelectNextFlurryStep(int *nextStep, StageRenderCapture *capture)
@@ -104,10 +104,10 @@ void EntryActionFlurry(u8 entryIndex)
     u8 hit;
 
     if (!IsStageEntryFrozen(entry) && entry->stateStep > 4) {
-        data_ov041_020cff48.castTimer += FX32_ONE;
+        gStageEntryRenderCapturePrefix.castTimer += FX32_ONE;
     }
     frame = GetEntryAnimationFrame(entry);
-    seconds = data_ov041_020cff48.castTimer >> FX32_SHIFT;
+    seconds = gStageEntryRenderCapturePrefix.castTimer >> FX32_SHIFT;
     if (action->flurryPressFrames[0] + 1 == seconds || action->flurryPressFrames[1] + 1 == seconds ||
         action->flurryPressFrames[2] + 1 == seconds) {
         ClearEntryActionState(entry);
@@ -139,9 +139,9 @@ void EntryActionFlurry(u8 entryIndex)
         entry->effects[0] = SpawnOnEntry(entry, 0x14, 0, FALSE);
         PlayStageSound(0x1a0, 6, TRUE);
         ShowFieldMessageLine_02072ad0(0x11, GetHudLabelId(0xef));
-        data_ov041_020cff48.flurryHit = 0;
-        data_ov041_020cff48.flurryRound = 0;
-        data_ov041_020cff48.castTimer = 0;
+        gStageEntryRenderCapturePrefix.flurryHit = 0;
+        gStageEntryRenderCapturePrefix.flurryRound = 0;
+        gStageEntryRenderCapturePrefix.castTimer = 0;
         entry->stateStep++;
     case 1:
         if (entry->effects[0]->flags & 4) {
@@ -212,25 +212,25 @@ void EntryActionFlurry(u8 entryIndex)
     case FLURRY_HITS: {
         VecFx32 start;
         VecFx32 end;
-        u8 animation = action->flurry[FLURRY_ANIMATION] + data_ov041_020cff48.flurryHit;
+        u8 animation = action->flurry[FLURRY_ANIMATION] + gStageEntryRenderCapturePrefix.flurryHit;
 
-        data_ov041_020cff48.flurryHitEnd =
-            FRAME_TO_FX32(action->flurry[FLURRY_HIT_END + data_ov041_020cff48.flurryHit]);
+        gStageEntryRenderCapturePrefix.flurryHitEnd =
+            FRAME_TO_FX32(action->flurry[FLURRY_HIT_END + gStageEntryRenderCapturePrefix.flurryHit]);
         SetSceneEntryAnimation(entry, animation, 0, 0);
         frame = GetEntryAnimationFrame(entry);
         GetEntryMoveEnds(entry, &start, &end, TRUE);
-        StartStageEntryMotion(entry, &start, &end, data_ov041_020cff48.flurryHitEnd, STAGE_MOTION_EASE_OUT);
+        StartStageEntryMotion(entry, &start, &end, gStageEntryRenderCapturePrefix.flurryHitEnd, STAGE_MOTION_EASE_OUT);
         entry->stateStep++;
     }
     case FLURRY_HITS + 1:
-        if (!StepEntryMotion(entry, work->frameStep) || frame < data_ov041_020cff48.flurryHitEnd) {
+        if (!StepEntryMotion(entry, work->frameStep) || frame < gStageEntryRenderCapturePrefix.flurryHitEnd) {
             break;
         }
         entry->stateStep = FLURRY_HIT;
         again = TRUE;
         break;
     case FLURRY_LAST_HITS:
-        if (frame < data_ov041_020cff48.flurryHitEnd) {
+        if (frame < gStageEntryRenderCapturePrefix.flurryHitEnd) {
             break;
         }
         entry->stateStep = FLURRY_HIT;
@@ -238,7 +238,7 @@ void EntryActionFlurry(u8 entryIndex)
         break;
     case FLURRY_HIT:
         ComputeEntryHit(entry, &entry->hit);
-        if (data_ov041_020cff48.flurryHit == 5) {
+        if (gStageEntryRenderCapturePrefix.flurryHit == 5) {
             ForEachActionTarget(entry, 0x1a0, 0xd);
         } else {
             ApplyActionToTargets(entry);
@@ -248,9 +248,9 @@ void EntryActionFlurry(u8 entryIndex)
         if (IsStageEntryFrozen(entry)) {
             break;
         }
-        if (data_ov041_020cff48.flurryHit == 3 || data_ov041_020cff48.flurryHit == 4) {
+        if (gStageEntryRenderCapturePrefix.flurryHit == 3 || gStageEntryRenderCapturePrefix.flurryHit == 4) {
             entry->stateStep = FLURRY_LAST_HITS;
-            data_ov041_020cff48.flurryHit++;
+            gStageEntryRenderCapturePrefix.flurryHit++;
             UpdateFlurryHitEnd(action);
             break;
         }
@@ -259,13 +259,13 @@ void EntryActionFlurry(u8 entryIndex)
         if (IsEntryFlag2Set(entry)) {
             break;
         }
-        data_ov041_020cff48.flurryHit++;
+        gStageEntryRenderCapturePrefix.flurryHit++;
         /* Reload the stored byte before choosing the next round. */
-        hit = *(volatile u8 *)&data_ov041_020cff48.flurryHit;
+        hit = *(volatile u8 *)&gStageEntryRenderCapturePrefix.flurryHit;
         if (hit == 3 || hit == 6) {
-            data_ov041_020cff48.flurryRound++;
+            gStageEntryRenderCapturePrefix.flurryRound++;
         }
-        SelectNextFlurryStep(&again, &data_ov041_020cff48);
+        SelectNextFlurryStep(&again, &gStageEntryRenderCapturePrefix);
         entry->stateStep = again;
         again = TRUE;
         break;
@@ -297,7 +297,7 @@ void EntryActionFlurry(u8 entryIndex)
         break;
     }
     if (again) {
-        data_ov041_020cff48.castTimer -= FX32_ONE;
+        gStageEntryRenderCapturePrefix.castTimer -= FX32_ONE;
         EntryActionFlurry(entryIndex);
     }
 }

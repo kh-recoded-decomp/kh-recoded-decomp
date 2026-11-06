@@ -1,4 +1,4 @@
 #define GetActiveRecordEntryOrNull_02029548 GetActiveRecordEntryOrNull
 #define GetItemSellPrice_020c1304 GetItemSellPrice
-#define data_ov085_020c22ca data_ov085_020c22ea
+#define data_ov085_020c22ca gShopSellPriceRecordFactors
 #include "src/ov085/unclassified_helpers/GetItemSellPrice_020c1304.c"

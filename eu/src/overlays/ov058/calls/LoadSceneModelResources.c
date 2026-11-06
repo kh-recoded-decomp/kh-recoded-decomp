@@ -8,8 +8,8 @@
 #define data_ov058_020d89e0 sOv058_BaChSoTMPZ_020d8a00
 #define data_ov058_020d89f4 sOv058_BaEfFnTrP2_020d8a14
 #define data_ov058_020d8a04 sOv058_CmAR_020d8a24
-#define data_ov058_020d8a24 data_ov058_020d8a44
-#define data_ov058_020d8a60 data_ov058_020d8a80
-#define data_ov058_020d8b98 data_ov058_020d8bb8
-#define data_ov058_020d9068 data_ov058_020d9088
+#define data_ov058_020d8a24 gOverlay058SceneControlHead
+#define data_ov058_020d8a60 gOverlay058SceneAnimatedModel
+#define data_ov058_020d8b98 gOverlay058ArchiveEffect2Model
+#define data_ov058_020d9068 gOverlay058ArchiveEffect4ModelPrefix
 #include "src/ov058/unclassified_helpers/LoadSceneModelResources_020d7e30.c"

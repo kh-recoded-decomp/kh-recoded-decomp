@@ -6,7 +6,7 @@
 #define PXI_Init_020b9078 CreateWidgetImageEntry
 #define ResolveEntryStoreWord_020b9088 ResolveEntryStoreWord
 #define SetAllElementObjectModes_020b97fc SetAllElementObjectModes
-#define data_ov086_020c2128 data_ov086_020c2148
+#define data_ov086_020c2128 gRecordDigitWidgetConfig
 #define data_ov086_020c228c gRecordDigitCellXGaps
 #define func_0204f0b4 PXI_Init_0204f0c8
 #define func_0204f13c IndexedRecord_SetPair

@@ -1,7 +1,7 @@
 #include "nitro/types.h"
 #include "src/overlays/ov041/StageEntryRender.h"
 
-extern int data_ov041_020cff40[2];
+extern int gStageCommandTimers[2];
 extern void SetMenuEntryHighlight(int listKind, int entryId, BOOL highlighted);
 extern int InvokeFieldModeOp150(void);
 extern void ResetSlotHandles(void);
@@ -57,7 +57,7 @@ void StageStateRunCommands(void)
                 SetMenuEntryHighlight(0, work->menuStack[i], TRUE);
             }
         }
-        data_ov041_020cff40[0] = 30;
+        gStageCommandTimers[0] = 30;
         work->stateStep++;
     case 2:
         if (work->flags & STAGE_WORK_RUNNING_COMMANDS) {
@@ -66,8 +66,8 @@ void StageStateRunCommands(void)
         }
         work->stateStep++;
     case 3:
-        if (data_ov041_020cff40[0] > 0) {
-            data_ov041_020cff40[0]--;
+        if (gStageCommandTimers[0] > 0) {
+            gStageCommandTimers[0]--;
             break;
         }
         work->stateStep++;
@@ -135,7 +135,7 @@ void StageStateRunCommands(void)
             return;
         }
         work->stateStep = 2;
-        data_ov041_020cff40[0] = 10;
+        gStageCommandTimers[0] = 10;
         break;
     }
     for (i = 0; i < work->entryCount; i++) {

@@ -283,7 +283,7 @@ typedef struct StageRenderCapture {
     VecFx32 panelOffset; /* from a defender to its timed press panel */
 } StageRenderCapture;
 
-extern StageRenderCapture data_ov041_020cff48;
+extern StageRenderCapture gStageEntryRenderCapturePrefix;
 extern const fx32 gStageShadowHeights[4];
 extern void GetPositionAboveGround(VecFx32 *position, StageEntry *entry);
 extern void ShadowVolume_Draw(const VecFx32 *position);

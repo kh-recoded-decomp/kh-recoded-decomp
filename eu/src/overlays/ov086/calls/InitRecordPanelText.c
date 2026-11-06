@@ -9,7 +9,7 @@
 #define SelectListNodeOrFirst_020019b8 SelectListNodeOrFirst
 #define Text_UploadTileBuffer_02001520 Text_UploadTileBuffer
 #define UpdateWidgetLayerDefault_020b9df0 UpdateWidgetLayerDefault_020b9e10
-#define data_ov086_020c2108 data_ov086_020c2128
+#define data_ov086_020c2108 gRecordPanelTextFrame
 #define data_ov086_020c226c gRecordInitialTextNodeBaseIndices
 #define data_ov086_020c2fd8 sOv086_UiMenuStrLanguageWsbSZ_020c2ff8
 #define func_02001914 CreateTextSurface

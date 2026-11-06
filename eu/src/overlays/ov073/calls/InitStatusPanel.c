@@ -45,10 +45,10 @@ typedef struct StatusMenu {
     u8 strings[1];
 } StatusMenu;
 
-extern const TileIdPair data_ov073_020c40a8;
-extern const TileTableSource data_ov073_020c40f0;
-extern const TextFrame data_ov073_020c40d0;
-extern const TextFrame data_ov073_020c4110;
+extern const TileIdPair gStatusPanelTileIds;
+extern const TileTableSource gStatusPanelTileSourceTemplate;
+extern const TextFrame gStatusPanelTitleFrame;
+extern const TextFrame gStatusPanelBodyFrame;
 extern StatusPanel *gStatusPanelGlobalStorage;
 extern const char sOv073_UiBtlBtlLanguageP2_020c41dc[];
 
@@ -65,10 +65,10 @@ extern int AcquireRecordSlot(int slot, int param);
 
 void InitStatusPanel(StatusMenu *menu, StatusPanel *panel)
 {
-    TileIdPair ids = data_ov073_020c40a8;
-    TileTableSource source = data_ov073_020c40f0;
-    TextFrame titleFrame = data_ov073_020c40d0;
-    TextFrame textFrame = data_ov073_020c4110;
+    TileIdPair ids = gStatusPanelTileIds;
+    TileTableSource source = gStatusPanelTileSourceTemplate;
+    TextFrame titleFrame = gStatusPanelTitleFrame;
+    TextFrame textFrame = gStatusPanelBodyFrame;
     u16 *screenBase;
 
     source.ids = ids.ids;

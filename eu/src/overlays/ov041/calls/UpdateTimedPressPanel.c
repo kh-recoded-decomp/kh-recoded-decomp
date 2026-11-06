@@ -26,7 +26,7 @@ static inline void PlacePressPanel(StageEntry *player, StageEntry *other, BOOL p
     } else {
         panel = 2;
         GetPositionAboveGround(&position, player);
-        VEC_Add(&position, &data_ov041_020cff48.panelOffset, &position);
+        VEC_Add(&position, &gStageEntryRenderCapturePrefix.panelOffset, &position);
     }
     PlaceSlotPanelAtWorldPosition(panel, &position, lit);
 }
@@ -41,9 +41,9 @@ void UpdateTimedPressPanel(StageEntry *player, StageEntry *other, BOOL playerFir
     StageWork *work = gMovieContextState->stageWork;
     BOOL pressed = FALSE;
 
-    data_ov041_020cff48.panelOffset.x = -FX_Mul(player->radius, 0x68f);
-    data_ov041_020cff48.panelOffset.y = FX_Mul(player->radius, 0x2548);
-    data_ov041_020cff48.panelOffset.z = 0;
+    gStageEntryRenderCapturePrefix.panelOffset.x = -FX_Mul(player->radius, 0x68f);
+    gStageEntryRenderCapturePrefix.panelOffset.y = FX_Mul(player->radius, 0x2548);
+    gStageEntryRenderCapturePrefix.panelOffset.z = 0;
     if (player->hp == 0) {
         return;
     }

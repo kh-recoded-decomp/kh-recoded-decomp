@@ -1,5 +1,5 @@
 #define Camera_ReturnFromPathView_020c2fac Camera_ReturnFromPathView
 #define ResetSceneModelState_020d87c0 ResetSceneModelState
 #define StopSeqArcOrDefault_0204d960 StopSeqArcOrDefault
-#define data_ov058_020d8a24 data_ov058_020d8a44
+#define data_ov058_020d8a24 gOverlay058SceneControlHead
 #include "src/ov058/unclassified_helpers/ResetSceneModelState_020d87c0.c"

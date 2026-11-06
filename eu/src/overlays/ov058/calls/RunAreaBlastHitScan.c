@@ -42,7 +42,7 @@ typedef struct {
     u8 data[0xdc];
 } HitScan;
 
-extern const VecFx32 data_ov058_020d912c;
+extern const VecFx32 gOverlay058SceneStorageTail;
 
 extern void InitRecord60(HitAttack *attack);
 extern void MakeSphereShape(HitVolume *volume, int *bounds, const VecFx32 *center, fx32 radius);
@@ -61,7 +61,7 @@ void RunAreaBlastHitScan(void)
     VecFx32 center;
 
     InitRecord60(&attack);
-    center = data_ov058_020d912c;
+    center = gOverlay058SceneStorageTail;
     MakeSphereShape(&volume, bounds, &center, 0xa000);
     volume.delta = attack.motion;
     OffsetBoxByDelta(&volume.box, &volume.sweptBox, &volume.delta);

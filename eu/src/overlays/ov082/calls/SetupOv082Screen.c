@@ -15,7 +15,7 @@
 #define SetupOv082Screen_020beb48 SetupOv082Screen
 #define StepEntryListCursor_020bf448 StepEntryListCursor
 #define Text_UploadTileBuffer_02001520 Text_UploadTileBuffer
-#define data_020bf654 data_ov082_020bf674
+#define data_020bf654 gOverlay082EntryListWindowStyle
 #define func_01ff8740 MIi_CpuClearFast
 #define func_0200672c GXS_SetGraphicsMode
 #define func_0202c48c LoadFileAllocFromHeapTail

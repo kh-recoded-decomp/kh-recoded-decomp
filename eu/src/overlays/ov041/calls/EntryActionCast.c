@@ -31,7 +31,7 @@ typedef float f32;
 
 /* Whole frames between two shots of a volley: the frames from its first shot to the return frame, spread over the
  * casts. */
-#define VOLLEY_INTERVAL(action, first) (((action)->returnFrame - (first)) / (data_ov041_020cff48.castCount + 1))
+#define VOLLEY_INTERVAL(action, first) (((action)->returnFrame - (first)) / (gStageEntryRenderCapturePrefix.castCount + 1))
 
 extern StageEntryAction *GetEntryAction(StageEntry *entry);
 extern int GetEntryAnimationFrame(StageEntry *entry);
@@ -133,30 +133,30 @@ void EntryActionCast(u8 entryIndex)
         switch (action->castStyle) {
         case CAST_FROM_ABOVE:
             if (entry->stateStep >= CAST_STATE_FROM_ABOVE && entry->stateStep < CAST_STATE_STRIKE) {
-                data_ov041_020cff48.castTimer += PRESS_SPAN / 4;
+                gStageEntryRenderCapturePrefix.castTimer += PRESS_SPAN / 4;
                 end = hitFrame + lead;
                 start = end - window;
-                if (start <= data_ov041_020cff48.castTimer && data_ov041_020cff48.castTimer < end) {
+                if (start <= gStageEntryRenderCapturePrefix.castTimer && gStageEntryRenderCapturePrefix.castTimer < end) {
                     ShowEntryPairPanel(entry, &work->entries[entry->mainTarget]);
-                } else if (end - window - early < data_ov041_020cff48.castTimer &&
-                           data_ov041_020cff48.castTimer < end - window) {
+                } else if (end - window - early < gStageEntryRenderCapturePrefix.castTimer &&
+                           gStageEntryRenderCapturePrefix.castTimer < end - window) {
                     CheckPairTimedPress(entry, &work->entries[entry->mainTarget]);
                 }
             } else {
-                data_ov041_020cff48.castTimer = 0;
+                gStageEntryRenderCapturePrefix.castTimer = 0;
             }
             break;
         case CAST_STRIKE:
             if (entry->stateStep >= CAST_STATE_STRIKE && entry->stateStep < CAST_STATE_AROUND_CASTER) {
-                data_ov041_020cff48.castTimer += PRESS_SPAN / 4;
+                gStageEntryRenderCapturePrefix.castTimer += PRESS_SPAN / 4;
                 start = hitFrame - window;
-                if (start <= data_ov041_020cff48.castTimer && data_ov041_020cff48.castTimer < hitFrame) {
+                if (start <= gStageEntryRenderCapturePrefix.castTimer && gStageEntryRenderCapturePrefix.castTimer < hitFrame) {
                     ShowEntryPairPanel(entry, &work->entries[entry->mainTarget]);
-                } else if (start - early < data_ov041_020cff48.castTimer && data_ov041_020cff48.castTimer < start) {
+                } else if (start - early < gStageEntryRenderCapturePrefix.castTimer && gStageEntryRenderCapturePrefix.castTimer < start) {
                     CheckPairTimedPress(entry, &work->entries[entry->mainTarget]);
                 }
             } else {
-                data_ov041_020cff48.castTimer = 0;
+                gStageEntryRenderCapturePrefix.castTimer = 0;
             }
             break;
         case CAST_AROUND_CASTER:
@@ -164,43 +164,43 @@ void EntryActionCast(u8 entryIndex)
             break;
         case CAST_VOLLEY:
             if (entry->stateStep >= CAST_STATE_VOLLEY + 5 && entry->stateStep < CAST_STATE_SWEEP) {
-                data_ov041_020cff48.castTimer += PRESS_SPAN / 4;
+                gStageEntryRenderCapturePrefix.castTimer += PRESS_SPAN / 4;
                 start = hitFrame - window - lead;
-                if (start <= data_ov041_020cff48.castTimer && data_ov041_020cff48.castTimer < hitFrame - lead) {
+                if (start <= gStageEntryRenderCapturePrefix.castTimer && gStageEntryRenderCapturePrefix.castTimer < hitFrame - lead) {
                     ShowEntryPairPanel(entry, &work->entries[entry->mainTarget]);
-                } else if (start - early < data_ov041_020cff48.castTimer && data_ov041_020cff48.castTimer < start) {
+                } else if (start - early < gStageEntryRenderCapturePrefix.castTimer && gStageEntryRenderCapturePrefix.castTimer < start) {
                     CheckPairTimedPress(entry, &work->entries[entry->mainTarget]);
                 }
             } else {
-                data_ov041_020cff48.castTimer = 0;
+                gStageEntryRenderCapturePrefix.castTimer = 0;
             }
             break;
         case CAST_SWEEP:
             if (entry->stateStep >= CAST_STATE_SWEEP + 1 && entry->stateStep < CAST_STATE_SWEEP + 10) {
-                data_ov041_020cff48.castTimer += PRESS_SPAN / 4;
+                gStageEntryRenderCapturePrefix.castTimer += PRESS_SPAN / 4;
                 end = hitFrame + lead;
                 start = end - window;
-                if (start <= data_ov041_020cff48.castTimer && data_ov041_020cff48.castTimer < end) {
+                if (start <= gStageEntryRenderCapturePrefix.castTimer && gStageEntryRenderCapturePrefix.castTimer < end) {
                     ShowEntryPairPanel(entry, &work->entries[entry->mainTarget]);
-                } else if (start - early < data_ov041_020cff48.castTimer && data_ov041_020cff48.castTimer < start) {
+                } else if (start - early < gStageEntryRenderCapturePrefix.castTimer && gStageEntryRenderCapturePrefix.castTimer < start) {
                     CheckPairTimedPress(entry, &work->entries[entry->mainTarget]);
                 }
             } else {
-                data_ov041_020cff48.castTimer = 0;
+                gStageEntryRenderCapturePrefix.castTimer = 0;
             }
             break;
         }
     }
     switch (entry->stateStep) {
     case 0:
-        data_ov041_020cff48.castsDone = 0;
-        data_ov041_020cff48.castCount =
+        gStageEntryRenderCapturePrefix.castsDone = 0;
+        gStageEntryRenderCapturePrefix.castCount =
             action->minRepeats + NextSharedRandom16Scaled((action->maxRepeats - action->minRepeats + 1) * 1000) / 1000 - 1;
         if (action->minRepeats == action->maxRepeats) {
-            data_ov041_020cff48.castCount = action->minRepeats - 1;
+            gStageEntryRenderCapturePrefix.castCount = action->minRepeats - 1;
         }
-        data_ov041_020cff48.castDelay = 0;
-        data_ov041_020cff48.sweepStage = 0;
+        gStageEntryRenderCapturePrefix.castDelay = 0;
+        gStageEntryRenderCapturePrefix.sweepStage = 0;
         entry->stateStep++;
     case 1:
         switch (action->castStyle) {
@@ -284,8 +284,8 @@ void EntryActionCast(u8 entryIndex)
         VecFx32 overhead;
         VecFx32 grid;
 
-        if (data_ov041_020cff48.castDelay < FRAME_TO_FX32(action->returnFrame)) {
-            data_ov041_020cff48.castDelay += FX32_ONE;
+        if (gStageEntryRenderCapturePrefix.castDelay < FRAME_TO_FX32(action->returnFrame)) {
+            gStageEntryRenderCapturePrefix.castDelay += FX32_ONE;
             break;
         }
         GetEntryOverheadPosition(&overhead, &work->entries[entry->mainTarget]);
@@ -477,20 +477,20 @@ void EntryActionCast(u8 entryIndex)
             ReleaseStageItem(entry->effects[i]);
             entry->effects[i] = NULL;
         }
-        data_ov041_020cff48.castWait = action->volleyPause;
+        gStageEntryRenderCapturePrefix.castWait = action->volleyPause;
         entry->stateStep++;
         break;
     }
     case CAST_STATE_VOLLEY + 3:
-        if (data_ov041_020cff48.castWait > 0) {
-            data_ov041_020cff48.castWait--;
+        if (gStageEntryRenderCapturePrefix.castWait > 0) {
+            gStageEntryRenderCapturePrefix.castWait--;
             break;
         }
-        data_ov041_020cff48.castWait = action->dropPause;
+        gStageEntryRenderCapturePrefix.castWait = action->dropPause;
         entry->stateStep++;
     case CAST_STATE_VOLLEY + 4:
-        if (data_ov041_020cff48.castWait > 0) {
-            data_ov041_020cff48.castWait--;
+        if (gStageEntryRenderCapturePrefix.castWait > 0) {
+            gStageEntryRenderCapturePrefix.castWait--;
             break;
         }
         ClearEntryActionState(entry);
@@ -539,13 +539,13 @@ void EntryActionCast(u8 entryIndex)
     case CAST_STATE_SWEEP + 1: {
         BOOL done = FALSE;
 
-        switch (data_ov041_020cff48.sweepStage) {
+        switch (gStageEntryRenderCapturePrefix.sweepStage) {
         case 0:
             if ((work->flags & 0x800) && work->entries[1].state != STAGE_ENTRY_OUT) {
                 entry->targetCount = 1;
                 entry->mainTarget = 1;
                 entry->targets[0] = 1;
-                data_ov041_020cff48.sweepStage = 1;
+                gStageEntryRenderCapturePrefix.sweepStage = 1;
                 break;
             }
         case 1:
@@ -553,7 +553,7 @@ void EntryActionCast(u8 entryIndex)
                 entry->targetCount = 1;
                 entry->mainTarget = 0;
                 entry->targets[0] = 0;
-                data_ov041_020cff48.sweepStage = 2;
+                gStageEntryRenderCapturePrefix.sweepStage = 2;
                 break;
             }
         case 2:
@@ -563,7 +563,7 @@ void EntryActionCast(u8 entryIndex)
                 entry->targets[0] = 2;
                 break;
             }
-            data_ov041_020cff48.castWait = 20;
+            gStageEntryRenderCapturePrefix.castWait = 20;
             entry->stateStep = CAST_STATE_END;
             done = TRUE;
             break;
@@ -622,38 +622,38 @@ void EntryActionCast(u8 entryIndex)
         }
         switch (action->castStyle) {
         case CAST_FROM_ABOVE:
-            if (data_ov041_020cff48.castsDone < data_ov041_020cff48.castCount) {
+            if (gStageEntryRenderCapturePrefix.castsDone < gStageEntryRenderCapturePrefix.castCount) {
                 ClearEntryActionState(entry);
-                data_ov041_020cff48.castsDone++;
+                gStageEntryRenderCapturePrefix.castsDone++;
                 entry->stateStep = CAST_STATE_FROM_ABOVE;
                 again = TRUE;
-                data_ov041_020cff48.castDelay = 0;
-                data_ov041_020cff48.castTimer = 0;
+                gStageEntryRenderCapturePrefix.castDelay = 0;
+                gStageEntryRenderCapturePrefix.castTimer = 0;
             }
             break;
         case CAST_STRIKE:
-            if (data_ov041_020cff48.castsDone < data_ov041_020cff48.castCount) {
-                data_ov041_020cff48.castWait = 5;
-                data_ov041_020cff48.castsDone++;
+            if (gStageEntryRenderCapturePrefix.castsDone < gStageEntryRenderCapturePrefix.castCount) {
+                gStageEntryRenderCapturePrefix.castWait = 5;
+                gStageEntryRenderCapturePrefix.castsDone++;
                 entry->stateStep = CAST_STATE_STRIKE;
                 again = TRUE;
                 waiting = TRUE;
             }
             break;
         case CAST_VOLLEY:
-            if (data_ov041_020cff48.castsDone < data_ov041_020cff48.castCount) {
-                data_ov041_020cff48.castsDone++;
+            if (gStageEntryRenderCapturePrefix.castsDone < gStageEntryRenderCapturePrefix.castCount) {
+                gStageEntryRenderCapturePrefix.castsDone++;
                 entry->stateStep = CAST_STATE_VOLLEY + 3;
                 again = TRUE;
             }
             break;
         case CAST_SWEEP:
-            if (data_ov041_020cff48.castsDone < data_ov041_020cff48.castCount) {
+            if (gStageEntryRenderCapturePrefix.castsDone < gStageEntryRenderCapturePrefix.castCount) {
                 ClearEntryActionState(entry);
-                data_ov041_020cff48.castsDone++;
+                gStageEntryRenderCapturePrefix.castsDone++;
                 entry->stateStep = CAST_STATE_SWEEP + 1;
                 again = TRUE;
-                data_ov041_020cff48.castDelay = 0;
+                gStageEntryRenderCapturePrefix.castDelay = 0;
             }
             break;
         }
@@ -663,24 +663,24 @@ void EntryActionCast(u8 entryIndex)
         entry->stateStep++;
         switch (action->castStyle) {
         case CAST_FROM_ABOVE:
-            data_ov041_020cff48.castWait = 20;
+            gStageEntryRenderCapturePrefix.castWait = 20;
             break;
         case CAST_STRIKE:
-            data_ov041_020cff48.castWait = 20;
+            gStageEntryRenderCapturePrefix.castWait = 20;
             break;
         case CAST_AROUND_CASTER:
-            data_ov041_020cff48.castWait = 0;
+            gStageEntryRenderCapturePrefix.castWait = 0;
             break;
         case CAST_VOLLEY:
-            data_ov041_020cff48.castWait = 20;
+            gStageEntryRenderCapturePrefix.castWait = 20;
             break;
         }
     case CAST_STATE_END:
         if (MatchesEitherSlotId(entry, action->animation) && IsEntryFlag2Set(entry)) {
             break;
         }
-        if (data_ov041_020cff48.castWait > 0) {
-            data_ov041_020cff48.castWait--;
+        if (gStageEntryRenderCapturePrefix.castWait > 0) {
+            gStageEntryRenderCapturePrefix.castWait--;
             break;
         }
         FinishEntryAction(entry);

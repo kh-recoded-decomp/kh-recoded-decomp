@@ -5,7 +5,7 @@ typedef struct Ov041AnimationTrackMap {
     u8 tracks[143];
 } Ov041AnimationTrackMap;
 
-const Ov041AnimationTrackMap data_ov041_020cf61c = {
+const Ov041AnimationTrackMap gStageActorAnimationTrackMap = {
     0xFF,
     {
         0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0x00, 0x00, 0x01, 0x01, 0x02, 0x02, 0x03,

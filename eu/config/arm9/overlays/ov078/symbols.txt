@@ -16,7 +16,7 @@ SelectNextPage kind:function(thumb,size=0xa4) addr:0x020c4ea0
 CloseOverlay078Menu kind:function(thumb,size=0x1c) addr:0x020c4f44
 StepCursorBack kind:function(thumb,size=0x26) addr:0x020c4f60
 StepCursorForward kind:function(thumb,size=0x26) addr:0x020c4f88
-data_ov078_020c4fb0 kind:data(any) addr:0x020c4fb0
+gPageMenuWidgetConfig kind:data(any) addr:0x020c4fb0
 gPageMenuDescriptor kind:data(any) addr:0x020c4fe0 ambiguous
 data_ov078_020c5024 kind:data(any) addr:0x020c5024
 data_ov078_020c5124 kind:data(any) addr:0x020c5124

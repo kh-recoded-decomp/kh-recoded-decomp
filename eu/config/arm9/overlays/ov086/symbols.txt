@@ -46,13 +46,13 @@ UpdateRecordPanelInput kind:function(arm,size=0x16c) addr:0x020c1ef4
 OnSliderTouched kind:function(arm,size=0x20) addr:0x020c2060
 SelectRecordPage kind:function(arm,size=0x20) addr:0x020c2080
 IsRecordPageUnavailable kind:function(arm,size=0x54) addr:0x020c20a0
-data_ov086_020c20f4 kind:data(any) addr:0x020c20f4
+gRecordTileLayerIds kind:data(any) addr:0x020c20f4
 gRecordGroupTierFlagBases kind:data(any) addr:0x020c20fc
 gRecordStatTierLabelIds kind:data(any) addr:0x020c2108
-data_ov086_020c2118 kind:data(any) addr:0x020c2118
-data_ov086_020c2128 kind:data(any) addr:0x020c2128
+gRecordTileSourceTemplate kind:data(any) addr:0x020c2118
+gRecordPanelTextFrame kind:data(any) addr:0x020c2128
 gRecordRankMessageIds kind:data(any) addr:0x020c2138
-data_ov086_020c2148 kind:data(any) addr:0x020c2148
+gRecordDigitWidgetConfig kind:data(any) addr:0x020c2148
 gRecordRowLabelMessageIds kind:data(any) addr:0x020c2158
 gRecordGroupTwoBitStatOffsets kind:data(any) addr:0x020c2168
 gRecordGroupSevenBitStatOffsets kind:data(any) addr:0x020c217c

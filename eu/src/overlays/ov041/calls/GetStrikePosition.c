@@ -2,7 +2,7 @@
 #include "nitro/fx.h"
 #include "src/overlays/ov041/StageEntryRender.h"
 
-extern const VecFx32 data_ov041_020cf7bc[];
+extern const VecFx32 gStageGridRowZPositions[];
 extern fx32 FX_Div(fx32 numer, fx32 denom);
 extern fx32 FX_Mul(fx32 a, fx32 b);
 extern void GetPositionAboveGround(VecFx32 *position, StageEntry *entry);
@@ -34,8 +34,8 @@ void GetStrikePosition(VecFx32 *out, StageEntry *attacker, StageEntry *target, S
     GetPositionAboveGround(&to, target);
     to.x += radius;
     GetPositionAboveGround(&from, attacker);
-    from.z -= data_ov041_020cf7bc[work->shadowHeightIndex].x + 0x4000;
-    to.z -= data_ov041_020cf7bc[work->shadowHeightIndex].x + 0x4000;
+    from.z -= gStageGridRowZPositions[work->shadowHeightIndex].x + 0x4000;
+    to.z -= gStageGridRowZPositions[work->shadowHeightIndex].x + 0x4000;
     VEC_Subtract(&to, &from, &step);
     distance = VEC_Mag(&step);
     VEC_NormalizeLength(&step, &step);

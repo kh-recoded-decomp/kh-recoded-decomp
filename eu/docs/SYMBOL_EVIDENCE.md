@@ -768,3 +768,11 @@ fields and tables, global scene work, and gauge/actor/effect configuration.
 [LATE_SCENE_GLOBAL_STORAGE.md](LATE_SCENE_GLOBAL_STORAGE.md) and
 [GAUGE_ACTOR_EFFECT_DATA.md](GAUGE_ACTOR_EFFECT_DATA.md) document owners,
 physical spans, real consumers and uncharacterized tails.
+
+## Name menu layouts and stage scene storage
+
+Name 86 native layout/template and scene/camera storage identities from constructor and consumer evidence. Keep native frame-count semantics, stage capture prefixes and overlay058 physical fragments explicit.
+
+[Menu Layout Template Data](MENU_LAYOUT_TEMPLATE_DATA.md),
+[Stage Camera Native Storage](STAGE_CAMERA_NATIVE_STORAGE.md),
+[Overlay058 Scene Native Storage](OVERLAY058_SCENE_NATIVE_STORAGE.md).

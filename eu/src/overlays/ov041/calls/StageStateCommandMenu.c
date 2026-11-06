@@ -8,7 +8,7 @@
 #define PAD_BUTTON_L 0x0200
 #define PAD_BUTTON_X 0x0400
 
-extern int data_ov041_020cff40[2]; /* [0] a short wait, [1] frames R has been held */
+extern int gStageCommandTimers[2]; /* [0] a short wait, [1] frames R has been held */
 extern u16 data_020604fc; /* buttons held */
 extern u16 data_02060500; /* buttons newly pressed */
 extern void ForceHudState6IfActive(void);
@@ -58,35 +58,35 @@ void StageStateCommandMenu(void)
             TryEnterFieldMenuState3();
             work->flags &= ~STAGE_WORK_TURN_STARTED;
         }
-        data_ov041_020cff40[0] = 2;
+        gStageCommandTimers[0] = 2;
         work->stateStep++;
     case 1:
-        if (data_ov041_020cff40[0] > 0) {
-            data_ov041_020cff40[0]--;
+        if (gStageCommandTimers[0] > 0) {
+            gStageCommandTimers[0]--;
             break;
         }
         work->stateStep++;
     case 2:
         HandleCommandMenuShortcuts(TRUE);
         if (data_020604fc & PAD_BUTTON_R) {
-            data_ov041_020cff40[1]++;
+            gStageCommandTimers[1]++;
             work->flags |= 0x100;
             if (work->flags & STAGE_WORK_SKIP_CHANCE_A) {
                 ShowStageHudMessage(4);
             }
-            if (data_ov041_020cff40[1] > 30) {
+            if (gStageCommandTimers[1] > 30) {
                 for (i = 0; i < work->menuDepth; i++) {
                     SetMenuEntryHighlight(0, work->menuStack[i], TRUE);
                     InvokeFieldModeOp150();
                 }
                 ResetSlotHandles();
                 HideStageHudMessage();
-                data_ov041_020cff40[1] = 0;
+                gStageCommandTimers[1] = 0;
                 work->flags |= STAGE_WORK_NO_TIMED_INPUT;
                 SetStageState(8, TRUE);
             }
         } else if (!(data_020604fc & PAD_BUTTON_L)) {
-            data_ov041_020cff40[1] = 0;
+            gStageCommandTimers[1] = 0;
             work->flags &= ~0x100;
             HideStageHudMessage();
             if (data_02060500 & PAD_BUTTON_X) {

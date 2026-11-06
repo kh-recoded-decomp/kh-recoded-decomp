@@ -1,6 +1,6 @@
 #include "nitro/types.h"
 
-const u32 data_ov041_020cf4e0[4] = {
+const u32 gStageRandomItemCommandCounts[4] = {
     0x0000A000, 0x00000003, 0x00000003, 0x00000003,
 };
 

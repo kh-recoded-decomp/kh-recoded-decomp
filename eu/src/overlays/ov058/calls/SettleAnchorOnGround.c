@@ -7,8 +7,8 @@
 #define VEC_Mag_01ff9f28 VEC_Mag
 #define VEC_MultAdd_01ffa09c VEC_MultAdd
 #define VEC_Add_01ff9e0c VEC_Add
-#define data_ov058_020d8a60 data_ov058_020d8a80
-#define data_ov058_020d8a24 data_ov058_020d8a44
+#define data_ov058_020d8a60 gOverlay058SceneAnimatedModel
+#define data_ov058_020d8a24 gOverlay058SceneControlHead
 #define func_ov021_020a94b0 CanStartTargetAction
 #define func_01ffaff4 VEC_NormalizeLength
 #include "src/ov058/unclassified_helpers/SettleAnchorOnGround_020d7054.c"

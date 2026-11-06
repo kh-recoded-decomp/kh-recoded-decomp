@@ -1,5 +1,5 @@
 #define AdvanceAnimationTracks_0202ef24 AdvanceAnimationTracks
 #define RebindEmitterSlots_020d7498 RebindEmitterSlots
 #define UpdateEffectSlotPhase_020d7640 UpdateEffectSlotPhase
-#define data_ov058_020d8a2c data_ov058_020d8a4c
+#define data_ov058_020d8a2c gOverlay058SceneCenter
 #include "src/ov058/unclassified_helpers/UpdateEffectSlotPhase_020d7640.c"

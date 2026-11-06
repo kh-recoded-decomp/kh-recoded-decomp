@@ -22,7 +22,7 @@ typedef struct {
 } StageWork;
 
 extern u8 *gMovieContextState;
-extern AnimTrackEntry data_ov041_020cf61c[][24];
+extern AnimTrackEntry gStageActorAnimationTrackMap[][24];
 extern void selectJointAnimationBlend(void *state, int joint, void *target, s16 track);
 
 void PlayActorEffectAnimation(AnimActor *actor, int animId) {
@@ -32,11 +32,11 @@ void PlayActorEffectAnimation(AnimActor *actor, int animId) {
 
     switch (actor->kind) {
     case 0xff:
-        track = data_ov041_020cf61c[0xff - actor->kind][animId].effectTrack;
+        track = gStageActorAnimationTrackMap[0xff - actor->kind][animId].effectTrack;
         effect = work->effects[0];
         break;
     case 0xfd:
-        track = data_ov041_020cf61c[0xff - actor->kind][animId].effectTrack;
+        track = gStageActorAnimationTrackMap[0xff - actor->kind][animId].effectTrack;
         effect = work->effects[1];
         break;
     default:

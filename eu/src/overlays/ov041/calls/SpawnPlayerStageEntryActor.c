@@ -68,7 +68,7 @@ extern u8 *gMovieContextState;
 extern char sOv041_RpgPlSoSoP2_020cfa34[];
 extern char sOv041_WeaponTg00_020cf770[];
 extern char sOv041_RpgPlSoWeP2_020cfa44[];
-extern const char data_ov041_020cf790[];
+extern const char gStageSpawnPlayerRootNodeName[];
 extern void UpdateStageEntryAnimation(void);
 extern void DrawStageEntryModels(void);
 extern void DrawStagePrimaryModel(void);
@@ -190,7 +190,7 @@ void SpawnPlayerStageEntryActor(int index, u8 slot)
     if (entry->actor.modelResource != NULL) {
         shadowDict = (u8 *)entry->actor.modelResource + 0x40;
     }
-    shadow->nodeIndex = shadowDict != NULL ? NNS_G3dGetResDictIdxByName(shadowDict, data_ov041_020cf790) : -1;
+    shadow->nodeIndex = shadowDict != NULL ? NNS_G3dGetResDictIdxByName(shadowDict, gStageSpawnPlayerRootNodeName) : -1;
     attributes[0] = 0;
     shadow->actor.slotId = FindFreeSlotId();
     ActorEntry_Init(shadow->actor.slotId, shadow, 0, attributes, NULL, FALSE, 0x20);

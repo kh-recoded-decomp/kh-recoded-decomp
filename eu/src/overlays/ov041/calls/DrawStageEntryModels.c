@@ -10,7 +10,7 @@ void DrawStageEntryModels(StageEntrySlot *slot, BOOL drawShadow)
     for (i = 0; i < work->entryCount; ++i) {
         entry = &work->entries[i];
         if (slot == &entry->slot) {
-            data_ov041_020cff48.entry = entry;
+            gStageEntryRenderCapturePrefix.entry = entry;
             break;
         }
     }

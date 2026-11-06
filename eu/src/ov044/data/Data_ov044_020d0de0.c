@@ -9,7 +9,7 @@ extern void InitPanelSwayB(void);
 extern void func_ov044_020d0000(void);
 extern void func_ov044_020d0020(void);
 
-u32 data_ov044_020d0e10[36] = {
+u32 gPanelCameraPathPresets[36] = {
     0x00000000, 0x00000000, 0xFFFED000, 0x0005A000,
     0x00022512, 0x00000000, 0x00000000, 0x00000000,
     0xFFFDF000, 0x0005A000, 0x00022512, 0x00000000,

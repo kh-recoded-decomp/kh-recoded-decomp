@@ -71,8 +71,8 @@ struct Enemy {
     AiState ai;
 };
 
-extern Enemy *data_ov058_020d8a40;
-extern const VecFx32 data_ov058_020d896c;
+extern Enemy *gOverlay058EntryZeroActor;
+extern const VecFx32 gOverlay058EnemyAiCrossAxis;
 
 extern VecFx32 *GetActorModelPosition(Enemy *enemy);
 extern Enemy *GetBoundedEntryField(int index);
@@ -134,8 +134,8 @@ u16 UpdateEnemyCombatAi(Enemy *enemy, EnemyCommand *command)
     if (ai->kind == 4) {
         range = 0xa000;
     }
-    data_ov058_020d8a40 = GetBoundedEntryField(0);
-    playerPos = GetActorModelPosition(data_ov058_020d8a40);
+    gOverlay058EntryZeroActor = GetBoundedEntryField(0);
+    playerPos = GetActorModelPosition(gOverlay058EntryZeroActor);
     distance = VEC_Distance(playerPos, pos);
     ai->alertTimer = CLAMP(ai->alertTimer - GetFieldActorUpdateStepFx12(), 0, 0x1e000);
     ai->retreatTimer = CLAMP(ai->retreatTimer - GetFieldActorUpdateStepFx12(), 0, 0x1e000);
@@ -154,7 +154,7 @@ u16 UpdateEnemyCombatAi(Enemy *enemy, EnemyCommand *command)
             VEC_MultAdd(0x3000, &target, pos, &target);
             enemy->turnSpeed = 0x19a;
             if (SteerEnemyTowardPoint(enemy, command, &target, TRUE) || range < distance) {
-                if (!(Enemy_GetMoveFlags(data_ov058_020d8a40) & 8)) {
+                if (!(Enemy_GetMoveFlags(gOverlay058EntryZeroActor) & 8)) {
                     Enemy_SpawnEvent1EEffectAndDetachCollider(enemy);
                 }
             }
@@ -164,7 +164,7 @@ u16 UpdateEnemyCombatAi(Enemy *enemy, EnemyCommand *command)
         break;
     }
     case 3: {
-        VecFx32 up = data_ov058_020d896c;
+        VecFx32 up = gOverlay058EnemyAiCrossAxis;
         VecFx32 side;
         VecFx32 toPlayer;
         VecFx32 dir;
@@ -189,11 +189,11 @@ u16 UpdateEnemyCombatAi(Enemy *enemy, EnemyCommand *command)
         }
         VEC_MultAdd(0x1800, &side, &toPlayer, &side);
         VEC_Add(GetActorModelPosition(enemy), &side, &side);
-        if (data_ov058_020d8a40->behaviorFlags & 4) {
+        if (gOverlay058EntryZeroActor->behaviorFlags & 4) {
             checkStuck = FALSE;
         }
         if (SteerEnemyTowardPoint(enemy, command, &side, checkStuck) || range < distance) {
-            if (!(Enemy_GetMoveFlags(data_ov058_020d8a40) & 8)) {
+            if (!(Enemy_GetMoveFlags(gOverlay058EntryZeroActor) & 8)) {
                 Enemy_SpawnEvent1EEffectAndDetachCollider(enemy);
             }
             ai->timer = 0;
@@ -218,8 +218,8 @@ u16 UpdateEnemyCombatAi(Enemy *enemy, EnemyCommand *command)
             alone = TRUE;
         }
         if (!alone) {
-            if (Enemy_CanShareTarget(data_ov058_020d8a40)) {
-                enemy->waitTarget = data_ov058_020d8a40->waitTarget;
+            if (Enemy_CanShareTarget(gOverlay058EntryZeroActor)) {
+                enemy->waitTarget = gOverlay058EntryZeroActor->waitTarget;
             }
             command->actions |= 0x400;
         } else {

@@ -2,7 +2,7 @@
 #define InitObjManagerAndMark_020b9060 InitObjManagerAndMark
 #define LoadPageMenuWidgets_020c4570 LoadPageMenuWidgets
 #define ReadGlobalPackedBits_02027348 ReadGlobalPackedBits
-#define data_ov078_020c4f90 data_ov078_020c4fb0
+#define data_ov078_020c4f90 gPageMenuWidgetConfig
 #define func_ov027_020b8f98 LoadWidgetDescriptorsFromFile
 #define func_ov027_020b95e4 ClearWidgetRecordActiveBits
 #define func_ov027_020b96a0 SetWidgetAnimationFrame

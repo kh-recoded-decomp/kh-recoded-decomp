@@ -24,12 +24,12 @@ typedef struct ModelContext {
     TrackedNodeManager *trackedNodes;
 } ModelContext;
 
-extern ModelContext data_ov041_020cff48;
+extern ModelContext gStageEntryRenderCapturePrefix;
 extern void NNS_G3dGetCurrentMtx(void *matrix, int mode);
 
 void ModelRenderCallbackKindC(ModelRenderState *renderState)
 {
-    TrackedNodeManager *trackedNodes = data_ov041_020cff48.trackedNodes;
+    TrackedNodeManager *trackedNodes = gStageEntryRenderCapturePrefix.trackedNodes;
     int nodeId = (renderState->flags & 0x10)
                      ? renderState->currentNode
                      : -1;

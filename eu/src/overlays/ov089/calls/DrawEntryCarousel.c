@@ -1,5 +1,5 @@
 #define DrawEntryCarousel_020bfeec DrawEntryCarousel
-#define data_ov089_020c04f4 data_ov089_020c0514
+#define data_ov089_020c04f4 gEntryCarouselPositionTemplate
 #define camera_commit_projection_0202a814 camera_commit_projection
 #define AdvanceAnimationTracks_0202ef24 AdvanceAnimationTracks
 #define SceneNode_Draw_01ffb12c SceneNode_Draw

@@ -64,7 +64,7 @@ void EntryActionMelee(u8 entryIndex)
     PlayEntryActionSound(entry, frame);
     switch (entry->stateStep) {
     case 0:
-        data_ov041_020cff48.comboCount = 0;
+        gStageEntryRenderCapturePrefix.comboCount = 0;
         entry->stateStep++;
     case 1:
         ChooseEntryMainTarget(entry);
@@ -141,8 +141,8 @@ void EntryActionMelee(u8 entryIndex)
         if (IsStageEntryFrozen(entry) || IsEntryFlag2Set(entry)) {
             break;
         }
-        if (data_ov041_020cff48.comboCount < 2) {
-            data_ov041_020cff48.comboCount++;
+        if (gStageEntryRenderCapturePrefix.comboCount < 2) {
+            gStageEntryRenderCapturePrefix.comboCount++;
             entry->stateStep = MELEE_COMBO;
             again = TRUE;
             ClearEntryActionState(entry);

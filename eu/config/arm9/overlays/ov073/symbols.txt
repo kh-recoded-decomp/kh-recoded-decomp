@@ -91,16 +91,16 @@ GetStatusListSelectedRecordIndex kind:function(thumb,size=0x24) addr:0x020c3fc4
 GetListWidgetEntryIds kind:function(thumb,size=0x34) addr:0x020c3fe8
 SetListWidgetEntries kind:function(thumb,size=0x48) addr:0x020c401c
 SetListWidgetBusy kind:function(thumb,size=0x42) addr:0x020c4064
-data_ov073_020c40a8 kind:data(any) addr:0x020c40a8
-data_ov073_020c40b0 kind:data(any) addr:0x020c40b0
-data_ov073_020c40c0 kind:data(any) addr:0x020c40c0
-data_ov073_020c40d0 kind:data(any) addr:0x020c40d0
-data_ov073_020c40e0 kind:data(any) addr:0x020c40e0
-data_ov073_020c40f0 kind:data(any) addr:0x020c40f0
-data_ov073_020c4100 kind:data(any) addr:0x020c4100
-data_ov073_020c4110 kind:data(any) addr:0x020c4110
-data_ov073_020c4120 kind:data(any) addr:0x020c4120
-data_ov073_020c4130 kind:data(any) addr:0x020c4130
+gStatusPanelTileIds kind:data(any) addr:0x020c40a8
+gStatusTierThresholds kind:data(any) addr:0x020c40b0
+gStatusMenuTextLayer1Frame kind:data(any) addr:0x020c40c0
+gStatusPanelTitleFrame kind:data(any) addr:0x020c40d0
+gStatusMenuWidgetConfig kind:data(any) addr:0x020c40e0
+gStatusPanelTileSourceTemplate kind:data(any) addr:0x020c40f0
+gStatusMenuTextLayer2Frame kind:data(any) addr:0x020c4100
+gStatusPanelBodyFrame kind:data(any) addr:0x020c4110
+gStatusMenuTextLayer0Frame kind:data(any) addr:0x020c4120
+gStatusPanelRowLayout kind:data(any) addr:0x020c4130
 gStatusMenuDescriptor kind:data(any) addr:0x020c4160 ambiguous
 gStatusHeaderTextFormat kind:data(any) addr:0x020c41a0
 sOv073_OCBGOFSFUNC_020c41a8 kind:data(any) addr:0x020c41a8

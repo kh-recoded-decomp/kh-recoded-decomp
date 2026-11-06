@@ -3,12 +3,12 @@
 
 #define ITEM_ACTION 2 /* the slot of StageEntry.actions an item's action is copied to */
 
-extern const fx32 data_ov041_020cf568[];
-extern const fx32 data_ov041_020cf554[];
-extern const fx32 data_ov041_020cf4f0[];
-extern const fx32 data_ov041_020cf4b0[];
-extern const int data_ov041_020cf4e0[];
-extern const int data_ov041_020cf594[][4];
+extern const fx32 gStageSingleItemArgPowerScales[];
+extern const fx32 gStageGroupItemArgPowerScales[];
+extern const fx32 gStageGroupItemEntryCountPowerScales[];
+extern const fx32 gStageItemEbPowerScales[];
+extern const int gStageRandomItemCommandCounts[];
+extern const int gStageRandomItemCommandChoices[][4];
 extern void MIi_CpuCopyFast(const void *src, void *dest, u32 size);
 extern fx32 FX_Mul(fx32 a, fx32 b);
 extern u8 CountActiveStageEntries(BOOL primary);
@@ -96,17 +96,17 @@ void StartQueuedItemCommand(StageFieldCommand *command)
     case 0xe8:
     case 0xe9:
     case 0xea:
-        work->itemActions[0].power = FX_Mul(work->itemActions[0].power, data_ov041_020cf568[arg]);
+        work->itemActions[0].power = FX_Mul(work->itemActions[0].power, gStageSingleItemArgPowerScales[arg]);
         break;
     case 0xe4:
     case 0xe5:
     case 0xe6:
-        work->itemActions[0].power = FX_Mul(work->itemActions[0].power, data_ov041_020cf554[arg]);
+        work->itemActions[0].power = FX_Mul(work->itemActions[0].power, gStageGroupItemArgPowerScales[arg]);
         work->itemActions[0].power =
-            FX_Mul(work->itemActions[0].power, data_ov041_020cf4f0[CountActiveStageEntries(TRUE) - 1]);
+            FX_Mul(work->itemActions[0].power, gStageGroupItemEntryCountPowerScales[CountActiveStageEntries(TRUE) - 1]);
         break;
     case 0xeb:
-        work->itemActions[0].power = FX_Mul(work->itemActions[0].power, data_ov041_020cf4b0[arg]);
+        work->itemActions[0].power = FX_Mul(work->itemActions[0].power, gStageItemEbPowerScales[arg]);
         break;
     case 0xec:
         break;
@@ -137,7 +137,7 @@ void StartQueuedItemCommand(StageFieldCommand *command)
         }
         break;
     case 0xec:
-        work->commandId = data_ov041_020cf594[arg][NextSharedRandom16Scaled(data_ov041_020cf4e0[arg] * 1000) / 1000];
+        work->commandId = gStageRandomItemCommandChoices[arg][NextSharedRandom16Scaled(gStageRandomItemCommandCounts[arg] * 1000) / 1000];
         work->commandEffectKind = GetCommandEffectKind(work->commandId);
         switch (work->commandEffectKind) {
         case 7:

@@ -23,7 +23,7 @@
 #define VEC_Subtract_01ff9e3c VEC_Subtract
 #define data_0205356c gSinFx12Table
 #define data_02053aac data_02053ac0
-#define data_ov047_020c7284 data_ov047_020c72a4
+#define data_ov047_020c7284 gCameraShakePresetAmountHead
 #define func_01ffa0f4 VEC_Distance
 #define func_ov046_020c2ab8 Camera_UsesDefaultFocusInPreset19Or21
 #include "src/ov047/camera/Camera_UpdateFollowLookAt_020c5548.c"

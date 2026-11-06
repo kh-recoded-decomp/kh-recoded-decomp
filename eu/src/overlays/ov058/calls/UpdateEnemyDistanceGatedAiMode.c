@@ -28,7 +28,7 @@ struct Enemy {
     AiState ai;
 };
 
-extern Enemy *data_ov058_020d8a40;
+extern Enemy *gOverlay058EntryZeroActor;
 extern VecFx32 *GetActorModelPosition(Enemy *enemy);
 extern fx32 VEC_Distance(const VecFx32 *a, const VecFx32 *b);
 
@@ -43,7 +43,7 @@ static inline u32 Enemy_GetStatus(Enemy *enemy)
 void UpdateEnemyDistanceGatedAiMode(Enemy *enemy, InputState *input)
 {
     AiState *ai = &enemy->ai;
-    fx32 distance = VEC_Distance(GetActorModelPosition(data_ov058_020d8a40), GetActorModelPosition(enemy));
+    fx32 distance = VEC_Distance(GetActorModelPosition(gOverlay058EntryZeroActor), GetActorModelPosition(enemy));
     fx32 margin = 0;
     BOOL locked = FALSE;
     u32 flags;
@@ -55,7 +55,7 @@ void UpdateEnemyDistanceGatedAiMode(Enemy *enemy, InputState *input)
     if (flags & 0x80000) {
         return;
     }
-    if (data_ov058_020d8a40->targetKind == 1) {
+    if (gOverlay058EntryZeroActor->targetKind == 1) {
         margin = 0x2000;
         locked = TRUE;
     }

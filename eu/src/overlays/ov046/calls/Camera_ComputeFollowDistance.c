@@ -3,7 +3,7 @@
 #define FixedPointMultiply12 FX_Mul
 #define VEC_DotProduct_01ff9e6c VEC_DotProduct
 #define VEC_Subtract_01ff9e3c VEC_Subtract
-#define data_ov046_020c33b0 data_ov046_020c33d0
+#define data_ov046_020c33b0 gCameraModePresetHead
 #define func_01ff9f88 VEC_Normalize
 #define g_cameraManager_020c34e0 gCameraManager
 #define func_01ffaff4 VEC_NormalizeLength

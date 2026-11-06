@@ -21,8 +21,8 @@ SaveSelect_ConsumeLButtonNoop kind:function(thumb,size=0x2) addr:0x020c5d28
 SaveSelect_ConsumeRButtonNoop kind:function(thumb,size=0x2) addr:0x020c5d2c
 UpdateValidSlotCount kind:function(thumb,size=0x18) addr:0x020c5d30
 gSaveSelectObjManagerConfig kind:data(any) addr:0x020c5d48
-data_ov080_020c5d58 kind:data(any) addr:0x020c5d58
-data_ov080_020c5d68 kind:data(any) addr:0x020c5d68
+gSaveSelectWindowStyle kind:data(any) addr:0x020c5d58
+gSaveSelectWidgetLayout kind:data(any) addr:0x020c5d68
 gSaveSelectMenuDescriptor kind:data(any) addr:0x020c5da0 ambiguous
 sOv080_UiMenuStrLanguageSaveSZ_020c5de4 kind:data(any) addr:0x020c5de4
 gSaveSlotNumberFormat kind:data(any) addr:0x020c5dfc

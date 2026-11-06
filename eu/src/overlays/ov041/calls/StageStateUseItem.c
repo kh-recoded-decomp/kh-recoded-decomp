@@ -6,7 +6,7 @@
 #define STAGE_ENTRY_ADVANCING 10
 #define ITEM_ACTION 2 /* the slot of StageEntry.actions an item's action is copied to */
 
-extern int data_ov041_020cff40;
+extern int gStageCommandTimers;
 extern void RequestFieldRefresh(void);
 extern void ShowStageHudMessage(u8 kind, ...);
 extern BOOL IsStageHudMessageShowing(void);
@@ -43,17 +43,17 @@ void StageStateUseItem(void)
         switch (work->itemActions[0].effect) {
         case 0xb7:
         case 0xb8:
-            data_ov041_020cff40 = 0;
+            gStageCommandTimers = 0;
             break;
         default:
             ShowStageHudMessage(10);
-            data_ov041_020cff40 = 15;
+            gStageCommandTimers = 15;
             break;
         }
         work->stateStep++;
     case 1:
-        if (data_ov041_020cff40 > 0) {
-            data_ov041_020cff40--;
+        if (gStageCommandTimers > 0) {
+            gStageCommandTimers--;
             break;
         }
         ShowStageHudMessage(11, work->itemActions[0].effect, work->itemActions[0].effectArg);

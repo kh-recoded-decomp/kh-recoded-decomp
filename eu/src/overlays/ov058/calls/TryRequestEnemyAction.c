@@ -1,3 +1,3 @@
 #define TryRequestEnemyAction_020d64dc TryRequestEnemyAction
-#define g_player_020d8a20 data_ov058_020d8a40
+#define g_player_020d8a20 gOverlay058EntryZeroActor
 #include "src/ov058/unclassified_helpers/TryRequestEnemyAction_020d64dc.c"

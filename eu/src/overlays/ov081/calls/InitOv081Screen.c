@@ -5,8 +5,8 @@
 #define LoadPackedFileView_020ba25c LoadPackedFileView
 #define Msg_OpenContainerAndReadHeader_0202cc6c Msg_OpenContainerAndReadHeader
 #define PXI_Init_020b9078 CreateWidgetImageEntry
-#define data_020c5c44 data_ov081_020c5c64
-#define data_020c5c54 data_ov081_020c5c74
+#define data_020c5c44 gTutorialRootWidgetConfig
+#define data_020c5c54 gTutorialContainerWidgetConfig
 #define data_020c5ce4 sOv081_UiMenuTutorialP2_020c5d04
 #define data_020c5cf8 sOv081_UiMenuLanguageTutorialP2_020c5d18
 #define data_020c5d10 sOv081_UiMenuStrLanguageTutoSZ_020c5d30

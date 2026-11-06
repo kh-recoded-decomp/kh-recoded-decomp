@@ -1,5 +1,5 @@
-extern int data_ov058_020d8a44;
+extern int gOverlay058SceneControlHead;
 
 int GetSceneIntroSequenceMode(void) {
-    return *(signed char *)&data_ov058_020d8a44;
+    return *(signed char *)&gOverlay058SceneControlHead;
 }

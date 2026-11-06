@@ -92,7 +92,7 @@ Camera_AimViewAtPlayer kind:function(thumb,size=0x78) addr:0x020c3310
 SetCameraMode3EntryState kind:function(thumb,size=0x34) addr:0x020c3388
 gCameraLayerIds kind:data(any) addr:0x020c33c0
 gCameraLayerIdsByMode kind:data(any) addr:0x020c33c0
-data_ov046_020c33d0 kind:data(any) addr:0x020c33d0
-data_ov046_020c33d4 kind:data(any) addr:0x020c33d4
-data_ov046_020c33d8 kind:data(any) addr:0x020c33d8
+gCameraModePresetHead kind:data(any) addr:0x020c33d0
+gCameraModePresetHeightHead kind:data(any) addr:0x020c33d4
+gCameraModePresetTail kind:data(any) addr:0x020c33d8
 gCameraManager kind:bss addr:0x020c3500

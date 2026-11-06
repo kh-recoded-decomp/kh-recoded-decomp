@@ -1,4 +1,4 @@
-#define defaultGridSettings data_ov088_020bee6c
+#define defaultGridSettings gOverlay088GridWidgetConfig
 #define func_ov001_02064574 ReadSessionPackedBits
 #define func_ov027_020b8f98 LoadWidgetDescriptorsFromFile
 #define func_ov027_020b9060 InitObjManagerAndMark
@@ -8,5 +8,5 @@
 #define func_ov027_020b97fc SetAllElementObjectModes
 #define func_ov039_020bc1cc GetMenuWidgetContainer
 #define func_ov039_020bc220 BuildSlotImageParams
-#define gridEntryIds data_ov088_020beec0
+#define gridEntryIds gOverlay088GridWidgetIds
 #include "src/ov088/panel_state/ApplyOverlay088GridStates.c"

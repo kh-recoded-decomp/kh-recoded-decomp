@@ -36,6 +36,6 @@ StartScaledPanelTransition kind:function(arm,size=0x84) addr:0x020d0d1c
 EnterPendingPanelState kind:function(arm,size=0x20) addr:0x020d0da0
 data_ov044_020d0de0 kind:data(any) addr:0x020d0de0
 data_ov044_020d0de4 kind:data(any) addr:0x020d0de4
-data_ov044_020d0e10 kind:data(any) addr:0x020d0e10
-data_ov044_020d0ea0 kind:data(any) addr:0x020d0ea0
+gPanelCameraPathPresets kind:data(any) addr:0x020d0e10
+gPanelCameraTransitionPathStorage kind:data(any) addr:0x020d0ea0
 gPanelCameraGlobalStorage kind:bss addr:0x020d0ec0

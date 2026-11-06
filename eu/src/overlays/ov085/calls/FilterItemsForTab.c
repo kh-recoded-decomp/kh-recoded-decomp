@@ -5,7 +5,7 @@ typedef struct KindGroups {
     u32 secondary[3];
 } KindGroups;
 
-extern KindGroups data_ov085_020c231c;
+extern KindGroups gShopCategoryFilterSets;
 extern u16 FilterEntriesByCategorySet(void *list, const u32 *categories,
                                      u32 categoryCount, BOOL exclude);
 extern u16 FilterEntriesByCategory(void *list, u32 category);
@@ -13,7 +13,7 @@ extern u16 FilterEntriesByCategory(void *list, u32 category);
 u16 FilterItemsForTab(OwnedItemMenu *menu, int kind)
 {
     u32 single;
-    KindGroups groups = data_ov085_020c231c;
+    KindGroups groups = gShopCategoryFilterSets;
     u32 result;
 
     if (kind == -1) {

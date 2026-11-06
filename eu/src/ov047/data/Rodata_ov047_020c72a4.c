@@ -1,5 +1,5 @@
 #include "nitro/types.h"
 
-const u32 data_ov047_020c72a4[1] = {
+const u32 gCameraShakePresetAmountHead[1] = {
     0x00000060,
 };

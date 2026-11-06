@@ -9,7 +9,7 @@ const StageTargetCandidates gEmptyTargetCandidates = {
     {-1, -1, -1, -1, -1, -1, -1, -1, -1},
 };
 
-const u32 data_ov041_020cf6b8[9] = {
+const u32 gStageSetupMemberSpawnOrder[9] = {
     0x00000001, 0x00000000, 0x00000002, 0x00000004,
     0x00000003, 0x00000005, 0x00000007, 0x00000006,
     0x00000008,

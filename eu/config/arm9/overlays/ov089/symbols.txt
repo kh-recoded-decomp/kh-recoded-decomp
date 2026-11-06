@@ -23,16 +23,16 @@ UpdateEntryCarousel kind:function(arm,size=0x218) addr:0x020c0214
 ConfirmOrClosePopup kind:function(arm,size=0x50) addr:0x020c042c
 CommitPopupSelectionToSessionBits kind:function(arm,size=0x6c) addr:0x020c047c
 ResetPopupConfirmModeWithSound kind:function(arm,size=0x2c) addr:0x020c04e8
-data_ov089_020c0514 kind:data(any) addr:0x020c0514
-data_ov089_020c0520 kind:data(any) addr:0x020c0520
-data_ov089_020c0530 kind:data(any) addr:0x020c0530
+gEntryCarouselPositionTemplate kind:data(any) addr:0x020c0514
+gEntryCarouselWidgetConfig kind:data(any) addr:0x020c0520
+gEntryCarouselTextFrame kind:data(any) addr:0x020c0530
 data_ov089_020c0540 kind:data(any) addr:0x020c0540
 data_ov089_020c0560 kind:data(any) addr:0x020c0560
 gEntryCarouselMenuDescriptor kind:data(any) addr:0x020c056c ambiguous
 data_ov089_020c05b0 kind:data(any) addr:0x020c05b0
 data_ov089_020c05c4 kind:data(any) addr:0x020c05c4 ambiguous
 data_ov089_020c05f8 kind:data(any) addr:0x020c05f8
-data_ov089_020c064c kind:data(any) addr:0x020c064c
-data_ov089_020c0654 kind:data(any) addr:0x020c0654
+gEntryCarouselTitleLanguage2Separator kind:data(any) addr:0x020c064c
+gEntryCarouselTitleDefaultSeparator kind:data(any) addr:0x020c0654
 sOv089_UiMenuStrLanguageCsSZ_020c065c kind:data(any) addr:0x020c065c
 gEntryCarouselTitleFormat kind:data(any) addr:0x020c0674

@@ -71,8 +71,8 @@ typedef struct {
     u8 pad_0b0[0x134 - 0xb0];
 } HazardEntry;
 
-extern OverlayState data_ov058_020d8a44;
-extern HazardEntry data_ov058_020d8cec[];
+extern OverlayState gOverlay058SceneControlHead;
+extern HazardEntry gOverlay058ArchiveEffect3Models[];
 
 extern void InitRecord60(HitAttack *attack);
 extern void RotateOffsetAroundY(VecFx32 *out, const VecFx32 *origin, int angle, const VecFx32 *offset);
@@ -100,8 +100,8 @@ void PulseHazardHitScans(int index)
     VecFx32 axis;
     VecFx32 diff;
     CollisionShape shapeResult;
-    OverlayState *state = &data_ov058_020d8a44;
-    HazardEntry *entry = &data_ov058_020d8cec[index];
+    OverlayState *state = &gOverlay058SceneControlHead;
+    HazardEntry *entry = &gOverlay058ArchiveEffect3Models[index];
     int i;
 
     if ((state->timer + index * 0x1000) % 0x8000 != 0) {

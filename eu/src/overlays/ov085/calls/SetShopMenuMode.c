@@ -15,7 +15,7 @@
 #define TagTracker_InvokeCallback_020b8210 TagTracker_InvokeCallback
 #define _u32_div_f _u32_div_f
 #define data_0205fe0c data_0205fe0c
-#define data_ov085_020c22c4 data_ov085_020c22e4
+#define data_ov085_020c22c4 gShopTabFilterCodes
 #define func_020291b4 GetPrimaryRecordCount
 #define func_02029240 AddRecordItem
 #define func_0204f378 IndexedRecords_SetFlag2

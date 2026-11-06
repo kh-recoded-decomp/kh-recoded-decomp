@@ -11,7 +11,7 @@ typedef float f32;
 /* A whole frame count as fx32, rounded half away from zero (converted once, after the rounding). */
 #define FRAME_TO_FX32(x) ((fx32)((x) > 0 ? (f32)((x) << FX32_SHIFT) + 0.5f : (f32)((x) << FX32_SHIFT) - 0.5f))
 
-extern const char data_ov041_020cf720[];
+extern const char gStageDashRootNodeName[];
 extern StageEntryAction *GetEntryAction(StageEntry *entry);
 extern int GetEntryAnimationFrame(StageEntry *entry);
 extern void GetPositionAboveGround(VecFx32 *position, StageEntry *entry);
@@ -76,9 +76,9 @@ void EntryActionDash(u8 entryIndex)
     switch (entry->stateStep) {
     case 0:
         again = FALSE;
-        data_ov041_020cff48.comboCount = 0;
-        data_ov041_020cff48.unk00 = 0;
-        data_ov041_020cff48.castTimer = 0;
+        gStageEntryRenderCapturePrefix.comboCount = 0;
+        gStageEntryRenderCapturePrefix.unk00 = 0;
+        gStageEntryRenderCapturePrefix.castTimer = 0;
         entry->stateStep++;
     case 1: {
         VecFx32 position;
@@ -152,7 +152,7 @@ void EntryActionDash(u8 entryIndex)
                 if (entry->slot.node.modelResource != NULL) {
                     dict = (u8 *)entry->slot.node.modelResource + 0x40;
                 }
-                entry->effects[0]->variant = dict != NULL ? NNS_G3dGetResDictIdxByName(dict, data_ov041_020cf720) : -1;
+                entry->effects[0]->variant = dict != NULL ? NNS_G3dGetResDictIdxByName(dict, gStageDashRootNodeName) : -1;
                 entry->effects[0]->flags |= 0x10;
             }
             MoveEntryAlongPath(entry, work->frameStep);

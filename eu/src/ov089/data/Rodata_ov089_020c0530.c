@@ -5,6 +5,6 @@ const u32 data_ov089_020c0540[6] = {
     0x00003712, 0x00003713,
 };
 
-const u16 data_ov089_020c0530[8] = {
+const u16 gEntryCarouselTextFrame[8] = {
     8, 3, 16, 2, 32, 15, 0, 0,
 };

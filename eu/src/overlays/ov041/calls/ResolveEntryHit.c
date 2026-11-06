@@ -321,8 +321,8 @@ u32 ResolveEntryHit(StageEntry *entry, StageEntry *target, StageEntryHit *hit)
         target->flags |= STAGE_ENTRY_ALT_VOICES;
     }
     if ((entry->kind == 0xfd && entry->actions[entry->actionIndex].kind == ACTION_KIND_FLURRY &&
-         data_ov041_020cff48.flurryHit != 5 &&
-         (CountActiveStageEntries(entry->flags & STAGE_ENTRY_ENEMY) == 1 || data_ov041_020cff48.flurryRound == 2)) ||
+         gStageEntryRenderCapturePrefix.flurryHit != 5 &&
+         (CountActiveStageEntries(entry->flags & STAGE_ENTRY_ENEMY) == 1 || gStageEntryRenderCapturePrefix.flurryRound == 2)) ||
         (entry->kind == 0xff && GetEntryAction(entry)->kind == 3 && entry->stateStep == 0xb)) {
         if (target->hp <= 0) {
             target->hp = 0;

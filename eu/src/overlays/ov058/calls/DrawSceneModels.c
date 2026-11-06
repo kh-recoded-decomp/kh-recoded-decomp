@@ -1,8 +1,8 @@
 #define ApplyModelPolygonId_020d78bc ApplyModelPolygonId
 #define DrawSceneModels_020d8774 DrawSceneModels
-#define data_ov058_020d8a24 data_ov058_020d8a44
-#define data_ov058_020d8b98 data_ov058_020d8bb8
-#define data_ov058_020d9068 data_ov058_020d9088
+#define data_ov058_020d8a24 gOverlay058SceneControlHead
+#define data_ov058_020d8b98 gOverlay058ArchiveEffect2Model
+#define data_ov058_020d9068 gOverlay058ArchiveEffect4ModelPrefix
 #define func_ov058_020d7720 DrawSceneIntroEffectSlot
 #define func_ov058_020d7980 DrawSceneIntroRaisedModel
 #include "src/ov058/unclassified_helpers/DrawSceneModels_020d8774.c"

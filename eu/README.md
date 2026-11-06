@@ -39,7 +39,7 @@ follow their shared regional bodies.
 | Verified library functions (not C) | **136** (71,242 bytes) | MobiClip, NitroSDK, MSL and DS Protect; verified separately from C |
 | C + verified library **bytes** | **1,771,024** / 1,771,024 (**100.00%**) | Combined byte-exact code coverage; library bytes do not increase the C percentage |
 | Reconstructed DATA bytes | **223,456** / 223,456 (100.00%) | Verified byte-exact .rodata, .data, .ctor and .bss reconstructed from source |
-| Named DATA symbols | **1,683** / 2,331 (72.20%) | Identified DATA names; naming alone does not count as reconstructed DATA |
+| Named DATA symbols | **1,769** / 2,331 (75.89%) | Identified DATA names; naming alone does not count as reconstructed DATA |
 | Named, not decompiled | **0** | Functions with a known name (SDK, NitroSystem, ...) but no source yet |
 | Total known functions | **10,625** | Functions in the dsd symbol tables |
 | Region | EU (`BK9P`) |  |

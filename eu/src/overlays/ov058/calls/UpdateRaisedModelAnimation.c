@@ -1,4 +1,4 @@
 #define AdvanceAnimationTracks_0202ef24 AdvanceAnimationTracks
 #define UpdateRaisedModelAnimation_020d7904 UpdateRaisedModelAnimation
-#define data_ov058_020d8a2c data_ov058_020d8a4c
+#define data_ov058_020d8a2c gOverlay058SceneCenter
 #include "src/ov058/unclassified_helpers/UpdateRaisedModelAnimation_020d7904.c"

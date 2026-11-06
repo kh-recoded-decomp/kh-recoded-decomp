@@ -1,5 +1,5 @@
 #define InitRecordTileTable_020c1024 InitRecordTileTable
 #define InitTileTableFrom_020b9a0c InitTileTableFrom
-#define data_ov086_020c20d4 data_ov086_020c20f4
-#define data_ov086_020c20f8 data_ov086_020c2118
+#define data_ov086_020c20d4 gRecordTileLayerIds
+#define data_ov086_020c20f8 gRecordTileSourceTemplate
 #include "src/ov086/panel_state/InitRecordTileTable_020c1024.c"

@@ -1,5 +1,5 @@
 #include "nitro/types.h"
 
-const u32 data_ov074_020c5960[4] = {
+const u32 gRootMenuWidgetConfig[4] = {
     0x00000000, 0x00000001, 0x00000000, 0x00000000,
 };

@@ -84,9 +84,9 @@ typedef struct ScoreScreen {
 #define REG_DB_BG3OFS  (*(vu32 *)0x0400101c)
 
 extern u8 *data_0205fe0c;
-extern SlotPoolConfig data_ov083_020bf66c;
-extern TextFrame data_ov083_020bf67c;
-extern TextFrame data_ov083_020bf68c;
+extern SlotPoolConfig gScoreScreenWidgetConfig;
+extern TextFrame gScoreScreenTextLayer0Frame;
+extern TextFrame gScoreScreenTextLayer1Frame;
 extern char sOv083_UiMenuStrLanguageShopSZ_020bf6e0[];
 
 extern void MI_CpuFill8(void *dest, int value, u32 size);
@@ -172,8 +172,8 @@ BOOL InitScoreScreen(ScoreScreen *screen)
     screen->elapsedSeconds = *(int *)(data_0205fe0c + 0x28c8)
         + _ll_udiv((OS_GetTick() - GetCardThreadStartTick()) * 64, 0x1ff6210);
 
-    frameA = data_ov083_020bf67c;
-    frameB = data_ov083_020bf68c;
+    frameA = gScoreScreenTextLayer0Frame;
+    frameB = gScoreScreenTextLayer1Frame;
     layer = UpdateScreenWidgetLayer(0x19);
     LoadPackedFileView(screen->strings, sOv083_UiMenuStrLanguageShopSZ_020bf6e0, FALSE);
     InitTextLayerAt(&screen->textLayers[0], 5, layer, GetMenuFont10(), &frameA);
@@ -184,7 +184,7 @@ BOOL InitScoreScreen(ScoreScreen *screen)
 
     elements = GetSecondaryMenuElement();
     container = GetMenuWidgetContainer();
-    config = data_ov083_020bf66c;
+    config = gScoreScreenWidgetConfig;
     config.imageParams = BuildSlotImageParams(2, 2);
     InitObjManagerAndMark(container, &config);
     CreateWidgetImageEntry(container, BuildSlotImageParams(3, 1));

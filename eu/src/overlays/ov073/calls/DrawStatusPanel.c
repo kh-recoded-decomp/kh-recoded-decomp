@@ -2,7 +2,7 @@
 #define DrawTextAnchored_020015a0 DrawTextAnchored
 #define ReadGlobalPackedBits_02027348 ReadGlobalPackedBits
 #define TagTracker_InvokeCallback_020b8210 TagTracker_InvokeCallback
-#define data_ov073_020c4110 data_ov073_020c4130
+#define data_ov073_020c4110 gStatusPanelRowLayout
 #define func_020275c8 CheckStatusAndThreshold
 #define func_0204f378 IndexedRecords_SetFlag2
 #define func_ov027_020b822c InvokeTrackerRecordAtPosition

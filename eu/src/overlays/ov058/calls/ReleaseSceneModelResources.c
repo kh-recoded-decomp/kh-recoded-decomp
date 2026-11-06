@@ -1,8 +1,8 @@
 #define ReleaseSceneModelResources_020d7ee8 ReleaseSceneModelResources
-#define data_ov058_020d8a60 data_ov058_020d8a80
-#define data_ov058_020d8a24 data_ov058_020d8a44
-#define data_ov058_020d8b98 data_ov058_020d8bb8
-#define data_ov058_020d9068 data_ov058_020d9088
+#define data_ov058_020d8a60 gOverlay058SceneAnimatedModel
+#define data_ov058_020d8a24 gOverlay058SceneControlHead
+#define data_ov058_020d8b98 gOverlay058ArchiveEffect2Model
+#define data_ov058_020d9068 gOverlay058ArchiveEffect4ModelPrefix
 #define TeardownBigObj_020ac8cc TeardownBigObj
 #define ReleaseRecordEntry_020d75e0 ReleaseRecordEntry_020d7600
 #define StopSeqArcOrDefault_0204d960 StopSeqArcOrDefault
