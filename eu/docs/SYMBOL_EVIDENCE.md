@@ -962,3 +962,7 @@ Thirteen numeric functions now follow exact scene-entry readers, menu auto-advan
 ## Managed-actor and patrol policy contracts
 
 Six numeric identities now describe cursor reset, command bookkeeping, exact binding-index/flag predicates, patrol phase-4 pause and raw event-header halfword-plus-one access. [The contract](FIELD_ACTOR_EVENT_POLICY.md) preserves the instance/class allocation distinction, logical versus packed saved bits and the non-enumerating general header API. [The callback-bank correction](NATIVE_CALLBACK_BANK_BINDING.md) resolves the old overlay053 annotation from the actual loader and invocation chain. All 28 official checks and 28 complete-object comparisons pass, with every module hash unchanged in a fresh 108-module gate; no baseline waiver, source-body change or verifier change is used.
+
+## Unused absolute interior exports
+
+Eleven numeric aliases with no active ELF consumers are retired from configuration and the existing SDK alias facade; eleven loads preserve their complete ROM words as canonical base plus addend. [The contract](UNUSED_ABSOLUTE_INTERIOR_ALIASES.md) distinguishes zero-size ABS exports from allocations and keeps nineteen ambiguous aliases and sixteen aliases with consumers intact. Eight official checks pass before and after; fifteen complete C objects are identical, and the SDK object changes only by the eleven approved ABS exports. A fresh gate retains all 108 module hashes. The function index remains byte-identical. DATA pending: 81; code coverage and physical DATA bytes are unchanged.

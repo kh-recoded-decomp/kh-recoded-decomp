@@ -2594,8 +2594,6 @@ FX_AtanTable_ kind:data(any) addr:0x02052700
 FX_AtanIdxTable_ kind:data(any) addr:0x02052804
 sTexPlttStartAddrTable kind:data(short[8]) addr:0x02052908
 sTexStartAddrTable kind:data(any) addr:0x02052918
-data_0205291a kind:data(any) addr:0x0205291a
-data_0205291c kind:data(any) addr:0x0205291c
 CARDiDmaUsingFormer kind:data(any) addr:0x02052978
 fsiDefaultDigestKey kind:data(any) addr:0x02052980
 fsi_default_command kind:data(any) addr:0x020529c0
@@ -2655,7 +2653,6 @@ data_020539c0 kind:data(any) addr:0x020539c0
 data_02053ac0 kind:data(any) addr:0x02053ac0
 data_02053b40 kind:data(any) addr:0x02053b40
 data_02053b80 kind:data(any) addr:0x02053b80
-data_02053d80 kind:data(any) addr:0x02053d80
 sBgExtPlttControlOffsets kind:data(short[8]) addr:0x02055580
 gBgSizeModePairs kind:data(any) addr:0x02055590
 gBgAffineSizeModePairs kind:data(any) addr:0x020555a8
@@ -2998,10 +2995,8 @@ gSaveIoStateDataTail kind:bss addr:0x0205fe0c
 gSaveSlotMenuEntryEnabled kind:bss addr:0x0205fe20
 gPanelState kind:bss addr:0x0205fe24
 gSavedCameraState kind:bss addr:0x0205fe28
-data_0205fe34 kind:bss addr:0x0205fe34
 gCameraDefaultsTail kind:bss addr:0x0205fe40
 gCameraDefaultProjection kind:bss addr:0x0205fe4c
-data_0205fe8c kind:bss addr:0x0205fe8c
 data_0205fea8 kind:bss addr:0x0205fea8
 data_0205febc kind:bss addr:0x0205febc
 gRuntimeRecordCategoryCounters kind:bss addr:0x0205fec4

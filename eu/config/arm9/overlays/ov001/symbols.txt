@@ -2373,8 +2373,6 @@ gActorControllerStateHandlers kind:data(any) addr:0x020a0318
 gSpawnedActorDescriptor kind:data(any) addr:0x020a032c
 gStageManagerTaskDescriptor kind:data(any) addr:0x020a0360
 gStageHeapConfigs kind:data(any) addr:0x020a0374
-data_ov001_020a0378 kind:data(any) addr:0x020a0378
-data_ov001_020a037c kind:data(any) addr:0x020a037c
 gExtendedSlotRemap kind:data(any) addr:0x020a038c
 gGroupMemberRemap kind:data(any) addr:0x020a03ac
 sOv001_EnPaDPP2f_020a03f4 kind:data(any) addr:0x020a03f4

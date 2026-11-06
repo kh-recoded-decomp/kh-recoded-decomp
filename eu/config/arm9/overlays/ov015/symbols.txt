@@ -298,7 +298,6 @@ gWirelessBoardObjConfig kind:data(any) addr:0x0207a2e0
 gWirelessBoardOverlayWidgetIds kind:data(any) addr:0x0207a2f8
 gWirelessThemeData kind:data(any) addr:0x0207a310
 gWirelessThemes kind:data(any) addr:0x0207a312
-data_ov015_0207a313 kind:data(any) addr:0x0207a313
 gWirelessSlotStyles kind:data(any) addr:0x0207a40c
 data_ov015_0207a40f kind:data(any) addr:0x0207a40f
 gWirelessSpecialSlotChanceByProgress kind:data(any) addr:0x0207a548

@@ -101,7 +101,7 @@ configured source paths still establish build ownership.
 
 ## Retained DATA identities
 
-[All 92 retained numeric DATA labels](EU_PENDING_DATA_LABELS.md) have an explicit
+[All 81 retained numeric DATA labels](EU_PENDING_DATA_LABELS.md) have an explicit
 owner or missing-proof record. All 941 identities in the DATA review are covered;
 835 original supported assignments are integrated; one existing backing allocation
 now has its descriptive storage name. Three canonical duplicates and ten interior
@@ -165,3 +165,5 @@ The [field HP/camera script gate](FIELD_HP_CAMERA_SCRIPT_GATE.md) documents opco
 [Scene-entry/menu policy](FIELD_SCENE_MENU_POLICY.md), [results handoff](RESULTS_SESSION_HANDOFF.md), [scene-transition hooks](FIELD_SCENE_TRANSITION_HOOK.md), [camera-offset waiting](FIELD_CAMERA_OFFSET_WAIT.md), [scroll speed](FIELD_SCRIPT_SCROLL_SPEED.md), [scene-4 exit](FIELD_SCRIPT_SCENE4_EXIT.md), [stage-local brightness](STAGE_BRIGHTNESS_FADE.md) and [camera snapping](CAMERA_GOAL_SNAP.md) explain the next owner and consumer closures.
 
 [Managed-actor and patrol policies](FIELD_ACTOR_EVENT_POLICY.md) document exact masks, signed header access and logical versus packed bits. [The callback bank correction](NATIVE_CALLBACK_BANK_BINDING.md) ties the existing special-action pointer to its actual overlay loader.
+
+[Unused absolute interior aliases](UNUSED_ABSOLUTE_INTERIOR_ALIASES.md) records the eleven exact metadata retirements, the preserved canonical allocations and the nineteen ambiguous aliases left intact.

@@ -2,11 +2,13 @@
 
 The DATA naming review covers 941 distinct module/address identities: 179 in
 overlays 000-020, 370 in main/ITCM/DTCM and overlays 021-040, and 392 in overlays
-041-104. The original 835 supported naming assignments are integrated. Three
-canonical configuration duplicates and ten interior metadata aliases are
-closed; one existing 12-byte backing allocation is now named
-`gActiveFieldContextStorage`. Exactly 92 numeric labels remain in this reviewed
-domain. All retained identities have an owner or a specific missing-proof record.
+041-104. The original 835 supported naming assignments are integrated. Twenty-five
+additional identities are closed through normalization: three canonical
+configuration duplicates, twenty-one retired interior metadata aliases and one
+existing 12-byte backing allocation now named `gActiveFieldContextStorage`.
+Exactly 81 numeric labels remain in this reviewed domain. All retained identities
+have an owner or a specific missing-proof record. The accounting is
+835 supported assignments + 25 normalizations + 81 retained identities = 941.
 
 Evidence was originally collected at commit
 `1ebd8885dfa0ba01df24ba0540a980339abbfa6b`; active paths, native owners and
@@ -17,10 +19,10 @@ record the completed changes. No semantic name is invented for a retained label.
 
 | Review cohort | Reviewed identities | Original naming assignments | Backing storage named | Canonical duplicates closed | Interior aliases retired | Retained numeric |
 |---|---:|---:|---:|---:|---:|---:|
-| Overlays 000-020 | 179 | 151 | 0 | 0 | 4 | 24 |
-| Main/ITCM/DTCM and overlays 021-040 | 370 | 317 | 1 | 3 | 3 | 46 |
-| Overlays 041-104 | 392 | 367 | 0 | 0 | 3 | 22 |
-| Total | 941 | 835 | 1 | 3 | 10 | 92 |
+| Overlays 000-020 | 179 | 151 | 0 | 0 | 7 | 21 |
+| Main/ITCM/DTCM and overlays 021-040 | 370 | 317 | 1 | 3 | 8 | 41 |
+| Overlays 041-104 | 392 | 367 | 0 | 0 | 6 | 19 |
+| Total | 941 | 835 | 1 | 3 | 21 | 81 |
 
 These dispositions count reviewed native identities, not new C allocations.
 Fixed external-RAM labels outside that 941-identity domain are not added to the
@@ -51,7 +53,7 @@ not rename functions or replace those function-review ledgers.
 
 | Retention class | Identities |
 |---|---:|
-| Interior/member metadata alias; no separate allocation | 47 |
+| Interior/member metadata alias; no separate allocation | 36 |
 | Storage exists; operational role unproved | 18 |
 | Stat-field meaning unproved | 2 |
 | Physical objects have overlapping execution views | 5 |
@@ -60,7 +62,7 @@ not rename functions or replace those function-review ledgers.
 | Foreign-bank binding remains unresolved | 12 |
 | Own storage opaque; observed reference selects foreign code | 3 |
 
-The 47 interior/member labels do not imply 47 additional allocations. Four additional
+The 36 interior/member labels do not imply 36 additional allocations. Four additional
 labels are physical fragments of the proved wireless data-sharing state.
 Foreign-bank rows retain their own physical storage and the unresolved binding
 instead of borrowing the other bank's meaning. Every row below states the
@@ -70,8 +72,6 @@ remaining proof needed; there is no count-driven requirement to rename it.
 
 | Module/address | Retained label | Retention class |
 |---|---|---|
-| [main:0205291a](#main0205291a) | `data_0205291a` | Interior/member metadata alias; no separate allocation |
-| [main:0205291c](#main0205291c) | `data_0205291c` | Interior/member metadata alias; no separate allocation |
 | [main:02053640](#main02053640) | `data_02053640` | Interior/member metadata alias; no separate allocation |
 | [main:020536c0](#main020536c0) | `data_020536c0` | Interior/member metadata alias; no separate allocation |
 | [main:02053740](#main02053740) | `data_02053740` | Interior/member metadata alias; no separate allocation |
@@ -83,9 +83,6 @@ remaining proof needed; there is no count-driven requirement to rename it.
 | [main:02053ac0](#main02053ac0) | `data_02053ac0` | Interior/member metadata alias; no separate allocation |
 | [main:02053b40](#main02053b40) | `data_02053b40` | Interior/member metadata alias; no separate allocation |
 | [main:02053b80](#main02053b80) | `data_02053b80` | Interior/member metadata alias; no separate allocation |
-| [main:02053d80](#main02053d80) | `data_02053d80` | Interior/member metadata alias; no separate allocation |
-| [main:0205fe34](#main0205fe34) | `data_0205fe34` | Interior/member metadata alias; no separate allocation |
-| [main:0205fe8c](#main0205fe8c) | `data_0205fe8c` | Interior/member metadata alias; no separate allocation |
 | [main:0205fea8](#main0205fea8) | `data_0205fea8` | Interior/member metadata alias; no separate allocation |
 | [main:0205febc](#main0205febc) | `data_0205febc` | Storage exists; operational role unproved |
 | [main:02060764](#main02060764) | `data_02060764` | Storage exists; operational role unproved |
@@ -98,14 +95,11 @@ remaining proof needed; there is no count-driven requirement to rename it.
 | [dtcm:027e0164](#dtcm027e0164) | `data_027e0164` | Physical objects have overlapping execution views |
 | [dtcm:027e016c](#dtcm027e016c) | `data_027e016c` | Physical objects have overlapping execution views |
 | [ov001:020a0101](#ov001020a0101) | `data_ov001_020a0101` | Interior/member metadata alias; no separate allocation |
-| [ov001:020a0378](#ov001020a0378) | `data_ov001_020a0378` | Interior/member metadata alias; no separate allocation |
-| [ov001:020a037c](#ov001020a037c) | `data_ov001_020a037c` | Interior/member metadata alias; no separate allocation |
 | [ov003:020650c0](#ov003020650c0) | `data_ov003_020650c0` | Storage exists; operational role unproved |
 | [ov004:02064575](#ov00402064575) | `data_ov004_02064575` | Interior/member metadata alias; no separate allocation |
 | [ov004:0206459d](#ov0040206459d) | `data_ov004_0206459d` | Storage exists; operational role unproved |
 | [ov013:020749f4](#ov013020749f4) | `data_ov013_020749f4` | Interior/member metadata alias; no separate allocation |
 | [ov013:02074a74](#ov01302074a74) | `data_ov013_02074a74` | Interior/member metadata alias; no separate allocation |
-| [ov015:0207a313](#ov0150207a313) | `data_ov015_0207a313` | Interior/member metadata alias; no separate allocation |
 | [ov015:0207a40f](#ov0150207a40f) | `data_ov015_0207a40f` | Interior/member metadata alias; no separate allocation |
 | [ov015:0207f0f9](#ov0150207f0f9) | `data_ov015_0207f0f9` | Interior/member metadata alias; no separate allocation |
 | [ov015:0207f151](#ov0150207f151) | `data_ov015_0207f151` | Interior/member metadata alias; no separate allocation |
@@ -148,16 +142,13 @@ remaining proof needed; there is no count-driven requirement to rename it.
 | [ov101:020c1bc8](#ov101020c1bc8) | `data_ov101_020c1bc8` | Interior/member metadata alias; no separate allocation |
 | [ov101:020c1c60](#ov101020c1c60) | `data_ov101_020c1c60` | Interior/member metadata alias; no separate allocation |
 | [ov101:020c1e61](#ov101020c1e61) | `data_ov101_020c1e61` | Interior/member metadata alias; no separate allocation |
-| [ov101:020c1ea0](#ov101020c1ea0) | `data_ov101_020c1ea0` | Interior/member metadata alias; no separate allocation |
 | [ov101:020c2360](#ov101020c2360) | `data_ov101_020c2360` | Interior/member metadata alias; no separate allocation |
 | [ov101:020c2368](#ov101020c2368) | `data_ov101_020c2368` | Interior/member metadata alias; no separate allocation |
 | [ov101:020c2380](#ov101020c2380) | `data_ov101_020c2380` | Interior/member metadata alias; no separate allocation |
-| [ov101:020c2b18](#ov101020c2b18) | `data_ov101_020c2b18` | Interior/member metadata alias; no separate allocation |
 | [ov101:020c2cc5](#ov101020c2cc5) | `data_ov101_020c2cc5` | Interior/member metadata alias; no separate allocation |
 | [ov101:020c2d41](#ov101020c2d41) | `data_ov101_020c2d41` | Interior/member metadata alias; no separate allocation |
 | [ov101:020c322d](#ov101020c322d) | `data_ov101_020c322d` | Interior/member metadata alias; no separate allocation |
 | [ov101:020c3275](#ov101020c3275) | `data_ov101_020c3275` | Interior/member metadata alias; no separate allocation |
-| [ov101:020c3500](#ov101020c3500) | `data_ov101_020c3500` | Interior/member metadata alias; no separate allocation |
 | [ov101:020c4014](#ov101020c4014) | `data_ov101_020c4014` | Interior/member metadata alias; no separate allocation |
 | [ov101:020c4160](#ov101020c4160) | `data_ov101_020c4160` | Interior/member metadata alias; no separate allocation |
 | [ov101:020c4c60](#ov101020c4c60) | `data_ov101_020c4c60` | Interior/member metadata alias; no separate allocation |
@@ -165,7 +156,9 @@ remaining proof needed; there is no count-driven requirement to rename it.
 
 <a id="overlays-000-020-28-retained-labels"></a>
 
-## Overlays 000-020: 24 retained labels
+## Overlays 000-020: 21 retained labels
+
+<a id="overlays-000-020-24-retained-labels"></a>
 
 ### ov001:020a0101
 
@@ -180,34 +173,6 @@ No additional C/ELF allocation is proved for this numeric label. `gGroupEntries`
 **Next proof:** Verify whether the ov034 word is a genuine relocation/pointer or an integer pattern before removing or expressing the alias as an offset.
 
 **Sources:** [eu/src/overlays/ov001/data/tables/gGroupEntries.c](../src/overlays/ov001/data/tables/gGroupEntries.c), [eu/libs/nitro/data/SdkLinkerSymbols.s](../libs/nitro/data/SdkLinkerSymbols.s), [eu/src/ov034/data/Data_ov034_020be980.c](../src/ov034/data/Data_ov034_020be980.c).
-
-### ov001:020a0378
-
-`data_ov001_020a0378`: Interior/member metadata alias; no separate allocation.
-
-No additional C/ELF allocation is proved for this numeric label. `gStageHeapConfigs`; containing object [0x020a0374, 0x020a038c), 24 B; label offset +0x4.
-
-**Evidence:** gStageHeapConfigs[0].heapSize at base+4, in the two12 -byte config records.
-
-**Retained because:** No independent owner; no direct alias consumer established.
-
-**Next proof:** Prefer the existing member when source consumers are identified; preserve aliases required by native linking.
-
-**Sources:** [eu/src/overlays/ov001/data/tables/gStageHeapConfigs.c](../src/overlays/ov001/data/tables/gStageHeapConfigs.c), [eu/libs/nitro/data/SdkLinkerSymbols.s](../libs/nitro/data/SdkLinkerSymbols.s).
-
-### ov001:020a037c
-
-`data_ov001_020a037c`: Interior/member metadata alias; no separate allocation.
-
-No additional C/ELF allocation is proved for this numeric label. `gStageHeapConfigs`; containing object [0x020a0374, 0x020a038c), 24 B; label offset +0x8.
-
-**Evidence:** gStageHeapConfigs[0].eventCount at base+8.
-
-**Retained because:** No independent owner; no direct alias consumer established.
-
-**Next proof:** Audit relocations and retain as a field-offset alias if required.
-
-**Sources:** [eu/src/overlays/ov001/data/tables/gStageHeapConfigs.c](../src/overlays/ov001/data/tables/gStageHeapConfigs.c), [eu/libs/nitro/data/SdkLinkerSymbols.s](../libs/nitro/data/SdkLinkerSymbols.s).
 
 ### ov003:020650c0
 
@@ -289,20 +254,6 @@ No additional C/ELF allocation is proved for this numeric label. `gRecordSelecti
 **Next proof:** Audit alias users and linker requirements; use the existing descriptive identity.
 
 **Sources:** [eu/src/overlays/ov013/data/tables/gRecordSelectionObjConfig.c](../src/overlays/ov013/data/tables/gRecordSelectionObjConfig.c), [eu/libs/nitro/data/SdkLinkerSymbols.s](../libs/nitro/data/SdkLinkerSymbols.s), [eu/src/overlays/ov013/calls/InitRecordResultScreen.c](../src/overlays/ov013/calls/InitRecordResultScreen.c).
-
-### ov015:0207a313
-
-`data_ov015_0207a313`: Interior/member metadata alias; no separate allocation.
-
-No additional C/ELF allocation is proved for this numeric label. `gWirelessThemeData`; containing object [0x0207a310, 0x0207a40c), 252 B; label offset +0x3.
-
-**Evidence:** gWirelessThemeData+3: charIndex of themes[0], immediately after the two-byte header and first theme bgIndex.
-
-**Retained because:** The alias has an absolute SDK/linker entry but no separate owner or direct C consumer.
-
-**Next proof:** Verify alias/relocation needs and express the existing member address if needed, without changing the packed25 -byte theme stride.
-
-**Sources:** [eu/src/overlays/ov015/data/tables/gWirelessThemeData.c](../src/overlays/ov015/data/tables/gWirelessThemeData.c), [eu/libs/nitro/data/SdkLinkerSymbols.s](../libs/nitro/data/SdkLinkerSymbols.s).
 
 ### ov015:0207a40f
 
@@ -516,31 +467,9 @@ Physical definition [0x02080606, 0x020812e0), 3290 B (bss). No canonical owner i
 
 <a id="maindtcm-and-overlays-021-040-53-retained-labels"></a>
 
-## Main/DTCM and overlays 021-040: 46 retained labels
+## Main/DTCM and overlays 021-040: 41 retained labels
 
-### main:0205291a
-
-`data_0205291a`: Interior/member metadata alias; no separate allocation.
-
-No additional C/ELF allocation is proved for this numeric label. `sTexStartAddrTable`; containing object [0x02052918, 0x02052978), 96 B; label offset +0x2.
-
-**Evidence and retained boundary:** The defining object contains the named backing allocation, not an independently allocated numeric symbol. Its address falls inside that allocation.
-
-**Next proof:** An interior field of the texture-bank mapping table. Read exact uses of this halfword address before choosing a field/view name.
-
-**Sources:** [eu/src/data/sdk/sTexStartAddrTable.c](../src/data/sdk/sTexStartAddrTable.c).
-
-### main:0205291c
-
-`data_0205291c`: Interior/member metadata alias; no separate allocation.
-
-No additional C/ELF allocation is proved for this numeric label. `sTexStartAddrTable`; containing object [0x02052918, 0x02052978), 96 B; label offset +0x4.
-
-**Evidence and retained boundary:** The defining object contains the named backing allocation, not an independently allocated numeric symbol. Its address falls inside that allocation.
-
-**Next proof:** An interior field of the texture-bank mapping table. Confirm page-count reads versus pointer-base addends.
-
-**Sources:** [eu/src/data/sdk/sTexStartAddrTable.c](../src/data/sdk/sTexStartAddrTable.c).
+<a id="maindtcm-and-overlays-021-040-46-retained-labels"></a>
 
 ### main:02053640
 
@@ -673,42 +602,6 @@ No additional C/ELF allocation is proved for this numeric label. `gSinFx12Table`
 **Next proof:** An interior address in the 8192 -byte sine table. Resolve consumer index/stride and absolute .equ aliases before choosing a semantic view name; never allocate another table.
 
 **Sources:** [eu/src/data/math/gSinFx12Table.c](../src/data/math/gSinFx12Table.c).
-
-### main:02053d80
-
-`data_02053d80`: Interior/member metadata alias; no separate allocation.
-
-No additional C/ELF allocation is proved for this numeric label. `gSinFx12Table`; containing object [0x02053580, 0x02055580), 8192 B; label offset +0x800.
-
-**Evidence and retained boundary:** The defining object contains the named backing allocation, not an independently allocated numeric symbol. Its address falls inside that allocation.
-
-**Next proof:** An interior address in the 8192 -byte sine table. Resolve consumer index/stride and absolute .equ aliases before choosing a semantic view name; never allocate another table.
-
-**Sources:** [eu/src/data/math/gSinFx12Table.c](../src/data/math/gSinFx12Table.c).
-
-### main:0205fe34
-
-`data_0205fe34`: Interior/member metadata alias; no separate allocation.
-
-No additional C/ELF allocation is proved for this numeric label. `gSavedCameraState`; containing object [0x0205fe28, 0x0205febc), 148 B; label offset +0xc.
-
-**Evidence and retained boundary:** The defining object contains the named backing allocation, not an independently allocated numeric symbol. Its address falls inside that allocation.
-
-**Next proof:** A view inside the named owner; audit actual SDK writers/readers before inheriting the Camera label.
-
-**Sources:** [eu/src/data/sdk/gSavedCameraState.c](../src/data/sdk/gSavedCameraState.c).
-
-### main:0205fe8c
-
-`data_0205fe8c`: Interior/member metadata alias; no separate allocation.
-
-No additional C/ELF allocation is proved for this numeric label. `gSavedCameraState`; containing object [0x0205fe28, 0x0205febc), 148 B; label offset +0x64.
-
-**Evidence and retained boundary:** The defining object contains the named backing allocation, not an independently allocated numeric symbol. Its address falls inside that allocation.
-
-**Next proof:** A view inside the named owner; audit the specific offset and register-bank consumer.
-
-**Sources:** [eu/src/data/sdk/gSavedCameraState.c](../src/data/sdk/gSavedCameraState.c).
 
 ### main:0205fea8
 
@@ -1072,7 +965,9 @@ Physical definition [0x020c7da0, 0x020ca204), 9316 B (bss). `gTextWindowStaticWo
 
 <a id="overlays-041-104-25-retained-labels"></a>
 
-## Overlays 041-104: 22 retained labels
+## Overlays 041-104: 19 retained labels
+
+<a id="overlays-041-104-22-retained-labels"></a>
 
 ### ov041:020cf700
 
@@ -1186,20 +1081,6 @@ No additional C/ELF allocation is proved for this numeric label. `gSecondaryList
 
 **Sources:** [eu/src/overlays/ov101/data/tables/gSecondaryListSlotTemplates.c](../src/overlays/ov101/data/tables/gSecondaryListSlotTemplates.c), [eu/src/overlays/ov101/ListSlotTemplate.h](../src/overlays/ov101/ListSlotTemplate.h).
 
-### ov101:020c1ea0
-
-`data_ov101_020c1ea0`: Interior/member metadata alias; no separate allocation.
-
-No additional C/ELF allocation is proved for this numeric label. `gSecondaryListSlotTemplates`; containing object [0x020c1d98, 0x020c1f78), 480 B; label offset +0x108.
-
-**Evidence:** Interior at gSecondaryListSlotTemplates +0x108; record index 11, byte offset 0x0. No independent C/ELF storage definition.
-
-**Retained because:** Interior to an existing named ELF object; no independent C definition. Preserve alias/address and physical array.
-
-**Next proof:** Audit bank-qualified relocation/alias requirements and any actual field consumer before expressing a member/offset alias. Preserve the existing parent array and exact address; do not generate another allocation.
-
-**Sources:** [eu/src/overlays/ov101/data/tables/gSecondaryListSlotTemplates.c](../src/overlays/ov101/data/tables/gSecondaryListSlotTemplates.c), [eu/src/overlays/ov101/ListSlotTemplate.h](../src/overlays/ov101/ListSlotTemplate.h).
-
 ### ov101:020c2360
 
 `data_ov101_020c2360`: Interior/member metadata alias; no separate allocation.
@@ -1235,20 +1116,6 @@ No additional C/ELF allocation is proved for this numeric label. `gListPortraitL
 No additional C/ELF allocation is proved for this numeric label. `gListPortraitLayouts`; containing object [0x020c1f9c, 0x020c591c), 14720 B; label offset +0x3e4.
 
 **Evidence:** Interior at gListPortraitLayouts +0x3e4; record index 2, byte offset 0x104. No independent C/ELF storage definition.
-
-**Retained because:** Interior to an existing named ELF object; no independent C definition. Preserve alias/address and physical array.
-
-**Next proof:** Audit bank-qualified relocation/alias requirements and any actual field consumer before expressing a member/offset alias. Preserve the existing parent array and exact address; do not generate another allocation.
-
-**Sources:** [eu/src/overlays/ov101/data/tables/gListPortraitLayouts.c](../src/overlays/ov101/data/tables/gListPortraitLayouts.c), [eu/src/overlays/ov101/ListPortraitLayout.h](../src/overlays/ov101/ListPortraitLayout.h).
-
-### ov101:020c2b18
-
-`data_ov101_020c2b18`: Interior/member metadata alias; no separate allocation.
-
-No additional C/ELF allocation is proved for this numeric label. `gListPortraitLayouts`; containing object [0x020c1f9c, 0x020c591c), 14720 B; label offset +0xb7c.
-
-**Evidence:** Interior at gListPortraitLayouts +0xb7c; record index 7, byte offset 0x16c. No independent C/ELF storage definition.
 
 **Retained because:** Interior to an existing named ELF object; no independent C definition. Preserve alias/address and physical array.
 
@@ -1305,20 +1172,6 @@ No additional C/ELF allocation is proved for this numeric label. `gListPortraitL
 No additional C/ELF allocation is proved for this numeric label. `gListPortraitLayouts`; containing object [0x020c1f9c, 0x020c591c), 14720 B; label offset +0x12d9.
 
 **Evidence:** Interior at gListPortraitLayouts +0x12d9; record index 13, byte offset 0x29. No independent C/ELF storage definition.
-
-**Retained because:** Interior to an existing named ELF object; no independent C definition. Preserve alias/address and physical array.
-
-**Next proof:** Audit bank-qualified relocation/alias requirements and any actual field consumer before expressing a member/offset alias. Preserve the existing parent array and exact address; do not generate another allocation.
-
-**Sources:** [eu/src/overlays/ov101/data/tables/gListPortraitLayouts.c](../src/overlays/ov101/data/tables/gListPortraitLayouts.c), [eu/src/overlays/ov101/ListPortraitLayout.h](../src/overlays/ov101/ListPortraitLayout.h).
-
-### ov101:020c3500
-
-`data_ov101_020c3500`: Interior/member metadata alias; no separate allocation.
-
-No additional C/ELF allocation is proved for this numeric label. `gListPortraitLayouts`; containing object [0x020c1f9c, 0x020c591c), 14720 B; label offset +0x1564.
-
-**Evidence:** Interior at gListPortraitLayouts +0x1564; record index 14, byte offset 0x144. No independent C/ELF storage definition.
 
 **Retained because:** Interior to an existing named ELF object; no independent C definition. Preserve alias/address and physical array.
 
@@ -1428,7 +1281,7 @@ closed naming decision, not a pending fourth canonical merge.
 
 ## Closed interior metadata aliases
 
-The following ten numeric labels are retired. The containing object and
+The following twenty-one numeric labels are retired. The containing object and
 explicit byte offset identify the native address; no additional allocation or
 unproved field name is introduced. See [the relocation contract](INTERIOR_DATA_ALIAS_NORMALIZATION.md).
 
@@ -1561,3 +1414,168 @@ meaning of the interior byte remains unassigned.
 
 **Sources:** [canonical owner](../src/overlays/ov104/DSProt-Extra.c),
 [base/addend normalization](INTERIOR_DATA_ALIAS_NORMALIZATION.md).
+
+### main:0205291a
+
+`data_0205291a` is a closed interior alias of `sTexStartAddrTable` at
+0x2 bytes from the base. The containing allocation is
+[0x02052918, 0x02052978), 96 bytes.
+
+**Resolution:** 1 existing load reference now uses the canonical base and explicit addend. Every source address, relocation kind, target bank and full original pointer value is unchanged.
+The active 12,330-object link graph has no undefined-symbol consumer of this
+alias. Its size-zero ABS export and duplicate numeric configuration entry are
+retired. No storage, instruction or unproved field name is introduced; the
+canonical allocation remains the owner of this native address.
+
+**Sources:** [canonical owner](../src/data/sdk/sTexStartAddrTable.c),
+[unused absolute alias contract](UNUSED_ABSOLUTE_INTERIOR_ALIASES.md).
+
+### main:0205291c
+
+`data_0205291c` is a closed interior alias of `sTexStartAddrTable` at
+0x4 bytes from the base. The containing allocation is
+[0x02052918, 0x02052978), 96 bytes.
+
+**Resolution:** 1 existing load reference now uses the canonical base and explicit addend. Every source address, relocation kind, target bank and full original pointer value is unchanged.
+The active 12,330-object link graph has no undefined-symbol consumer of this
+alias. Its size-zero ABS export and duplicate numeric configuration entry are
+retired. No storage, instruction or unproved field name is introduced; the
+canonical allocation remains the owner of this native address.
+
+**Sources:** [canonical owner](../src/data/sdk/sTexStartAddrTable.c),
+[unused absolute alias contract](UNUSED_ABSOLUTE_INTERIOR_ALIASES.md).
+
+### main:02053d80
+
+`data_02053d80` is a closed interior alias of `gSinFx12Table` at
+0x800 bytes from the base. The containing allocation is
+[0x02053580, 0x02055580), 8192 bytes.
+
+**Resolution:** 1 existing load reference now uses the canonical base and explicit addend. Every source address, relocation kind, target bank and full original pointer value is unchanged.
+The active 12,330-object link graph has no undefined-symbol consumer of this
+alias. Its size-zero ABS export and duplicate numeric configuration entry are
+retired. No storage, instruction or unproved field name is introduced; the
+canonical allocation remains the owner of this native address.
+
+**Sources:** [canonical owner](../src/data/math/gSinFx12Table.c),
+[unused absolute alias contract](UNUSED_ABSOLUTE_INTERIOR_ALIASES.md).
+
+### main:0205fe34
+
+`data_0205fe34` is a closed interior alias of `gSavedCameraState` at
+0xc bytes from the base. The containing allocation is
+[0x0205fe28, 0x0205febc), 148 bytes.
+
+**Resolution:** 3 existing load references now use the canonical base and explicit addend. Every source address, relocation kind, target bank and full original pointer value is unchanged.
+The active 12,330-object link graph has no undefined-symbol consumer of this
+alias. Its size-zero ABS export and duplicate numeric configuration entry are
+retired. No storage, instruction or unproved field name is introduced; the
+canonical allocation remains the owner of this native address.
+
+**Sources:** [canonical owner](../src/data/sdk/gSavedCameraState.c),
+[unused absolute alias contract](UNUSED_ABSOLUTE_INTERIOR_ALIASES.md).
+
+### main:0205fe8c
+
+`data_0205fe8c` is a closed interior alias of `gSavedCameraState` at
+0x64 bytes from the base. The containing allocation is
+[0x0205fe28, 0x0205febc), 148 bytes.
+
+**Resolution:** 2 existing load references now use the canonical base and explicit addend. Every source address, relocation kind, target bank and full original pointer value is unchanged.
+The active 12,330-object link graph has no undefined-symbol consumer of this
+alias. Its size-zero ABS export and duplicate numeric configuration entry are
+retired. No storage, instruction or unproved field name is introduced; the
+canonical allocation remains the owner of this native address.
+
+**Sources:** [canonical owner](../src/data/sdk/gSavedCameraState.c),
+[unused absolute alias contract](UNUSED_ABSOLUTE_INTERIOR_ALIASES.md).
+
+### ov001:020a0378
+
+`data_ov001_020a0378` is a closed interior alias of `gStageHeapConfigs` at
+0x4 bytes from the base. The containing allocation is
+[0x020a0374, 0x020a038c), 24 bytes.
+
+**Resolution:** 1 existing load reference now uses the canonical base and explicit addend. Every source address, relocation kind, target bank and full original pointer value is unchanged.
+The active 12,330-object link graph has no undefined-symbol consumer of this
+alias. Its size-zero ABS export and duplicate numeric configuration entry are
+retired. No storage, instruction or unproved field name is introduced; the
+canonical allocation remains the owner of this native address.
+
+**Sources:** [canonical owner](../src/overlays/ov001/data/tables/gStageHeapConfigs.c),
+[unused absolute alias contract](UNUSED_ABSOLUTE_INTERIOR_ALIASES.md).
+
+### ov001:020a037c
+
+`data_ov001_020a037c` is a closed interior alias of `gStageHeapConfigs` at
+0x8 bytes from the base. The containing allocation is
+[0x020a0374, 0x020a038c), 24 bytes.
+
+**Resolution:** 1 existing load reference now uses the canonical base and explicit addend. Every source address, relocation kind, target bank and full original pointer value is unchanged.
+The active 12,330-object link graph has no undefined-symbol consumer of this
+alias. Its size-zero ABS export and duplicate numeric configuration entry are
+retired. No storage, instruction or unproved field name is introduced; the
+canonical allocation remains the owner of this native address.
+
+**Sources:** [canonical owner](../src/overlays/ov001/data/tables/gStageHeapConfigs.c),
+[unused absolute alias contract](UNUSED_ABSOLUTE_INTERIOR_ALIASES.md).
+
+### ov015:0207a313
+
+`data_ov015_0207a313` is a closed interior alias of `gWirelessThemeData` at
+0x3 bytes from the base. The containing allocation is
+[0x0207a310, 0x0207a40c), 252 bytes.
+
+**Resolution:** 1 existing load reference now uses the canonical base and explicit addend. Every source address, relocation kind, target bank and full original pointer value is unchanged.
+The active 12,330-object link graph has no undefined-symbol consumer of this
+alias. Its size-zero ABS export and duplicate numeric configuration entry are
+retired. No storage, instruction or unproved field name is introduced; the
+canonical allocation remains the owner of this native address.
+
+**Sources:** [canonical owner](../src/overlays/ov015/data/tables/gWirelessThemeData.c),
+[unused absolute alias contract](UNUSED_ABSOLUTE_INTERIOR_ALIASES.md).
+
+### ov101:020c1ea0
+
+`data_ov101_020c1ea0` is a closed interior alias of `gSecondaryListSlotTemplates` at
+0x108 bytes from the base. The containing allocation is
+[0x020c1d98, 0x020c1f78), 480 bytes.
+
+**Resolution:** No configuration reference names this alias bank. Its redundant numeric metadata is removed; same-address references to other banks remain unchanged.
+The active 12,330-object link graph has no undefined-symbol consumer of this
+alias. Its size-zero ABS export and duplicate numeric configuration entry are
+retired. No storage, instruction or unproved field name is introduced; the
+canonical allocation remains the owner of this native address.
+
+**Sources:** [canonical owner](../src/overlays/ov101/data/tables/gSecondaryListSlotTemplates.c),
+[unused absolute alias contract](UNUSED_ABSOLUTE_INTERIOR_ALIASES.md).
+
+### ov101:020c2b18
+
+`data_ov101_020c2b18` is a closed interior alias of `gListPortraitLayouts` at
+0xb7c bytes from the base. The containing allocation is
+[0x020c1f9c, 0x020c591c), 14720 bytes.
+
+**Resolution:** No configuration reference names this alias bank. Its redundant numeric metadata is removed; same-address references to other banks remain unchanged.
+The active 12,330-object link graph has no undefined-symbol consumer of this
+alias. Its size-zero ABS export and duplicate numeric configuration entry are
+retired. No storage, instruction or unproved field name is introduced; the
+canonical allocation remains the owner of this native address.
+
+**Sources:** [canonical owner](../src/overlays/ov101/data/tables/gListPortraitLayouts.c),
+[unused absolute alias contract](UNUSED_ABSOLUTE_INTERIOR_ALIASES.md).
+
+### ov101:020c3500
+
+`data_ov101_020c3500` is a closed interior alias of `gListPortraitLayouts` at
+0x1564 bytes from the base. The containing allocation is
+[0x020c1f9c, 0x020c591c), 14720 bytes.
+
+**Resolution:** No configuration reference names this alias bank. Its redundant numeric metadata is removed; same-address references to other banks remain unchanged.
+The active 12,330-object link graph has no undefined-symbol consumer of this
+alias. Its size-zero ABS export and duplicate numeric configuration entry are
+retired. No storage, instruction or unproved field name is introduced; the
+canonical allocation remains the owner of this native address.
+
+**Sources:** [canonical owner](../src/overlays/ov101/data/tables/gListPortraitLayouts.c),
+[unused absolute alias contract](UNUSED_ABSOLUTE_INTERIOR_ALIASES.md).

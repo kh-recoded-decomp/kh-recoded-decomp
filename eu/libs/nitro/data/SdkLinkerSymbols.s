@@ -22,14 +22,8 @@
     .equ data_02053b40, 0x02053b40
     .global data_02053b80
     .equ data_02053b80, 0x02053b80
-    .global data_02053d80
-    .equ data_02053d80, 0x02053d80
 
     /* Existing field views of sTexStartAddrTable[0]. */
-    .global data_0205291a
-    .equ data_0205291a, 0x0205291a
-    .global data_0205291c
-    .equ data_0205291c, 0x0205291c
 
     /* The standalone DMA view aliases CARDRomState.dmaReadInfo (+0x10). */
     .global sCardDmaReadInfo
@@ -44,12 +38,8 @@
     .equ gCameraDefaultProjection, 0x0205fe4c
 
     /* Interior views of the saved camera, owned by gSavedCameraState. */
-    .global data_0205fe34
-    .equ data_0205fe34, 0x0205fe34
     .global gCameraDefaultsTail
     .equ gCameraDefaultsTail, 0x0205fe40
-    .global data_0205fe8c
-    .equ data_0205fe8c, 0x0205fe8c
     .global data_0205fea8
     .equ data_0205fea8, 0x0205fea8
 
@@ -89,8 +79,6 @@
     .equ data_ov101_020c2368, 0x020c2368
     .global data_ov101_020c2380
     .equ data_ov101_020c2380, 0x020c2380
-    .global data_ov101_020c2b18
-    .equ data_ov101_020c2b18, 0x020c2b18
     .global data_ov101_020c2cc5
     .equ data_ov101_020c2cc5, 0x020c2cc5
     .global data_ov101_020c2d41
@@ -99,8 +87,6 @@
     .equ data_ov101_020c322d, 0x020c322d
     .global data_ov101_020c3275
     .equ data_ov101_020c3275, 0x020c3275
-    .global data_ov101_020c3500
-    .equ data_ov101_020c3500, 0x020c3500
     .global data_ov101_020c4014
     .equ data_ov101_020c4014, 0x020c4014
     .global data_ov101_020c4160
@@ -115,8 +101,6 @@
     .equ data_ov101_020c1bc8, 0x020c1bc8
     .global data_ov101_020c1e61
     .equ data_ov101_020c1e61, 0x020c1e61
-    .global data_ov101_020c1ea0
-    .equ data_ov101_020c1ea0, 0x020c1ea0
 
     /* Absolute NitroSDK archive aliases supplied by the original linker. */
     /* Interior anchors in the wireless board's fixed-stride tables. */
@@ -138,8 +122,6 @@
 
     .global gWirelessThemes
     .equ gWirelessThemes, 0x0207a312
-    .global data_ov015_0207a313
-    .equ data_ov015_0207a313, 0x0207a313
     .global data_ov015_0207a40f
     .equ data_ov015_0207a40f, 0x0207a40f
 
@@ -159,10 +141,6 @@
     .equ fsi_rom_root_path, 0x02055c38
 
     /* Interior field labels in the stage heap configuration records. */
-    .global data_ov001_020a0378
-    .equ data_ov001_020a0378, 0x020a0378
-    .global data_ov001_020a037c
-    .equ data_ov001_020a037c, 0x020a037c
 
     /* This build has no authenticated overlay digest rows. */
     .section .data

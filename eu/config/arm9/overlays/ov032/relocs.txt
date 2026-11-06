@@ -524,7 +524,7 @@ from:0x020bd228 kind:thumb_call_arm to:0x02006464 module:main
 from:0x020bd232 kind:thumb_call_arm to:0x02006464 module:main
 from:0x020bd23c kind:thumb_call_arm to:0x02006464 module:main
 from:0x020bd250 kind:load to:0x0205344c module:main
-from:0x020bd254 kind:load to:0x02053d80 module:main
+from:0x020bd254 kind:load to:0x02053580 add:0x800 module:main
 from:0x020bd258 kind:load to:0x02053580 module:main
 from:0x020bd26c kind:thumb_call to:0x020bbc80 module:overlay(32)
 from:0x020bd272 kind:thumb_call to:0x02051180 module:main
